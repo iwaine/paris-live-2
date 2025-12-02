@@ -1,0 +1,42 @@
+[
+  {
+    "strategy_name": "Conservative",
+    "confidence_threshold": 0.5,
+    "danger_threshold": 0.5,
+    "total_bets": 12,
+    "win_rate": 50.0,
+    "roi_avg": 0.0,
+    "precision": 0.5,
+    "f1_score": 0.9900990099009901
+  },
+  {
+    "strategy_name": "Moderate",
+    "confidence_threshold": 0.3,
+    "danger_threshold": 0.35,
+    "total_bets": 30,
+    "win_rate": 40.0,
+    "roi_avg": -20.0,
+    "precision": 0.4,
+    "f1_score": 0.7920792079207921
+  },
+  {
+    "strategy_name": "Aggressive",
+    "confidence_threshold": 0.2,
+    "danger_threshold": 0.25,
+    "total_bets": 30,
+    "win_rate": 40.0,
+    "roi_avg": -20.0,
+    "precision": 0.4,
+    "f1_score": 0.7920792079207921
+  },
+  {
+    "strategy_name": "VeryAggressive",
+    "confidence_threshold": 0.1,
+    "danger_threshold": 0.15,
+    "total_bets": 30,
+    "win_rate": 40.0,
+    "roi_avg": -20.0,
+    "precision": 0.4,
+    "f1_score": 0.7920792079207921
+  }
+]

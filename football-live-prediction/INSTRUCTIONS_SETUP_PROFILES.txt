@@ -1,0 +1,58 @@
+═══════════════════════════════════════════════════════════════
+INSTRUCTIONS POUR CORRIGER setup_profiles.py SUR MAC
+═══════════════════════════════════════════════════════════════
+
+PROBLÈME IDENTIFIÉ:
+-------------------
+1. KeyError 'league' → Corrigé en 'league_code'
+2. Possible cache Python avec ancienne version
+
+SOLUTION:
+---------
+
+ÉTAPE 1: Nettoyer le cache Python
+----------------------------------
+cd /Users/iwainebenbouziane/Desktop/football-live-prediction
+find . -name "*.pyc" -delete
+find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
+
+ÉTAPE 2: Vérifier votre fichier soccerstats_historical.py
+----------------------------------------------------------
+grep -n "def scrape_team_stats" scrapers/soccerstats_historical.py
+
+Si cette commande ne retourne RIEN, vous avez le mauvais fichier!
+
+ÉTAPE 3: Remplacer setup_profiles.py
+-------------------------------------
+cp setup_profiles_CORRECTED.py setup_profiles.py
+
+ÉTAPE 4: Retester
+-----------------
+python setup_profiles.py
+
+Choisir option 1 (équipes de test)
+
+RÉSULTAT ATTENDU:
+-----------------
+📋 Équipes de test configurées:
+   - Manchester United (england)
+   - Paris Saint-Germain (france)
+   - Real Madrid (spain)
+
+🔄 Génération de 3 profils...
+   [Scraping en cours...]
+
+═══════════════════════════════════════════════════════════════
+FICHIERS FOURNIS:
+═══════════════════════════════════════════════════════════════
+
+1. setup_profiles_CORRECTED.py
+   → Version corrigée du script principal
+
+2. soccerstats_historical_VERIFIED.py
+   → Version vérifiée du scraper avec scrape_team_stats()
+   
+3. test_setup_complete.py
+   → Script de test pour vérifier que tout fonctionne
+
+═══════════════════════════════════════════════════════════════

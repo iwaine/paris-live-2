@@ -1,0 +1,174 @@
+project:
+  name: Football Live Prediction
+  version: 1.0.0
+  author: Iwaine
+soccerstats:
+  base_url: https://www.soccerstats.com
+  urls:
+    timing_stats: /timing.asp?league={league_code}
+    team_stats: /team.asp?league={league_code}&stats={team_id}
+    match_details: /pmatch.asp?league={league_code}&stats={match_id}
+    matches_today: /matches.asp
+    latest: /latest.asp?league={league_code}
+  scraping:
+    user_agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
+      (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    timeout: 30
+    retry_attempts: 3
+    retry_delay: 3
+    rate_limit_delay: 2.5
+  selenium:
+    headless: true
+    window_size: 1920,1080
+    page_load_timeout: 30
+    implicit_wait: 10
+leagues:
+- name: Premier League
+  code: england
+  country: England
+  priority: 1
+  enabled: true
+- name: La Liga
+  code: spain
+  country: Spain
+  priority: 2
+  enabled: true
+- name: Serie A
+  code: italy
+  country: Italy
+  priority: 2
+  enabled: true
+- name: Bundesliga
+  code: germany
+  country: Germany
+  priority: 2
+  enabled: true
+- name: Ligue 1
+  code: france
+  country: France
+  priority: 2
+  enabled: true
+- name: Championship
+  code: england2
+  country: England
+  priority: 3
+  enabled: false
+test_teams:
+- name: Manchester City
+  league_code: england
+  team_id: manchester-utd
+- name: Paris FC
+  league_code: france
+  team_id: psg
+- name: Real Madrid
+  league_code: spain
+  team_id: real-madrid
+time_intervals:
+  original:
+  - 0-15
+  - 15-30
+  - 30-45
+  - 45-60
+  - 60-75
+  - 75-90
+  target:
+    first_half:
+    - 0-10
+    - 10-20
+    - 20-30
+    - 30-40
+    - 40-45
+    second_half:
+    - 45-55
+    - 55-65
+    - 65-75
+    - 75-85
+    - 85-90
+prediction:
+  weights:
+    historical_pattern: 0.4
+    live_pressure: 0.3
+    live_efficiency: 0.2
+    live_quality: 0.1
+  confidence_thresholds:
+    high: 0.7
+    medium: 0.5
+    low: 0.3
+  bet_thresholds:
+    strong_bet: 0.65
+    moderate_bet: 0.55
+    wait: 0.45
+  min_matches_for_profile: 5
+adjustments:
+  premature_goal: -0.15
+  red_card_dominant: -0.25
+  penalty_scored: -0.1
+  red_card_opponent: 0.2
+  sustained_pressure: 0.15
+  dangerous_attacks_spike: 0.1
+data:
+  directories:
+    team_profiles: data/team_profiles
+    team_profiles_json: data/team_profiles/json
+    team_profiles_excel: data/team_profiles/excel
+    raw_matches: data/raw_matches
+    live_cache: data/live_cache
+    predictions: data/predictions
+    logs: data/logs
+  export:
+    json: true
+    excel: true
+    csv: true
+  cache:
+    enabled: true
+    ttl_minutes: 60
+    live_ttl_seconds: 90
+live_monitoring:
+  refresh_interval: 60
+  max_concurrent_matches: 5
+  alert_on_high_probability: true
+  alert_threshold: 0.7
+  priority_stats:
+  - shots_on_target
+  - dangerous_attacks
+  - shots_inside_box
+  - possession
+interface:
+  dashboard:
+    enabled: true
+    refresh_rate: 2
+    show_debug: false
+  colors:
+    high_probability: green
+    medium_probability: yellow
+    low_probability: red
+    info: blue
+    warning: yellow
+    error: red
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  file: data/logs/app.log
+  max_bytes: 10485760
+  backup_count: 5
+  console_output: true
+notifications:
+  telegram:
+    enabled: false
+    bot_token: ''
+    chat_id: ''
+  email:
+    enabled: false
+    smtp_server: ''
+    smtp_port: 587
+    from_address: ''
+    to_addresses: []
+development:
+  debug_mode: true
+  mock_data: false
+  save_html_responses: true
+  verbose_logging: true
+
+  - name: "Erovnuli Liga 2"
+    country: "Georgia"
+    url: "https://www.soccerstats.com/latest.asp?league=georgia2"

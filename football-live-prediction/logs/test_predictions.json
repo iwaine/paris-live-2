@@ -1,0 +1,57 @@
+[
+  {
+    "match_id": "SIM_0000",
+    "home_team": "Paris SG",
+    "away_team": "Marseille",
+    "interval": "75-90",
+    "minute": 89,
+    "danger_score": 0.0,
+    "confidence": 0.0,
+    "prediction": "SKIP",
+    "timestamp": "2025-12-02T16:31:24.002007"
+  },
+  {
+    "match_id": "SIM_0001",
+    "home_team": "Lyon",
+    "away_team": "Monaco",
+    "interval": "75-90",
+    "minute": 83,
+    "danger_score": 0.0,
+    "confidence": 0.0,
+    "prediction": "SKIP",
+    "timestamp": "2025-12-02T16:31:26.010794"
+  },
+  {
+    "match_id": "SIM_0002",
+    "home_team": "Lille",
+    "away_team": "Nice",
+    "interval": "30-45",
+    "minute": 78,
+    "danger_score": 0.0,
+    "confidence": 0.0,
+    "prediction": "SKIP",
+    "timestamp": "2025-12-02T16:31:28.023698"
+  },
+  {
+    "match_id": "SIM_0003",
+    "home_team": "Bordeaux",
+    "away_team": "Toulouse",
+    "interval": "75-90",
+    "minute": 69,
+    "danger_score": 0.0,
+    "confidence": 0.0,
+    "prediction": "SKIP",
+    "timestamp": "2025-12-02T16:31:30.038096"
+  },
+  {
+    "match_id": "SIM_0004",
+    "home_team": "Nantes",
+    "away_team": "Rennes",
+    "interval": "30-45",
+    "minute": 65,
+    "danger_score": 0.0,
+    "confidence": 0.0,
+    "prediction": "SKIP",
+    "timestamp": "2025-12-02T16:31:32.039119"
+  }
+]

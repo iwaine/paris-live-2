@@ -1,0 +1,17 @@
+2025-11-27 22:51:52,895 - __main__ - INFO - Initializing Production Monitor...
+2025-11-27 22:51:53,003 - __main__ - INFO - ✅ Monitor initialized
+2025-11-27 22:51:53,003 - __main__ - INFO -    - Teams: 243
+2025-11-27 22:51:53,003 - __main__ - INFO -    - Database: /workspaces/paris-live/football-live-prediction/data/production.db
+2025-11-27 22:51:53,003 - __main__ - INFO -    - Telegram: ✅
+2025-11-27 22:51:53,003 - __main__ - INFO - 🚀 PARIS LIVE PRODUCTION MONITORING STARTED
+2025-11-27 22:51:53,003 - __main__ - INFO - Time: 2025-11-27 22:51:53
+2025-11-27 22:51:53,003 - __main__ - INFO - Log: /workspaces/paris-live/football-live-prediction/logs/monitoring_20251127_225151.log
+2025-11-27 22:51:53,003 - __main__ - WARNING - Failed to send startup notification: 'TelegramNotifier' object has no attribute 'send_alert'
+2025-11-27 22:51:53,003 - __main__ - INFO - Starting match monitoring loop...
+2025-11-27 22:51:53,003 - __main__ - INFO - 
+============================================================
+2025-11-27 22:51:53,003 - __main__ - INFO - Monitor Cycle #1 - 2025-11-27 22:51:53
+2025-11-27 22:51:53,003 - __main__ - INFO - ============================================================
+2025-11-27 22:51:53,003 - __main__ - INFO - No live matches at this time
+2025-11-27 22:51:53,003 - __main__ - WARNING - Failed to get statistics: 'DatabaseManager' object has no attribute 'get_matches_count'
+2025-11-27 22:51:53,003 - __main__ - INFO - Waiting 300 seconds before next cycle...

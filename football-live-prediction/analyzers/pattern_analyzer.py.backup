@@ -1,0 +1,518 @@
+"""
+Pattern Analyzer - Analyse des patterns historiques de buts
+
+Ce module analyse :
+- Fréquence de buts par intervalles de 10min
+- Zones de danger (intervalles à fort taux de buts)
+- Tendances domicile vs extérieur
+- Profils d'équipes
+"""
+import json
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
+import pandas as pd
+import numpy as np
+
+import sys
+sys.path.append(str(Path(__file__).parent.parent))
+
+from utils.config_loader import get_config
+from utils.logger import get_logger
+
+
+class PatternAnalyzer:
+    """Analyseur de patterns historiques"""
+    
+    def __init__(self):
+        """Initialise l'analyseur"""
+        self.config = get_config()
+        self.logger = get_logger()
+        self.intervals_10min = self.config.get_time_intervals("target_10min")
+        self.logger.info("PatternAnalyzer initialized")
+    
+    def analyze_team_profile(
+        self, 
+        team_stats: Dict[str, Dict]
+    ) -> Dict[str, any]:
+        """
+        Analyse le profil complet d'une équipe
+        
+        Args:
+            team_stats: Stats de l'équipe (format du scraper)
+                {
+                    "team": "Manchester United",
+                    "league": "england",
+                    "home": {
+                        "goals_scored_10min": {...},
+                        "goals_conceded_10min": {...}
+                    },
+                    "away": {...}
+                }
+        
+        Returns:
+            Dict avec analyse complète
+        """
+        self.logger.info(f"Analyzing profile for {team_stats.get('team', 'unknown')}")
+        
+        analysis = {
+            "team": team_stats.get("team"),
+            "league": team_stats.get("league"),
+            "home": self._analyze_location_stats(team_stats["home"]),
+            "away": self._analyze_location_stats(team_stats["away"]),
+            "overall": self._compute_overall_stats(team_stats)
+        }
+        
+        # Identifier les zones de danger
+        analysis["danger_zones"] = self._identify_danger_zones(analysis)
+        
+        # Calculer le style de jeu
+        analysis["play_style"] = self._identify_play_style(analysis)
+        
+        return analysis
+    
+    def _analyze_location_stats(self, location_stats: Dict) -> Dict:
+        """
+        Analyse les stats pour une localisation (home/away)
+        
+        Args:
+            location_stats: Stats pour home ou away
+        
+        Returns:
+            Dict avec métriques calculées
+        """
+        scored = location_stats.get("goals_scored_10min", {})
+        conceded = location_stats.get("goals_conceded_10min", {})
+        
+        analysis = {
+            "goals_scored": scored,
+            "goals_conceded": conceded,
+            "total_scored": sum(scored.values()),
+            "total_conceded": sum(conceded.values()),
+            "avg_scored_per_interval": np.mean(list(scored.values())) if scored else 0,
+            "avg_conceded_per_interval": np.mean(list(conceded.values())) if conceded else 0,
+            "best_scoring_interval": max(scored, key=scored.get) if scored else None,
+            "worst_defensive_interval": max(conceded, key=conceded.get) if conceded else None
+        }
+        
+        # Calculer la différence de buts
+        analysis["goal_difference"] = analysis["total_scored"] - analysis["total_conceded"]
+        
+        # Identifier les patterns par mi-temps
+        analysis["first_half_pattern"] = self._analyze_half_pattern(scored, "first")
+        analysis["second_half_pattern"] = self._analyze_half_pattern(scored, "second")
+        
+        return analysis
+    
+    def _analyze_half_pattern(
+        self, 
+        goals: Dict[str, float], 
+        half: str
+    ) -> Dict:
+        """
+        Analyse le pattern pour une mi-temps
+        
+        Args:
+            goals: Dict des buts par intervalle
+            half: "first" ou "second"
+        
+        Returns:
+            Dict avec pattern de la mi-temps
+        """
+        if half == "first":
+            intervals = ["0-10", "10-20", "20-30", "30-40", "40-45"]
+        else:
+            intervals = ["45-55", "55-65", "65-75", "75-85", "85-90"]
+        
+        half_goals = {k: v for k, v in goals.items() if k in intervals}
+        
+        if not half_goals:
+            return {"total": 0, "avg": 0, "peak_interval": None}
+        
+        return {
+            "total": sum(half_goals.values()),
+            "avg": np.mean(list(half_goals.values())),
+            "peak_interval": max(half_goals, key=half_goals.get),
+            "peak_value": max(half_goals.values()),
+            "distribution": half_goals
+        }
+    
+    def _compute_overall_stats(self, team_stats: Dict) -> Dict:
+        """
+        Calcule les statistiques globales (home + away)
+        
+        Args:
+            team_stats: Stats complètes de l'équipe
+        
+        Returns:
+            Dict avec stats globales
+        """
+        home = team_stats["home"]
+        away = team_stats["away"]
+        
+        # Combiner les buts scored
+        all_scored = {}
+        for interval in self.intervals_10min:
+            home_val = home.get("goals_scored_10min", {}).get(interval, 0)
+            away_val = away.get("goals_scored_10min", {}).get(interval, 0)
+            all_scored[interval] = (home_val + away_val) / 2
+        
+        # Combiner les buts conceded
+        all_conceded = {}
+        for interval in self.intervals_10min:
+            home_val = home.get("goals_conceded_10min", {}).get(interval, 0)
+            away_val = away.get("goals_conceded_10min", {}).get(interval, 0)
+            all_conceded[interval] = (home_val + away_val) / 2
+        
+        return {
+            "avg_goals_scored": all_scored,
+            "avg_goals_conceded": all_conceded,
+            "total_avg_scored": sum(all_scored.values()),
+            "total_avg_conceded": sum(all_conceded.values())
+        }
+    
+    def _identify_danger_zones(self, analysis: Dict) -> List[Dict]:
+        """
+        Identifie les zones de danger (intervalles à haut taux de buts)
+        
+        Args:
+            analysis: Analyse complète de l'équipe
+        
+        Returns:
+            Liste des zones de danger triées par intensité
+        """
+        overall = analysis["overall"]
+        scored = overall["avg_goals_scored"]
+        
+        # Calculer le seuil (moyenne + 1 écart-type)
+        values = list(scored.values())
+        if not values:
+            return []
+        
+        mean = np.mean(values)
+        std = np.std(values)
+        threshold = mean + std
+        
+        # Identifier les intervalles au-dessus du seuil
+        danger_zones = []
+        for interval, value in scored.items():
+            if value >= threshold:
+                danger_zones.append({
+                    "interval": interval,
+                    "goal_rate": value,
+                    "intensity": "high" if value >= mean + 1.5*std else "medium",
+                    "deviation_from_mean": value - mean
+                })
+        
+        # Trier par taux de buts décroissant
+        danger_zones.sort(key=lambda x: x["goal_rate"], reverse=True)
+        
+        self.logger.info(f"Identified {len(danger_zones)} danger zones")
+        
+        return danger_zones
+    
+    def _identify_play_style(self, analysis: Dict) -> Dict:
+        """
+        Identifie le style de jeu de l'équipe
+        
+        Args:
+            analysis: Analyse complète
+        
+        Returns:
+            Dict avec classification du style
+        """
+        home = analysis["home"]
+        away = analysis["away"]
+        
+        # Ratio buts 1ère vs 2ème mi-temps
+        first_half_home = home["first_half_pattern"]["total"]
+        second_half_home = home["second_half_pattern"]["total"]
+        
+        first_half_away = away["first_half_pattern"]["total"]
+        second_half_away = away["second_half_pattern"]["total"]
+        
+        total_first = first_half_home + first_half_away
+        total_second = second_half_home + second_half_away
+        
+        # Classification
+        style = {
+            "first_half_dominant": total_first > total_second * 1.2,
+            "second_half_dominant": total_second > total_first * 1.2,
+            "balanced": abs(total_first - total_second) <= total_first * 0.2,
+            "home_advantage": home["goal_difference"] > away["goal_difference"] + 5,
+            "away_resilient": away["goal_difference"] >= home["goal_difference"],
+            "high_scoring": (home["total_scored"] + away["total_scored"]) / 2 > 1.5,
+            "defensive": (home["total_conceded"] + away["total_conceded"]) / 2 < 1.0
+        }
+        
+        # Résumé textuel
+        summary_parts = []
+        if style["first_half_dominant"]:
+            summary_parts.append("starts strong")
+        elif style["second_half_dominant"]:
+            summary_parts.append("finishes strong")
+        else:
+            summary_parts.append("consistent")
+        
+        if style["high_scoring"]:
+            summary_parts.append("offensive")
+        elif style["defensive"]:
+            summary_parts.append("defensive")
+        
+        if style["home_advantage"]:
+            summary_parts.append("strong at home")
+        elif style["away_resilient"]:
+            summary_parts.append("travels well")
+        
+        style["summary"] = ", ".join(summary_parts)
+        
+        return style
+    
+    def calculate_goal_probability(
+        self,
+        team_analysis: Dict,
+        current_interval: str,
+        location: str = "home"
+    ) -> float:
+        """
+        Calcule la probabilité de but pour un intervalle donné
+        
+        Args:
+            team_analysis: Analyse complète de l'équipe
+            current_interval: Intervalle actuel (ex: "20-30")
+            location: "home" ou "away"
+        
+        Returns:
+            Probabilité (0.0 à 1.0)
+        """
+        if location not in ["home", "away"]:
+            self.logger.error(f"Invalid location: {location}")
+            return 0.0
+        
+        # Récupérer les stats pour la localisation
+        loc_stats = team_analysis[location]
+        goals_scored = loc_stats.get("goals_scored", {})
+        
+        if current_interval not in goals_scored:
+            self.logger.warning(f"Interval {current_interval} not found")
+            return 0.0
+        
+        # Taux de buts pour cet intervalle
+        goal_rate = goals_scored.get(current_interval, 0)
+        
+        # Normaliser en probabilité (supposons max 3 buts par intervalle)
+        max_goals = 3.0
+        probability = min(goal_rate / max_goals, 1.0)
+        
+        return probability
+    
+    def compare_teams(
+        self,
+        home_team_analysis: Dict,
+        away_team_analysis: Dict
+    ) -> Dict:
+        """
+        Compare deux équipes pour prédire le match
+        
+        Args:
+            home_team_analysis: Analyse équipe domicile
+            away_team_analysis: Analyse équipe extérieure
+        
+        Returns:
+            Dict avec comparaison et prédictions
+        """
+        self.logger.info(
+            f"Comparing {home_team_analysis['team']} vs {away_team_analysis['team']}"
+        )
+        
+        comparison = {
+            "home_team": home_team_analysis["team"],
+            "away_team": away_team_analysis["team"],
+            "predictions_by_interval": {}
+        }
+        
+        # Prédictions par intervalle
+        for interval in self.intervals_10min:
+            # Probabilité de but équipe domicile
+            home_prob = self.calculate_goal_probability(
+                home_team_analysis,
+                interval,
+                "home"
+            )
+            
+            # Probabilité de but équipe extérieure
+            away_prob = self.calculate_goal_probability(
+                away_team_analysis,
+                interval,
+                "away"
+            )
+            
+            # Probabilité combinée qu'au moins un but soit marqué
+            combined_prob = 1 - (1 - home_prob) * (1 - away_prob)
+            
+            comparison["predictions_by_interval"][interval] = {
+                "home_goal_prob": round(home_prob, 3),
+                "away_goal_prob": round(away_prob, 3),
+                "any_goal_prob": round(combined_prob, 3),
+                "expected_goals": round(home_prob + away_prob, 2)
+            }
+        
+        # Identifier les meilleurs moments pour parier
+        best_intervals = sorted(
+            comparison["predictions_by_interval"].items(),
+            key=lambda x: x[1]["any_goal_prob"],
+            reverse=True
+        )[:3]
+        
+        comparison["best_betting_windows"] = [
+            {
+                "interval": interval,
+                "probability": data["any_goal_prob"],
+                "expected_goals": data["expected_goals"]
+            }
+            for interval, data in best_intervals
+        ]
+        
+        return comparison
+    
+    def save_team_profile(
+        self,
+        analysis: Dict,
+        output_dir: Optional[Path] = None
+    ) -> Path:
+        """
+        Sauvegarde le profil d'équipe en JSON
+        
+        Args:
+            analysis: Analyse complète
+            output_dir: Répertoire de sortie (None = utiliser config)
+        
+        Returns:
+            Path du fichier sauvegardé
+        """
+        if output_dir is None:
+            output_dir = Path(self.config.get_data_directory("team_profiles"))
+        else:
+            output_dir = Path(output_dir)
+        
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        team_name = analysis["team"].replace(" ", "_").lower()
+        filename = f"{team_name}_profile.json"
+        filepath = output_dir / filename
+        
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(analysis, f, indent=2, ensure_ascii=False)
+        
+        self.logger.success(f"Profile saved: {filepath}")
+        
+        return filepath
+    
+    def load_team_profile(
+        self,
+        team_name: str,
+        profile_dir: Optional[Path] = None
+    ) -> Optional[Dict]:
+        """
+        Charge un profil d'équipe depuis JSON
+        
+        Args:
+            team_name: Nom de l'équipe
+            profile_dir: Répertoire des profils (None = utiliser config)
+        
+        Returns:
+            Dict avec profil ou None
+        """
+        if profile_dir is None:
+            profile_dir = Path(self.config.get_data_directory("team_profiles"))
+        else:
+            profile_dir = Path(profile_dir)
+        
+        team_name_clean = team_name.replace(" ", "_").lower()
+        filename = f"{team_name_clean}_profile.json"
+        filepath = profile_dir / filename
+        
+        if not filepath.exists():
+            self.logger.warning(f"Profile not found: {filepath}")
+            return None
+        
+        with open(filepath, 'r', encoding='utf-8') as f:
+            profile = json.load(f)
+        
+        self.logger.info(f"Profile loaded: {team_name}")
+        
+        return profile
+
+
+# Test de l'analyseur
+if __name__ == "__main__":
+    from utils.logger import setup_logger
+    
+    # Setup logger
+    log = setup_logger(level="DEBUG")
+    
+    print("=" * 60)
+    print("TEST PATTERN ANALYZER")
+    print("=" * 60)
+    print()
+    
+    # Créer l'analyseur
+    analyzer = PatternAnalyzer()
+    
+    # Données de test
+    test_team_stats = {
+        "team": "Manchester United",
+        "league": "england",
+        "home": {
+            "goals_scored_10min": {
+                "0-10": 3.2, "10-20": 4.5, "20-30": 3.8, "30-40": 4.2, "40-45": 2.1,
+                "45-55": 3.5, "55-65": 4.8, "65-75": 5.2, "75-85": 4.5, "85-90": 2.8
+            },
+            "goals_conceded_10min": {
+                "0-10": 2.1, "10-20": 2.8, "20-30": 2.5, "30-40": 2.2, "40-45": 1.5,
+                "45-55": 2.3, "55-65": 3.1, "65-75": 3.5, "75-85": 3.2, "85-90": 2.0
+            }
+        },
+        "away": {
+            "goals_scored_10min": {
+                "0-10": 2.5, "10-20": 3.2, "20-30": 3.0, "30-40": 3.5, "40-45": 1.8,
+                "45-55": 2.8, "55-65": 3.5, "65-75": 4.0, "75-85": 3.8, "85-90": 2.2
+            },
+            "goals_conceded_10min": {
+                "0-10": 2.8, "10-20": 3.5, "20-30": 3.2, "30-40": 2.9, "40-45": 1.8,
+                "45-55": 3.0, "55-65": 3.8, "65-75": 4.2, "75-85": 4.0, "85-90": 2.5
+            }
+        }
+    }
+    
+    # Test 1: Analyse du profil
+    print("📊 Test 1: Analyzing team profile...")
+    analysis = analyzer.analyze_team_profile(test_team_stats)
+    
+    print(f"✅ Team: {analysis['team']}")
+    print(f"   Play style: {analysis['play_style']['summary']}")
+    print(f"   Danger zones: {len(analysis['danger_zones'])}")
+    
+    if analysis['danger_zones']:
+        print("\n   Top 3 danger zones:")
+        for zone in analysis['danger_zones'][:3]:
+            print(f"   - {zone['interval']}: {zone['goal_rate']:.2f} goals ({zone['intensity']})")
+    
+    # Test 2: Calcul de probabilité
+    print("\n📊 Test 2: Calculating goal probability...")
+    interval = "65-75"
+    prob = analyzer.calculate_goal_probability(analysis, interval, "home")
+    print(f"✅ Probability for {interval} (home): {prob:.1%}")
+    
+    # Test 3: Sauvegarde du profil
+    print("\n📊 Test 3: Saving profile...")
+    output_path = analyzer.save_team_profile(analysis)
+    print(f"✅ Profile saved to: {output_path}")
+    
+    # Test 4: Chargement du profil
+    print("\n📊 Test 4: Loading profile...")
+    loaded_profile = analyzer.load_team_profile("Manchester United")
+    if loaded_profile:
+        print(f"✅ Profile loaded: {loaded_profile['team']}")
+    
+    print("\n" + "=" * 60)
+    print("✅ Tests completed!")

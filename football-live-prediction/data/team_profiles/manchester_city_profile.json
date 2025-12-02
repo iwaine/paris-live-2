@@ -1,0 +1,159 @@
+{
+  "team": "Manchester City",
+  "league": "England - Premier League",
+  "overall": {
+    "gp": "13",
+    "goals_by_interval": {
+      "0-15": {
+        "scored": 4,
+        "conceded": 0
+      },
+      "16-30": {
+        "scored": 4,
+        "conceded": 2
+      },
+      "31-45": {
+        "scored": 5,
+        "conceded": 3
+      },
+      "46-60": {
+        "scored": 3,
+        "conceded": 1
+      },
+      "61-75": {
+        "scored": 7,
+        "conceded": 4
+      },
+      "76-90": {
+        "scored": 4,
+        "conceded": 2
+      }
+    },
+    "first_half": {
+      "scored": 0,
+      "conceded": 0
+    },
+    "second_half": {
+      "scored": 0,
+      "conceded": 0
+    }
+  },
+  "home": {
+    "gp": "7",
+    "goals_by_interval": {
+      "0-15": {
+        "scored": 2,
+        "conceded": 0
+      },
+      "16-30": {
+        "scored": 4,
+        "conceded": 1
+      },
+      "31-45": {
+        "scored": 2,
+        "conceded": 3
+      },
+      "46-60": {
+        "scored": 3,
+        "conceded": 1
+      },
+      "61-75": {
+        "scored": 5,
+        "conceded": 1
+      },
+      "76-90": {
+        "scored": 3,
+        "conceded": 0
+      }
+    },
+    "first_half": {
+      "scored": 0,
+      "conceded": 0
+    },
+    "second_half": {
+      "scored": 0,
+      "conceded": 0
+    },
+    "recent_form_by_interval": {
+      "0-15": {
+        "scored": 2,
+        "conceded": 0,
+        "scored_avg": 0.5,
+        "conceded_avg": 0.0,
+        "matches": 4
+      },
+      "16-30": {
+        "scored": 0,
+        "conceded": 1,
+        "scored_avg": 0.0,
+        "conceded_avg": 0.25,
+        "matches": 4
+      },
+      "31-45": {
+        "scored": 0,
+        "conceded": 0,
+        "scored_avg": 0.0,
+        "conceded_avg": 0.0,
+        "matches": 4
+      },
+      "46-60": {
+        "scored": 0,
+        "conceded": 0,
+        "scored_avg": 0.0,
+        "conceded_avg": 0.0,
+        "matches": 4
+      },
+      "61-75": {
+        "scored": 1,
+        "conceded": 2,
+        "scored_avg": 0.25,
+        "conceded_avg": 0.5,
+        "matches": 4
+      },
+      "76-90": {
+        "scored": 0,
+        "conceded": 1,
+        "scored_avg": 0.0,
+        "conceded_avg": 0.25,
+        "matches": 4
+      }
+    }
+  },
+  "away": {
+    "gp": "6",
+    "goals_by_interval": {
+      "0-15": {
+        "scored": 2,
+        "conceded": 0
+      },
+      "16-30": {
+        "scored": 0,
+        "conceded": 1
+      },
+      "31-45": {
+        "scored": 3,
+        "conceded": 0
+      },
+      "46-60": {
+        "scored": 0,
+        "conceded": 0
+      },
+      "61-75": {
+        "scored": 2,
+        "conceded": 3
+      },
+      "76-90": {
+        "scored": 1,
+        "conceded": 2
+      }
+    },
+    "first_half": {
+      "scored": 0,
+      "conceded": 0
+    },
+    "second_half": {
+      "scored": 0,
+      "conceded": 0
+    }
+  }
+}

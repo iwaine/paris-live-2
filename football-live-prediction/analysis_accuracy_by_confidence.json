@@ -1,0 +1,52 @@
+[
+  {
+    "confidence_range": "50-60%",
+    "accuracy": 0.5570570570570571,
+    "count": 1332
+  },
+  {
+    "confidence_range": "0-10%",
+    "accuracy": 0.6428571428571429,
+    "count": 756
+  },
+  {
+    "confidence_range": "70-80%",
+    "accuracy": 0.5772357723577236,
+    "count": 492
+  },
+  {
+    "confidence_range": "40-50%",
+    "accuracy": 0.5681818181818182,
+    "count": 792
+  },
+  {
+    "confidence_range": "20-30%",
+    "accuracy": 0.7142857142857143,
+    "count": 252
+  },
+  {
+    "confidence_range": "10-20%",
+    "accuracy": 0.7013888888888888,
+    "count": 864
+  },
+  {
+    "confidence_range": "80-90%",
+    "accuracy": 0.5476190476190477,
+    "count": 504
+  },
+  {
+    "confidence_range": "30-40%",
+    "accuracy": 0.5933333333333334,
+    "count": 300
+  },
+  {
+    "confidence_range": "60-70%",
+    "accuracy": 0.5370370370370371,
+    "count": 648
+  },
+  {
+    "confidence_range": "90-100%",
+    "accuracy": 0.5666666666666667,
+    "count": 60
+  }
+]

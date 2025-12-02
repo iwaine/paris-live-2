@@ -1,0 +1,57 @@
+================================================================================
+                   PARIS LIVE v2 - PRODUCTION REPORT
+================================================================================
+
+Deployment Date: $(date)
+Environment: Production
+Status: READY
+
+PHASES IMPLEMENTED:
+-------------------
+✅ Phase 1: Historical Data & Feature Engineering (23 features)
+✅ Phase 2: ML Model Training (LightGBM, AUC 0.7543)
+✅ Phase 3: Live Prediction Pipeline with TTL Manager
+✅ Phase 4: Backtesting & Strategy Analysis
+
+STRATEGY CONFIGURATION:
+-----------------------
+Betting Target: "Au moins 1 but" (≥1 goal)
+Intervals: [30-45] and [75-90] ONLY
+Confidence Threshold: 50%
+Danger Score Threshold: 50%
+Signal TTL: 300 seconds (exponential decay)
+Update Interval: 45 seconds
+
+EXPECTED PERFORMANCE:
+---------------------
+Strategy: Conservative
+Historical Win Rate: 35.1%
+Backtesting Coverage: 6000 decisions
+Bets Triggered: ~23%
+Recommended over: Moderate (32%)
+
+DATABASE:
+---------
+Type: SQLite
+Path: /workspaces/paris-live/football-live-prediction/data/production.db
+Tables: matches, predictions, notifications, stats
+
+MODELS:
+-------
+Danger Model: LightGBM Classifier
+Feature Scaler: StandardScaler (23 features)
+Update Frequency: Real-time (as matches update)
+
+TELEGRAM:
+---------
+Bot: @Direct_goal_bot
+Notifications: Instant alerts on predictions
+Event Detection: Goals, cards, penalties, injuries
+
+MONITORING:
+-----------
+Log Directory: /workspaces/paris-live/football-live-prediction/logs/
+Real-time Tracking: Live match statistics
+Event Detection: Automated event discovery
+
+================================================================================

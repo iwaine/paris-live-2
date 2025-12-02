@@ -1,0 +1,1001 @@
+match_id,match_date,league,home_team,away_team,home_goals,away_goals,interval_start,interval_end,label,goals_count,goal_minutes
+DEMO_00000,2024-11-28,Ligue 1,PSG,Marseille,0,3,30,45,0,0,
+DEMO_00000,2024-11-28,Ligue 1,PSG,Marseille,0,3,75,90,0,0,
+DEMO_00001,2024-11-29,Bundesliga,RB Leipzig,Stuttgart,3,0,30,45,1,1,38
+DEMO_00001,2024-11-29,Bundesliga,RB Leipzig,Stuttgart,3,0,75,90,0,0,
+DEMO_00002,2024-11-30,La Liga,Real Madrid,Barcelona,0,2,30,45,1,1,39
+DEMO_00002,2024-11-30,La Liga,Real Madrid,Barcelona,0,2,75,90,0,0,
+DEMO_00003,2024-12-01,Ligue 1,PSG,Marseille,1,0,30,45,0,0,
+DEMO_00003,2024-12-01,Ligue 1,PSG,Marseille,1,0,75,90,0,0,
+DEMO_00004,2024-12-02,Serie A,Juventus,AC Milan,1,2,30,45,0,0,
+DEMO_00004,2024-12-02,Serie A,Juventus,AC Milan,1,2,75,90,1,1,82
+DEMO_00005,2024-12-03,Serie A,Juventus,AC Milan,1,1,30,45,1,1,43
+DEMO_00005,2024-12-03,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00006,2024-12-04,Premier League,Manchester United,Liverpool,1,2,30,45,1,2,"44,38"
+DEMO_00006,2024-12-04,Premier League,Manchester United,Liverpool,1,2,75,90,1,1,83
+DEMO_00007,2024-12-05,La Liga,Atletico Madrid,Sevilla,4,2,30,45,0,0,
+DEMO_00007,2024-12-05,La Liga,Atletico Madrid,Sevilla,4,2,75,90,0,0,
+DEMO_00008,2024-12-06,La Liga,Real Madrid,Barcelona,1,2,30,45,1,1,42
+DEMO_00008,2024-12-06,La Liga,Real Madrid,Barcelona,1,2,75,90,1,1,78
+DEMO_00009,2024-12-07,Ligue 1,Paris,Lyon,0,1,30,45,0,0,
+DEMO_00009,2024-12-07,Ligue 1,Paris,Lyon,0,1,75,90,0,0,
+DEMO_00010,2024-12-08,Bundesliga,RB Leipzig,Stuttgart,1,1,30,45,1,1,45
+DEMO_00010,2024-12-08,Bundesliga,RB Leipzig,Stuttgart,1,1,75,90,0,0,
+DEMO_00011,2024-12-09,Bundesliga,Bayern Munich,Borussia Dortmund,1,1,30,45,0,0,
+DEMO_00011,2024-12-09,Bundesliga,Bayern Munich,Borussia Dortmund,1,1,75,90,0,0,
+DEMO_00012,2024-12-10,Ligue 1,PSG,Marseille,1,0,30,45,0,0,
+DEMO_00012,2024-12-10,Ligue 1,PSG,Marseille,1,0,75,90,0,0,
+DEMO_00013,2024-12-11,Bundesliga,RB Leipzig,Stuttgart,1,2,30,45,1,1,43
+DEMO_00013,2024-12-11,Bundesliga,RB Leipzig,Stuttgart,1,2,75,90,1,1,75
+DEMO_00014,2024-12-12,La Liga,Real Madrid,Barcelona,3,0,30,45,0,0,
+DEMO_00014,2024-12-12,La Liga,Real Madrid,Barcelona,3,0,75,90,0,0,
+DEMO_00015,2024-12-13,Ligue 1,Paris,Lyon,1,1,30,45,0,0,
+DEMO_00015,2024-12-13,Ligue 1,Paris,Lyon,1,1,75,90,0,0,
+DEMO_00016,2024-12-14,Premier League,Arsenal,Chelsea,2,0,30,45,0,0,
+DEMO_00016,2024-12-14,Premier League,Arsenal,Chelsea,2,0,75,90,0,0,
+DEMO_00017,2024-12-15,Premier League,Arsenal,Chelsea,0,3,30,45,1,1,39
+DEMO_00017,2024-12-15,Premier League,Arsenal,Chelsea,0,3,75,90,0,0,
+DEMO_00018,2024-12-16,Premier League,Manchester United,Liverpool,1,3,30,45,1,3,"41,42,42"
+DEMO_00018,2024-12-16,Premier League,Manchester United,Liverpool,1,3,75,90,0,0,
+DEMO_00019,2024-12-17,Serie A,Juventus,AC Milan,2,2,30,45,1,1,41
+DEMO_00019,2024-12-17,Serie A,Juventus,AC Milan,2,2,75,90,0,0,
+DEMO_00020,2024-12-18,La Liga,Atletico Madrid,Sevilla,0,2,30,45,0,0,
+DEMO_00020,2024-12-18,La Liga,Atletico Madrid,Sevilla,0,2,75,90,1,1,76
+DEMO_00021,2024-12-19,Bundesliga,RB Leipzig,Stuttgart,0,1,30,45,1,1,30
+DEMO_00021,2024-12-19,Bundesliga,RB Leipzig,Stuttgart,0,1,75,90,0,0,
+DEMO_00022,2024-12-20,Premier League,Manchester United,Liverpool,0,0,30,45,0,0,
+DEMO_00022,2024-12-20,Premier League,Manchester United,Liverpool,0,0,75,90,0,0,
+DEMO_00023,2024-12-21,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,30,45,0,0,
+DEMO_00023,2024-12-21,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,75,90,0,0,
+DEMO_00024,2024-12-22,Serie A,Inter Milan,Roma,1,1,30,45,1,1,32
+DEMO_00024,2024-12-22,Serie A,Inter Milan,Roma,1,1,75,90,1,1,81
+DEMO_00025,2024-12-23,Serie A,Juventus,AC Milan,1,1,30,45,1,1,45
+DEMO_00025,2024-12-23,Serie A,Juventus,AC Milan,1,1,75,90,1,1,84
+DEMO_00026,2024-12-24,La Liga,Atletico Madrid,Sevilla,0,1,30,45,0,0,
+DEMO_00026,2024-12-24,La Liga,Atletico Madrid,Sevilla,0,1,75,90,1,1,83
+DEMO_00027,2024-12-25,Ligue 1,PSG,Marseille,2,0,30,45,0,0,
+DEMO_00027,2024-12-25,Ligue 1,PSG,Marseille,2,0,75,90,0,0,
+DEMO_00028,2024-12-26,Premier League,Arsenal,Chelsea,0,1,30,45,0,0,
+DEMO_00028,2024-12-26,Premier League,Arsenal,Chelsea,0,1,75,90,0,0,
+DEMO_00029,2024-12-27,Ligue 1,PSG,Marseille,0,1,30,45,0,0,
+DEMO_00029,2024-12-27,Ligue 1,PSG,Marseille,0,1,75,90,1,1,85
+DEMO_00030,2024-12-28,Bundesliga,Bayern Munich,Borussia Dortmund,1,0,30,45,0,0,
+DEMO_00030,2024-12-28,Bundesliga,Bayern Munich,Borussia Dortmund,1,0,75,90,0,0,
+DEMO_00031,2024-12-29,Serie A,Inter Milan,Roma,1,0,30,45,0,0,
+DEMO_00031,2024-12-29,Serie A,Inter Milan,Roma,1,0,75,90,0,0,
+DEMO_00032,2024-12-30,Serie A,Inter Milan,Roma,2,0,30,45,0,0,
+DEMO_00032,2024-12-30,Serie A,Inter Milan,Roma,2,0,75,90,0,0,
+DEMO_00033,2024-12-31,Bundesliga,Bayern Munich,Borussia Dortmund,0,2,30,45,1,1,35
+DEMO_00033,2024-12-31,Bundesliga,Bayern Munich,Borussia Dortmund,0,2,75,90,0,0,
+DEMO_00034,2025-01-01,Ligue 1,PSG,Marseille,1,0,30,45,0,0,
+DEMO_00034,2025-01-01,Ligue 1,PSG,Marseille,1,0,75,90,0,0,
+DEMO_00035,2025-01-02,Serie A,Juventus,AC Milan,0,1,30,45,0,0,
+DEMO_00035,2025-01-02,Serie A,Juventus,AC Milan,0,1,75,90,0,0,
+DEMO_00036,2025-01-03,Bundesliga,Bayern Munich,Borussia Dortmund,2,2,30,45,1,1,30
+DEMO_00036,2025-01-03,Bundesliga,Bayern Munich,Borussia Dortmund,2,2,75,90,0,0,
+DEMO_00037,2025-01-04,Premier League,Arsenal,Chelsea,0,0,30,45,0,0,
+DEMO_00037,2025-01-04,Premier League,Arsenal,Chelsea,0,0,75,90,0,0,
+DEMO_00038,2025-01-05,Premier League,Manchester United,Liverpool,0,4,30,45,0,0,
+DEMO_00038,2025-01-05,Premier League,Manchester United,Liverpool,0,4,75,90,0,0,
+DEMO_00039,2025-01-06,La Liga,Atletico Madrid,Sevilla,1,1,30,45,1,1,44
+DEMO_00039,2025-01-06,La Liga,Atletico Madrid,Sevilla,1,1,75,90,0,0,
+DEMO_00040,2025-01-07,Serie A,Juventus,AC Milan,0,0,30,45,0,0,
+DEMO_00040,2025-01-07,Serie A,Juventus,AC Milan,0,0,75,90,0,0,
+DEMO_00041,2025-01-08,Premier League,Manchester United,Liverpool,1,1,30,45,0,0,
+DEMO_00041,2025-01-08,Premier League,Manchester United,Liverpool,1,1,75,90,1,1,77
+DEMO_00042,2025-01-09,Serie A,Juventus,AC Milan,0,1,30,45,0,0,
+DEMO_00042,2025-01-09,Serie A,Juventus,AC Milan,0,1,75,90,0,0,
+DEMO_00043,2025-01-10,Premier League,Arsenal,Chelsea,0,1,30,45,1,1,30
+DEMO_00043,2025-01-10,Premier League,Arsenal,Chelsea,0,1,75,90,0,0,
+DEMO_00044,2025-01-11,Serie A,Juventus,AC Milan,1,1,30,45,0,0,
+DEMO_00044,2025-01-11,Serie A,Juventus,AC Milan,1,1,75,90,1,2,"78,78"
+DEMO_00045,2025-01-12,La Liga,Real Madrid,Barcelona,3,0,30,45,0,0,
+DEMO_00045,2025-01-12,La Liga,Real Madrid,Barcelona,3,0,75,90,1,2,"82,82"
+DEMO_00046,2025-01-13,Ligue 1,Paris,Lyon,0,1,30,45,0,0,
+DEMO_00046,2025-01-13,Ligue 1,Paris,Lyon,0,1,75,90,1,1,80
+DEMO_00047,2025-01-14,La Liga,Atletico Madrid,Sevilla,0,0,30,45,0,0,
+DEMO_00047,2025-01-14,La Liga,Atletico Madrid,Sevilla,0,0,75,90,0,0,
+DEMO_00048,2025-01-15,La Liga,Real Madrid,Barcelona,0,2,30,45,0,0,
+DEMO_00048,2025-01-15,La Liga,Real Madrid,Barcelona,0,2,75,90,0,0,
+DEMO_00049,2025-01-16,Bundesliga,RB Leipzig,Stuttgart,0,0,30,45,0,0,
+DEMO_00049,2025-01-16,Bundesliga,RB Leipzig,Stuttgart,0,0,75,90,0,0,
+DEMO_00050,2025-01-17,La Liga,Real Madrid,Barcelona,0,1,30,45,0,0,
+DEMO_00050,2025-01-17,La Liga,Real Madrid,Barcelona,0,1,75,90,0,0,
+DEMO_00051,2025-01-18,Serie A,Juventus,AC Milan,0,2,30,45,0,0,
+DEMO_00051,2025-01-18,Serie A,Juventus,AC Milan,0,2,75,90,0,0,
+DEMO_00052,2025-01-19,La Liga,Atletico Madrid,Sevilla,1,1,30,45,0,0,
+DEMO_00052,2025-01-19,La Liga,Atletico Madrid,Sevilla,1,1,75,90,0,0,
+DEMO_00053,2025-01-20,Ligue 1,PSG,Marseille,4,2,30,45,1,1,32
+DEMO_00053,2025-01-20,Ligue 1,PSG,Marseille,4,2,75,90,1,1,84
+DEMO_00054,2025-01-21,La Liga,Real Madrid,Barcelona,1,1,30,45,0,0,
+DEMO_00054,2025-01-21,La Liga,Real Madrid,Barcelona,1,1,75,90,1,1,78
+DEMO_00055,2025-01-22,La Liga,Real Madrid,Barcelona,0,1,30,45,1,1,39
+DEMO_00055,2025-01-22,La Liga,Real Madrid,Barcelona,0,1,75,90,0,0,
+DEMO_00056,2025-01-23,Bundesliga,RB Leipzig,Stuttgart,4,1,30,45,1,1,45
+DEMO_00056,2025-01-23,Bundesliga,RB Leipzig,Stuttgart,4,1,75,90,0,0,
+DEMO_00057,2025-01-24,La Liga,Real Madrid,Barcelona,3,0,30,45,0,0,
+DEMO_00057,2025-01-24,La Liga,Real Madrid,Barcelona,3,0,75,90,1,1,81
+DEMO_00058,2025-01-25,Serie A,Inter Milan,Roma,3,1,30,45,0,0,
+DEMO_00058,2025-01-25,Serie A,Inter Milan,Roma,3,1,75,90,1,1,85
+DEMO_00059,2025-01-26,La Liga,Real Madrid,Barcelona,0,0,30,45,0,0,
+DEMO_00059,2025-01-26,La Liga,Real Madrid,Barcelona,0,0,75,90,0,0,
+DEMO_00060,2025-01-27,Serie A,Inter Milan,Roma,1,1,30,45,0,0,
+DEMO_00060,2025-01-27,Serie A,Inter Milan,Roma,1,1,75,90,0,0,
+DEMO_00061,2025-01-28,Premier League,Arsenal,Chelsea,0,1,30,45,0,0,
+DEMO_00061,2025-01-28,Premier League,Arsenal,Chelsea,0,1,75,90,1,1,81
+DEMO_00062,2025-01-29,Premier League,Manchester United,Liverpool,1,0,30,45,1,1,34
+DEMO_00062,2025-01-29,Premier League,Manchester United,Liverpool,1,0,75,90,0,0,
+DEMO_00063,2025-01-30,La Liga,Real Madrid,Barcelona,3,0,30,45,0,0,
+DEMO_00063,2025-01-30,La Liga,Real Madrid,Barcelona,3,0,75,90,1,1,83
+DEMO_00064,2025-01-31,Bundesliga,RB Leipzig,Stuttgart,0,1,30,45,1,1,32
+DEMO_00064,2025-01-31,Bundesliga,RB Leipzig,Stuttgart,0,1,75,90,0,0,
+DEMO_00065,2025-02-01,Bundesliga,RB Leipzig,Stuttgart,1,0,30,45,0,0,
+DEMO_00065,2025-02-01,Bundesliga,RB Leipzig,Stuttgart,1,0,75,90,0,0,
+DEMO_00066,2025-02-02,Ligue 1,PSG,Marseille,3,3,30,45,1,1,30
+DEMO_00066,2025-02-02,Ligue 1,PSG,Marseille,3,3,75,90,0,0,
+DEMO_00067,2025-02-03,Ligue 1,PSG,Marseille,2,0,30,45,1,1,30
+DEMO_00067,2025-02-03,Ligue 1,PSG,Marseille,2,0,75,90,0,0,
+DEMO_00068,2025-02-04,La Liga,Atletico Madrid,Sevilla,1,1,30,45,0,0,
+DEMO_00068,2025-02-04,La Liga,Atletico Madrid,Sevilla,1,1,75,90,1,1,80
+DEMO_00069,2025-02-05,Premier League,Manchester United,Liverpool,0,0,30,45,0,0,
+DEMO_00069,2025-02-05,Premier League,Manchester United,Liverpool,0,0,75,90,0,0,
+DEMO_00070,2025-02-06,Ligue 1,PSG,Marseille,2,0,30,45,1,1,34
+DEMO_00070,2025-02-06,Ligue 1,PSG,Marseille,2,0,75,90,0,0,
+DEMO_00071,2025-02-07,Serie A,Inter Milan,Roma,1,2,30,45,1,1,44
+DEMO_00071,2025-02-07,Serie A,Inter Milan,Roma,1,2,75,90,1,1,78
+DEMO_00072,2025-02-08,Serie A,Inter Milan,Roma,0,2,30,45,1,1,38
+DEMO_00072,2025-02-08,Serie A,Inter Milan,Roma,0,2,75,90,0,0,
+DEMO_00073,2025-02-09,Ligue 1,PSG,Marseille,3,1,30,45,0,0,
+DEMO_00073,2025-02-09,Ligue 1,PSG,Marseille,3,1,75,90,0,0,
+DEMO_00074,2025-02-10,Ligue 1,PSG,Marseille,4,4,30,45,1,1,33
+DEMO_00074,2025-02-10,Ligue 1,PSG,Marseille,4,4,75,90,1,3,"75,79,81"
+DEMO_00075,2025-02-11,Ligue 1,Paris,Lyon,1,0,30,45,0,0,
+DEMO_00075,2025-02-11,Ligue 1,Paris,Lyon,1,0,75,90,0,0,
+DEMO_00076,2025-02-12,Bundesliga,Bayern Munich,Borussia Dortmund,2,0,30,45,1,1,36
+DEMO_00076,2025-02-12,Bundesliga,Bayern Munich,Borussia Dortmund,2,0,75,90,0,0,
+DEMO_00077,2025-02-13,Bundesliga,Bayern Munich,Borussia Dortmund,0,1,30,45,0,0,
+DEMO_00077,2025-02-13,Bundesliga,Bayern Munich,Borussia Dortmund,0,1,75,90,0,0,
+DEMO_00078,2025-02-14,Premier League,Arsenal,Chelsea,2,0,30,45,1,1,45
+DEMO_00078,2025-02-14,Premier League,Arsenal,Chelsea,2,0,75,90,1,1,84
+DEMO_00079,2025-02-15,Premier League,Arsenal,Chelsea,1,1,30,45,1,1,35
+DEMO_00079,2025-02-15,Premier League,Arsenal,Chelsea,1,1,75,90,0,0,
+DEMO_00080,2025-02-16,Bundesliga,Bayern Munich,Borussia Dortmund,1,1,30,45,0,0,
+DEMO_00080,2025-02-16,Bundesliga,Bayern Munich,Borussia Dortmund,1,1,75,90,0,0,
+DEMO_00081,2025-02-17,Ligue 1,Paris,Lyon,0,2,30,45,0,0,
+DEMO_00081,2025-02-17,Ligue 1,Paris,Lyon,0,2,75,90,0,0,
+DEMO_00082,2025-02-18,La Liga,Atletico Madrid,Sevilla,2,1,30,45,0,0,
+DEMO_00082,2025-02-18,La Liga,Atletico Madrid,Sevilla,2,1,75,90,0,0,
+DEMO_00083,2025-02-19,La Liga,Atletico Madrid,Sevilla,1,1,30,45,1,1,44
+DEMO_00083,2025-02-19,La Liga,Atletico Madrid,Sevilla,1,1,75,90,0,0,
+DEMO_00084,2025-02-20,La Liga,Real Madrid,Barcelona,2,2,30,45,1,1,36
+DEMO_00084,2025-02-20,La Liga,Real Madrid,Barcelona,2,2,75,90,1,1,81
+DEMO_00085,2025-02-21,Bundesliga,Bayern Munich,Borussia Dortmund,2,0,30,45,0,0,
+DEMO_00085,2025-02-21,Bundesliga,Bayern Munich,Borussia Dortmund,2,0,75,90,0,0,
+DEMO_00086,2025-02-22,Ligue 1,PSG,Marseille,3,0,30,45,0,0,
+DEMO_00086,2025-02-22,Ligue 1,PSG,Marseille,3,0,75,90,1,1,85
+DEMO_00087,2025-02-23,Serie A,Inter Milan,Roma,0,1,30,45,1,1,30
+DEMO_00087,2025-02-23,Serie A,Inter Milan,Roma,0,1,75,90,0,0,
+DEMO_00088,2025-02-24,Serie A,Juventus,AC Milan,1,1,30,45,0,0,
+DEMO_00088,2025-02-24,Serie A,Juventus,AC Milan,1,1,75,90,1,1,85
+DEMO_00089,2025-02-25,La Liga,Atletico Madrid,Sevilla,2,1,30,45,0,0,
+DEMO_00089,2025-02-25,La Liga,Atletico Madrid,Sevilla,2,1,75,90,0,0,
+DEMO_00090,2025-02-26,La Liga,Atletico Madrid,Sevilla,3,1,30,45,1,1,39
+DEMO_00090,2025-02-26,La Liga,Atletico Madrid,Sevilla,3,1,75,90,1,1,80
+DEMO_00091,2025-02-27,La Liga,Real Madrid,Barcelona,2,4,30,45,1,1,31
+DEMO_00091,2025-02-27,La Liga,Real Madrid,Barcelona,2,4,75,90,1,1,81
+DEMO_00092,2025-02-28,Ligue 1,PSG,Marseille,2,0,30,45,0,0,
+DEMO_00092,2025-02-28,Ligue 1,PSG,Marseille,2,0,75,90,0,0,
+DEMO_00093,2025-03-01,La Liga,Real Madrid,Barcelona,1,0,30,45,0,0,
+DEMO_00093,2025-03-01,La Liga,Real Madrid,Barcelona,1,0,75,90,0,0,
+DEMO_00094,2025-03-02,La Liga,Real Madrid,Barcelona,1,1,30,45,0,0,
+DEMO_00094,2025-03-02,La Liga,Real Madrid,Barcelona,1,1,75,90,0,0,
+DEMO_00095,2025-03-03,Premier League,Manchester United,Liverpool,1,0,30,45,0,0,
+DEMO_00095,2025-03-03,Premier League,Manchester United,Liverpool,1,0,75,90,0,0,
+DEMO_00096,2025-03-04,La Liga,Real Madrid,Barcelona,0,1,30,45,0,0,
+DEMO_00096,2025-03-04,La Liga,Real Madrid,Barcelona,0,1,75,90,1,1,75
+DEMO_00097,2025-03-05,Serie A,Inter Milan,Roma,1,1,30,45,1,1,31
+DEMO_00097,2025-03-05,Serie A,Inter Milan,Roma,1,1,75,90,0,0,
+DEMO_00098,2025-03-06,Bundesliga,RB Leipzig,Stuttgart,3,1,30,45,1,1,38
+DEMO_00098,2025-03-06,Bundesliga,RB Leipzig,Stuttgart,3,1,75,90,0,0,
+DEMO_00099,2025-03-07,Premier League,Arsenal,Chelsea,0,1,30,45,0,0,
+DEMO_00099,2025-03-07,Premier League,Arsenal,Chelsea,0,1,75,90,0,0,
+DEMO_00100,2025-03-08,Ligue 1,Paris,Lyon,4,1,30,45,0,0,
+DEMO_00100,2025-03-08,Ligue 1,Paris,Lyon,4,1,75,90,1,1,77
+DEMO_00101,2025-03-09,Ligue 1,PSG,Marseille,0,3,30,45,1,1,41
+DEMO_00101,2025-03-09,Ligue 1,PSG,Marseille,0,3,75,90,0,0,
+DEMO_00102,2025-03-10,La Liga,Atletico Madrid,Sevilla,0,2,30,45,0,0,
+DEMO_00102,2025-03-10,La Liga,Atletico Madrid,Sevilla,0,2,75,90,0,0,
+DEMO_00103,2025-03-11,Ligue 1,PSG,Marseille,0,1,30,45,0,0,
+DEMO_00103,2025-03-11,Ligue 1,PSG,Marseille,0,1,75,90,1,1,85
+DEMO_00104,2025-03-12,Bundesliga,Bayern Munich,Borussia Dortmund,1,4,30,45,0,0,
+DEMO_00104,2025-03-12,Bundesliga,Bayern Munich,Borussia Dortmund,1,4,75,90,1,1,78
+DEMO_00105,2025-03-13,Ligue 1,PSG,Marseille,1,2,30,45,0,0,
+DEMO_00105,2025-03-13,Ligue 1,PSG,Marseille,1,2,75,90,1,1,75
+DEMO_00106,2025-03-14,Serie A,Juventus,AC Milan,2,0,30,45,0,0,
+DEMO_00106,2025-03-14,Serie A,Juventus,AC Milan,2,0,75,90,0,0,
+DEMO_00107,2025-03-15,Premier League,Arsenal,Chelsea,0,1,30,45,0,0,
+DEMO_00107,2025-03-15,Premier League,Arsenal,Chelsea,0,1,75,90,0,0,
+DEMO_00108,2025-03-16,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,30,45,0,0,
+DEMO_00108,2025-03-16,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,75,90,0,0,
+DEMO_00109,2025-03-17,Premier League,Manchester United,Liverpool,2,0,30,45,0,0,
+DEMO_00109,2025-03-17,Premier League,Manchester United,Liverpool,2,0,75,90,1,1,81
+DEMO_00110,2025-03-18,La Liga,Real Madrid,Barcelona,1,2,30,45,1,1,37
+DEMO_00110,2025-03-18,La Liga,Real Madrid,Barcelona,1,2,75,90,0,0,
+DEMO_00111,2025-03-19,Bundesliga,RB Leipzig,Stuttgart,1,1,30,45,1,1,32
+DEMO_00111,2025-03-19,Bundesliga,RB Leipzig,Stuttgart,1,1,75,90,0,0,
+DEMO_00112,2025-03-20,La Liga,Atletico Madrid,Sevilla,1,3,30,45,0,0,
+DEMO_00112,2025-03-20,La Liga,Atletico Madrid,Sevilla,1,3,75,90,1,1,82
+DEMO_00113,2025-03-21,La Liga,Atletico Madrid,Sevilla,1,1,30,45,0,0,
+DEMO_00113,2025-03-21,La Liga,Atletico Madrid,Sevilla,1,1,75,90,0,0,
+DEMO_00114,2025-03-22,La Liga,Real Madrid,Barcelona,1,1,30,45,1,1,37
+DEMO_00114,2025-03-22,La Liga,Real Madrid,Barcelona,1,1,75,90,0,0,
+DEMO_00115,2025-03-23,Bundesliga,Bayern Munich,Borussia Dortmund,0,1,30,45,0,0,
+DEMO_00115,2025-03-23,Bundesliga,Bayern Munich,Borussia Dortmund,0,1,75,90,1,1,84
+DEMO_00116,2025-03-24,Ligue 1,PSG,Marseille,1,1,30,45,0,0,
+DEMO_00116,2025-03-24,Ligue 1,PSG,Marseille,1,1,75,90,0,0,
+DEMO_00117,2025-03-25,La Liga,Real Madrid,Barcelona,0,1,30,45,0,0,
+DEMO_00117,2025-03-25,La Liga,Real Madrid,Barcelona,0,1,75,90,0,0,
+DEMO_00118,2025-03-26,Ligue 1,PSG,Marseille,0,1,30,45,0,0,
+DEMO_00118,2025-03-26,Ligue 1,PSG,Marseille,0,1,75,90,0,0,
+DEMO_00119,2025-03-27,La Liga,Atletico Madrid,Sevilla,1,1,30,45,1,1,30
+DEMO_00119,2025-03-27,La Liga,Atletico Madrid,Sevilla,1,1,75,90,0,0,
+DEMO_00120,2025-03-28,Premier League,Arsenal,Chelsea,0,0,30,45,0,0,
+DEMO_00120,2025-03-28,Premier League,Arsenal,Chelsea,0,0,75,90,0,0,
+DEMO_00121,2025-03-29,Ligue 1,PSG,Marseille,3,1,30,45,1,1,44
+DEMO_00121,2025-03-29,Ligue 1,PSG,Marseille,3,1,75,90,0,0,
+DEMO_00122,2025-03-30,Serie A,Inter Milan,Roma,2,2,30,45,1,1,30
+DEMO_00122,2025-03-30,Serie A,Inter Milan,Roma,2,2,75,90,0,0,
+DEMO_00123,2025-03-31,Serie A,Inter Milan,Roma,1,2,30,45,1,1,36
+DEMO_00123,2025-03-31,Serie A,Inter Milan,Roma,1,2,75,90,0,0,
+DEMO_00124,2025-04-01,Ligue 1,PSG,Marseille,1,1,30,45,1,1,37
+DEMO_00124,2025-04-01,Ligue 1,PSG,Marseille,1,1,75,90,0,0,
+DEMO_00125,2025-04-02,La Liga,Real Madrid,Barcelona,1,3,30,45,0,0,
+DEMO_00125,2025-04-02,La Liga,Real Madrid,Barcelona,1,3,75,90,1,1,78
+DEMO_00126,2025-04-03,La Liga,Atletico Madrid,Sevilla,3,0,30,45,1,2,"44,35"
+DEMO_00126,2025-04-03,La Liga,Atletico Madrid,Sevilla,3,0,75,90,0,0,
+DEMO_00127,2025-04-04,Serie A,Juventus,AC Milan,0,1,30,45,0,0,
+DEMO_00127,2025-04-04,Serie A,Juventus,AC Milan,0,1,75,90,0,0,
+DEMO_00128,2025-04-05,Premier League,Manchester United,Liverpool,2,1,30,45,0,0,
+DEMO_00128,2025-04-05,Premier League,Manchester United,Liverpool,2,1,75,90,0,0,
+DEMO_00129,2025-04-06,Bundesliga,Bayern Munich,Borussia Dortmund,1,1,30,45,0,0,
+DEMO_00129,2025-04-06,Bundesliga,Bayern Munich,Borussia Dortmund,1,1,75,90,0,0,
+DEMO_00130,2025-04-07,Premier League,Arsenal,Chelsea,0,1,30,45,0,0,
+DEMO_00130,2025-04-07,Premier League,Arsenal,Chelsea,0,1,75,90,0,0,
+DEMO_00131,2025-04-08,Serie A,Inter Milan,Roma,0,1,30,45,0,0,
+DEMO_00131,2025-04-08,Serie A,Inter Milan,Roma,0,1,75,90,0,0,
+DEMO_00132,2025-04-09,La Liga,Real Madrid,Barcelona,2,0,30,45,1,1,35
+DEMO_00132,2025-04-09,La Liga,Real Madrid,Barcelona,2,0,75,90,0,0,
+DEMO_00133,2025-04-10,Bundesliga,Bayern Munich,Borussia Dortmund,2,0,30,45,1,1,43
+DEMO_00133,2025-04-10,Bundesliga,Bayern Munich,Borussia Dortmund,2,0,75,90,0,0,
+DEMO_00134,2025-04-11,Ligue 1,PSG,Marseille,1,4,30,45,1,2,"35,35"
+DEMO_00134,2025-04-11,Ligue 1,PSG,Marseille,1,4,75,90,1,2,"80,81"
+DEMO_00135,2025-04-12,Bundesliga,RB Leipzig,Stuttgart,0,0,30,45,0,0,
+DEMO_00135,2025-04-12,Bundesliga,RB Leipzig,Stuttgart,0,0,75,90,0,0,
+DEMO_00136,2025-04-13,Premier League,Arsenal,Chelsea,2,1,30,45,1,1,42
+DEMO_00136,2025-04-13,Premier League,Arsenal,Chelsea,2,1,75,90,1,1,75
+DEMO_00137,2025-04-14,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,30,45,0,0,
+DEMO_00137,2025-04-14,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,75,90,0,0,
+DEMO_00138,2025-04-15,Serie A,Juventus,AC Milan,2,0,30,45,0,0,
+DEMO_00138,2025-04-15,Serie A,Juventus,AC Milan,2,0,75,90,0,0,
+DEMO_00139,2025-04-16,La Liga,Real Madrid,Barcelona,2,1,30,45,0,0,
+DEMO_00139,2025-04-16,La Liga,Real Madrid,Barcelona,2,1,75,90,0,0,
+DEMO_00140,2025-04-17,La Liga,Atletico Madrid,Sevilla,3,1,30,45,1,2,"30,42"
+DEMO_00140,2025-04-17,La Liga,Atletico Madrid,Sevilla,3,1,75,90,0,0,
+DEMO_00141,2025-04-18,La Liga,Real Madrid,Barcelona,1,1,30,45,0,0,
+DEMO_00141,2025-04-18,La Liga,Real Madrid,Barcelona,1,1,75,90,0,0,
+DEMO_00142,2025-04-19,Ligue 1,Paris,Lyon,3,1,30,45,0,0,
+DEMO_00142,2025-04-19,Ligue 1,Paris,Lyon,3,1,75,90,1,2,"80,76"
+DEMO_00143,2025-04-20,Ligue 1,PSG,Marseille,1,0,30,45,0,0,
+DEMO_00143,2025-04-20,Ligue 1,PSG,Marseille,1,0,75,90,1,1,78
+DEMO_00144,2025-04-21,Premier League,Arsenal,Chelsea,0,0,30,45,0,0,
+DEMO_00144,2025-04-21,Premier League,Arsenal,Chelsea,0,0,75,90,0,0,
+DEMO_00145,2025-04-22,Bundesliga,RB Leipzig,Stuttgart,1,3,30,45,0,0,
+DEMO_00145,2025-04-22,Bundesliga,RB Leipzig,Stuttgart,1,3,75,90,1,1,78
+DEMO_00146,2025-04-23,Premier League,Manchester United,Liverpool,0,0,30,45,0,0,
+DEMO_00146,2025-04-23,Premier League,Manchester United,Liverpool,0,0,75,90,0,0,
+DEMO_00147,2025-04-24,Serie A,Juventus,AC Milan,2,1,30,45,0,0,
+DEMO_00147,2025-04-24,Serie A,Juventus,AC Milan,2,1,75,90,0,0,
+DEMO_00148,2025-04-25,Premier League,Arsenal,Chelsea,0,3,30,45,1,2,"42,37"
+DEMO_00148,2025-04-25,Premier League,Arsenal,Chelsea,0,3,75,90,0,0,
+DEMO_00149,2025-04-26,Serie A,Inter Milan,Roma,0,0,30,45,0,0,
+DEMO_00149,2025-04-26,Serie A,Inter Milan,Roma,0,0,75,90,0,0,
+DEMO_00150,2025-04-27,La Liga,Real Madrid,Barcelona,2,1,30,45,0,0,
+DEMO_00150,2025-04-27,La Liga,Real Madrid,Barcelona,2,1,75,90,0,0,
+DEMO_00151,2025-04-28,Premier League,Arsenal,Chelsea,2,1,30,45,1,1,45
+DEMO_00151,2025-04-28,Premier League,Arsenal,Chelsea,2,1,75,90,0,0,
+DEMO_00152,2025-04-29,Ligue 1,PSG,Marseille,1,1,30,45,0,0,
+DEMO_00152,2025-04-29,Ligue 1,PSG,Marseille,1,1,75,90,0,0,
+DEMO_00153,2025-04-30,Serie A,Juventus,AC Milan,1,1,30,45,1,1,41
+DEMO_00153,2025-04-30,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00154,2025-05-01,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,30,45,0,0,
+DEMO_00154,2025-05-01,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,75,90,0,0,
+DEMO_00155,2025-05-02,Premier League,Manchester United,Liverpool,3,3,30,45,0,0,
+DEMO_00155,2025-05-02,Premier League,Manchester United,Liverpool,3,3,75,90,0,0,
+DEMO_00156,2025-05-03,La Liga,Real Madrid,Barcelona,0,0,30,45,0,0,
+DEMO_00156,2025-05-03,La Liga,Real Madrid,Barcelona,0,0,75,90,0,0,
+DEMO_00157,2025-05-04,La Liga,Atletico Madrid,Sevilla,0,0,30,45,0,0,
+DEMO_00157,2025-05-04,La Liga,Atletico Madrid,Sevilla,0,0,75,90,0,0,
+DEMO_00158,2025-05-05,Premier League,Manchester United,Liverpool,1,2,30,45,0,0,
+DEMO_00158,2025-05-05,Premier League,Manchester United,Liverpool,1,2,75,90,1,2,"78,82"
+DEMO_00159,2025-05-06,Ligue 1,PSG,Marseille,2,2,30,45,1,1,30
+DEMO_00159,2025-05-06,Ligue 1,PSG,Marseille,2,2,75,90,1,1,75
+DEMO_00160,2025-05-07,Ligue 1,PSG,Marseille,1,0,30,45,1,1,33
+DEMO_00160,2025-05-07,Ligue 1,PSG,Marseille,1,0,75,90,0,0,
+DEMO_00161,2025-05-08,Bundesliga,RB Leipzig,Stuttgart,1,1,30,45,1,1,41
+DEMO_00161,2025-05-08,Bundesliga,RB Leipzig,Stuttgart,1,1,75,90,0,0,
+DEMO_00162,2025-05-09,Serie A,Juventus,AC Milan,1,1,30,45,1,1,42
+DEMO_00162,2025-05-09,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00163,2025-05-10,La Liga,Atletico Madrid,Sevilla,1,4,30,45,1,1,44
+DEMO_00163,2025-05-10,La Liga,Atletico Madrid,Sevilla,1,4,75,90,0,0,
+DEMO_00164,2025-05-11,Serie A,Juventus,AC Milan,0,3,30,45,1,1,31
+DEMO_00164,2025-05-11,Serie A,Juventus,AC Milan,0,3,75,90,0,0,
+DEMO_00165,2025-05-12,La Liga,Atletico Madrid,Sevilla,0,1,30,45,0,0,
+DEMO_00165,2025-05-12,La Liga,Atletico Madrid,Sevilla,0,1,75,90,0,0,
+DEMO_00166,2025-05-13,Premier League,Manchester United,Liverpool,0,2,30,45,0,0,
+DEMO_00166,2025-05-13,Premier League,Manchester United,Liverpool,0,2,75,90,0,0,
+DEMO_00167,2025-05-14,Premier League,Manchester United,Liverpool,2,1,30,45,0,0,
+DEMO_00167,2025-05-14,Premier League,Manchester United,Liverpool,2,1,75,90,1,1,78
+DEMO_00168,2025-05-15,Premier League,Manchester United,Liverpool,2,2,30,45,0,0,
+DEMO_00168,2025-05-15,Premier League,Manchester United,Liverpool,2,2,75,90,1,1,84
+DEMO_00169,2025-05-16,Serie A,Inter Milan,Roma,3,1,30,45,1,2,"36,36"
+DEMO_00169,2025-05-16,Serie A,Inter Milan,Roma,3,1,75,90,0,0,
+DEMO_00170,2025-05-17,Bundesliga,RB Leipzig,Stuttgart,4,1,30,45,1,1,36
+DEMO_00170,2025-05-17,Bundesliga,RB Leipzig,Stuttgart,4,1,75,90,0,0,
+DEMO_00171,2025-05-18,La Liga,Atletico Madrid,Sevilla,2,0,30,45,0,0,
+DEMO_00171,2025-05-18,La Liga,Atletico Madrid,Sevilla,2,0,75,90,1,1,78
+DEMO_00172,2025-05-19,Ligue 1,PSG,Marseille,2,2,30,45,0,0,
+DEMO_00172,2025-05-19,Ligue 1,PSG,Marseille,2,2,75,90,1,1,84
+DEMO_00173,2025-05-20,Ligue 1,PSG,Marseille,0,2,30,45,1,2,"35,35"
+DEMO_00173,2025-05-20,Ligue 1,PSG,Marseille,0,2,75,90,0,0,
+DEMO_00174,2025-05-21,La Liga,Real Madrid,Barcelona,3,3,30,45,1,1,30
+DEMO_00174,2025-05-21,La Liga,Real Madrid,Barcelona,3,3,75,90,0,0,
+DEMO_00175,2025-05-22,Serie A,Inter Milan,Roma,2,1,30,45,0,0,
+DEMO_00175,2025-05-22,Serie A,Inter Milan,Roma,2,1,75,90,1,1,85
+DEMO_00176,2025-05-23,Premier League,Manchester United,Liverpool,3,1,30,45,1,3,"31,45,45"
+DEMO_00176,2025-05-23,Premier League,Manchester United,Liverpool,3,1,75,90,0,0,
+DEMO_00177,2025-05-24,Serie A,Inter Milan,Roma,1,2,30,45,0,0,
+DEMO_00177,2025-05-24,Serie A,Inter Milan,Roma,1,2,75,90,0,0,
+DEMO_00178,2025-05-25,La Liga,Atletico Madrid,Sevilla,0,1,30,45,0,0,
+DEMO_00178,2025-05-25,La Liga,Atletico Madrid,Sevilla,0,1,75,90,0,0,
+DEMO_00179,2025-05-26,Bundesliga,Bayern Munich,Borussia Dortmund,1,2,30,45,0,0,
+DEMO_00179,2025-05-26,Bundesliga,Bayern Munich,Borussia Dortmund,1,2,75,90,0,0,
+DEMO_00180,2025-05-27,Serie A,Inter Milan,Roma,1,1,30,45,1,1,45
+DEMO_00180,2025-05-27,Serie A,Inter Milan,Roma,1,1,75,90,0,0,
+DEMO_00181,2025-05-28,Bundesliga,Bayern Munich,Borussia Dortmund,2,1,30,45,0,0,
+DEMO_00181,2025-05-28,Bundesliga,Bayern Munich,Borussia Dortmund,2,1,75,90,0,0,
+DEMO_00182,2025-05-29,Serie A,Juventus,AC Milan,0,2,30,45,0,0,
+DEMO_00182,2025-05-29,Serie A,Juventus,AC Milan,0,2,75,90,0,0,
+DEMO_00183,2025-05-30,La Liga,Real Madrid,Barcelona,3,4,30,45,1,3,"43,30,43"
+DEMO_00183,2025-05-30,La Liga,Real Madrid,Barcelona,3,4,75,90,1,1,76
+DEMO_00184,2025-05-31,Bundesliga,Bayern Munich,Borussia Dortmund,1,2,30,45,1,1,36
+DEMO_00184,2025-05-31,Bundesliga,Bayern Munich,Borussia Dortmund,1,2,75,90,0,0,
+DEMO_00185,2025-06-01,Premier League,Manchester United,Liverpool,0,1,30,45,0,0,
+DEMO_00185,2025-06-01,Premier League,Manchester United,Liverpool,0,1,75,90,0,0,
+DEMO_00186,2025-06-02,Serie A,Juventus,AC Milan,1,1,30,45,1,1,33
+DEMO_00186,2025-06-02,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00187,2025-06-03,Ligue 1,PSG,Marseille,0,2,30,45,1,1,36
+DEMO_00187,2025-06-03,Ligue 1,PSG,Marseille,0,2,75,90,0,0,
+DEMO_00188,2025-06-04,Ligue 1,Paris,Lyon,2,2,30,45,1,1,42
+DEMO_00188,2025-06-04,Ligue 1,Paris,Lyon,2,2,75,90,0,0,
+DEMO_00189,2025-06-05,La Liga,Real Madrid,Barcelona,2,2,30,45,1,1,33
+DEMO_00189,2025-06-05,La Liga,Real Madrid,Barcelona,2,2,75,90,1,1,78
+DEMO_00190,2025-06-06,Serie A,Juventus,AC Milan,1,2,30,45,1,1,41
+DEMO_00190,2025-06-06,Serie A,Juventus,AC Milan,1,2,75,90,1,1,79
+DEMO_00191,2025-06-07,Premier League,Arsenal,Chelsea,2,4,30,45,1,1,41
+DEMO_00191,2025-06-07,Premier League,Arsenal,Chelsea,2,4,75,90,0,0,
+DEMO_00192,2025-06-08,Serie A,Inter Milan,Roma,2,1,30,45,1,1,44
+DEMO_00192,2025-06-08,Serie A,Inter Milan,Roma,2,1,75,90,0,0,
+DEMO_00193,2025-06-09,Premier League,Manchester United,Liverpool,1,2,30,45,1,3,"34,31,32"
+DEMO_00193,2025-06-09,Premier League,Manchester United,Liverpool,1,2,75,90,0,0,
+DEMO_00194,2025-06-10,La Liga,Atletico Madrid,Sevilla,0,0,30,45,0,0,
+DEMO_00194,2025-06-10,La Liga,Atletico Madrid,Sevilla,0,0,75,90,0,0,
+DEMO_00195,2025-06-11,Premier League,Manchester United,Liverpool,2,3,30,45,0,0,
+DEMO_00195,2025-06-11,Premier League,Manchester United,Liverpool,2,3,75,90,0,0,
+DEMO_00196,2025-06-12,Bundesliga,Bayern Munich,Borussia Dortmund,1,2,30,45,1,2,"35,30"
+DEMO_00196,2025-06-12,Bundesliga,Bayern Munich,Borussia Dortmund,1,2,75,90,0,0,
+DEMO_00197,2025-06-13,Serie A,Juventus,AC Milan,1,1,30,45,0,0,
+DEMO_00197,2025-06-13,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00198,2025-06-14,Serie A,Juventus,AC Milan,1,0,30,45,0,0,
+DEMO_00198,2025-06-14,Serie A,Juventus,AC Milan,1,0,75,90,0,0,
+DEMO_00199,2025-06-15,Bundesliga,RB Leipzig,Stuttgart,1,0,30,45,0,0,
+DEMO_00199,2025-06-15,Bundesliga,RB Leipzig,Stuttgart,1,0,75,90,0,0,
+DEMO_00200,2025-06-16,La Liga,Atletico Madrid,Sevilla,0,3,30,45,0,0,
+DEMO_00200,2025-06-16,La Liga,Atletico Madrid,Sevilla,0,3,75,90,1,1,79
+DEMO_00201,2025-06-17,Ligue 1,Paris,Lyon,1,1,30,45,0,0,
+DEMO_00201,2025-06-17,Ligue 1,Paris,Lyon,1,1,75,90,1,1,80
+DEMO_00202,2025-06-18,Serie A,Inter Milan,Roma,0,1,30,45,0,0,
+DEMO_00202,2025-06-18,Serie A,Inter Milan,Roma,0,1,75,90,0,0,
+DEMO_00203,2025-06-19,La Liga,Atletico Madrid,Sevilla,0,2,30,45,1,1,41
+DEMO_00203,2025-06-19,La Liga,Atletico Madrid,Sevilla,0,2,75,90,1,1,85
+DEMO_00204,2025-06-20,Ligue 1,PSG,Marseille,0,0,30,45,0,0,
+DEMO_00204,2025-06-20,Ligue 1,PSG,Marseille,0,0,75,90,0,0,
+DEMO_00205,2025-06-21,Bundesliga,RB Leipzig,Stuttgart,2,2,30,45,0,0,
+DEMO_00205,2025-06-21,Bundesliga,RB Leipzig,Stuttgart,2,2,75,90,0,0,
+DEMO_00206,2025-06-22,Premier League,Arsenal,Chelsea,0,1,30,45,0,0,
+DEMO_00206,2025-06-22,Premier League,Arsenal,Chelsea,0,1,75,90,0,0,
+DEMO_00207,2025-06-23,Premier League,Arsenal,Chelsea,2,1,30,45,0,0,
+DEMO_00207,2025-06-23,Premier League,Arsenal,Chelsea,2,1,75,90,0,0,
+DEMO_00208,2025-06-24,Bundesliga,RB Leipzig,Stuttgart,1,1,30,45,0,0,
+DEMO_00208,2025-06-24,Bundesliga,RB Leipzig,Stuttgart,1,1,75,90,0,0,
+DEMO_00209,2025-06-25,Bundesliga,RB Leipzig,Stuttgart,1,3,30,45,1,1,42
+DEMO_00209,2025-06-25,Bundesliga,RB Leipzig,Stuttgart,1,3,75,90,1,1,77
+DEMO_00210,2025-06-26,Premier League,Manchester United,Liverpool,1,3,30,45,0,0,
+DEMO_00210,2025-06-26,Premier League,Manchester United,Liverpool,1,3,75,90,1,1,80
+DEMO_00211,2025-06-27,Premier League,Arsenal,Chelsea,0,3,30,45,1,1,37
+DEMO_00211,2025-06-27,Premier League,Arsenal,Chelsea,0,3,75,90,1,2,"75,83"
+DEMO_00212,2025-06-28,Ligue 1,PSG,Marseille,1,2,30,45,0,0,
+DEMO_00212,2025-06-28,Ligue 1,PSG,Marseille,1,2,75,90,1,1,80
+DEMO_00213,2025-06-29,La Liga,Real Madrid,Barcelona,2,0,30,45,1,1,45
+DEMO_00213,2025-06-29,La Liga,Real Madrid,Barcelona,2,0,75,90,0,0,
+DEMO_00214,2025-06-30,La Liga,Real Madrid,Barcelona,1,1,30,45,1,1,36
+DEMO_00214,2025-06-30,La Liga,Real Madrid,Barcelona,1,1,75,90,0,0,
+DEMO_00215,2025-07-01,Serie A,Inter Milan,Roma,0,4,30,45,0,0,
+DEMO_00215,2025-07-01,Serie A,Inter Milan,Roma,0,4,75,90,1,1,80
+DEMO_00216,2025-07-02,Serie A,Inter Milan,Roma,1,0,30,45,0,0,
+DEMO_00216,2025-07-02,Serie A,Inter Milan,Roma,1,0,75,90,0,0,
+DEMO_00217,2025-07-03,Bundesliga,Bayern Munich,Borussia Dortmund,0,1,30,45,0,0,
+DEMO_00217,2025-07-03,Bundesliga,Bayern Munich,Borussia Dortmund,0,1,75,90,0,0,
+DEMO_00218,2025-07-04,Premier League,Arsenal,Chelsea,0,2,30,45,0,0,
+DEMO_00218,2025-07-04,Premier League,Arsenal,Chelsea,0,2,75,90,0,0,
+DEMO_00219,2025-07-05,Premier League,Arsenal,Chelsea,2,0,30,45,1,1,45
+DEMO_00219,2025-07-05,Premier League,Arsenal,Chelsea,2,0,75,90,0,0,
+DEMO_00220,2025-07-06,La Liga,Real Madrid,Barcelona,3,1,30,45,1,1,42
+DEMO_00220,2025-07-06,La Liga,Real Madrid,Barcelona,3,1,75,90,0,0,
+DEMO_00221,2025-07-07,Ligue 1,Paris,Lyon,1,0,30,45,0,0,
+DEMO_00221,2025-07-07,Ligue 1,Paris,Lyon,1,0,75,90,0,0,
+DEMO_00222,2025-07-08,La Liga,Real Madrid,Barcelona,0,1,30,45,0,0,
+DEMO_00222,2025-07-08,La Liga,Real Madrid,Barcelona,0,1,75,90,0,0,
+DEMO_00223,2025-07-09,Serie A,Inter Milan,Roma,0,0,30,45,0,0,
+DEMO_00223,2025-07-09,Serie A,Inter Milan,Roma,0,0,75,90,0,0,
+DEMO_00224,2025-07-10,La Liga,Atletico Madrid,Sevilla,1,1,30,45,1,1,36
+DEMO_00224,2025-07-10,La Liga,Atletico Madrid,Sevilla,1,1,75,90,0,0,
+DEMO_00225,2025-07-11,Bundesliga,RB Leipzig,Stuttgart,0,3,30,45,1,1,35
+DEMO_00225,2025-07-11,Bundesliga,RB Leipzig,Stuttgart,0,3,75,90,1,1,85
+DEMO_00226,2025-07-12,Serie A,Inter Milan,Roma,0,2,30,45,0,0,
+DEMO_00226,2025-07-12,Serie A,Inter Milan,Roma,0,2,75,90,1,1,84
+DEMO_00227,2025-07-13,Premier League,Manchester United,Liverpool,3,3,30,45,1,2,"30,37"
+DEMO_00227,2025-07-13,Premier League,Manchester United,Liverpool,3,3,75,90,1,1,84
+DEMO_00228,2025-07-14,La Liga,Real Madrid,Barcelona,4,2,30,45,1,1,45
+DEMO_00228,2025-07-14,La Liga,Real Madrid,Barcelona,4,2,75,90,0,0,
+DEMO_00229,2025-07-15,Bundesliga,Bayern Munich,Borussia Dortmund,1,1,30,45,1,1,36
+DEMO_00229,2025-07-15,Bundesliga,Bayern Munich,Borussia Dortmund,1,1,75,90,0,0,
+DEMO_00230,2025-07-16,Premier League,Manchester United,Liverpool,1,3,30,45,1,2,"42,39"
+DEMO_00230,2025-07-16,Premier League,Manchester United,Liverpool,1,3,75,90,1,1,80
+DEMO_00231,2025-07-17,La Liga,Atletico Madrid,Sevilla,1,1,30,45,1,1,35
+DEMO_00231,2025-07-17,La Liga,Atletico Madrid,Sevilla,1,1,75,90,0,0,
+DEMO_00232,2025-07-18,Premier League,Manchester United,Liverpool,1,1,30,45,0,0,
+DEMO_00232,2025-07-18,Premier League,Manchester United,Liverpool,1,1,75,90,1,1,83
+DEMO_00233,2025-07-19,La Liga,Atletico Madrid,Sevilla,2,1,30,45,1,1,39
+DEMO_00233,2025-07-19,La Liga,Atletico Madrid,Sevilla,2,1,75,90,1,1,79
+DEMO_00234,2025-07-20,Serie A,Inter Milan,Roma,4,1,30,45,0,0,
+DEMO_00234,2025-07-20,Serie A,Inter Milan,Roma,4,1,75,90,1,1,76
+DEMO_00235,2025-07-21,Serie A,Juventus,AC Milan,0,1,30,45,0,0,
+DEMO_00235,2025-07-21,Serie A,Juventus,AC Milan,0,1,75,90,0,0,
+DEMO_00236,2025-07-22,Serie A,Juventus,AC Milan,0,1,30,45,0,0,
+DEMO_00236,2025-07-22,Serie A,Juventus,AC Milan,0,1,75,90,0,0,
+DEMO_00237,2025-07-23,La Liga,Real Madrid,Barcelona,0,0,30,45,0,0,
+DEMO_00237,2025-07-23,La Liga,Real Madrid,Barcelona,0,0,75,90,0,0,
+DEMO_00238,2025-07-24,Ligue 1,PSG,Marseille,3,1,30,45,1,1,36
+DEMO_00238,2025-07-24,Ligue 1,PSG,Marseille,3,1,75,90,0,0,
+DEMO_00239,2025-07-25,La Liga,Real Madrid,Barcelona,0,0,30,45,0,0,
+DEMO_00239,2025-07-25,La Liga,Real Madrid,Barcelona,0,0,75,90,0,0,
+DEMO_00240,2025-07-26,Premier League,Manchester United,Liverpool,2,2,30,45,1,2,"44,43"
+DEMO_00240,2025-07-26,Premier League,Manchester United,Liverpool,2,2,75,90,0,0,
+DEMO_00241,2025-07-27,Serie A,Inter Milan,Roma,1,2,30,45,0,0,
+DEMO_00241,2025-07-27,Serie A,Inter Milan,Roma,1,2,75,90,1,1,75
+DEMO_00242,2025-07-28,Bundesliga,Bayern Munich,Borussia Dortmund,1,1,30,45,1,1,44
+DEMO_00242,2025-07-28,Bundesliga,Bayern Munich,Borussia Dortmund,1,1,75,90,0,0,
+DEMO_00243,2025-07-29,Ligue 1,Paris,Lyon,1,2,30,45,0,0,
+DEMO_00243,2025-07-29,Ligue 1,Paris,Lyon,1,2,75,90,1,1,76
+DEMO_00244,2025-07-30,Ligue 1,Paris,Lyon,0,3,30,45,0,0,
+DEMO_00244,2025-07-30,Ligue 1,Paris,Lyon,0,3,75,90,1,1,75
+DEMO_00245,2025-07-31,Ligue 1,PSG,Marseille,2,1,30,45,1,1,37
+DEMO_00245,2025-07-31,Ligue 1,PSG,Marseille,2,1,75,90,1,2,"80,77"
+DEMO_00246,2025-08-01,Serie A,Inter Milan,Roma,1,1,30,45,0,0,
+DEMO_00246,2025-08-01,Serie A,Inter Milan,Roma,1,1,75,90,0,0,
+DEMO_00247,2025-08-02,La Liga,Real Madrid,Barcelona,2,3,30,45,0,0,
+DEMO_00247,2025-08-02,La Liga,Real Madrid,Barcelona,2,3,75,90,1,1,76
+DEMO_00248,2025-08-03,Serie A,Inter Milan,Roma,0,0,30,45,0,0,
+DEMO_00248,2025-08-03,Serie A,Inter Milan,Roma,0,0,75,90,0,0,
+DEMO_00249,2025-08-04,Ligue 1,PSG,Marseille,0,1,30,45,0,0,
+DEMO_00249,2025-08-04,Ligue 1,PSG,Marseille,0,1,75,90,0,0,
+DEMO_00250,2025-08-05,Premier League,Arsenal,Chelsea,1,0,30,45,0,0,
+DEMO_00250,2025-08-05,Premier League,Arsenal,Chelsea,1,0,75,90,0,0,
+DEMO_00251,2025-08-06,Serie A,Inter Milan,Roma,4,1,30,45,1,3,"40,43,35"
+DEMO_00251,2025-08-06,Serie A,Inter Milan,Roma,4,1,75,90,1,1,80
+DEMO_00252,2025-08-07,Serie A,Juventus,AC Milan,0,0,30,45,0,0,
+DEMO_00252,2025-08-07,Serie A,Juventus,AC Milan,0,0,75,90,0,0,
+DEMO_00253,2025-08-08,Ligue 1,Paris,Lyon,3,2,30,45,0,0,
+DEMO_00253,2025-08-08,Ligue 1,Paris,Lyon,3,2,75,90,1,1,84
+DEMO_00254,2025-08-09,Ligue 1,Paris,Lyon,0,1,30,45,0,0,
+DEMO_00254,2025-08-09,Ligue 1,Paris,Lyon,0,1,75,90,1,1,82
+DEMO_00255,2025-08-10,La Liga,Atletico Madrid,Sevilla,2,1,30,45,0,0,
+DEMO_00255,2025-08-10,La Liga,Atletico Madrid,Sevilla,2,1,75,90,1,1,85
+DEMO_00256,2025-08-11,Ligue 1,Paris,Lyon,1,0,30,45,0,0,
+DEMO_00256,2025-08-11,Ligue 1,Paris,Lyon,1,0,75,90,1,1,75
+DEMO_00257,2025-08-12,Bundesliga,RB Leipzig,Stuttgart,1,1,30,45,0,0,
+DEMO_00257,2025-08-12,Bundesliga,RB Leipzig,Stuttgart,1,1,75,90,0,0,
+DEMO_00258,2025-08-13,Bundesliga,Bayern Munich,Borussia Dortmund,1,2,30,45,1,1,40
+DEMO_00258,2025-08-13,Bundesliga,Bayern Munich,Borussia Dortmund,1,2,75,90,0,0,
+DEMO_00259,2025-08-14,Ligue 1,Paris,Lyon,2,0,30,45,0,0,
+DEMO_00259,2025-08-14,Ligue 1,Paris,Lyon,2,0,75,90,1,1,79
+DEMO_00260,2025-08-15,La Liga,Real Madrid,Barcelona,2,1,30,45,0,0,
+DEMO_00260,2025-08-15,La Liga,Real Madrid,Barcelona,2,1,75,90,1,1,75
+DEMO_00261,2025-08-16,La Liga,Atletico Madrid,Sevilla,0,1,30,45,0,0,
+DEMO_00261,2025-08-16,La Liga,Atletico Madrid,Sevilla,0,1,75,90,1,1,76
+DEMO_00262,2025-08-17,Serie A,Inter Milan,Roma,4,1,30,45,1,3,"31,30,37"
+DEMO_00262,2025-08-17,Serie A,Inter Milan,Roma,4,1,75,90,0,0,
+DEMO_00263,2025-08-18,Serie A,Inter Milan,Roma,0,1,30,45,0,0,
+DEMO_00263,2025-08-18,Serie A,Inter Milan,Roma,0,1,75,90,0,0,
+DEMO_00264,2025-08-19,Serie A,Inter Milan,Roma,1,0,30,45,0,0,
+DEMO_00264,2025-08-19,Serie A,Inter Milan,Roma,1,0,75,90,0,0,
+DEMO_00265,2025-08-20,Ligue 1,PSG,Marseille,1,2,30,45,1,1,39
+DEMO_00265,2025-08-20,Ligue 1,PSG,Marseille,1,2,75,90,0,0,
+DEMO_00266,2025-08-21,Bundesliga,Bayern Munich,Borussia Dortmund,4,1,30,45,1,1,35
+DEMO_00266,2025-08-21,Bundesliga,Bayern Munich,Borussia Dortmund,4,1,75,90,0,0,
+DEMO_00267,2025-08-22,Ligue 1,PSG,Marseille,0,1,30,45,0,0,
+DEMO_00267,2025-08-22,Ligue 1,PSG,Marseille,0,1,75,90,0,0,
+DEMO_00268,2025-08-23,La Liga,Atletico Madrid,Sevilla,1,2,30,45,0,0,
+DEMO_00268,2025-08-23,La Liga,Atletico Madrid,Sevilla,1,2,75,90,0,0,
+DEMO_00269,2025-08-24,Serie A,Inter Milan,Roma,2,1,30,45,1,1,37
+DEMO_00269,2025-08-24,Serie A,Inter Milan,Roma,2,1,75,90,0,0,
+DEMO_00270,2025-08-25,Premier League,Manchester United,Liverpool,3,2,30,45,1,2,"45,31"
+DEMO_00270,2025-08-25,Premier League,Manchester United,Liverpool,3,2,75,90,1,1,84
+DEMO_00271,2025-08-26,Serie A,Juventus,AC Milan,1,1,30,45,0,0,
+DEMO_00271,2025-08-26,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00272,2025-08-27,La Liga,Real Madrid,Barcelona,1,1,30,45,1,2,"30,37"
+DEMO_00272,2025-08-27,La Liga,Real Madrid,Barcelona,1,1,75,90,0,0,
+DEMO_00273,2025-08-28,Serie A,Juventus,AC Milan,2,2,30,45,0,0,
+DEMO_00273,2025-08-28,Serie A,Juventus,AC Milan,2,2,75,90,0,0,
+DEMO_00274,2025-08-29,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,30,45,0,0,
+DEMO_00274,2025-08-29,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,75,90,0,0,
+DEMO_00275,2025-08-30,La Liga,Atletico Madrid,Sevilla,0,0,30,45,0,0,
+DEMO_00275,2025-08-30,La Liga,Atletico Madrid,Sevilla,0,0,75,90,0,0,
+DEMO_00276,2025-08-31,Serie A,Inter Milan,Roma,1,0,30,45,0,0,
+DEMO_00276,2025-08-31,Serie A,Inter Milan,Roma,1,0,75,90,1,1,75
+DEMO_00277,2025-09-01,La Liga,Real Madrid,Barcelona,0,0,30,45,0,0,
+DEMO_00277,2025-09-01,La Liga,Real Madrid,Barcelona,0,0,75,90,0,0,
+DEMO_00278,2025-09-02,La Liga,Atletico Madrid,Sevilla,0,1,30,45,0,0,
+DEMO_00278,2025-09-02,La Liga,Atletico Madrid,Sevilla,0,1,75,90,0,0,
+DEMO_00279,2025-09-03,Bundesliga,RB Leipzig,Stuttgart,0,0,30,45,0,0,
+DEMO_00279,2025-09-03,Bundesliga,RB Leipzig,Stuttgart,0,0,75,90,0,0,
+DEMO_00280,2025-09-04,Serie A,Juventus,AC Milan,3,1,30,45,1,1,36
+DEMO_00280,2025-09-04,Serie A,Juventus,AC Milan,3,1,75,90,1,1,76
+DEMO_00281,2025-09-05,La Liga,Real Madrid,Barcelona,2,1,30,45,0,0,
+DEMO_00281,2025-09-05,La Liga,Real Madrid,Barcelona,2,1,75,90,0,0,
+DEMO_00282,2025-09-06,Serie A,Inter Milan,Roma,1,1,30,45,0,0,
+DEMO_00282,2025-09-06,Serie A,Inter Milan,Roma,1,1,75,90,1,2,"84,77"
+DEMO_00283,2025-09-07,Ligue 1,PSG,Marseille,3,1,30,45,0,0,
+DEMO_00283,2025-09-07,Ligue 1,PSG,Marseille,3,1,75,90,1,1,85
+DEMO_00284,2025-09-08,Ligue 1,PSG,Marseille,1,0,30,45,0,0,
+DEMO_00284,2025-09-08,Ligue 1,PSG,Marseille,1,0,75,90,0,0,
+DEMO_00285,2025-09-09,Premier League,Manchester United,Liverpool,0,2,30,45,0,0,
+DEMO_00285,2025-09-09,Premier League,Manchester United,Liverpool,0,2,75,90,0,0,
+DEMO_00286,2025-09-10,Serie A,Juventus,AC Milan,2,0,30,45,1,1,44
+DEMO_00286,2025-09-10,Serie A,Juventus,AC Milan,2,0,75,90,0,0,
+DEMO_00287,2025-09-11,Premier League,Arsenal,Chelsea,0,1,30,45,0,0,
+DEMO_00287,2025-09-11,Premier League,Arsenal,Chelsea,0,1,75,90,0,0,
+DEMO_00288,2025-09-12,Serie A,Juventus,AC Milan,0,4,30,45,1,1,39
+DEMO_00288,2025-09-12,Serie A,Juventus,AC Milan,0,4,75,90,0,0,
+DEMO_00289,2025-09-13,Premier League,Manchester United,Liverpool,1,1,30,45,0,0,
+DEMO_00289,2025-09-13,Premier League,Manchester United,Liverpool,1,1,75,90,0,0,
+DEMO_00290,2025-09-14,Ligue 1,Paris,Lyon,0,0,30,45,0,0,
+DEMO_00290,2025-09-14,Ligue 1,Paris,Lyon,0,0,75,90,0,0,
+DEMO_00291,2025-09-15,Ligue 1,PSG,Marseille,2,2,30,45,0,0,
+DEMO_00291,2025-09-15,Ligue 1,PSG,Marseille,2,2,75,90,0,0,
+DEMO_00292,2025-09-16,Ligue 1,Paris,Lyon,0,0,30,45,0,0,
+DEMO_00292,2025-09-16,Ligue 1,Paris,Lyon,0,0,75,90,0,0,
+DEMO_00293,2025-09-17,Serie A,Juventus,AC Milan,3,0,30,45,0,0,
+DEMO_00293,2025-09-17,Serie A,Juventus,AC Milan,3,0,75,90,0,0,
+DEMO_00294,2025-09-18,Ligue 1,Paris,Lyon,4,0,30,45,1,2,"41,39"
+DEMO_00294,2025-09-18,Ligue 1,Paris,Lyon,4,0,75,90,0,0,
+DEMO_00295,2025-09-19,Bundesliga,Bayern Munich,Borussia Dortmund,0,3,30,45,0,0,
+DEMO_00295,2025-09-19,Bundesliga,Bayern Munich,Borussia Dortmund,0,3,75,90,1,1,77
+DEMO_00296,2025-09-20,Premier League,Manchester United,Liverpool,1,2,30,45,0,0,
+DEMO_00296,2025-09-20,Premier League,Manchester United,Liverpool,1,2,75,90,0,0,
+DEMO_00297,2025-09-21,Serie A,Inter Milan,Roma,3,1,30,45,0,0,
+DEMO_00297,2025-09-21,Serie A,Inter Milan,Roma,3,1,75,90,1,1,81
+DEMO_00298,2025-09-22,Serie A,Inter Milan,Roma,0,0,30,45,0,0,
+DEMO_00298,2025-09-22,Serie A,Inter Milan,Roma,0,0,75,90,0,0,
+DEMO_00299,2025-09-23,Ligue 1,Paris,Lyon,2,0,30,45,0,0,
+DEMO_00299,2025-09-23,Ligue 1,Paris,Lyon,2,0,75,90,1,1,81
+DEMO_00300,2025-09-24,Serie A,Inter Milan,Roma,2,4,30,45,0,0,
+DEMO_00300,2025-09-24,Serie A,Inter Milan,Roma,2,4,75,90,0,0,
+DEMO_00301,2025-09-25,Serie A,Juventus,AC Milan,1,0,30,45,0,0,
+DEMO_00301,2025-09-25,Serie A,Juventus,AC Milan,1,0,75,90,0,0,
+DEMO_00302,2025-09-26,Serie A,Inter Milan,Roma,3,1,30,45,1,2,"34,30"
+DEMO_00302,2025-09-26,Serie A,Inter Milan,Roma,3,1,75,90,1,1,79
+DEMO_00303,2025-09-27,La Liga,Atletico Madrid,Sevilla,0,2,30,45,1,1,45
+DEMO_00303,2025-09-27,La Liga,Atletico Madrid,Sevilla,0,2,75,90,0,0,
+DEMO_00304,2025-09-28,La Liga,Atletico Madrid,Sevilla,2,1,30,45,0,0,
+DEMO_00304,2025-09-28,La Liga,Atletico Madrid,Sevilla,2,1,75,90,0,0,
+DEMO_00305,2025-09-29,Bundesliga,RB Leipzig,Stuttgart,1,1,30,45,0,0,
+DEMO_00305,2025-09-29,Bundesliga,RB Leipzig,Stuttgart,1,1,75,90,0,0,
+DEMO_00306,2025-09-30,La Liga,Atletico Madrid,Sevilla,0,0,30,45,0,0,
+DEMO_00306,2025-09-30,La Liga,Atletico Madrid,Sevilla,0,0,75,90,0,0,
+DEMO_00307,2025-10-01,Premier League,Manchester United,Liverpool,0,0,30,45,0,0,
+DEMO_00307,2025-10-01,Premier League,Manchester United,Liverpool,0,0,75,90,0,0,
+DEMO_00308,2025-10-02,Premier League,Arsenal,Chelsea,1,1,30,45,0,0,
+DEMO_00308,2025-10-02,Premier League,Arsenal,Chelsea,1,1,75,90,0,0,
+DEMO_00309,2025-10-03,Serie A,Inter Milan,Roma,1,1,30,45,0,0,
+DEMO_00309,2025-10-03,Serie A,Inter Milan,Roma,1,1,75,90,0,0,
+DEMO_00310,2025-10-04,Premier League,Manchester United,Liverpool,0,2,30,45,1,1,38
+DEMO_00310,2025-10-04,Premier League,Manchester United,Liverpool,0,2,75,90,0,0,
+DEMO_00311,2025-10-05,Bundesliga,Bayern Munich,Borussia Dortmund,2,1,30,45,1,3,"40,30,30"
+DEMO_00311,2025-10-05,Bundesliga,Bayern Munich,Borussia Dortmund,2,1,75,90,0,0,
+DEMO_00312,2025-10-06,Premier League,Arsenal,Chelsea,2,1,30,45,0,0,
+DEMO_00312,2025-10-06,Premier League,Arsenal,Chelsea,2,1,75,90,0,0,
+DEMO_00313,2025-10-07,La Liga,Atletico Madrid,Sevilla,1,0,30,45,0,0,
+DEMO_00313,2025-10-07,La Liga,Atletico Madrid,Sevilla,1,0,75,90,0,0,
+DEMO_00314,2025-10-08,Premier League,Manchester United,Liverpool,1,1,30,45,0,0,
+DEMO_00314,2025-10-08,Premier League,Manchester United,Liverpool,1,1,75,90,0,0,
+DEMO_00315,2025-10-09,Bundesliga,Bayern Munich,Borussia Dortmund,3,1,30,45,1,1,41
+DEMO_00315,2025-10-09,Bundesliga,Bayern Munich,Borussia Dortmund,3,1,75,90,0,0,
+DEMO_00316,2025-10-10,Ligue 1,PSG,Marseille,2,1,30,45,1,1,32
+DEMO_00316,2025-10-10,Ligue 1,PSG,Marseille,2,1,75,90,1,1,76
+DEMO_00317,2025-10-11,Premier League,Manchester United,Liverpool,2,0,30,45,1,1,45
+DEMO_00317,2025-10-11,Premier League,Manchester United,Liverpool,2,0,75,90,0,0,
+DEMO_00318,2025-10-12,Serie A,Juventus,AC Milan,2,0,30,45,1,1,37
+DEMO_00318,2025-10-12,Serie A,Juventus,AC Milan,2,0,75,90,0,0,
+DEMO_00319,2025-10-13,Ligue 1,PSG,Marseille,3,1,30,45,1,1,44
+DEMO_00319,2025-10-13,Ligue 1,PSG,Marseille,3,1,75,90,0,0,
+DEMO_00320,2025-10-14,La Liga,Atletico Madrid,Sevilla,4,0,30,45,1,1,38
+DEMO_00320,2025-10-14,La Liga,Atletico Madrid,Sevilla,4,0,75,90,0,0,
+DEMO_00321,2025-10-15,Premier League,Manchester United,Liverpool,2,4,30,45,1,2,"34,34"
+DEMO_00321,2025-10-15,Premier League,Manchester United,Liverpool,2,4,75,90,0,0,
+DEMO_00322,2025-10-16,Serie A,Juventus,AC Milan,2,3,30,45,0,0,
+DEMO_00322,2025-10-16,Serie A,Juventus,AC Milan,2,3,75,90,0,0,
+DEMO_00323,2025-10-17,Premier League,Arsenal,Chelsea,2,3,30,45,1,1,45
+DEMO_00323,2025-10-17,Premier League,Arsenal,Chelsea,2,3,75,90,1,1,81
+DEMO_00324,2025-10-18,Ligue 1,PSG,Marseille,2,1,30,45,1,1,45
+DEMO_00324,2025-10-18,Ligue 1,PSG,Marseille,2,1,75,90,1,1,77
+DEMO_00325,2025-10-19,La Liga,Real Madrid,Barcelona,1,1,30,45,1,1,39
+DEMO_00325,2025-10-19,La Liga,Real Madrid,Barcelona,1,1,75,90,0,0,
+DEMO_00326,2025-10-20,Serie A,Juventus,AC Milan,1,1,30,45,1,1,35
+DEMO_00326,2025-10-20,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00327,2025-10-21,La Liga,Atletico Madrid,Sevilla,0,3,30,45,0,0,
+DEMO_00327,2025-10-21,La Liga,Atletico Madrid,Sevilla,0,3,75,90,0,0,
+DEMO_00328,2025-10-22,La Liga,Atletico Madrid,Sevilla,3,0,30,45,0,0,
+DEMO_00328,2025-10-22,La Liga,Atletico Madrid,Sevilla,3,0,75,90,0,0,
+DEMO_00329,2025-10-23,Serie A,Inter Milan,Roma,3,1,30,45,1,1,35
+DEMO_00329,2025-10-23,Serie A,Inter Milan,Roma,3,1,75,90,0,0,
+DEMO_00330,2025-10-24,Premier League,Manchester United,Liverpool,1,0,30,45,0,0,
+DEMO_00330,2025-10-24,Premier League,Manchester United,Liverpool,1,0,75,90,0,0,
+DEMO_00331,2025-10-25,Serie A,Juventus,AC Milan,1,2,30,45,0,0,
+DEMO_00331,2025-10-25,Serie A,Juventus,AC Milan,1,2,75,90,0,0,
+DEMO_00332,2025-10-26,Premier League,Manchester United,Liverpool,1,1,30,45,0,0,
+DEMO_00332,2025-10-26,Premier League,Manchester United,Liverpool,1,1,75,90,0,0,
+DEMO_00333,2025-10-27,Serie A,Inter Milan,Roma,2,3,30,45,1,1,34
+DEMO_00333,2025-10-27,Serie A,Inter Milan,Roma,2,3,75,90,1,2,"81,82"
+DEMO_00334,2025-10-28,Serie A,Juventus,AC Milan,1,1,30,45,1,1,35
+DEMO_00334,2025-10-28,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00335,2025-10-29,Serie A,Juventus,AC Milan,2,1,30,45,0,0,
+DEMO_00335,2025-10-29,Serie A,Juventus,AC Milan,2,1,75,90,1,1,82
+DEMO_00336,2025-10-30,Serie A,Juventus,AC Milan,1,3,30,45,1,1,30
+DEMO_00336,2025-10-30,Serie A,Juventus,AC Milan,1,3,75,90,0,0,
+DEMO_00337,2025-10-31,Bundesliga,Bayern Munich,Borussia Dortmund,2,1,30,45,1,1,42
+DEMO_00337,2025-10-31,Bundesliga,Bayern Munich,Borussia Dortmund,2,1,75,90,1,1,82
+DEMO_00338,2025-11-01,Serie A,Juventus,AC Milan,2,1,30,45,1,1,37
+DEMO_00338,2025-11-01,Serie A,Juventus,AC Milan,2,1,75,90,0,0,
+DEMO_00339,2025-11-02,Serie A,Inter Milan,Roma,0,1,30,45,0,0,
+DEMO_00339,2025-11-02,Serie A,Inter Milan,Roma,0,1,75,90,0,0,
+DEMO_00340,2025-11-03,Premier League,Arsenal,Chelsea,0,1,30,45,1,1,34
+DEMO_00340,2025-11-03,Premier League,Arsenal,Chelsea,0,1,75,90,0,0,
+DEMO_00341,2025-11-04,Ligue 1,Paris,Lyon,0,2,30,45,0,0,
+DEMO_00341,2025-11-04,Ligue 1,Paris,Lyon,0,2,75,90,1,1,81
+DEMO_00342,2025-11-05,Serie A,Inter Milan,Roma,0,2,30,45,0,0,
+DEMO_00342,2025-11-05,Serie A,Inter Milan,Roma,0,2,75,90,0,0,
+DEMO_00343,2025-11-06,Premier League,Manchester United,Liverpool,1,0,30,45,0,0,
+DEMO_00343,2025-11-06,Premier League,Manchester United,Liverpool,1,0,75,90,1,1,76
+DEMO_00344,2025-11-07,La Liga,Atletico Madrid,Sevilla,0,1,30,45,0,0,
+DEMO_00344,2025-11-07,La Liga,Atletico Madrid,Sevilla,0,1,75,90,0,0,
+DEMO_00345,2025-11-08,Serie A,Juventus,AC Milan,4,2,30,45,0,0,
+DEMO_00345,2025-11-08,Serie A,Juventus,AC Milan,4,2,75,90,1,1,85
+DEMO_00346,2025-11-09,Bundesliga,RB Leipzig,Stuttgart,0,2,30,45,1,1,34
+DEMO_00346,2025-11-09,Bundesliga,RB Leipzig,Stuttgart,0,2,75,90,0,0,
+DEMO_00347,2025-11-10,Serie A,Juventus,AC Milan,2,2,30,45,1,2,"34,30"
+DEMO_00347,2025-11-10,Serie A,Juventus,AC Milan,2,2,75,90,0,0,
+DEMO_00348,2025-11-11,Ligue 1,PSG,Marseille,0,3,30,45,1,1,40
+DEMO_00348,2025-11-11,Ligue 1,PSG,Marseille,0,3,75,90,0,0,
+DEMO_00349,2025-11-12,Serie A,Juventus,AC Milan,2,1,30,45,0,0,
+DEMO_00349,2025-11-12,Serie A,Juventus,AC Milan,2,1,75,90,0,0,
+DEMO_00350,2025-11-13,La Liga,Real Madrid,Barcelona,0,0,30,45,0,0,
+DEMO_00350,2025-11-13,La Liga,Real Madrid,Barcelona,0,0,75,90,0,0,
+DEMO_00351,2025-11-14,Ligue 1,PSG,Marseille,1,1,30,45,1,1,31
+DEMO_00351,2025-11-14,Ligue 1,PSG,Marseille,1,1,75,90,0,0,
+DEMO_00352,2025-11-15,Bundesliga,RB Leipzig,Stuttgart,0,0,30,45,0,0,
+DEMO_00352,2025-11-15,Bundesliga,RB Leipzig,Stuttgart,0,0,75,90,0,0,
+DEMO_00353,2025-11-16,Ligue 1,PSG,Marseille,0,1,30,45,1,1,38
+DEMO_00353,2025-11-16,Ligue 1,PSG,Marseille,0,1,75,90,0,0,
+DEMO_00354,2025-11-17,Bundesliga,Bayern Munich,Borussia Dortmund,3,3,30,45,1,1,33
+DEMO_00354,2025-11-17,Bundesliga,Bayern Munich,Borussia Dortmund,3,3,75,90,0,0,
+DEMO_00355,2025-11-18,Bundesliga,Bayern Munich,Borussia Dortmund,0,3,30,45,1,1,41
+DEMO_00355,2025-11-18,Bundesliga,Bayern Munich,Borussia Dortmund,0,3,75,90,1,1,78
+DEMO_00356,2025-11-19,La Liga,Real Madrid,Barcelona,1,3,30,45,1,1,39
+DEMO_00356,2025-11-19,La Liga,Real Madrid,Barcelona,1,3,75,90,0,0,
+DEMO_00357,2025-11-20,Serie A,Juventus,AC Milan,0,2,30,45,1,1,38
+DEMO_00357,2025-11-20,Serie A,Juventus,AC Milan,0,2,75,90,0,0,
+DEMO_00358,2025-11-21,Serie A,Juventus,AC Milan,1,0,30,45,0,0,
+DEMO_00358,2025-11-21,Serie A,Juventus,AC Milan,1,0,75,90,0,0,
+DEMO_00359,2025-11-22,Premier League,Arsenal,Chelsea,0,0,30,45,0,0,
+DEMO_00359,2025-11-22,Premier League,Arsenal,Chelsea,0,0,75,90,0,0,
+DEMO_00360,2025-11-23,Serie A,Juventus,AC Milan,1,1,30,45,0,0,
+DEMO_00360,2025-11-23,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00361,2025-11-24,Ligue 1,PSG,Marseille,2,1,30,45,0,0,
+DEMO_00361,2025-11-24,Ligue 1,PSG,Marseille,2,1,75,90,0,0,
+DEMO_00362,2025-11-25,Serie A,Juventus,AC Milan,1,1,30,45,0,0,
+DEMO_00362,2025-11-25,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00363,2025-11-26,Ligue 1,PSG,Marseille,1,0,30,45,1,1,39
+DEMO_00363,2025-11-26,Ligue 1,PSG,Marseille,1,0,75,90,0,0,
+DEMO_00364,2025-11-27,La Liga,Atletico Madrid,Sevilla,0,3,30,45,0,0,
+DEMO_00364,2025-11-27,La Liga,Atletico Madrid,Sevilla,0,3,75,90,0,0,
+DEMO_00365,2025-11-28,Ligue 1,PSG,Marseille,0,1,30,45,0,0,
+DEMO_00365,2025-11-28,Ligue 1,PSG,Marseille,0,1,75,90,0,0,
+DEMO_00366,2025-11-29,Bundesliga,RB Leipzig,Stuttgart,1,2,30,45,0,0,
+DEMO_00366,2025-11-29,Bundesliga,RB Leipzig,Stuttgart,1,2,75,90,0,0,
+DEMO_00367,2025-11-30,Bundesliga,RB Leipzig,Stuttgart,2,0,30,45,0,0,
+DEMO_00367,2025-11-30,Bundesliga,RB Leipzig,Stuttgart,2,0,75,90,0,0,
+DEMO_00368,2025-12-01,Premier League,Arsenal,Chelsea,0,2,30,45,0,0,
+DEMO_00368,2025-12-01,Premier League,Arsenal,Chelsea,0,2,75,90,0,0,
+DEMO_00369,2025-12-02,Ligue 1,PSG,Marseille,1,0,30,45,0,0,
+DEMO_00369,2025-12-02,Ligue 1,PSG,Marseille,1,0,75,90,0,0,
+DEMO_00370,2025-12-03,La Liga,Real Madrid,Barcelona,2,4,30,45,1,1,45
+DEMO_00370,2025-12-03,La Liga,Real Madrid,Barcelona,2,4,75,90,0,0,
+DEMO_00371,2025-12-04,Serie A,Inter Milan,Roma,0,1,30,45,1,1,38
+DEMO_00371,2025-12-04,Serie A,Inter Milan,Roma,0,1,75,90,0,0,
+DEMO_00372,2025-12-05,La Liga,Real Madrid,Barcelona,3,1,30,45,0,0,
+DEMO_00372,2025-12-05,La Liga,Real Madrid,Barcelona,3,1,75,90,0,0,
+DEMO_00373,2025-12-06,Bundesliga,RB Leipzig,Stuttgart,1,1,30,45,1,1,32
+DEMO_00373,2025-12-06,Bundesliga,RB Leipzig,Stuttgart,1,1,75,90,0,0,
+DEMO_00374,2025-12-07,La Liga,Real Madrid,Barcelona,0,0,30,45,0,0,
+DEMO_00374,2025-12-07,La Liga,Real Madrid,Barcelona,0,0,75,90,0,0,
+DEMO_00375,2025-12-08,Ligue 1,Paris,Lyon,0,0,30,45,0,0,
+DEMO_00375,2025-12-08,Ligue 1,Paris,Lyon,0,0,75,90,0,0,
+DEMO_00376,2025-12-09,La Liga,Atletico Madrid,Sevilla,0,1,30,45,0,0,
+DEMO_00376,2025-12-09,La Liga,Atletico Madrid,Sevilla,0,1,75,90,1,1,81
+DEMO_00377,2025-12-10,Bundesliga,RB Leipzig,Stuttgart,1,3,30,45,0,0,
+DEMO_00377,2025-12-10,Bundesliga,RB Leipzig,Stuttgart,1,3,75,90,0,0,
+DEMO_00378,2025-12-11,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,30,45,0,0,
+DEMO_00378,2025-12-11,Bundesliga,Bayern Munich,Borussia Dortmund,0,0,75,90,0,0,
+DEMO_00379,2025-12-12,Premier League,Arsenal,Chelsea,2,1,30,45,0,0,
+DEMO_00379,2025-12-12,Premier League,Arsenal,Chelsea,2,1,75,90,1,1,76
+DEMO_00380,2025-12-13,Bundesliga,RB Leipzig,Stuttgart,2,1,30,45,0,0,
+DEMO_00380,2025-12-13,Bundesliga,RB Leipzig,Stuttgart,2,1,75,90,0,0,
+DEMO_00381,2025-12-14,Serie A,Inter Milan,Roma,0,1,30,45,0,0,
+DEMO_00381,2025-12-14,Serie A,Inter Milan,Roma,0,1,75,90,0,0,
+DEMO_00382,2025-12-15,Serie A,Juventus,AC Milan,1,2,30,45,0,0,
+DEMO_00382,2025-12-15,Serie A,Juventus,AC Milan,1,2,75,90,1,2,"85,75"
+DEMO_00383,2025-12-16,Bundesliga,Bayern Munich,Borussia Dortmund,3,1,30,45,1,1,42
+DEMO_00383,2025-12-16,Bundesliga,Bayern Munich,Borussia Dortmund,3,1,75,90,0,0,
+DEMO_00384,2025-12-17,La Liga,Atletico Madrid,Sevilla,2,0,30,45,0,0,
+DEMO_00384,2025-12-17,La Liga,Atletico Madrid,Sevilla,2,0,75,90,0,0,
+DEMO_00385,2025-12-18,Bundesliga,RB Leipzig,Stuttgart,1,0,30,45,0,0,
+DEMO_00385,2025-12-18,Bundesliga,RB Leipzig,Stuttgart,1,0,75,90,0,0,
+DEMO_00386,2025-12-19,Serie A,Inter Milan,Roma,0,2,30,45,1,1,45
+DEMO_00386,2025-12-19,Serie A,Inter Milan,Roma,0,2,75,90,0,0,
+DEMO_00387,2025-12-20,Ligue 1,Paris,Lyon,0,1,30,45,0,0,
+DEMO_00387,2025-12-20,Ligue 1,Paris,Lyon,0,1,75,90,0,0,
+DEMO_00388,2025-12-21,Bundesliga,RB Leipzig,Stuttgart,3,0,30,45,0,0,
+DEMO_00388,2025-12-21,Bundesliga,RB Leipzig,Stuttgart,3,0,75,90,1,1,79
+DEMO_00389,2025-12-22,Serie A,Juventus,AC Milan,3,0,30,45,0,0,
+DEMO_00389,2025-12-22,Serie A,Juventus,AC Milan,3,0,75,90,0,0,
+DEMO_00390,2025-12-23,Bundesliga,Bayern Munich,Borussia Dortmund,0,2,30,45,0,0,
+DEMO_00390,2025-12-23,Bundesliga,Bayern Munich,Borussia Dortmund,0,2,75,90,0,0,
+DEMO_00391,2025-12-24,Premier League,Arsenal,Chelsea,4,0,30,45,0,0,
+DEMO_00391,2025-12-24,Premier League,Arsenal,Chelsea,4,0,75,90,1,1,75
+DEMO_00392,2025-12-25,Ligue 1,PSG,Marseille,2,2,30,45,0,0,
+DEMO_00392,2025-12-25,Ligue 1,PSG,Marseille,2,2,75,90,1,1,77
+DEMO_00393,2025-12-26,Premier League,Manchester United,Liverpool,3,1,30,45,1,2,"43,39"
+DEMO_00393,2025-12-26,Premier League,Manchester United,Liverpool,3,1,75,90,0,0,
+DEMO_00394,2025-12-27,La Liga,Atletico Madrid,Sevilla,0,1,30,45,0,0,
+DEMO_00394,2025-12-27,La Liga,Atletico Madrid,Sevilla,0,1,75,90,0,0,
+DEMO_00395,2025-12-28,Serie A,Inter Milan,Roma,0,2,30,45,1,1,30
+DEMO_00395,2025-12-28,Serie A,Inter Milan,Roma,0,2,75,90,0,0,
+DEMO_00396,2025-12-29,La Liga,Atletico Madrid,Sevilla,0,0,30,45,0,0,
+DEMO_00396,2025-12-29,La Liga,Atletico Madrid,Sevilla,0,0,75,90,0,0,
+DEMO_00397,2025-12-30,Ligue 1,Paris,Lyon,1,2,30,45,0,0,
+DEMO_00397,2025-12-30,Ligue 1,Paris,Lyon,1,2,75,90,0,0,
+DEMO_00398,2025-12-31,Bundesliga,Bayern Munich,Borussia Dortmund,0,2,30,45,0,0,
+DEMO_00398,2025-12-31,Bundesliga,Bayern Munich,Borussia Dortmund,0,2,75,90,0,0,
+DEMO_00399,2026-01-01,Bundesliga,RB Leipzig,Stuttgart,2,0,30,45,0,0,
+DEMO_00399,2026-01-01,Bundesliga,RB Leipzig,Stuttgart,2,0,75,90,0,0,
+DEMO_00400,2026-01-02,Serie A,Inter Milan,Roma,4,2,30,45,1,1,37
+DEMO_00400,2026-01-02,Serie A,Inter Milan,Roma,4,2,75,90,0,0,
+DEMO_00401,2026-01-03,Bundesliga,Bayern Munich,Borussia Dortmund,2,3,30,45,1,1,44
+DEMO_00401,2026-01-03,Bundesliga,Bayern Munich,Borussia Dortmund,2,3,75,90,1,1,83
+DEMO_00402,2026-01-04,La Liga,Atletico Madrid,Sevilla,4,1,30,45,0,0,
+DEMO_00402,2026-01-04,La Liga,Atletico Madrid,Sevilla,4,1,75,90,0,0,
+DEMO_00403,2026-01-05,Premier League,Manchester United,Liverpool,2,3,30,45,1,2,"30,40"
+DEMO_00403,2026-01-05,Premier League,Manchester United,Liverpool,2,3,75,90,0,0,
+DEMO_00404,2026-01-06,La Liga,Real Madrid,Barcelona,1,0,30,45,0,0,
+DEMO_00404,2026-01-06,La Liga,Real Madrid,Barcelona,1,0,75,90,0,0,
+DEMO_00405,2026-01-07,Serie A,Juventus,AC Milan,1,0,30,45,0,0,
+DEMO_00405,2026-01-07,Serie A,Juventus,AC Milan,1,0,75,90,0,0,
+DEMO_00406,2026-01-08,Serie A,Inter Milan,Roma,1,2,30,45,1,2,"30,38"
+DEMO_00406,2026-01-08,Serie A,Inter Milan,Roma,1,2,75,90,0,0,
+DEMO_00407,2026-01-09,Bundesliga,Bayern Munich,Borussia Dortmund,2,3,30,45,1,1,38
+DEMO_00407,2026-01-09,Bundesliga,Bayern Munich,Borussia Dortmund,2,3,75,90,0,0,
+DEMO_00408,2026-01-10,Bundesliga,RB Leipzig,Stuttgart,0,1,30,45,1,1,32
+DEMO_00408,2026-01-10,Bundesliga,RB Leipzig,Stuttgart,0,1,75,90,0,0,
+DEMO_00409,2026-01-11,Premier League,Manchester United,Liverpool,1,0,30,45,0,0,
+DEMO_00409,2026-01-11,Premier League,Manchester United,Liverpool,1,0,75,90,0,0,
+DEMO_00410,2026-01-12,Premier League,Manchester United,Liverpool,1,0,30,45,1,1,36
+DEMO_00410,2026-01-12,Premier League,Manchester United,Liverpool,1,0,75,90,0,0,
+DEMO_00411,2026-01-13,Bundesliga,Bayern Munich,Borussia Dortmund,0,2,30,45,0,0,
+DEMO_00411,2026-01-13,Bundesliga,Bayern Munich,Borussia Dortmund,0,2,75,90,0,0,
+DEMO_00412,2026-01-14,Ligue 1,PSG,Marseille,3,1,30,45,1,1,44
+DEMO_00412,2026-01-14,Ligue 1,PSG,Marseille,3,1,75,90,1,1,84
+DEMO_00413,2026-01-15,Serie A,Juventus,AC Milan,1,0,30,45,0,0,
+DEMO_00413,2026-01-15,Serie A,Juventus,AC Milan,1,0,75,90,0,0,
+DEMO_00414,2026-01-16,Serie A,Inter Milan,Roma,3,1,30,45,0,0,
+DEMO_00414,2026-01-16,Serie A,Inter Milan,Roma,3,1,75,90,1,1,75
+DEMO_00415,2026-01-17,Bundesliga,Bayern Munich,Borussia Dortmund,0,1,30,45,0,0,
+DEMO_00415,2026-01-17,Bundesliga,Bayern Munich,Borussia Dortmund,0,1,75,90,0,0,
+DEMO_00416,2026-01-18,La Liga,Real Madrid,Barcelona,1,1,30,45,0,0,
+DEMO_00416,2026-01-18,La Liga,Real Madrid,Barcelona,1,1,75,90,0,0,
+DEMO_00417,2026-01-19,Ligue 1,PSG,Marseille,2,1,30,45,0,0,
+DEMO_00417,2026-01-19,Ligue 1,PSG,Marseille,2,1,75,90,0,0,
+DEMO_00418,2026-01-20,La Liga,Real Madrid,Barcelona,1,0,30,45,0,0,
+DEMO_00418,2026-01-20,La Liga,Real Madrid,Barcelona,1,0,75,90,0,0,
+DEMO_00419,2026-01-21,Serie A,Juventus,AC Milan,1,1,30,45,1,1,42
+DEMO_00419,2026-01-21,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00420,2026-01-22,Ligue 1,PSG,Marseille,1,1,30,45,0,0,
+DEMO_00420,2026-01-22,Ligue 1,PSG,Marseille,1,1,75,90,0,0,
+DEMO_00421,2026-01-23,Ligue 1,PSG,Marseille,2,1,30,45,0,0,
+DEMO_00421,2026-01-23,Ligue 1,PSG,Marseille,2,1,75,90,0,0,
+DEMO_00422,2026-01-24,Premier League,Manchester United,Liverpool,0,0,30,45,0,0,
+DEMO_00422,2026-01-24,Premier League,Manchester United,Liverpool,0,0,75,90,0,0,
+DEMO_00423,2026-01-25,Ligue 1,PSG,Marseille,2,0,30,45,0,0,
+DEMO_00423,2026-01-25,Ligue 1,PSG,Marseille,2,0,75,90,0,0,
+DEMO_00424,2026-01-26,La Liga,Real Madrid,Barcelona,3,2,30,45,0,0,
+DEMO_00424,2026-01-26,La Liga,Real Madrid,Barcelona,3,2,75,90,1,1,85
+DEMO_00425,2026-01-27,Premier League,Manchester United,Liverpool,3,1,30,45,1,1,32
+DEMO_00425,2026-01-27,Premier League,Manchester United,Liverpool,3,1,75,90,0,0,
+DEMO_00426,2026-01-28,Ligue 1,PSG,Marseille,1,1,30,45,1,1,36
+DEMO_00426,2026-01-28,Ligue 1,PSG,Marseille,1,1,75,90,0,0,
+DEMO_00427,2026-01-29,Serie A,Inter Milan,Roma,0,2,30,45,1,1,32
+DEMO_00427,2026-01-29,Serie A,Inter Milan,Roma,0,2,75,90,1,1,84
+DEMO_00428,2026-01-30,Premier League,Arsenal,Chelsea,1,1,30,45,1,1,45
+DEMO_00428,2026-01-30,Premier League,Arsenal,Chelsea,1,1,75,90,0,0,
+DEMO_00429,2026-01-31,Premier League,Arsenal,Chelsea,1,2,30,45,1,1,31
+DEMO_00429,2026-01-31,Premier League,Arsenal,Chelsea,1,2,75,90,0,0,
+DEMO_00430,2026-02-01,Bundesliga,Bayern Munich,Borussia Dortmund,1,0,30,45,0,0,
+DEMO_00430,2026-02-01,Bundesliga,Bayern Munich,Borussia Dortmund,1,0,75,90,1,1,81
+DEMO_00431,2026-02-02,Ligue 1,Paris,Lyon,1,0,30,45,0,0,
+DEMO_00431,2026-02-02,Ligue 1,Paris,Lyon,1,0,75,90,0,0,
+DEMO_00432,2026-02-03,Bundesliga,RB Leipzig,Stuttgart,2,1,30,45,1,1,42
+DEMO_00432,2026-02-03,Bundesliga,RB Leipzig,Stuttgart,2,1,75,90,1,1,82
+DEMO_00433,2026-02-04,Serie A,Inter Milan,Roma,4,0,30,45,1,2,"39,42"
+DEMO_00433,2026-02-04,Serie A,Inter Milan,Roma,4,0,75,90,0,0,
+DEMO_00434,2026-02-05,La Liga,Atletico Madrid,Sevilla,2,2,30,45,1,2,"38,44"
+DEMO_00434,2026-02-05,La Liga,Atletico Madrid,Sevilla,2,2,75,90,0,0,
+DEMO_00435,2026-02-06,Premier League,Manchester United,Liverpool,1,3,30,45,0,0,
+DEMO_00435,2026-02-06,Premier League,Manchester United,Liverpool,1,3,75,90,0,0,
+DEMO_00436,2026-02-07,Bundesliga,RB Leipzig,Stuttgart,2,1,30,45,0,0,
+DEMO_00436,2026-02-07,Bundesliga,RB Leipzig,Stuttgart,2,1,75,90,1,1,75
+DEMO_00437,2026-02-08,Premier League,Arsenal,Chelsea,1,1,30,45,0,0,
+DEMO_00437,2026-02-08,Premier League,Arsenal,Chelsea,1,1,75,90,0,0,
+DEMO_00438,2026-02-09,Serie A,Juventus,AC Milan,1,2,30,45,0,0,
+DEMO_00438,2026-02-09,Serie A,Juventus,AC Milan,1,2,75,90,1,1,83
+DEMO_00439,2026-02-10,Bundesliga,RB Leipzig,Stuttgart,0,3,30,45,0,0,
+DEMO_00439,2026-02-10,Bundesliga,RB Leipzig,Stuttgart,0,3,75,90,1,1,80
+DEMO_00440,2026-02-11,Premier League,Arsenal,Chelsea,0,0,30,45,0,0,
+DEMO_00440,2026-02-11,Premier League,Arsenal,Chelsea,0,0,75,90,0,0,
+DEMO_00441,2026-02-12,Ligue 1,Paris,Lyon,2,1,30,45,0,0,
+DEMO_00441,2026-02-12,Ligue 1,Paris,Lyon,2,1,75,90,1,1,83
+DEMO_00442,2026-02-13,La Liga,Atletico Madrid,Sevilla,0,3,30,45,1,1,34
+DEMO_00442,2026-02-13,La Liga,Atletico Madrid,Sevilla,0,3,75,90,0,0,
+DEMO_00443,2026-02-14,Ligue 1,Paris,Lyon,1,1,30,45,1,1,43
+DEMO_00443,2026-02-14,Ligue 1,Paris,Lyon,1,1,75,90,0,0,
+DEMO_00444,2026-02-15,Premier League,Manchester United,Liverpool,0,0,30,45,0,0,
+DEMO_00444,2026-02-15,Premier League,Manchester United,Liverpool,0,0,75,90,0,0,
+DEMO_00445,2026-02-16,Bundesliga,RB Leipzig,Stuttgart,1,3,30,45,1,1,35
+DEMO_00445,2026-02-16,Bundesliga,RB Leipzig,Stuttgart,1,3,75,90,0,0,
+DEMO_00446,2026-02-17,Ligue 1,Paris,Lyon,2,1,30,45,0,0,
+DEMO_00446,2026-02-17,Ligue 1,Paris,Lyon,2,1,75,90,0,0,
+DEMO_00447,2026-02-18,Ligue 1,Paris,Lyon,1,2,30,45,1,1,39
+DEMO_00447,2026-02-18,Ligue 1,Paris,Lyon,1,2,75,90,1,1,79
+DEMO_00448,2026-02-19,Bundesliga,RB Leipzig,Stuttgart,1,2,30,45,1,1,38
+DEMO_00448,2026-02-19,Bundesliga,RB Leipzig,Stuttgart,1,2,75,90,0,0,
+DEMO_00449,2026-02-20,Ligue 1,Paris,Lyon,0,1,30,45,0,0,
+DEMO_00449,2026-02-20,Ligue 1,Paris,Lyon,0,1,75,90,0,0,
+DEMO_00450,2026-02-21,La Liga,Real Madrid,Barcelona,1,1,30,45,0,0,
+DEMO_00450,2026-02-21,La Liga,Real Madrid,Barcelona,1,1,75,90,0,0,
+DEMO_00451,2026-02-22,Bundesliga,RB Leipzig,Stuttgart,0,1,30,45,0,0,
+DEMO_00451,2026-02-22,Bundesliga,RB Leipzig,Stuttgart,0,1,75,90,0,0,
+DEMO_00452,2026-02-23,Bundesliga,RB Leipzig,Stuttgart,1,1,30,45,1,1,43
+DEMO_00452,2026-02-23,Bundesliga,RB Leipzig,Stuttgart,1,1,75,90,0,0,
+DEMO_00453,2026-02-24,Serie A,Inter Milan,Roma,0,1,30,45,0,0,
+DEMO_00453,2026-02-24,Serie A,Inter Milan,Roma,0,1,75,90,0,0,
+DEMO_00454,2026-02-25,Ligue 1,PSG,Marseille,0,2,30,45,0,0,
+DEMO_00454,2026-02-25,Ligue 1,PSG,Marseille,0,2,75,90,0,0,
+DEMO_00455,2026-02-26,Ligue 1,Paris,Lyon,3,0,30,45,1,1,31
+DEMO_00455,2026-02-26,Ligue 1,Paris,Lyon,3,0,75,90,0,0,
+DEMO_00456,2026-02-27,Serie A,Inter Milan,Roma,0,2,30,45,1,1,38
+DEMO_00456,2026-02-27,Serie A,Inter Milan,Roma,0,2,75,90,0,0,
+DEMO_00457,2026-02-28,Bundesliga,RB Leipzig,Stuttgart,4,3,30,45,1,1,36
+DEMO_00457,2026-02-28,Bundesliga,RB Leipzig,Stuttgart,4,3,75,90,0,0,
+DEMO_00458,2026-03-01,Serie A,Inter Milan,Roma,2,0,30,45,0,0,
+DEMO_00458,2026-03-01,Serie A,Inter Milan,Roma,2,0,75,90,1,1,80
+DEMO_00459,2026-03-02,Ligue 1,PSG,Marseille,1,1,30,45,1,1,42
+DEMO_00459,2026-03-02,Ligue 1,PSG,Marseille,1,1,75,90,1,1,81
+DEMO_00460,2026-03-03,Serie A,Juventus,AC Milan,0,0,30,45,0,0,
+DEMO_00460,2026-03-03,Serie A,Juventus,AC Milan,0,0,75,90,0,0,
+DEMO_00461,2026-03-04,Ligue 1,Paris,Lyon,1,2,30,45,1,1,40
+DEMO_00461,2026-03-04,Ligue 1,Paris,Lyon,1,2,75,90,0,0,
+DEMO_00462,2026-03-05,Bundesliga,RB Leipzig,Stuttgart,3,1,30,45,1,1,42
+DEMO_00462,2026-03-05,Bundesliga,RB Leipzig,Stuttgart,3,1,75,90,1,1,84
+DEMO_00463,2026-03-06,La Liga,Atletico Madrid,Sevilla,1,0,30,45,0,0,
+DEMO_00463,2026-03-06,La Liga,Atletico Madrid,Sevilla,1,0,75,90,0,0,
+DEMO_00464,2026-03-07,Serie A,Juventus,AC Milan,1,1,30,45,1,1,38
+DEMO_00464,2026-03-07,Serie A,Juventus,AC Milan,1,1,75,90,1,1,81
+DEMO_00465,2026-03-08,Premier League,Arsenal,Chelsea,1,4,30,45,1,2,"31,30"
+DEMO_00465,2026-03-08,Premier League,Arsenal,Chelsea,1,4,75,90,0,0,
+DEMO_00466,2026-03-09,Ligue 1,Paris,Lyon,1,3,30,45,0,0,
+DEMO_00466,2026-03-09,Ligue 1,Paris,Lyon,1,3,75,90,0,0,
+DEMO_00467,2026-03-10,Ligue 1,Paris,Lyon,4,0,30,45,0,0,
+DEMO_00467,2026-03-10,Ligue 1,Paris,Lyon,4,0,75,90,0,0,
+DEMO_00468,2026-03-11,Premier League,Arsenal,Chelsea,1,0,30,45,0,0,
+DEMO_00468,2026-03-11,Premier League,Arsenal,Chelsea,1,0,75,90,0,0,
+DEMO_00469,2026-03-12,Serie A,Juventus,AC Milan,1,0,30,45,0,0,
+DEMO_00469,2026-03-12,Serie A,Juventus,AC Milan,1,0,75,90,0,0,
+DEMO_00470,2026-03-13,Serie A,Juventus,AC Milan,1,1,30,45,1,1,41
+DEMO_00470,2026-03-13,Serie A,Juventus,AC Milan,1,1,75,90,0,0,
+DEMO_00471,2026-03-14,Bundesliga,Bayern Munich,Borussia Dortmund,1,4,30,45,0,0,
+DEMO_00471,2026-03-14,Bundesliga,Bayern Munich,Borussia Dortmund,1,4,75,90,1,2,"81,76"
+DEMO_00472,2026-03-15,La Liga,Real Madrid,Barcelona,2,2,30,45,0,0,
+DEMO_00472,2026-03-15,La Liga,Real Madrid,Barcelona,2,2,75,90,1,2,"77,75"
+DEMO_00473,2026-03-16,Ligue 1,PSG,Marseille,0,0,30,45,0,0,
+DEMO_00473,2026-03-16,Ligue 1,PSG,Marseille,0,0,75,90,0,0,
+DEMO_00474,2026-03-17,Serie A,Juventus,AC Milan,0,0,30,45,0,0,
+DEMO_00474,2026-03-17,Serie A,Juventus,AC Milan,0,0,75,90,0,0,
+DEMO_00475,2026-03-18,La Liga,Atletico Madrid,Sevilla,1,0,30,45,0,0,
+DEMO_00475,2026-03-18,La Liga,Atletico Madrid,Sevilla,1,0,75,90,1,1,84
+DEMO_00476,2026-03-19,Serie A,Juventus,AC Milan,3,2,30,45,1,1,43
+DEMO_00476,2026-03-19,Serie A,Juventus,AC Milan,3,2,75,90,0,0,
+DEMO_00477,2026-03-20,Bundesliga,RB Leipzig,Stuttgart,2,4,30,45,1,1,43
+DEMO_00477,2026-03-20,Bundesliga,RB Leipzig,Stuttgart,2,4,75,90,0,0,
+DEMO_00478,2026-03-21,Serie A,Inter Milan,Roma,2,2,30,45,0,0,
+DEMO_00478,2026-03-21,Serie A,Inter Milan,Roma,2,2,75,90,0,0,
+DEMO_00479,2026-03-22,Premier League,Arsenal,Chelsea,2,0,30,45,0,0,
+DEMO_00479,2026-03-22,Premier League,Arsenal,Chelsea,2,0,75,90,0,0,
+DEMO_00480,2026-03-23,La Liga,Real Madrid,Barcelona,0,4,30,45,1,1,37
+DEMO_00480,2026-03-23,La Liga,Real Madrid,Barcelona,0,4,75,90,0,0,
+DEMO_00481,2026-03-24,Ligue 1,PSG,Marseille,1,1,30,45,0,0,
+DEMO_00481,2026-03-24,Ligue 1,PSG,Marseille,1,1,75,90,0,0,
+DEMO_00482,2026-03-25,Ligue 1,Paris,Lyon,4,1,30,45,1,2,"30,41"
+DEMO_00482,2026-03-25,Ligue 1,Paris,Lyon,4,1,75,90,1,1,80
+DEMO_00483,2026-03-26,Ligue 1,PSG,Marseille,1,3,30,45,0,0,
+DEMO_00483,2026-03-26,Ligue 1,PSG,Marseille,1,3,75,90,1,1,76
+DEMO_00484,2026-03-27,La Liga,Real Madrid,Barcelona,0,0,30,45,0,0,
+DEMO_00484,2026-03-27,La Liga,Real Madrid,Barcelona,0,0,75,90,0,0,
+DEMO_00485,2026-03-28,La Liga,Atletico Madrid,Sevilla,1,1,30,45,1,1,45
+DEMO_00485,2026-03-28,La Liga,Atletico Madrid,Sevilla,1,1,75,90,0,0,
+DEMO_00486,2026-03-29,Serie A,Juventus,AC Milan,3,1,30,45,1,3,"41,42,30"
+DEMO_00486,2026-03-29,Serie A,Juventus,AC Milan,3,1,75,90,1,1,80
+DEMO_00487,2026-03-30,Ligue 1,PSG,Marseille,2,2,30,45,1,1,43
+DEMO_00487,2026-03-30,Ligue 1,PSG,Marseille,2,2,75,90,0,0,
+DEMO_00488,2026-03-31,Bundesliga,Bayern Munich,Borussia Dortmund,0,1,30,45,0,0,
+DEMO_00488,2026-03-31,Bundesliga,Bayern Munich,Borussia Dortmund,0,1,75,90,0,0,
+DEMO_00489,2026-04-01,La Liga,Atletico Madrid,Sevilla,0,2,30,45,1,1,36
+DEMO_00489,2026-04-01,La Liga,Atletico Madrid,Sevilla,0,2,75,90,1,1,76
+DEMO_00490,2026-04-02,Bundesliga,RB Leipzig,Stuttgart,2,4,30,45,0,0,
+DEMO_00490,2026-04-02,Bundesliga,RB Leipzig,Stuttgart,2,4,75,90,0,0,
+DEMO_00491,2026-04-03,La Liga,Real Madrid,Barcelona,0,0,30,45,0,0,
+DEMO_00491,2026-04-03,La Liga,Real Madrid,Barcelona,0,0,75,90,0,0,
+DEMO_00492,2026-04-04,Ligue 1,PSG,Marseille,1,0,30,45,0,0,
+DEMO_00492,2026-04-04,Ligue 1,PSG,Marseille,1,0,75,90,0,0,
+DEMO_00493,2026-04-05,La Liga,Atletico Madrid,Sevilla,2,0,30,45,0,0,
+DEMO_00493,2026-04-05,La Liga,Atletico Madrid,Sevilla,2,0,75,90,0,0,
+DEMO_00494,2026-04-06,Bundesliga,RB Leipzig,Stuttgart,1,0,30,45,0,0,
+DEMO_00494,2026-04-06,Bundesliga,RB Leipzig,Stuttgart,1,0,75,90,0,0,
+DEMO_00495,2026-04-07,Premier League,Arsenal,Chelsea,2,1,30,45,1,1,36
+DEMO_00495,2026-04-07,Premier League,Arsenal,Chelsea,2,1,75,90,0,0,
+DEMO_00496,2026-04-08,Bundesliga,RB Leipzig,Stuttgart,0,0,30,45,0,0,
+DEMO_00496,2026-04-08,Bundesliga,RB Leipzig,Stuttgart,0,0,75,90,0,0,
+DEMO_00497,2026-04-09,Bundesliga,RB Leipzig,Stuttgart,0,1,30,45,0,0,
+DEMO_00497,2026-04-09,Bundesliga,RB Leipzig,Stuttgart,0,1,75,90,0,0,
+DEMO_00498,2026-04-10,Ligue 1,PSG,Marseille,4,2,30,45,1,2,"39,31"
+DEMO_00498,2026-04-10,Ligue 1,PSG,Marseille,4,2,75,90,0,0,
+DEMO_00499,2026-04-11,Premier League,Arsenal,Chelsea,3,2,30,45,1,1,31
+DEMO_00499,2026-04-11,Premier League,Arsenal,Chelsea,3,2,75,90,0,0,

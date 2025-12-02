@@ -1,0 +1,89 @@
+leagues:
+- name: France – Ligue 1
+  url: https://www.soccerstats.com/latest.asp?league=france
+- name: France – Ligue 2
+  url: https://www.soccerstats.com/latest.asp?league=france2
+- name: Germany – Bundesliga
+  url: https://www.soccerstats.com/latest.asp?league=germany
+- name: Germany – 2. Bundesliga
+  url: https://www.soccerstats.com/latest.asp?league=germany2
+- name: Italy – Serie A
+  url: https://www.soccerstats.com/latest.asp?league=italy
+- name: Portugal – Liga Portugal
+  url: https://www.soccerstats.com/latest.asp?league=portugal
+- name: Portugal – Liga Portugal 2
+  url: https://www.soccerstats.com/latest.asp?league=portugal2
+- name: Scotland – Premiership
+  url: https://www.soccerstats.com/latest.asp?league=scotland
+- name: Spain – LaLiga
+  url: https://www.soccerstats.com/latest.asp?league=spain
+- name: Spain – LaLiga2
+  url: https://www.soccerstats.com/latest.asp?league=spain2
+- name: Switzerland – Super League
+  url: https://www.soccerstats.com/latest.asp?league=switzerland
+- name: Austria – Bundesliga
+  url: https://www.soccerstats.com/latest.asp?league=austria
+- name: Austria – 2. Liga
+  url: https://www.soccerstats.com/latest.asp?league=austria2
+- name: Bulgaria – Parva liga
+  url: https://www.soccerstats.com/latest.asp?league=bulgaria
+- name: Croatia – HNL
+  url: https://www.soccerstats.com/latest.asp?league=croatia
+- name: Croatia – NL
+  url: https://www.soccerstats.com/latest.asp?league=croatia2
+- name: Czech Republic – 1. Liga
+  url: https://www.soccerstats.com/latest.asp?league=czechrepublic
+- name: Czech Republic – ChNL
+  url: https://www.soccerstats.com/latest.asp?league=czechrepublic2
+- name: Denmark – Superligaen
+  url: https://www.soccerstats.com/latest.asp?league=denmark
+- name: Netherlands – Eredivisie
+  url: https://www.soccerstats.com/latest.asp?league=netherlands
+- name: Poland – Ekstraklasa
+  url: https://www.soccerstats.com/latest.asp?league=poland
+- name: Turkey – Super Lig
+  url: https://www.soccerstats.com/latest.asp?league=turkey
+- name: England – Premier League
+  url: https://www.soccerstats.com/latest.asp?league=england
+- name: England – Championship
+  url: https://www.soccerstats.com/latest.asp?league=england2
+- name: England – League One
+  url: https://www.soccerstats.com/latest.asp?league=england3
+- name: England – League Two
+  url: https://www.soccerstats.com/latest.asp?league=england4
+- name: Saudi Arabia – Saudi Professional League
+  url: https://www.soccerstats.com/latest.asp?league=saudiarabia
+- name: Australia – A-League
+  url: https://www.soccerstats.com/latest.asp?league=australia
+- name: Greece – Super League
+  url: https://www.soccerstats.com/latest.asp?league=greece
+- name: Slovenia – Prva liga
+  url: https://www.soccerstats.com/latest.asp?league=slovenia
+- name: Japan - J1 League
+  url: https://www.soccerstats.com/latest.asp?league=japan
+- name: Ireland - Premier Division
+  url: https://www.soccerstats.com/latest.asp?league=ireland
+- name: South Korea - K League 1
+  url: https://www.soccerstats.com/latest.asp?league=southkorea
+- name: Argentina - Liga Profesional - Apertura
+  url: https://www.soccerstats.com/latest.asp?league=argentina
+- name: Chile - Primera Division
+  url: https://www.soccerstats.com/halftime.asp?league=chile
+- name: Estonia - Meistriliiga
+  url: https://www.soccerstats.com/halftime.asp?league=estonia
+- name: FaroeIslands - Premier League
+  url: https://www.soccerstats.com/halftime.asp?league=faroeislands
+- name: Finland - Veikkausliiga
+  url: https://www.soccerstats.com/halftime.asp?league=finland
+- name: Iceland - Besta deild
+  url: https://www.soccerstats.com/halftime.asp?league=iceland
+- name: Latvia - Virsliga
+  url: https://www.soccerstats.com/halftime.asp?league=latvia
+- name: Sweden - Allsvenskan
+  url: https://www.soccerstats.com/halftime.asp?league=sweden
+- name: USA - MLS
+  url: https://www.soccerstats.com/latest.asp?league=usa
+- name: South Korea - WK League Women
+  url: https://www.soccerstats.com/halftime.asp?league=southkorea4
+- name: Chile - Liga de Primera
+  url: https://www.soccerstats.com/latest.asp?league=chile

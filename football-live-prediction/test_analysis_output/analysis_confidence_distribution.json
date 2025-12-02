@@ -1,0 +1,14 @@
+[
+  {
+    "confidence_bracket": "41%-44%",
+    "sample_count": 12,
+    "correct_rate": 0.6666666666666666,
+    "avg_roi": -0.3333333333333333
+  },
+  {
+    "confidence_bracket": "44%-46%",
+    "sample_count": 6,
+    "correct_rate": 0.3333333333333333,
+    "avg_roi": 0.3333333333333333
+  }
+]

@@ -1,0 +1,56 @@
+==========================================
+🚀 PARIS LIVE - PRODUCTION DEPLOYMENT
+==========================================
+
+[1/8] 🔍 Vérification de l'environnement Python...
+✅ Python trouvé: Python 3.12.3
+
+[2/8] 📁 Création des répertoires...
+✅ Répertoires créés
+
+[3/8] 🗄️  Initialisation de la base de données...
+2025-11-26 20:44:01.588 | INFO     | utils.database_manager:_create_tables:118 - ✅ Database tables created
+2025-11-26 20:44:01.588 | INFO     | utils.database_manager:_init_db:35 - ✅ Database initialized: /workspaces/paris-live/football-live-prediction/data/production.db
+✅ Base de données initialisée
+
+[4/8] ✔️  Vérification de la configuration...
+✅ Configuration YAML valide
+   - Équipes: 243
+   - Ligues: australia, austria, belgium, england, france, germany, greece, italy, spain
+✅ Référence des ligues valide (1 ligues)
+
+[5/8] 📱 Test de la connexion Telegram...
+✅ Connexion Telegram réussie
+   - Bot: @Direct_goal_bot
+⚠️  Erreur Telegram: Chat not found
+
+[6/8] 🧪 Exécution de la suite de tests...
+✅ Tests: 
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+18 passed, 6 warnings in 10.91s
+
+[7/8] 📝 Génération de la documentation...
+✅ Documentation générée
+
+[8/8] 🎯 Démarrage du système en production...
+
+==========================================
+✅ PRODUCTION DEPLOYMENT COMPLETE
+==========================================
+
+Logs: /workspaces/paris-live/football-live-prediction/logs/production_20251126_204401.log
+
+Système prêt pour:
+1. Monitoring en temps réel des matchs
+2. Alertes Telegram instantanées
+3. Suivi des statistiques live
+4. Calcul des scores de danger
+
+Pour démarrer le monitoring:
+  cd /workspaces/paris-live/football-live-prediction
+  python main_live_predictor.py
+
+🚀 Monitoring lancé (PID: 62432)
+
+Vérifiez les logs:
+  tail -f /workspaces/paris-live/football-live-prediction/logs/production_20251126_204401.log

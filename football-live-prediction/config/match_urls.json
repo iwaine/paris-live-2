@@ -1,0 +1,41 @@
+{
+  "urls": [
+    {
+      "url": "https://www.soccerstats.com/pmatch.asp?league=bulgaria&stats=141-2-5-2026",
+      "name": "Bulgaria",
+      "added": "2025-12-02T16:40:49.196637"
+    },
+    {
+      "url": "https://www.soccerstats.com/pmatch.asp?league=france&stats=141-2-5-2026",
+      "name": "France_Ligue1",
+      "added": "2025-12-02T16:40:49.196653"
+    },
+    {
+      "url": "https://www.soccerstats.com/pmatch.asp?league=spain&stats=141-2-5-2026",
+      "name": "Spain_LaLiga",
+      "added": "2025-12-02T16:40:49.196656"
+    },
+    {
+      "url": "https://www.soccerstats.com/pmatch.asp?league=germany&stats=141-2-5-2026",
+      "name": "Germany_Bundesliga",
+      "added": "2025-12-02T16:40:49.196658"
+    },
+    {
+      "url": "https://www.soccerstats.com/pmatch.asp?league=italy&stats=141-2-5-2026",
+      "name": "Italy_SerieA",
+      "added": "2025-12-02T16:40:49.196660"
+    },
+    {
+      "url": "https://www.soccerstats.com/pmatch.asp?league=england&stats=141-2-5-2026",
+      "name": "England_PremierLeague",
+      "added": "2025-12-02T16:40:49.196662"
+    },
+    {
+      "url": "https://www.soccerstats.com/pmatch.asp?league=portugal&stats=141-2-5-2026",
+      "name": "Portugal_Primeira",
+      "added": "2025-12-02T16:40:49.196664"
+    }
+  ],
+  "last_updated": "2025-12-02T16:40:49.196711",
+  "total": 7
+}

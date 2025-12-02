@@ -1,0 +1,74 @@
+2025-11-27 22:53:13,152 - __main__ - INFO - Initializing Production Monitor...
+2025-11-27 22:53:13,283 - __main__ - INFO - ✅ Monitor initialized
+2025-11-27 22:53:13,283 - __main__ - INFO -    - Teams: 243
+2025-11-27 22:53:13,283 - __main__ - INFO -    - Database: /workspaces/paris-live/football-live-prediction/data/production.db
+2025-11-27 22:53:13,283 - __main__ - INFO -    - Telegram: ✅
+2025-11-27 22:53:13,283 - __main__ - INFO - 🚀 PARIS LIVE PRODUCTION MONITORING STARTED
+2025-11-27 22:53:13,283 - __main__ - INFO - Time: 2025-11-27 22:53:13
+2025-11-27 22:53:13,283 - __main__ - INFO - Log: /workspaces/paris-live/football-live-prediction/logs/monitoring_20251127_225312.log
+2025-11-27 22:53:13,321 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8085055094:AAG2DnroWUhR0vISl5XGNND1OZCLm1GF41c/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 22:53:13,322 - __main__ - INFO - ✅ Startup notification sent
+2025-11-27 22:53:13,322 - __main__ - INFO - Starting match monitoring loop...
+2025-11-27 22:53:13,322 - __main__ - INFO - 
+============================================================
+2025-11-27 22:53:13,323 - __main__ - INFO - Monitor Cycle #1 - 2025-11-27 22:53:13
+2025-11-27 22:53:13,323 - __main__ - INFO - ============================================================
+2025-11-27 22:53:13,323 - __main__ - INFO - No live matches at this time
+2025-11-27 22:53:13,323 - __main__ - WARNING - Failed to get statistics: 'DatabaseManager' object has no attribute 'conn'
+2025-11-27 22:53:13,323 - __main__ - INFO - Waiting 300 seconds before next cycle...
+2025-11-27 22:58:13,407 - __main__ - INFO - 
+============================================================
+2025-11-27 22:58:13,408 - __main__ - INFO - Monitor Cycle #2 - 2025-11-27 22:58:13
+2025-11-27 22:58:13,408 - __main__ - INFO - ============================================================
+2025-11-27 22:58:13,408 - __main__ - INFO - No live matches at this time
+2025-11-27 22:58:13,408 - __main__ - WARNING - Failed to get statistics: 'DatabaseManager' object has no attribute 'conn'
+2025-11-27 22:58:13,408 - __main__ - INFO - Waiting 300 seconds before next cycle...
+2025-11-27 23:03:13,439 - __main__ - INFO - 
+============================================================
+2025-11-27 23:03:13,440 - __main__ - INFO - Monitor Cycle #3 - 2025-11-27 23:03:13
+2025-11-27 23:03:13,440 - __main__ - INFO - ============================================================
+2025-11-27 23:03:13,440 - __main__ - INFO - No live matches at this time
+2025-11-27 23:03:13,440 - __main__ - WARNING - Failed to get statistics: 'DatabaseManager' object has no attribute 'conn'
+2025-11-27 23:03:13,440 - __main__ - INFO - Waiting 300 seconds before next cycle...
+2025-11-27 23:08:13,487 - __main__ - INFO - 
+============================================================
+2025-11-27 23:08:13,487 - __main__ - INFO - Monitor Cycle #4 - 2025-11-27 23:08:13
+2025-11-27 23:08:13,487 - __main__ - INFO - ============================================================
+2025-11-27 23:08:13,487 - __main__ - INFO - No live matches at this time
+2025-11-27 23:08:13,488 - __main__ - WARNING - Failed to get statistics: 'DatabaseManager' object has no attribute 'conn'
+2025-11-27 23:08:13,488 - __main__ - INFO - Waiting 300 seconds before next cycle...
+2025-11-27 23:13:13,519 - __main__ - INFO - 
+============================================================
+2025-11-27 23:13:13,520 - __main__ - INFO - Monitor Cycle #5 - 2025-11-27 23:13:13
+2025-11-27 23:13:13,520 - __main__ - INFO - ============================================================
+2025-11-27 23:13:13,520 - __main__ - INFO - No live matches at this time
+2025-11-27 23:13:13,520 - __main__ - WARNING - Failed to get statistics: 'DatabaseManager' object has no attribute 'conn'
+2025-11-27 23:13:13,520 - __main__ - INFO - Waiting 300 seconds before next cycle...
+2025-11-27 23:18:13,551 - __main__ - INFO - 
+============================================================
+2025-11-27 23:18:13,552 - __main__ - INFO - Monitor Cycle #6 - 2025-11-27 23:18:13
+2025-11-27 23:18:13,552 - __main__ - INFO - ============================================================
+2025-11-27 23:18:13,552 - __main__ - INFO - No live matches at this time
+2025-11-27 23:18:13,552 - __main__ - WARNING - Failed to get statistics: 'DatabaseManager' object has no attribute 'conn'
+2025-11-27 23:18:13,552 - __main__ - INFO - Waiting 300 seconds before next cycle...
+2025-11-27 23:23:13,628 - __main__ - INFO - 
+============================================================
+2025-11-27 23:23:13,628 - __main__ - INFO - Monitor Cycle #7 - 2025-11-27 23:23:13
+2025-11-27 23:23:13,628 - __main__ - INFO - ============================================================
+2025-11-27 23:23:13,628 - __main__ - INFO - No live matches at this time
+2025-11-27 23:23:13,629 - __main__ - WARNING - Failed to get statistics: 'DatabaseManager' object has no attribute 'conn'
+2025-11-27 23:23:13,629 - __main__ - INFO - Waiting 300 seconds before next cycle...
+2025-11-27 23:28:13,695 - __main__ - INFO - 
+============================================================
+2025-11-27 23:28:13,696 - __main__ - INFO - Monitor Cycle #8 - 2025-11-27 23:28:13
+2025-11-27 23:28:13,696 - __main__ - INFO - ============================================================
+2025-11-27 23:28:13,696 - __main__ - INFO - No live matches at this time
+2025-11-27 23:28:13,696 - __main__ - WARNING - Failed to get statistics: 'DatabaseManager' object has no attribute 'conn'
+2025-11-27 23:28:13,696 - __main__ - INFO - Waiting 300 seconds before next cycle...
+2025-11-27 23:33:13,794 - __main__ - INFO - 
+============================================================
+2025-11-27 23:33:13,794 - __main__ - INFO - Monitor Cycle #9 - 2025-11-27 23:33:13
+2025-11-27 23:33:13,794 - __main__ - INFO - ============================================================
+2025-11-27 23:33:13,794 - __main__ - INFO - No live matches at this time
+2025-11-27 23:33:13,794 - __main__ - WARNING - Failed to get statistics: 'DatabaseManager' object has no attribute 'conn'
+2025-11-27 23:33:13,794 - __main__ - INFO - Waiting 300 seconds before next cycle...

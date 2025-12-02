@@ -1,0 +1,49 @@
+# ============================================
+# FOOTBALL LIVE PREDICTION - REQUIREMENTS
+# ============================================
+
+# Scraping - HTML statique
+requests==2.31.0
+beautifulsoup4==4.12.2
+lxml==4.9.3
+
+# Scraping - JavaScript dynamique (Live)
+selenium==4.15.2
+undetected-chromedriver==3.5.4
+webdriver-manager==4.0.1
+
+# Data Processing
+pandas==2.1.4
+numpy==1.26.2
+
+# Configuration
+pyyaml==6.0.1
+python-dotenv==1.0.0
+
+# Date/Time
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Exports
+openpyxl==3.1.2
+xlsxwriter==3.1.9
+reportlab==4.0.7  # Pour PDF (phase ultérieure)
+
+# Interface Terminal
+rich==13.7.0
+colorama==0.4.6
+tqdm==4.66.1
+
+# Logging
+loguru==0.7.2
+
+# Utilities
+tenacity==8.2.3  # Pour retry automatique
+
+# Telegram Bot
+python-telegram-bot==20.7
+aiofiles==23.2.1
+
+# Tests (optionnel)
+pytest==7.4.3
+pytest-cov==4.1.0

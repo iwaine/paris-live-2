@@ -1,0 +1,64 @@
+# Configuration Telegram Bot
+
+telegram:
+  # Token obtenu de @BotFather sur Telegram
+  # Format: "123456789:ABCdefGHIjklmnoPQRstUVwxyz"
+  bot_token: "${TELEGRAM_BOT_TOKEN}"
+  
+  # Chat ID ou Group ID où envoyer les notifications
+  # Pour trouver votre chat_id: démarrez le bot et envoyez /start
+  chat_id: "${TELEGRAM_CHAT_ID}"
+  
+  # Configuration des notifications
+  notifications:
+    # Envoyer alerte quand danger_score > seuil
+    send_on_high_danger: true
+    danger_threshold: 3.5  # DANGEREUX ou plus
+    
+    # Envoyer mise à jour toutes les N minutes
+    update_interval_minutes: 15
+    
+    # Types de notifications à activer
+    types:
+      match_start: true         # Quand le match commence
+      danger_alert: true        # Score de danger élevé
+      goal: true                # Nouveau but
+      match_end: true           # Fin du match
+      form_update: true         # Mise à jour de forme
+  
+  # Messages personnalisés
+  messages:
+    welcome: |
+      🎯 Bienvenue sur le Prédicteur Live!
+      
+      Commandes disponibles:
+      /start - Démarrer
+      /help - Aide
+      /match URL - Analyser un match
+      /monitor URL - Surveiller un match
+      /stats - Voir statistiques
+      /stop - Arrêter la surveillance
+      
+    help: |
+      📋 GUIDE D'UTILISATION
+      
+      1. /match <URL> - Analyser un match live
+      2. /monitor <URL> - Surveiller en continu
+      3. /stats - Voir les stats du mois
+      4. /settings - Configurer les alertes
+      
+      Danger Score:
+      🔴 4.0+     → ULTRA-DANGEREUX
+      🟠 3.0-4.0  → DANGEREUX
+      🟡 2.0-3.0  → MODÉRÉ
+      🟢 < 2.0    → FAIBLE
+
+# Proxy (si nécessaire)
+proxy:
+  enabled: false
+  url: "http://proxy.example.com:8080"
+
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/telegram_bot.log"

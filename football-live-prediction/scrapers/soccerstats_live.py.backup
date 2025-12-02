@@ -1,0 +1,262 @@
+"""
+Live Match Scraper pour SoccerStats.com
+Extrait les données en temps réel d'un match
+"""
+import requests
+from bs4 import BeautifulSoup
+import re
+import time
+from typing import Dict, Optional
+from datetime import datetime
+from loguru import logger
+
+
+class SoccerStatsLiveScraper:
+    """Scraper pour matchs en direct sur SoccerStats.com"""
+    
+    def __init__(self):
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }
+        logger.info("SoccerStatsLiveScraper initialized")
+    
+    def scrape_live_match(self, match_url: str) -> Optional[Dict]:
+        """
+        Scrape les données live d'un match
+        
+        Args:
+            match_url: URL du match (ex: pmatch.asp?league=georgia2&stats=264-8-1-2025)
+        
+        Returns:
+            Dict avec toutes les données du match ou None si erreur
+        """
+        try:
+            response = requests.get(match_url, headers=self.headers, timeout=30)
+            response.raise_for_status()
+            
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            match_data = {}
+            
+            # 1. EXTRAIRE LES ÉQUIPES
+            h1 = soup.find('h1')
+            if h1:
+                match_title = h1.get_text(strip=True)
+                teams = match_title.split(' vs ')
+                
+                if len(teams) == 2:
+                    match_data['home_team'] = teams[0].strip()
+                    match_data['away_team'] = teams[1].strip()
+                    logger.info(f"Match: {match_data['home_team']} vs {match_data['away_team']}")
+            
+            # 2. EXTRAIRE LE SCORE ACTUEL
+            match_data['score'] = self._extract_score(soup)
+            
+            # 3. EXTRAIRE LA MINUTE ACTUELLE
+            match_data['current_minute'] = self._extract_minute(soup)
+            
+            # 4. EXTRAIRE LE STATUT (HT, FT, Live)
+            match_data['status'] = self._extract_status(soup)
+            
+            # 5. EXTRAIRE LES STATS LIVE
+            match_data['stats'] = self._extract_live_stats(soup)
+            
+            # 6. TIMESTAMP
+            match_data['scraped_at'] = datetime.now().isoformat()
+            
+            logger.success(f"Live data scraped: {match_data.get('score', 'N/A')} @ {match_data.get('current_minute', 'N/A')}'")
+            
+            return match_data
+            
+        except Exception as e:
+            logger.error(f"Error scraping live match: {e}")
+            return None
+    
+    def _extract_score(self, soup: BeautifulSoup) -> Optional[str]:
+        """Extrait le score actuel (format: "2-1")"""
+        # Chercher dans les éléments avec class/id contenant "score"
+        score_elements = soup.find_all(['div', 'span', 'td', 'b', 'strong'], 
+                                       class_=re.compile('score', re.IGNORECASE))
+        
+        for elem in score_elements:
+            text = elem.get_text(strip=True)
+            match = re.match(r'^(\d+)\s*[-:]\s*(\d+)$', text)
+            if match:
+                return f"{match.group(1)}-{match.group(2)}"
+        
+        # Fallback: chercher n'importe quel pattern de score
+        all_text = soup.get_text()
+        scores = re.findall(r'\b(\d+)\s*[-:]\s*(\d+)\b', all_text)
+        if scores:
+            return f"{scores[0][0]}-{scores[0][1]}"
+        
+        return None
+    
+    def _extract_minute(self, soup: BeautifulSoup) -> Optional[int]:
+        """Extrait la minute actuelle du match"""
+        # Chercher dans le <td colspan="2"> avec la minute
+        status_cell = soup.find('td', {'colspan': '2', 'align': 'center'})
+        
+        if status_cell:
+            font_tag = status_cell.find('font')
+            if font_tag:
+                status_text = font_tag.get_text(strip=True)
+                
+                # Format: 35'
+                match = re.match(r'^(\d+)\'$', status_text)
+                if match:
+                    minute = int(match.group(1))
+                    logger.info(f"Minute extraite: {minute}'")
+                    return minute
+        
+        # Fallback: chercher n'importe où
+        all_text = soup.get_text()
+        matches = re.findall(r'(\d+)'', all_text)
+        if matches:
+            minutes = [int(m) for m in matches if int(m) <= 120]
+            if minutes:
+                return min(minutes)
+        
+        return None
+    
+    def _extract_status(self, soup: BeautifulSoup) -> str:
+        """Extrait le statut du match (Live, HT, FT)"""
+        all_text = soup.get_text()
+        
+        if re.search(r'\bFT\b|Full\s*Time|Terminé', all_text, re.IGNORECASE):
+            return "FT"
+        elif re.search(r'\bHT\b|Half\s*Time|Mi-temps', all_text, re.IGNORECASE):
+            return "HT"
+        elif re.search(r'\bLive\b|En\s*cours', all_text, re.IGNORECASE):
+            return "Live"
+        else:
+            return "Unknown"
+    
+    def _extract_live_stats(self, soup: BeautifulSoup) -> Dict:
+        """
+        Extrait les statistiques live du match
+        
+        Returns:
+            Dict avec toutes les stats (Possession, Corners, Shots, etc.)
+        """
+        stats_data = {}
+        
+        # Trouver tous les tableaux de stats (bgcolor="#cccccc", width="99%")
+        stat_tables = soup.find_all('table', {'bgcolor': '#cccccc', 'width': '99%'})
+        
+        for table in stat_tables:
+            # Trouver le nom de la stat (H3)
+            h3 = table.find('h3')
+            if not h3:
+                continue
+            
+            stat_name = h3.get_text(strip=True)
+            
+            # Trouver la ligne avec les valeurs (height="24")
+            value_row = table.find('tr', {'height': '24'})
+            if not value_row:
+                continue
+            
+            # Extraire les cellules avec width="80"
+            value_cells = value_row.find_all('td', {'width': '80'})
+            
+            if len(value_cells) >= 2:
+                home_val = value_cells[0].get_text(strip=True)
+                away_val = value_cells[1].get_text(strip=True)
+                
+                stats_data[stat_name] = {
+                    'home': home_val,
+                    'away': away_val
+                }
+        
+        logger.info(f"Stats extracted: {len(stats_data)} categories")
+        
+        return stats_data
+    
+    def monitor_match(self, match_url: str, interval: int = 45, callback=None):
+        """
+        Surveille un match en continu avec mise à jour toutes les X secondes
+        
+        Args:
+            match_url: URL du match
+            interval: Intervalle entre chaque scraping (défaut: 45 secondes)
+            callback: Fonction à appeler avec les nouvelles données
+        """
+        logger.info(f"🔴 Surveillance du match démarrée (intervalle: {interval}s)")
+        
+        iteration = 0
+        
+        try:
+            while True:
+                iteration += 1
+                logger.info(f"[Iteration {iteration}] Scraping...")
+                
+                match_data = self.scrape_live_match(match_url)
+                
+                if match_data:
+                    # Appeler le callback si fourni
+                    if callback:
+                        callback(match_data)
+                    
+                    # Arrêter si match terminé
+                    if match_data.get('status') == 'FT':
+                        logger.success("Match terminé (FT) - Arrêt de la surveillance")
+                        break
+                
+                # Attendre avant la prochaine itération
+                logger.info(f"Attente de {interval} secondes...")
+                time.sleep(interval)
+                
+        except KeyboardInterrupt:
+            logger.warning("Surveillance interrompue par l'utilisateur")
+        except Exception as e:
+            logger.error(f"Erreur durant la surveillance: {e}")
+
+
+def test_live_scraper():
+    """Test du scraper live"""
+    print("="*70)
+    print("🧪 TEST DU LIVE SCRAPER")
+    print("="*70)
+    
+    # URL du match en Géorgie
+    test_url = "https://www.soccerstats.com/pmatch.asp?league=georgia2&stats=264-8-1-2025"
+    
+    scraper = SoccerStatsLiveScraper()
+    
+    print("\n📊 Test 1: Scraping unique")
+    print("-"*70)
+    
+    match_data = scraper.scrape_live_match(test_url)
+    
+    if match_data:
+        print(f"\n✅ Données extraites:")
+        print(f"  🏠 Domicile: {match_data.get('home_team', 'N/A')}")
+        print(f"  ✈️  Extérieur: {match_data.get('away_team', 'N/A')}")
+        print(f"  ⚽ Score: {match_data.get('score', 'N/A')}")
+        print(f"  ⏱️  Minute: {match_data.get('current_minute', 'N/A')}'")
+        print(f"  📡 Statut: {match_data.get('status', 'N/A')}")
+        
+        print(f"\n📊 Statistiques live:")
+        stats = match_data.get('stats', {})
+        for stat_name, values in stats.items():
+            print(f"  {stat_name:25s}: {values['home']:6s} vs {values['away']:6s}")
+    else:
+        print("❌ Échec de l'extraction")
+    
+    print("\n" + "="*70)
+    
+    # Test 2: Surveillance (optionnel)
+    response = input("\n🔴 Voulez-vous surveiller ce match en continu ? (o/n): ")
+    
+    if response.lower() in ['o', 'oui', 'y', 'yes']:
+        def print_update(data):
+            print(f"\n⚡ UPDATE [{data.get('scraped_at', 'N/A')}]")
+            print(f"   Score: {data.get('score', 'N/A')} @ {data.get('current_minute', 'N/A')}'")
+            print(f"   Statut: {data.get('status', 'N/A')}")
+        
+        scraper.monitor_match(test_url, interval=45, callback=print_update)
+
+
+if __name__ == "__main__":
+    test_live_scraper()

@@ -1,0 +1,32 @@
+[
+  {
+    "confidence_bracket": "25%-32%",
+    "sample_count": 1620,
+    "correct_rate": 0.674074074074074,
+    "avg_roi": 0.0
+  },
+  {
+    "confidence_bracket": "32%-38%",
+    "sample_count": 552,
+    "correct_rate": 0.6485507246376812,
+    "avg_roi": -0.10144927536231885
+  },
+  {
+    "confidence_bracket": "38%-44%",
+    "sample_count": 2124,
+    "correct_rate": 0.5612052730696798,
+    "avg_roi": -0.1224105461393597
+  },
+  {
+    "confidence_bracket": "44%-50%",
+    "sample_count": 1140,
+    "correct_rate": 0.5543859649122806,
+    "avg_roi": -0.10877192982456141
+  },
+  {
+    "confidence_bracket": "50%-56%",
+    "sample_count": 540,
+    "correct_rate": 0.5481481481481482,
+    "avg_roi": -0.0962962962962963
+  }
+]

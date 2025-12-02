@@ -1,0 +1,13 @@
+2025-11-26 20:44:13.668 | INFO     | soccerstats_live:__init__:21 - SoccerStatsLiveScraper initialized
+2025-11-26 20:44:13.668 | INFO     | interval_predictor:__init__:13 - IntervalPredictor initialized
+======================================================================
+🎯 SYSTÈME DE PRÉDICTION LIVE
+======================================================================
+
+📋 Entrez l'URL du match live: Traceback (most recent call last):
+  File "/workspaces/paris-live/football-live-prediction/main_live_predictor.py", line 115, in <module>
+    main()
+  File "/workspaces/paris-live/football-live-prediction/main_live_predictor.py", line 24, in main
+    match_url = input("\n📋 Entrez l'URL du match live: ").strip()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError: EOF when reading a line

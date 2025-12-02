@@ -1,0 +1,5 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/workspaces/paris-live/football-live-prediction/monitoring_production.py", line 37, in <module>
+    from scrapers.soccerstats_historical import HistoricalSoccerStatsScraper
+ImportError: cannot import name 'HistoricalSoccerStatsScraper' from 'scrapers.soccerstats_historical' (/workspaces/paris-live/football-live-prediction/scrapers/soccerstats_historical.py)

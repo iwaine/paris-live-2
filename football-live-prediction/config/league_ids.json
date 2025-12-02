@@ -1,0 +1,262 @@
+{
+  "league_ids": {
+    "france": {
+      "name": "Ligue 1",
+      "country": "France",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=france"
+    },
+    "france2": {
+      "name": "Ligue 2",
+      "country": "France",
+      "tier": 2,
+      "url": "https://www.soccerstats.com/latest.asp?league=france2"
+    },
+    "germany": {
+      "name": "Bundesliga",
+      "country": "Germany",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=germany"
+    },
+    "germany2": {
+      "name": "2. Bundesliga",
+      "country": "Germany",
+      "tier": 2,
+      "url": "https://www.soccerstats.com/latest.asp?league=germany2"
+    },
+    "italy": {
+      "name": "Serie A",
+      "country": "Italy",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=italy"
+    },
+    "portugal": {
+      "name": "Liga Portugal",
+      "country": "Portugal",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=portugal"
+    },
+    "portugal2": {
+      "name": "Liga Portugal 2",
+      "country": "Portugal",
+      "tier": 2,
+      "url": "https://www.soccerstats.com/latest.asp?league=portugal2"
+    },
+    "scotland": {
+      "name": "Premiership",
+      "country": "Scotland",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=scotland"
+    },
+    "spain": {
+      "name": "LaLiga",
+      "country": "Spain",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=spain"
+    },
+    "spain2": {
+      "name": "LaLiga 2",
+      "country": "Spain",
+      "tier": 2,
+      "url": "https://www.soccerstats.com/latest.asp?league=spain2"
+    },
+    "switzerland": {
+      "name": "Super League",
+      "country": "Switzerland",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=switzerland"
+    },
+    "austria": {
+      "name": "Bundesliga",
+      "country": "Austria",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=austria"
+    },
+    "austria2": {
+      "name": "2. Liga",
+      "country": "Austria",
+      "tier": 2,
+      "url": "https://www.soccerstats.com/latest.asp?league=austria2"
+    },
+    "bulgaria": {
+      "name": "Parva liga",
+      "country": "Bulgaria",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=bulgaria"
+    },
+    "croatia": {
+      "name": "HNL",
+      "country": "Croatia",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=croatia"
+    },
+    "croatia2": {
+      "name": "NL",
+      "country": "Croatia",
+      "tier": 2,
+      "url": "https://www.soccerstats.com/latest.asp?league=croatia2"
+    },
+    "czechrepublic": {
+      "name": "1. Liga",
+      "country": "Czech Republic",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=czechrepublic"
+    },
+    "czechrepublic2": {
+      "name": "ChNL",
+      "country": "Czech Republic",
+      "tier": 2,
+      "url": "https://www.soccerstats.com/latest.asp?league=czechrepublic2"
+    },
+    "denmark": {
+      "name": "Superligaen",
+      "country": "Denmark",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=denmark"
+    },
+    "netherlands": {
+      "name": "Eredivisie",
+      "country": "Netherlands",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=netherlands"
+    },
+    "poland": {
+      "name": "Ekstraklasa",
+      "country": "Poland",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=poland"
+    },
+    "turkey": {
+      "name": "Super Lig",
+      "country": "Turkey",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=turkey"
+    },
+    "england": {
+      "name": "Premier League",
+      "country": "England",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=england"
+    },
+    "england2": {
+      "name": "Championship",
+      "country": "England",
+      "tier": 2,
+      "url": "https://www.soccerstats.com/latest.asp?league=england2"
+    },
+    "england3": {
+      "name": "League One",
+      "country": "England",
+      "tier": 3,
+      "url": "https://www.soccerstats.com/latest.asp?league=england3"
+    },
+    "england4": {
+      "name": "League Two",
+      "country": "England",
+      "tier": 4,
+      "url": "https://www.soccerstats.com/latest.asp?league=england4"
+    },
+    "saudiarabia": {
+      "name": "Saudi Professional League",
+      "country": "Saudi Arabia",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=saudiarabia"
+    },
+    "australia": {
+      "name": "A-League",
+      "country": "Australia",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=australia"
+    },
+    "greece": {
+      "name": "Super League",
+      "country": "Greece",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=greece"
+    },
+    "slovenia": {
+      "name": "Prva liga",
+      "country": "Slovenia",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=slovenia"
+    },
+    "japan": {
+      "name": "J1 League",
+      "country": "Japan",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=japan"
+    },
+    "ireland": {
+      "name": "Premier Division",
+      "country": "Ireland",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=ireland"
+    },
+    "southkorea": {
+      "name": "K League 1",
+      "country": "South Korea",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=southkorea"
+    },
+    "southkorea4": {
+      "name": "WK League Women",
+      "country": "South Korea",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/halftime.asp?league=southkorea4"
+    },
+    "argentina": {
+      "name": "Liga Profesional - Apertura",
+      "country": "Argentina",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=argentina"
+    },
+    "chile": {
+      "name": "Primera Division",
+      "country": "Chile",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=chile"
+    },
+    "estonia": {
+      "name": "Meistriliiga",
+      "country": "Estonia",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/halftime.asp?league=estonia"
+    },
+    "faroeislands": {
+      "name": "Premier League",
+      "country": "Faroe Islands",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/halftime.asp?league=faroeislands"
+    },
+    "finland": {
+      "name": "Veikkausliiga",
+      "country": "Finland",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/halftime.asp?league=finland"
+    },
+    "iceland": {
+      "name": "Besta deild",
+      "country": "Iceland",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/halftime.asp?league=iceland"
+    },
+    "latvia": {
+      "name": "Virsliga",
+      "country": "Latvia",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/halftime.asp?league=latvia"
+    },
+    "sweden": {
+      "name": "Allsvenskan",
+      "country": "Sweden",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/halftime.asp?league=sweden"
+    },
+    "usa": {
+      "name": "MLS",
+      "country": "USA",
+      "tier": 1,
+      "url": "https://www.soccerstats.com/latest.asp?league=usa"
+    }
+  }
+}

@@ -1,0 +1,1171 @@
+teams:
+  Adelaide Utd:
+    id: u6990
+    league: australia
+  Auckland:
+    id: u11591
+    league: australia
+  Auckland stats:
+    id: u11591
+    league: australia
+  Brisbane Roar:
+    id: u6984
+    league: australia
+  Central Coast:
+    id: u6992
+    league: australia
+  Macarthur FC:
+    id: u6993
+    league: australia
+  Melbourne City:
+    id: u6983
+    league: australia
+  Melbourne V.:
+    id: u6988
+    league: australia
+  Newcastle Jets:
+    id: u6991
+    league: australia
+  Perth Glory:
+    id: u6989
+    league: australia
+  Sydney FC:
+    id: u6986
+    league: australia
+  Sydney FC stats:
+    id: u6986
+    league: australia
+  WS Wanderers:
+    id: u6985
+    league: australia
+  Wellington:
+    id: u6994
+    league: australia
+  Altach:
+    id: u2089
+    league: austria
+  Austria Wien:
+    id: u2088
+    league: austria
+  BW Linz:
+    id: u2098
+    league: austria
+  Grazer AK:
+    id: u2107
+    league: austria
+  Hartberg:
+    id: u2090
+    league: austria
+  LASK Linz:
+    id: u2087
+    league: austria
+  Rapid Wien:
+    id: u2085
+    league: austria
+  Ried:
+    id: u2091
+    league: austria
+  Salzburg:
+    id: u2096
+    league: austria
+  Sturm Graz:
+    id: u2094
+    league: austria
+  Tirol:
+    id: u2092
+    league: austria
+  Wolfsberger AC:
+    id: u2095
+    league: austria
+  Anderlecht:
+    id: u7315
+    league: belgium
+  Antwerp:
+    id: u7312
+    league: belgium
+  Cercle Brugge:
+    id: u7308
+    league: belgium
+  Charleroi:
+    id: u7310
+    league: belgium
+  Club Brugge:
+    id: u7313
+    league: belgium
+  Club Brugge stats:
+    id: u7313
+    league: belgium
+  Dender:
+    id: u7767
+    league: belgium
+  Gent:
+    id: u7318
+    league: belgium
+  KRC Genk:
+    id: u7302
+    league: belgium
+  KV Mechelen:
+    id: u7311
+    league: belgium
+  La Louviere:
+    id: u9080
+    league: belgium
+  OH Leuven:
+    id: u7303
+    league: belgium
+  Royale Union SG:
+    id: u7316
+    league: belgium
+  Royale Union SG stats:
+    id: u7316
+    league: belgium
+  Sint-Truiden:
+    id: u7317
+    league: belgium
+  Standard Liege:
+    id: u7301
+    league: belgium
+  Westerlo:
+    id: u7267
+    league: belgium
+  Zulte-Waregem:
+    id: u7304
+    league: belgium
+  Atletico MG:
+    id: u2644
+    league: brazil
+  Bahia:
+    id: u2655
+    league: brazil
+  Botafogo:
+    id: u2653
+    league: brazil
+  Bragantino:
+    id: u2646
+    league: brazil
+  Ceara:
+    id: u2642
+    league: brazil
+  Corinthians:
+    id: u2654
+    league: brazil
+  Cruzeiro:
+    id: u2665
+    league: brazil
+  Flamengo:
+    id: u2643
+    league: brazil
+  Flamengo stats:
+    id: u2643
+    league: brazil
+  Fluminense:
+    id: u2650
+    league: brazil
+  Fortaleza:
+    id: u2637
+    league: brazil
+  Gremio:
+    id: u2649
+    league: brazil
+  Internacional:
+    id: u2640
+    league: brazil
+  Juventude:
+    id: u2661
+    league: brazil
+  Mirassol:
+    id: u5493
+    league: brazil
+  Palmeiras:
+    id: u2651
+    league: brazil
+  Palmeiras stats:
+    id: u2651
+    league: brazil
+  Santos:
+    id: u2645
+    league: brazil
+  Sao Paulo:
+    id: u2648
+    league: brazil
+  Sport Recife:
+    id: u2641
+    league: brazil
+  Vasco da Gama:
+    id: u2652
+    league: brazil
+  Vitoria:
+    id: u2669
+    league: brazil
+  AGF Aarhus:
+    id: u23
+    league: denmark
+  Brondby IF:
+    id: u19
+    league: denmark
+  FC Kobenhavn:
+    id: u22
+    league: denmark
+  FC Midtjylland:
+    id: u14
+    league: denmark
+  Fredericia:
+    id: u4444
+    league: denmark
+  Nordsjaelland:
+    id: u20
+    league: denmark
+  Odense BK:
+    id: u4393
+    league: denmark
+  Randers FC:
+    id: u16
+    league: denmark
+  Silkeborg:
+    id: u4437
+    league: denmark
+  SonderjyskE:
+    id: u3786
+    league: denmark
+  Vejle BK:
+    id: u24
+    league: denmark
+  Viborg:
+    id: u4435
+    league: denmark
+  Arsenal:
+    id: u324
+    league: england
+  Arsenal stats:
+    id: u324
+    league: england
+  Aston Villa:
+    id: u322
+    league: england
+  Bournemouth:
+    id: u7571
+    league: england
+  Brentford:
+    id: u342
+    league: england
+  Brighton:
+    id: u337
+    league: england
+  Burnley:
+    id: u319
+    league: england
+  Chelsea:
+    id: u338
+    league: england
+  Chelsea stats:
+    id: u338
+    league: england
+  Crystal Palace:
+    id: u325
+    league: england
+  Everton:
+    id: u334
+    league: england
+  Fulham:
+    id: u7591
+    league: england
+  Leeds Utd:
+    id: u328
+    league: england
+  Liverpool:
+    id: u327
+    league: england
+  Manchester City:
+    id: u321
+    league: england
+  Manchester Utd:
+    id: u320
+    league: england
+  Newcastle Utd:
+    id: u330
+    league: england
+  Nottm Forest:
+    id: u7594
+    league: england
+  Sunderland:
+    id: u7691
+    league: england
+  Tottenham:
+    id: u333
+    league: england
+  West Ham Utd:
+    id: u329
+    league: england
+  Wolverhampton:
+    id: u336
+    league: england
+  Angers:
+    id: u502
+    league: france
+  Auxerre:
+    id: u7648
+    league: france
+  Brest:
+    id: u510
+    league: france
+  Le Havre:
+    id: u7655
+    league: france
+  Lens:
+    id: u512
+    league: france
+  Lille:
+    id: u503
+    league: france
+  Lorient:
+    id: u507
+    league: france
+  Lyon:
+    id: u513
+    league: france
+  Marseille:
+    id: u517
+    league: france
+  Marseille stats:
+    id: u517
+    league: france
+  Metz:
+    id: u515
+    league: france
+  Monaco:
+    id: u505
+    league: france
+  Nantes:
+    id: u500
+    league: france
+  Nice:
+    id: u511
+    league: france
+  Paris FC:
+    id: u7654
+    league: france
+  Paris SG:
+    id: u518
+    league: france
+  Paris SG stats:
+    id: u518
+    league: france
+  Rennes:
+    id: u504
+    league: france
+  Strasbourg:
+    id: u508
+    league: france
+  Toulouse:
+    id: u7659
+    league: france
+  Bayern Munich:
+    id: u1392
+    league: germany
+  Bayern Munich stats:
+    id: u1392
+    league: germany
+  Dortmund:
+    id: u1404
+    league: germany
+  E. Frankfurt:
+    id: u1394
+    league: germany
+  FC Augsburg:
+    id: u1397
+    league: germany
+  FC Koln:
+    id: u1398
+    league: germany
+  FSV Mainz:
+    id: u1407
+    league: germany
+  Freiburg:
+    id: u1403
+    league: germany
+  Hamburger SV:
+    id: u1410
+    league: germany
+  Heidenheim:
+    id: u1420
+    league: germany
+  Hoffenheim:
+    id: u1399
+    league: germany
+  Leverkusen:
+    id: u1409
+    league: germany
+  Monchengladbach:
+    id: u1405
+    league: germany
+  RB Leipzig:
+    id: u1406
+    league: germany
+  RB Leipzig stats:
+    id: u1406
+    league: germany
+  Sankt Pauli:
+    id: u1427
+    league: germany
+  Stuttgart:
+    id: u1402
+    league: germany
+  Union Berlin:
+    id: u1396
+    league: germany
+  Werder Bremen:
+    id: u1400
+    league: germany
+  Wolfsburg:
+    id: u1408
+    league: germany
+  AEK Athens:
+    id: u8129
+    league: greece
+  Aris:
+    id: u8127
+    league: greece
+  Asteras T.:
+    id: u8122
+    league: greece
+  Atromitos:
+    id: u8124
+    league: greece
+  Kifisia:
+    id: u10482
+    league: greece
+  Larissa:
+    id: u10675
+    league: greece
+  Levadiakos:
+    id: u9335
+    league: greece
+  OFI Crete:
+    id: u8128
+    league: greece
+  Olympiakos:
+    id: u8131
+    league: greece
+  PAOK:
+    id: u8123
+    league: greece
+  Panaitolikos:
+    id: u8125
+    league: greece
+  Panathinaikos:
+    id: u8119
+    league: greece
+  Panserraikos:
+    id: u10481
+    league: greece
+  Volos:
+    id: u8121
+    league: greece
+  AC Milan:
+    id: u1284
+    league: italy
+  AC Milan stats:
+    id: u1284
+    league: italy
+  AS Roma:
+    id: u1275
+    league: italy
+  AS Roma stats:
+    id: u1275
+    league: italy
+  Atalanta:
+    id: u1286
+    league: italy
+  Bologna:
+    id: u1285
+    league: italy
+  Cagliari:
+    id: u1281
+    league: italy
+  Como:
+    id: u576
+    league: italy
+  Cremonese:
+    id: u1328
+    league: italy
+  Fiorentina:
+    id: u1272
+    league: italy
+  Genoa:
+    id: u1278
+    league: italy
+  Hellas Verona:
+    id: u1274
+    league: italy
+  Inter Milan:
+    id: u1289
+    league: italy
+  Juventus:
+    id: u1282
+    league: italy
+  Lazio:
+    id: u1287
+    league: italy
+  Lecce:
+    id: u1320
+    league: italy
+  Napoli:
+    id: u1277
+    league: italy
+  Parma:
+    id: u1276
+    league: italy
+  Pisa:
+    id: u1331
+    league: italy
+  Sassuolo:
+    id: u1280
+    league: italy
+  Torino:
+    id: u1273
+    league: italy
+  Udinese:
+    id: u1291
+    league: italy
+  Albirex Niigata:
+    id: u1667
+    league: japan
+  Avispa Fukuoka:
+    id: u1663
+    league: japan
+  Cerezo Osaka:
+    id: u2279
+    league: japan
+  FC Tokyo:
+    id: u2282
+    league: japan
+  Fagiano Okayama:
+    id: u1674
+    league: japan
+  Gamba Osaka:
+    id: u2284
+    league: japan
+  K. Frontale:
+    id: u2277
+    league: japan
+  Kashima Antlers:
+    id: u2286
+    league: japan
+  Kashima Antlers stats:
+    id: u2286
+    league: japan
+  Kashiwa Reysol:
+    id: u2275
+    league: japan
+  Kashiwa Reysol stats:
+    id: u2275
+    league: japan
+  Kyoto Sanga:
+    id: u1677
+    league: japan
+  Machida Zelvia:
+    id: u1670
+    league: japan
+  Nagoya G.:
+    id: u2274
+    league: japan
+  S. Hiroshima:
+    id: u2285
+    league: japan
+  Shimizu S-Pulse:
+    id: u2281
+    league: japan
+  Shonan Bellmare:
+    id: u2271
+    league: japan
+  Tokyo Verdy:
+    id: u1679
+    league: japan
+  Urawa RD:
+    id: u2272
+    league: japan
+  Vissel Kobe:
+    id: u2287
+    league: japan
+  Yokohama FC:
+    id: u2288
+    league: japan
+  Yokohama M.:
+    id: u2283
+    league: japan
+  A. San Luis:
+    id: u6005
+    league: mexico
+  Atlas:
+    id: u6007
+    league: mexico
+  CF America:
+    id: u5997
+    league: mexico
+  Club Leon:
+    id: u6003
+    league: mexico
+  Cruz Azul:
+    id: u6012
+    league: mexico
+  Guadalajara:
+    id: u6004
+    league: mexico
+  Juarez:
+    id: u6000
+    league: mexico
+  Mazatlan:
+    id: u6013
+    league: mexico
+  Monterrey:
+    id: u6008
+    league: mexico
+  Necaxa:
+    id: u5998
+    league: mexico
+  Pachuca:
+    id: u6002
+    league: mexico
+  Puebla:
+    id: u6009
+    league: mexico
+  Pumas UNAM:
+    id: u6006
+    league: mexico
+  Queretaro:
+    id: u5996
+    league: mexico
+  Santos Laguna:
+    id: u5999
+    league: mexico
+  Tigres:
+    id: u6011
+    league: mexico
+  Tigres stats:
+    id: u6011
+    league: mexico
+  Tijuana:
+    id: u6010
+    league: mexico
+  Toluca:
+    id: u6001
+    league: mexico
+  Toluca stats:
+    id: u6001
+    league: mexico
+  AZ Alkmaar:
+    id: u1371
+    league: netherlands
+  Ajax Amsterdam:
+    id: u1363
+    league: netherlands
+  Excelsior:
+    id: u7099
+    league: netherlands
+  FC Groningen:
+    id: u1366
+    league: netherlands
+  FC Twente:
+    id: u1358
+    league: netherlands
+  FC Utrecht:
+    id: u1370
+    league: netherlands
+  FC Volendam:
+    id: u7098
+    league: netherlands
+  Feyenoord:
+    id: u1357
+    league: netherlands
+  Feyenoord stats:
+    id: u1357
+    league: netherlands
+  Fortuna Sittard:
+    id: u1359
+    league: netherlands
+  Go Ahead Eagles:
+    id: u1387
+    league: netherlands
+  Heerenveen:
+    id: u1354
+    league: netherlands
+  Heracles Almelo:
+    id: u1364
+    league: netherlands
+  NAC Breda:
+    id: u7108
+    league: netherlands
+  NEC Nijmegen:
+    id: u1375
+    league: netherlands
+  PEC Zwolle:
+    id: u1356
+    league: netherlands
+  PSV Eindhoven:
+    id: u1367
+    league: netherlands
+  PSV Eindhoven stats:
+    id: u1367
+    league: netherlands
+  Sparta:
+    id: u1362
+    league: netherlands
+  Telstar:
+    id: u7101
+    league: netherlands
+  Bodo/Glimt:
+    id: u7879
+    league: norway
+  Bodo/Glimt stats:
+    id: u7879
+    league: norway
+  Brann:
+    id: u7880
+    league: norway
+  Bryne:
+    id: u4640
+    league: norway
+  Fredrikstad:
+    id: u4648
+    league: norway
+  HamKam:
+    id: u4641
+    league: norway
+  Haugesund:
+    id: u7881
+    league: norway
+  KFUM Oslo:
+    id: u4644
+    league: norway
+  Kristiansund:
+    id: u7883
+    league: norway
+  Molde:
+    id: u7892
+    league: norway
+  Rosenborg:
+    id: u7887
+    league: norway
+  Sandefjord:
+    id: u7886
+    league: norway
+  Sarpsborg 08:
+    id: u7889
+    league: norway
+  Stromsgodset:
+    id: u7888
+    league: norway
+  Tromso:
+    id: u7882
+    league: norway
+  Valerenga:
+    id: u7891
+    league: norway
+  Viking:
+    id: u7890
+    league: norway
+  Viking stats:
+    id: u7890
+    league: norway
+  AVS:
+    id: u10489
+    league: portugal
+  Alverca:
+    id: u10899
+    league: portugal
+  Arouca:
+    id: u7251
+    league: portugal
+  Benfica:
+    id: u7254
+    league: portugal
+  Casa Pia:
+    id: u7454
+    league: portugal
+  Estoril:
+    id: u7252
+    league: portugal
+  Estrela Amadora:
+    id: u7461
+    league: portugal
+  FC Porto:
+    id: u7261
+    league: portugal
+  FC Porto stats:
+    id: u7261
+    league: portugal
+  Famalicao:
+    id: u7264
+    league: portugal
+  Gil Vicente:
+    id: u7265
+    league: portugal
+  Guimaraes:
+    id: u7257
+    league: portugal
+  Moreirense:
+    id: u7253
+    league: portugal
+  Nacional:
+    id: u7466
+    league: portugal
+  Rio Ave:
+    id: u7463
+    league: portugal
+  Santa Clara:
+    id: u7260
+    league: portugal
+  Sporting Braga:
+    id: u7256
+    league: portugal
+  Sporting CP:
+    id: u7249
+    league: portugal
+  Sporting CP stats:
+    id: u7249
+    league: portugal
+  Tondela:
+    id: u7259
+    league: portugal
+  Aberdeen:
+    id: u7449
+    league: scotland
+  Celtic:
+    id: u7448
+    league: scotland
+  Dundee FC:
+    id: u7443
+    league: scotland
+  Dundee Utd:
+    id: u7450
+    league: scotland
+  Falkirk:
+    id: u7822
+    league: scotland
+  Hearts:
+    id: u7447
+    league: scotland
+  Hibernian:
+    id: u7452
+    league: scotland
+  Kilmarnock:
+    id: u7327
+    league: scotland
+  Livingston:
+    id: u7442
+    league: scotland
+  Motherwell:
+    id: u7451
+    league: scotland
+  Rangers:
+    id: u7441
+    league: scotland
+  St. Mirren:
+    id: u7444
+    league: scotland
+  Alaves:
+    id: u1302
+    league: spain
+  Athletic Bilbao:
+    id: u1295
+    league: spain
+  Atletico Madrid:
+    id: u1310
+    league: spain
+  Celta Vigo:
+    id: u1293
+    league: spain
+  Elche:
+    id: u1299
+    league: spain
+  Espanyol:
+    id: u1338
+    league: spain
+  FC Barcelona:
+    id: u1298
+    league: spain
+  FC Barcelona stats:
+    id: u1298
+    league: spain
+  Getafe:
+    id: u1301
+    league: spain
+  Girona:
+    id: u7135
+    league: spain
+  Levante:
+    id: u1309
+    league: spain
+  Mallorca:
+    id: u1346
+    league: spain
+  Osasuna:
+    id: u1297
+    league: spain
+  Rayo Vallecano:
+    id: u1347
+    league: spain
+  Real Betis:
+    id: u1303
+    league: spain
+  Real Madrid:
+    id: u1300
+    league: spain
+  Real Madrid stats:
+    id: u1300
+    league: spain
+  Real Oviedo:
+    id: u7141
+    league: spain
+  Real Sociedad:
+    id: u1305
+    league: spain
+  Sevilla FC:
+    id: u1311
+    league: spain
+  Valencia:
+    id: u1308
+    league: spain
+  Villarreal:
+    id: u1306
+    league: spain
+  AIK:
+    id: u4789
+    league: sweden
+  Brommapojkarna:
+    id: u4809
+    league: sweden
+  Degerfors:
+    id: u4790
+    league: sweden
+  Djurgarden:
+    id: u4786
+    league: sweden
+  Elfsborg:
+    id: u4785
+    league: sweden
+  GAIS:
+    id: u4794
+    league: sweden
+  Hacken:
+    id: u4782
+    league: sweden
+  Halmstad:
+    id: u4781
+    league: sweden
+  Hammarby:
+    id: u4778
+    league: sweden
+  Hammarby stats:
+    id: u4778
+    league: sweden
+  IFK Goteborg:
+    id: u4780
+    league: sweden
+  Malmo FF:
+    id: u4777
+    league: sweden
+  Mjallby:
+    id: u4783
+    league: sweden
+  Mjallby stats:
+    id: u4783
+    league: sweden
+  Norrkoping:
+    id: u4787
+    league: sweden
+  Oster:
+    id: u4800
+    league: sweden
+  Sirius:
+    id: u4788
+    league: sweden
+  Varnamo:
+    id: u4796
+    league: sweden
+  BSC Young Boys:
+    id: u2498
+    league: switzerland
+  FC Basel:
+    id: u2500
+    league: switzerland
+  FC Zurich:
+    id: u2499
+    league: switzerland
+  Grasshopper:
+    id: u1506
+    league: switzerland
+  Lausanne Sport:
+    id: u2502
+    league: switzerland
+  Lugano:
+    id: u2496
+    league: switzerland
+  Luzern:
+    id: u2497
+    league: switzerland
+  Servette:
+    id: u2503
+    league: switzerland
+  Sion:
+    id: u2505
+    league: switzerland
+  St. Gallen:
+    id: u2504
+    league: switzerland
+  Thun:
+    id: u1504
+    league: switzerland
+  Winterthur:
+    id: u1507
+    league: switzerland
+  Alanyaspor:
+    id: u2994
+    league: turkey
+  Antalyaspor:
+    id: u3007
+    league: turkey
+  Basaksehir:
+    id: u3010
+    league: turkey
+  Besiktas:
+    id: u3006
+    league: turkey
+  Eyupspor:
+    id: u3059
+    league: turkey
+  F. Karagumruk:
+    id: u2995
+    league: turkey
+  Fenerbahce:
+    id: u2992
+    league: turkey
+  Fenerbahce stats:
+    id: u2992
+    league: turkey
+  Galatasaray:
+    id: u2997
+    league: turkey
+  Galatasaray stats:
+    id: u2997
+    league: turkey
+  Gaziantep:
+    id: u2998
+    league: turkey
+  Genclerbirligi:
+    id: u3008
+    league: turkey
+  Goztepe:
+    id: u2999
+    league: turkey
+  Kasimpasa:
+    id: u3002
+    league: turkey
+  Kayserispor:
+    id: u3001
+    league: turkey
+  Kocaelispor:
+    id: u3046
+    league: turkey
+  Konyaspor:
+    id: u3011
+    league: turkey
+  Rizespor:
+    id: u2991
+    league: turkey
+  Samsunspor:
+    id: u3025
+    league: turkey
+  Trabzonspor:
+    id: u3005
+    league: turkey
+  Atlanta Utd:
+    id: u5283
+    league: usa
+  Austin:
+    id: u5285
+    league: usa
+  CF Montreal:
+    id: u5280
+    league: usa
+  Charlotte:
+    id: u8735
+    league: usa
+  Chicago Fire:
+    id: u5294
+    league: usa
+  Cincinnati:
+    id: u5293
+    league: usa
+  Colorado Rapids:
+    id: u5289
+    league: usa
+  Columbus Crew:
+    id: u5298
+    league: usa
+  DC United:
+    id: u5290
+    league: usa
+  Dallas:
+    id: u5288
+    league: usa
+  Houston Dynamo:
+    id: u5276
+    league: usa
+  Inter Miami:
+    id: u5296
+    league: usa
+  LA Galaxy:
+    id: u5297
+    league: usa
+  Los Angeles FC:
+    id: u5284
+    league: usa
+  Minnesota Utd:
+    id: u5279
+    league: usa
+  Nashville SC:
+    id: u5292
+    league: usa
+  New England:
+    id: u5295
+    league: usa
+  New York City:
+    id: u5291
+    league: usa
+  New York RB:
+    id: u5286
+    league: usa
+  Orlando City:
+    id: u5282
+    league: usa
+  Philadelphia:
+    id: u5299
+    league: usa
+  Portland:
+    id: u5301
+    league: usa
+  Real Salt Lake:
+    id: u5302
+    league: usa
+  SJ Earthquakes:
+    id: u5277
+    league: usa
+  San Diego:
+    id: u11710
+    league: usa
+  Seattle:
+    id: u5278
+    league: usa
+  Sporting KC:
+    id: u5287
+    league: usa
+  St. Louis City:
+    id: u9962
+    league: usa
+  Toronto:
+    id: u5281
+    league: usa
+  Vancouver:
+    id: u5300
+    league: usa

@@ -1,0 +1,255 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                ║
+║              PARIS LIVE - TRACE COMPLÈTE D'UNE DÉCISION                      ║
+║                                                                                ║
+║                 Du match en direct au signal d'achat (BUY)                    ║
+║                                                                                ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ SCÉNARIO: PSG 2-1 Marseille - Minute 38 (Première moitié)
+═══════════════════════════════════════════════════════════════════════════════
+
+
+[ÉTAPE 0] DONNÉES BRUTES DU MATCH
+─────────────────────────────────────────────────────────────────────────────
+
+Timestamp: 2025-12-02 16:45:30
+Match ID: PSG_vs_OM_20251202
+
+Score:
+  PSG (Home):     2 buts
+  Marseille (Away): 1 but
+
+Minute:           38
+Possession:       55% (PSG) vs 45% (OM)
+Tirs:            9 (PSG) vs 6 (OM)
+Tirs cadrés:     5 (PSG) vs 2 (OM)
+Corners:         4 (PSG) vs 2 (OM)
+Cartons:         0 rouges, 2 jaunes (PSG) vs 1 jaune (OM)
+
+Signal Age:      15 secondes (dernière mise à jour il y a 15s)
+Penalty:         Aucun penalty actif
+
+
+[ÉTAPE 1] VÉRIFICATION DE L'INTERVALLE
+─────────────────────────────────────────────────────────────────────────────
+
+Minute: 38
+Interval [30-45]? YES ✅
+
+Raison: 30 ≤ 38 ≤ 45
+
+→ ✅ PASSE AU FILTRE 1 (CONTINUE)
+
+
+[ÉTAPE 2] EXTRACTION DES 30 FEATURES
+─────────────────────────────────────────────────────────────────────────────
+
+À partir des données brutes, le système calcule 30 features:
+
+Feature 1  - minute                = 38
+Feature 2  - minute_bucket           = "35-40"
+Feature 3  - score_home             = 2
+Feature 4  - score_away             = 1
+Feature 5  - goal_diff              = 1
+Feature 6  - possession_home        = 0.55
+Feature 7  - possession_away        = 0.45
+Feature 8  - shots_home             = 9
+Feature 9  - shots_away             = 6
+Feature 10 - sot_home               = 5
+Feature 11 - sot_away               = 2
+Feature 12 - shot_accuracy_home     = 5/9 = 0.556
+Feature 13 - shot_accuracy_away     = 2/6 = 0.333
+Feature 14 - shots_delta_5m_home    = 2 (2 tirs dernières 5 min)
+Feature 15 - shots_delta_5m_away    = 1
+Feature 16 - sot_delta_5m_home      = 1
+Feature 17 - sot_delta_5m_away      = 0
+Feature 18 - corners_home           = 4
+Feature 19 - corners_away           = 2
+Feature 20 - corners_delta_5m_home  = 1
+Feature 21 - corners_delta_5m_away  = 0
+Feature 22 - red_cards_home         = 0
+Feature 23 - red_cards_away         = 0
+Feature 24 - yellow_cards_home      = 2
+Feature 25 - yellow_cards_away      = 1
+Feature 26 - team_elo_home          = 1750 (PSG très fort)
+Feature 27 - team_elo_away          = 1600 (OM fort)
+Feature 28 - elo_diff               = 150
+Feature 29 - home_advantage         = 1.0
+Feature 30 - saturation_score       = 1.2
+
+
+[ÉTAPE 3] NORMALISATION (StandardScaler)
+─────────────────────────────────────────────────────────────────────────────
+
+Vecteur brut (30 features):
+  [38, "35-40", 2, 1, 1, 0.55, 0.45, 9, 6, 5, 2, 0.556, 0.333, ...]
+
+Après StandardScaler (normalisation):
+  [0.234, -0.156, 0.789, -0.321, 0.456, 0.123, -0.198, 1.234, 0.567, ...]
+
+Raison: Le modèle ML fonctionne mieux avec données centrées-réduites
+
+
+[ÉTAPE 4] MODÈLE LightGBM
+─────────────────────────────────────────────────────────────────────────────
+
+Entrée:  [0.234, -0.156, 0.789, -0.321, 0.456, ...]
+
+LightGBM Classifier (Entrainé sur 1000 matchs historiques):
+  └─ Boosting trees: 100+ arbres de décision
+  └─ Feature Importance: minute > possession > shots > corners
+  └─ AUC Score: 0.7543
+
+Traitement interne:
+  • Arbre 1: "Si possession > 0.5 ET shots > 8 → probabilité +0.15"
+  • Arbre 2: "Si minute ∈ [35-40] → probabilité +0.12"
+  • Arbre 3: "Si corners_delta > 0 → probabilité +0.08"
+  • ... (100+ arbres)
+
+Sortie: Probabilité = 0.68
+
+
+[ÉTAPE 5] CALCUL DU DANGER SCORE
+─────────────────────────────────────────────────────────────────────────────
+
+danger_score = probability × 100
+
+  0.68 × 100 = 68%
+
+Signification:
+  "Il y a 68% de chance qu'au moins 1 but soit marqué dans [30-45] minutes"
+
+Évaluation:
+  68% est dans la zone [60-80%] → RISQUE ÉLEVÉ ⚠️
+
+
+[ÉTAPE 6] VÉRIFICATION DE PENALTY
+─────────────────────────────────────────────────────────────────────────────
+
+penalty_active = False
+
+→ Pas de réduction appliquée
+→ danger_score reste: 68%
+
+
+[ÉTAPE 7] DÉCROISSANCE EXPONENTIELLE TTL
+─────────────────────────────────────────────────────────────────────────────
+
+TTL (Time To Live) = 300 secondes
+signal_age = 15 secondes
+
+Calcul du facteur de fraîcheur:
+  freshness_factor = e^(-15 / 300)
+                   = e^(-0.05)
+                   = 0.9512
+
+Ajustement de la confiance:
+  confidence = danger_score × freshness_factor
+             = 68% × 0.9512
+             = 64.68%
+
+Interprétation:
+  Le signal perd 4.88% de sa valeur après 15 secondes
+  (très bon état - signal frais)
+
+
+[ÉTAPE 8] VÉRIFICATION DES 5 FILTRES
+─────────────────────────────────────────────────────────────────────────────
+
+FILTRE 1 - INTERVALLE?
+  ✅ PASS: Minute 38 ∈ [30-45]
+
+FILTRE 2 - PENALTY ACTIF?
+  ✅ PASS: penalty_active = False
+
+FILTRE 3 - SIGNAL TROP VIEUX?
+  ✅ PASS: signal_age (15s) < TTL (300s)
+
+FILTRE 4 - CONFIANCE MINIMALE?
+  Seuil (Conservative): 50%
+  Valeur actuelle: 64.68%
+  ✅ PASS: 64.68% > 50%
+
+FILTRE 5 - DANGER MINIMALE?
+  Seuil (Conservative): 50%
+  Valeur actuelle: 68%
+  ✅ PASS: 68% > 50%
+
+Résultat:
+  ✅✅✅✅✅ TOUS LES FILTRES PASSENT
+
+
+[ÉTAPE 9] PRISE DE DÉCISION FINALE
+─────────────────────────────────────────────────────────────────────────────
+
+reason = "BETTING_SIGNAL_ACTIVE ✅"
+should_bet = True
+decision = "BUY ✅"
+
+
+[ÉTAPE 10] SORTIE FINALE
+─────────────────────────────────────────────────────────────────────────────
+
+{
+    "should_bet": true,
+    "reason": "BETTING_SIGNAL_ACTIVE",
+    "danger_score": 68.0,
+    "confidence": 64.68,
+    "freshness_factor": 0.9512,
+    "market_suspended": false,
+    "penalty_ttl_seconds": 0,
+    "signal_age_seconds": 15,
+    "interval": [30, 45],
+    "match_id": "PSG_vs_OM_20251202",
+    "minute": 38,
+    "home_team": "PSG",
+    "away_team": "Marseille",
+    "score": "2-1",
+    "timestamp": 1733148330.5
+}
+
+
+[ÉTAPE 11] ACTION
+─────────────────────────────────────────────────────────────────────────────
+
+should_bet = True
+→ ALERTE TELEGRAM ENVOYÉE
+
+Message:
+┌──────────────────────────────────────────────────────┐
+│ 🎯 SIGNAL D'ACHAT DÉTECTÉ                           │
+│                                                      │
+│ 🏟️  PSG vs Marseille                                │
+│ 📊 Score: 2-1                                       │
+│ ⏱️  Minute: 38' (Intervalle [30-45])               │
+│                                                      │
+│ 🔮 Prédiction AI:                                   │
+│ �� Danger Score: 68%                                │
+│ 💪 Confiance: 64.7%                                 │
+│                                                      │
+│ 💰 ACTION: ACHETER - Au moins 1 but attendu        │
+│                                                      │
+│ TTL Frais: Signal age 15s (excellent)              │
+└──────────────────────────────────────────────────────┘
+
+Destinataire: @Direct_goal_bot
+Status: ✅ ENVOYÉ avec succès
+
+═══════════════════════════════════════════════════════════════════════════════
+
+RÉSULTAT DANS LE MATCH:
+
+⏱️  Minute 42 (+4 min après le signal):
+    PSG marque un 3e but! ✅ VICTOIRE
+
+Prédiction: "Au moins 1 but attendu"
+Résultat:  3 buts marqués
+Accuracy:  ✅ CORRECT
+
+
+═══════════════════════════════════════════════════════════════════════════════
+FIN DE TRACE
+═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,20 @@
+{
+  "30-45": {
+    "interval": "30-45",
+    "decisions": 3000,
+    "bets_triggered": 688,
+    "wins": 220,
+    "win_rate": 31.976744186046513,
+    "roi_avg": -36.04651162790697,
+    "precision": 0.31976744186046513
+  },
+  "75-90": {
+    "interval": "75-90",
+    "decisions": 3000,
+    "bets_triggered": 688,
+    "wins": 220,
+    "win_rate": 31.976744186046513,
+    "roi_avg": -36.04651162790697,
+    "precision": 0.31976744186046513
+  }
+}

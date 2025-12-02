@@ -1,0 +1,42 @@
+[
+  {
+    "strategy_name": "Conservative",
+    "confidence_threshold": 0.5,
+    "danger_threshold": 0.5,
+    "total_bets": 564,
+    "win_rate": 35.1063829787234,
+    "roi_avg": -29.78723404255319,
+    "precision": 0.35106382978723405,
+    "f1_score": 0.6951759005687802
+  },
+  {
+    "strategy_name": "Moderate",
+    "confidence_threshold": 0.3,
+    "danger_threshold": 0.35,
+    "total_bets": 4128,
+    "win_rate": 31.976744186046513,
+    "roi_avg": -36.04651162790697,
+    "precision": 0.31976744186046513,
+    "f1_score": 0.6332028551692378
+  },
+  {
+    "strategy_name": "Aggressive",
+    "confidence_threshold": 0.2,
+    "danger_threshold": 0.25,
+    "total_bets": 6000,
+    "win_rate": 32.0,
+    "roi_avg": -36.0,
+    "precision": 0.32,
+    "f1_score": 0.6336633663366337
+  },
+  {
+    "strategy_name": "VeryAggressive",
+    "confidence_threshold": 0.1,
+    "danger_threshold": 0.15,
+    "total_bets": 6000,
+    "win_rate": 32.0,
+    "roi_avg": -36.0,
+    "precision": 0.32,
+    "f1_score": 0.6336633663366337
+  }
+]

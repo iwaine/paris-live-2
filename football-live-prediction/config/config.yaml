@@ -1,0 +1,927 @@
+leagues:
+- name: France – Ligue 1
+  url: https://www.soccerstats.com/latest.asp?league=france
+  enabled: true
+- name: France – Ligue 2
+  url: https://www.soccerstats.com/latest.asp?league=france2
+  enabled: true
+- name: Germany – Bundesliga
+  url: https://www.soccerstats.com/latest.asp?league=germany
+  enabled: true
+- name: Germany – 2. Bundesliga
+  url: https://www.soccerstats.com/latest.asp?league=germany2
+  enabled: true
+- name: Italy – Serie A
+  url: https://www.soccerstats.com/latest.asp?league=italy
+  enabled: true
+- name: Portugal – Liga Portugal
+  url: https://www.soccerstats.com/latest.asp?league=portugal
+  enabled: true
+- name: Portugal – Liga Portugal 2
+  url: https://www.soccerstats.com/latest.asp?league=portugal2
+  enabled: true
+- name: Scotland – Premiership
+  url: https://www.soccerstats.com/latest.asp?league=scotland
+  enabled: true
+- name: Spain – LaLiga
+  url: https://www.soccerstats.com/latest.asp?league=spain
+  enabled: true
+- name: Spain – LaLiga2
+  url: https://www.soccerstats.com/latest.asp?league=spain2
+  enabled: true
+- name: Switzerland – Super League
+  url: https://www.soccerstats.com/latest.asp?league=switzerland
+  enabled: true
+- name: Austria – Bundesliga
+  url: https://www.soccerstats.com/latest.asp?league=austria
+  enabled: true
+- name: Austria – 2. Liga
+  url: https://www.soccerstats.com/latest.asp?league=austria2
+  enabled: true
+- name: Bulgaria – Parva liga
+  url: https://www.soccerstats.com/latest.asp?league=bulgaria
+  enabled: true
+- name: Croatia – HNL
+  url: https://www.soccerstats.com/latest.asp?league=croatia
+  enabled: true
+- name: Croatia – NL
+  url: https://www.soccerstats.com/latest.asp?league=croatia2
+  enabled: true
+- name: Czech Republic – 1. Liga
+  url: https://www.soccerstats.com/latest.asp?league=czechrepublic
+  enabled: true
+- name: Czech Republic – ChNL
+  url: https://www.soccerstats.com/latest.asp?league=czechrepublic2
+  enabled: true
+- name: Denmark – Superligaen
+  url: https://www.soccerstats.com/latest.asp?league=denmark
+  enabled: true
+- name: Netherlands – Eredivisie
+  url: https://www.soccerstats.com/latest.asp?league=netherlands
+  enabled: true
+- name: Poland – Ekstraklasa
+  url: https://www.soccerstats.com/latest.asp?league=poland
+  enabled: true
+- name: Turkey – Super Lig
+  url: https://www.soccerstats.com/latest.asp?league=turkey
+  enabled: true
+- name: England – Premier League
+  url: https://www.soccerstats.com/latest.asp?league=england
+  enabled: true
+- name: England – Championship
+  url: https://www.soccerstats.com/latest.asp?league=england2
+  enabled: true
+- name: England – League One
+  url: https://www.soccerstats.com/latest.asp?league=england3
+  enabled: true
+- name: England – League Two
+  url: https://www.soccerstats.com/latest.asp?league=england4
+  enabled: true
+- name: Saudi Arabia – Saudi Professional League
+  url: https://www.soccerstats.com/latest.asp?league=saudiarabia
+  enabled: true
+- name: Australia – A-League
+  url: https://www.soccerstats.com/latest.asp?league=australia
+  enabled: true
+- name: Greece – Super League
+  url: https://www.soccerstats.com/latest.asp?league=greece
+  enabled: true
+- name: Slovenia – Prva liga
+  url: https://www.soccerstats.com/latest.asp?league=slovenia
+  enabled: true
+- name: Japan - J1 League
+  url: https://www.soccerstats.com/latest.asp?league=japan
+  enabled: true
+- name: Ireland - Premier Division
+  url: https://www.soccerstats.com/latest.asp?league=ireland
+  enabled: true
+- name: South Korea - K League 1
+  url: https://www.soccerstats.com/latest.asp?league=southkorea
+  enabled: true
+- name: Argentina - Liga Profesional - Apertura
+  url: https://www.soccerstats.com/latest.asp?league=argentina
+  enabled: true
+- name: Chile - Primera Division
+  url: https://www.soccerstats.com/halftime.asp?league=chile
+  enabled: true
+- name: Estonia - Meistriliiga
+  url: https://www.soccerstats.com/halftime.asp?league=estonia
+  enabled: true
+- name: FaroeIslands - Premier League
+  url: https://www.soccerstats.com/halftime.asp?league=faroeislands
+  enabled: true
+- name: Finland - Veikkausliiga
+  url: https://www.soccerstats.com/halftime.asp?league=finland
+  enabled: true
+- name: Iceland - Besta deild
+  url: https://www.soccerstats.com/halftime.asp?league=iceland
+  enabled: true
+- name: Latvia - Virsliga
+  url: https://www.soccerstats.com/halftime.asp?league=latvia
+  enabled: true
+- name: Sweden - Allsvenskan
+  url: https://www.soccerstats.com/halftime.asp?league=sweden
+  enabled: true
+- name: USA - MLS
+  url: https://www.soccerstats.com/latest.asp?league=usa
+  enabled: true
+- name: South Korea - WK League Women
+  url: https://www.soccerstats.com/halftime.asp?league=southkorea4
+  enabled: true
+- name: Chile - Liga de Primera
+  url: https://www.soccerstats.com/latest.asp?league=chile
+  enabled: true
+- name: Georgia - Erovnuli Liga
+  url: https://www.soccerstats.com/latest.asp?league=georgia
+  enabled: true
+test_teams:
+- team: Manchester City
+  league: england
+- team: Paris FC
+  league: france
+- team: Real Madrid
+  league: spain
+data:
+  directories:
+    team_profiles: data/team_profiles
+    team_profiles_json: data/team_profiles_json
+    live_matches: data/live_matches
+    predictions: data/predictions
+teams:
+  Adelaide Utd:
+    id: u6990
+    league: australia
+  Auckland:
+    id: u11591
+    league: australia
+  Brisbane Roar:
+    id: u6984
+    league: australia
+  Central Coast:
+    id: u6992
+    league: australia
+  Macarthur FC:
+    id: u6993
+    league: australia
+  Melbourne City:
+    id: u6983
+    league: australia
+  Melbourne V.:
+    id: u6988
+    league: australia
+  Newcastle Jets:
+    id: u6991
+    league: australia
+  Perth Glory:
+    id: u6989
+    league: australia
+  Sydney FC:
+    id: u6986
+    league: australia
+  WS Wanderers:
+    id: u6985
+    league: australia
+  Wellington:
+    id: u6994
+    league: australia
+  Altach:
+    id: u2089
+    league: austria
+  Austria Wien:
+    id: u2088
+    league: austria
+  BW Linz:
+    id: u2098
+    league: austria
+  Grazer AK:
+    id: u2107
+    league: austria
+  Hartberg:
+    id: u2090
+    league: austria
+  LASK Linz:
+    id: u2087
+    league: austria
+  Rapid Wien:
+    id: u2085
+    league: austria
+  Ried:
+    id: u2091
+    league: austria
+  Salzburg:
+    id: u2096
+    league: austria
+  Sturm Graz:
+    id: u2094
+    league: austria
+  Tirol:
+    id: u2092
+    league: austria
+  Wolfsberger AC:
+    id: u2095
+    league: austria
+  Anderlecht:
+    id: u7315
+    league: belgium
+  Antwerp:
+    id: u7312
+    league: belgium
+  Cercle Brugge:
+    id: u7308
+    league: belgium
+  Charleroi:
+    id: u7310
+    league: belgium
+  Club Brugge:
+    id: u7313
+    league: belgium
+  Dender:
+    id: u7767
+    league: belgium
+  Gent:
+    id: u7311
+    league: belgium
+  KAA Gent:
+    id: u7311
+    league: belgium
+  Kortrijk:
+    id: u7314
+    league: belgium
+  La Gantoise:
+    id: u7311
+    league: belgium
+  Lierse:
+    id: u7762
+    league: belgium
+  Lokeren:
+    id: u7316
+    league: belgium
+  Mechelen:
+    id: u7309
+    league: belgium
+  Mouscron:
+    id: u7768
+    league: belgium
+  OHL:
+    id: u7769
+    league: belgium
+  Ostend:
+    id: u7766
+    league: belgium
+  Seraing:
+    id: u7770
+    league: belgium
+  Sporting Charleroi:
+    id: u7310
+    league: belgium
+  Standard Liège:
+    id: u7317
+    league: belgium
+  Waregem:
+    id: u7770
+    league: belgium
+  Arsenal:
+    id: u324
+    league: england
+  Aston Villa:
+    id: u322
+    league: england
+  Bournemouth:
+    id: u7571
+    league: england
+  Brentford:
+    id: u342
+    league: england
+  Brighton:
+    id: u337
+    league: england
+  Burnley:
+    id: u319
+    league: england
+  Chelsea:
+    id: u338
+    league: england
+  Crystal Palace:
+    id: u325
+    league: england
+  Everton:
+    id: u334
+    league: england
+  Fulham:
+    id: u7591
+    league: england
+  Leeds Utd:
+    id: u328
+    league: england
+  Liverpool:
+    id: u327
+    league: england
+  Manchester City:
+    id: u321
+    league: england
+  Manchester United:
+    id: u320
+    league: england
+  Manchester Utd:
+    id: u320
+    league: england
+  Newcastle Utd:
+    id: u330
+    league: england
+  Nottm Forest:
+    id: u7594
+    league: england
+  Sunderland:
+    id: u7691
+    league: england
+  Tottenham:
+    id: u333
+    league: england
+  West Ham Utd:
+    id: u329
+    league: england
+  Wolverhampton:
+    id: u336
+    league: england
+  AC Milan:
+    id: u7597
+    league: italy
+  Atalanta:
+    id: u7599
+    league: italy
+  AS Roma:
+    id: u7596
+    league: italy
+  Benevento:
+    id: u7604
+    league: italy
+  Bologna:
+    id: u7608
+    league: italy
+  Brescia:
+    id: u7601
+    league: italy
+  Cagliari:
+    id: u7603
+    league: italy
+  Cecchini:
+    id: u7610
+    league: italy
+  Empoli:
+    id: u7609
+    league: italy
+  Fiorentina:
+    id: u7595
+    league: italy
+  Frosinone:
+    id: u7605
+    league: italy
+  Genoa:
+    id: u7598
+    league: italy
+  Hellas Verona:
+    id: u7600
+    league: italy
+  Inter Milan:
+    id: u7606
+    league: italy
+  Inter:
+    id: u7606
+    league: italy
+  Juventus:
+    id: u7607
+    league: italy
+  Juventus FC:
+    id: u7607
+    league: italy
+  Juventus Turin:
+    id: u7607
+    league: italy
+  Lazio:
+    id: u7602
+    league: italy
+  Modena:
+    id: u7611
+    league: italy
+  Monza:
+    id: u7612
+    league: italy
+  Napoli:
+    id: u7613
+    league: italy
+  Palermo:
+    id: u7614
+    league: italy
+  Parma:
+    id: u7615
+    league: italy
+  Perugia:
+    id: u7616
+    league: italy
+  Reggina:
+    id: u7617
+    league: italy
+  Roma:
+    id: u7596
+    league: italy
+  Sampdoria:
+    id: u7618
+    league: italy
+  Sassuolo:
+    id: u7619
+    league: italy
+  Spezia:
+    id: u7620
+    league: italy
+  Torino:
+    id: u7621
+    league: italy
+  Udinese:
+    id: u7622
+    league: italy
+  Venezia:
+    id: u7623
+    league: italy
+  Verona:
+    id: u7600
+    league: italy
+  PSG:
+    id: u349
+    league: france
+  Ligue 1:
+    id: u349
+    league: france
+  Paris SG:
+    id: u349
+    league: france
+  Paris Saint-Germain:
+    id: u349
+    league: france
+  Amiens:
+    id: u7644
+    league: france
+  Angers:
+    id: u7645
+    league: france
+  Bordeaux:
+    id: u7646
+    league: france
+  Brest:
+    id: u7647
+    league: france
+  Clermont:
+    id: u7648
+    league: france
+  Dijon:
+    id: u7649
+    league: france
+  Estac Troyes:
+    id: u7650
+    league: france
+  FC Nantes:
+    id: u7651
+    league: france
+  FC Sochaux:
+    id: u7652
+    league: france
+  Girondins:
+    id: u7646
+    league: france
+  Lens:
+    id: u7653
+    league: france
+  Ligue 1:
+    id: u7643
+    league: france
+  Lille:
+    id: u7654
+    league: france
+  Ligue 1:
+    id: u7643
+    league: france
+  Lorient:
+    id: u7655
+    league: france
+  Lyon:
+    id: u7656
+    league: france
+  Metz:
+    id: u7657
+    league: france
+  Monaco:
+    id: u7658
+    league: france
+  Montpellier:
+    id: u7659
+    league: france
+  Nantes:
+    id: u7651
+    league: france
+  Nice:
+    id: u7660
+    league: france
+  OGC Nice:
+    id: u7660
+    league: france
+  Olympique Lyonnais:
+    id: u7656
+    league: france
+  Olympique Marseille:
+    id: u7661
+    league: france
+  PSG:
+    id: u349
+    league: france
+  RC Lens:
+    id: u7653
+    league: france
+  Reims:
+    id: u7662
+    league: france
+  Rennes:
+    id: u7663
+    league: france
+  Saint-Etienne:
+    id: u7664
+    league: france
+  Stade Brest:
+    id: u7647
+    league: france
+  Stade de Reims:
+    id: u7662
+    league: france
+  Strasbourg:
+    id: u7665
+    league: france
+  Toulouse:
+    id: u7666
+    league: france
+  Troyes:
+    id: u7650
+    league: france
+  Lens:
+    id: u7653
+    league: france
+  Marseille:
+    id: u7661
+    league: france
+  Montpellier:
+    id: u7659
+    league: france
+  Nantes:
+    id: u7651
+    league: france
+  Rennes:
+    id: u7663
+    league: france
+  Marseille OM:
+    id: u7661
+    league: france
+  Marseille:
+    id: u7661
+    league: france
+  Nice:
+    id: u7660
+    league: france
+  Olympique Lyonnais:
+    id: u7656
+    league: france
+  PSG:
+    id: u349
+    league: france
+  Rennes:
+    id: u7663
+    league: france
+  Saint-Etienne:
+    id: u7664
+    league: france
+  Stade Rennais:
+    id: u7663
+    league: france
+  Auxerre:
+    id: u7667
+    league: france
+  Beaumont:
+    id: u7668
+    league: france
+  Cannes:
+    id: u7669
+    league: france
+  Créteil:
+    id: u7670
+    league: france
+  Dijon FCO:
+    id: u7649
+    league: france
+  ESTAC:
+    id: u7650
+    league: france
+  FC Sochaux-Montbéliard:
+    id: u7652
+    league: france
+  Le Havre:
+    id: u7671
+    league: france
+  Lorient:
+    id: u7655
+    league: france
+  Mantes:
+    id: u7672
+    league: france
+  Midtjylland:
+    id: u7673
+    league: france
+  Molde:
+    id: u7674
+    league: france
+  Nîmes:
+    id: u7675
+    league: france
+  Pau:
+    id: u7676
+    league: france
+  Quimper:
+    id: u7677
+    league: france
+  Rodez:
+    id: u7678
+    league: france
+  Saint-Dié:
+    id: u7679
+    league: france
+  Sochaux:
+    id: u7652
+    league: france
+  Vannes:
+    id: u7680
+    league: france
+  Villarreal:
+    id: u7755
+    league: spain
+  Rayo Vallecano:
+    id: u7754
+    league: spain
+  Athletic Bilbao:
+    id: u7740
+    league: spain
+  Alaves:
+    id: u7739
+    league: spain
+  Almeria:
+    id: u7751
+    league: spain
+  Andalucia:
+    id: u7752
+    league: spain
+  Athletic:
+    id: u7740
+    league: spain
+  Atletico Madrid:
+    id: u7737
+    league: spain
+  Atlétic Bilbao:
+    id: u7740
+    league: spain
+  Atletico:
+    id: u7737
+    league: spain
+  Betis:
+    id: u7742
+    league: spain
+  Cadiz:
+    id: u7741
+    league: spain
+  Cordoba:
+    id: u7743
+    league: spain
+  Eibar:
+    id: u7744
+    league: spain
+  Elche:
+    id: u7745
+    league: spain
+  Espanol:
+    id: u7746
+    league: spain
+  Getafe:
+    id: u7747
+    league: spain
+  Gijon:
+    id: u7748
+    league: spain
+  Girona:
+    id: u7753
+    league: spain
+  Girona FC:
+    id: u7753
+    league: spain
+  Gimnàstica:
+    id: u7749
+    league: spain
+  Granada:
+    id: u7750
+    league: spain
+  Granda:
+    id: u7750
+    league: spain
+  Hercules:
+    id: u7751
+    league: spain
+  Huesca:
+    id: u7756
+    league: spain
+  Leganes:
+    id: u7757
+    league: spain
+  Lérida:
+    id: u7758
+    league: spain
+  Levanté:
+    id: u7759
+    league: spain
+  Levante:
+    id: u7759
+    league: spain
+  Lorca:
+    id: u7760
+    league: spain
+  Lugo:
+    id: u7761
+    league: spain
+  Malaga:
+    id: u7740
+    league: spain
+  Mallorca:
+    id: u7762
+    league: spain
+  Murcia:
+    id: u7763
+    league: spain
+  Numancia:
+    id: u7764
+    league: spain
+  Oviedo:
+    id: u7748
+    league: spain
+  Osasuna:
+    id: u7765
+    league: spain
+  Oviedo:
+    id: u7748
+    league: spain
+  Ponferradina:
+    id: u7766
+    league: spain
+  Real Betis:
+    id: u7742
+    league: spain
+  Real Madrid:
+    id: u7735
+    league: spain
+  Real Oviedo:
+    id: u7748
+    league: spain
+  Real Sociedad:
+    id: u7738
+    league: spain
+  Recreativo:
+    id: u7767
+    league: spain
+  Real Valladolid:
+    id: u7768
+    league: spain
+  Real Zaragoza:
+    id: u7769
+    league: spain
+  Reus:
+    id: u7770
+    league: spain
+  Sabadell:
+    id: u7771
+    league: spain
+  Salamanca:
+    id: u7772
+    league: spain
+  San Sebastian:
+    id: u7738
+    league: spain
+  Santander:
+    id: u7773
+    league: spain
+  Seville:
+    id: u7736
+    league: spain
+  Seville FC:
+    id: u7736
+    league: spain
+  Sevilla:
+    id: u7736
+    league: spain
+  Sociedad:
+    id: u7738
+    league: spain
+  Sporting:
+    id: u7774
+    league: spain
+  Sporting Gijon:
+    id: u7748
+    league: spain
+  Tenerife:
+    id: u7775
+    league: spain
+  Terrassa:
+    id: u7776
+    league: spain
+  Toledo:
+    id: u7777
+    league: spain
+  Toledo CF:
+    id: u7777
+    league: spain
+  Valladolid:
+    id: u7768
+    league: spain
+  Valencia:
+    id: u7734
+    league: spain
+  Valencia CF:
+    id: u7734
+    league: spain
+  Villarreal:
+    id: u7755
+    league: spain
+  Villarreal CF:
+    id: u7755
+    league: spain
+  Xerez:
+    id: u7778
+    league: spain
+  Zaragoza:
+    id: u7769
+    league: spain
+  Bayern Munich:
+    id: u356
+    league: germany
+  Borussia Dortmund:
+    id: u354
+    league: germany
+  Borussia Moenchengladbach:
+    id: u355
+    league: germany
+  Schalke 04:
+    id: u7797
+    league: germany
+  Bayer Leverkusen:
+    id: u7796
+    league: germany
+  Hamburg SV:
+    id: u7795
+    league: germany
+  VfB Stuttgart:
+    id: u7794
+    league: germany
+  Hertha Berlin:
+    id: u7793
+    league: germany
+  Werder Bremen:
+    id: u7792
+    league: germany
+  Hannover:
+    id: u7791
+    league: germany
+  TSV 1860:
+    id: u7790
+    league: germany
+  Arminia:
+    id: u7789
+    league: germany
+  AEK Athen:
+    id: u7779
+    league: greece
+  Apollon:
+    id: u7780
+    league: greece
+  AO Glyfada:
+    id: u7781
+    league: greece
+  Atalanti Athina:
+    id: u7782
+    league: greece
+  ASTERAS Tripolis:
+    id: u7783
+    league: greece
+  Levadiakos:
+    id: u7784
+    league: greece
+  Olympiakos:
+    id: u7785
+    league: greece
+  Panachaiki:
+    id: u7786
+    league: greece
+  Panathinaikos:
+    id: u7787
+    league: greece
+  PAOK:
+    id: u7788
+    league: greece
