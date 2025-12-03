@@ -1,0 +1,76 @@
+================================================================================
+                  📥 MISE À JOUR ET TEST DU REPO
+================================================================================
+
+🔄 ÉTAPE 1: MISE À JOUR DU REPO
+
+    cd ~/paris-live-2
+
+    # Pull la branche avec tous les changements
+    git pull origin claude/continue-conversation-01CTn5GEeYZ6YMTxYVbyjtHe
+
+    # Vérifier que tout est à jour
+    git status
+
+    # Devrait afficher: "Your branch is up to date"
+
+================================================================================
+
+🧪 ÉTAPE 2: LANCER LES TESTS
+
+    cd football-live-prediction
+
+    # Installer dépendances (si pas déjà fait)
+    pip install requests beautifulsoup4 pyyaml loguru lxml
+
+    # Lancer le test automatique
+    ./quick_test.sh
+
+================================================================================
+
+✅ ALTERNATIVE: TOUT EN UNE COMMANDE
+
+    cd ~/paris-live-2 && \
+    git pull origin claude/continue-conversation-01CTn5GEeYZ6YMTxYVbyjtHe && \
+    cd football-live-prediction && \
+    ./quick_test.sh
+
+================================================================================
+
+📋 FICHIERS AJOUTÉS DANS CETTE SESSION:
+
+    ✅ test_live_detection.py      - Tests avec données réelles
+    ✅ test_phase3_demo.py         - Démo sans internet
+    ✅ quick_test.sh               - Script de test automatique
+    ✅ TEST_LOCAL_GUIDE.md         - Guide complet
+    ✅ README_TESTING.md           - Guide rapide
+    ✅ TESTING_README.txt          - Commandes essentielles
+    ✅ PULL_AND_TEST.txt           - Ce fichier
+    ✅ auto_live_monitor.py        - Système automatique (Phase 4)
+    ✅ AUTO_MONITOR_GUIDE.md       - Documentation Phase 4
+    ✅ LIVE_SCRAPING_SYSTEM.md     - Documentation Phase 3
+
+================================================================================
+
+🎯 APRÈS LE PULL:
+
+    Tu auras:
+    - Système de détection Phase 3 complet
+    - Tous les scripts de test
+    - Documentation complète
+    - Système automatique Phase 4 prêt
+
+================================================================================
+
+💡 COMMANDES UTILES:
+
+    # Voir les derniers commits
+    git log --oneline -10
+
+    # Voir les fichiers modifiés
+    git diff --name-only HEAD~10
+
+    # Vérifier la branche
+    git branch
+
+================================================================================
