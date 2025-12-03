@@ -103,11 +103,11 @@ class HistoricalDataLoader:
     def load_from_soccerstats(self, league_code: str, max_matches: int = 100):
         """
         Scrape les données depuis SoccerStats.com
-        (À implémenter avec vrai scraper Selenium)
         """
-        logger.warning("load_from_soccerstats not yet implemented")
-        # TODO: Intégrer avec soccerstats_historical.py
-        pass
+        from scrapers.soccerstats_match_history_scraper import SoccerStatsHistoricalScraper
+
+        scraper = SoccerStatsHistoricalScraper()
+        return scraper.scrape_league_history(league_code, max_matches)
 
     def get_teams_in_db(self) -> List[str]:
         """Récupère toutes les équipes de la BD"""
