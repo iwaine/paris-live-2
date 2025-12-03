@@ -1,394 +1,369 @@
 #!/usr/bin/env python3
-# ============================================================================
-# PARIS LIVE - CONTINUOUS LIVE MONITORING
-# ============================================================================
-# Scrape tous les matchs en direct et génère des prédictions chaque 45 secondes
-# ============================================================================
+"""
+🎯 CONTINUOUS LIVE MATCH MONITOR
+Integrates RecurrencePredictor for real-time betting signals
+
+Phase 5: Live Monitoring with Recurrence-Based Predictions
+- Scrapes live match data every N seconds
+- Makes predictions using RecurrencePredictor (minute-exact analysis)
+- Alerts when danger_score >= 65% (high confidence betting signal)
+- Supports multiple simultaneous matches
+"""
 
 import sys
-import os
 import time
-import asyncio
-import re
+from pathlib import Path
+from typing import Dict, List, Optional
 from datetime import datetime
-from bs4 import BeautifulSoup
-import requests
-from collections import defaultdict
+from dataclasses import dataclass
 
-sys.path.insert(0, '/workspaces/paris-live/football-live-prediction')
+sys.path.insert(0, 'scrapers')
+sys.path.insert(0, 'predictors')
 
-from live_prediction_pipeline import LivePredictionPipeline
+from soccerstats_live import SoccerStatsLiveScraper
+from recurrence_predictor import RecurrencePredictor
 from loguru import logger
-from telegram import Bot
-import numpy as np
 
-# Configure logger
-logger.remove()
-logger.add(
-    sys.stderr,
-    format="<level>{time:HH:mm:ss}</level> | <level>{level: <8}</level> | {message}"
-)
+
+@dataclass
+class BettingSignal:
+    """Betting signal output"""
+    match_id: str
+    home_team: str
+    away_team: str
+    minute: int
+    current_score: str
+    danger_score: float
+    danger_level: str  # "HIGH", "MODERATE", "LOW"
+    should_bet: bool
+    prediction_data: Dict
+    timestamp: datetime
+    signal_reason: str
+
+    def display(self) -> str:
+        """Pretty print the signal"""
+        emoji = "🎯" if self.should_bet else "⚠️ "
+        bet_indicator = "PARIER" if self.should_bet else "CONSIDÉRER"
+        return f"{emoji} {bet_indicator} | {self.home_team} vs {self.away_team} @ min {self.minute} | Danger: {self.danger_score:.1f}% | Score: {self.current_score}"
+
 
 class ContinuousLiveMonitor:
-    """Monitoring continu avec scraping multi-matchs"""
-    
-    def __init__(self):
-        self.pipeline = LivePredictionPipeline()
-        self.bot_token = os.getenv('TELEGRAM_BOT_TOKEN', '8085055094:AAG2DnroWUhR0vISl5XGNND1OZCLm1GF41c')
-        self.chat_id = os.getenv('TELEGRAM_CHAT_ID', '6942358056')
-        self.update_interval = int(os.getenv('UPDATE_INTERVAL', '45'))
-        self.confidence_threshold = float(os.getenv('CONFIDENCE_THRESHOLD', '0.50'))
-        self.danger_threshold = float(os.getenv('DANGER_SCORE_THRESHOLD', '0.50'))
-        
-        # Charger les URLs depuis la config
-        self.match_urls = self._load_match_urls()
-        
-        self.match_cache = {}  # Cache pour éviter les doublons
-        self.predictions_count = 0
-        self.buy_signals_count = 0
-    
-    def _load_match_urls(self) -> list:
-        """Charge les URLs depuis le fichier config"""
-        import json
-        urls_file = '/workspaces/paris-live/football-live-prediction/config/match_urls.json'
+    """Continuous live match monitoring with recurrence-based predictions"""
+
+    def __init__(self, telegram_token: Optional[str] = None, telegram_chat_id: Optional[str] = None):
+        """
+        Initialize the monitor
+
+        Args:
+            telegram_token: Telegram bot token for alerts
+            telegram_chat_id: Telegram chat ID for alerts
+        """
+        self.scraper = SoccerStatsLiveScraper()
+        self.predictor = RecurrencePredictor()
+        self.telegram_token = telegram_token
+        self.telegram_chat_id = telegram_chat_id
+
+        # Monitoring state
+        self.active_matches: Dict[str, Dict] = {}
+        self.signals_history: List[BettingSignal] = []
+        self.high_danger_signals: List[BettingSignal] = []
+
+        # Configuration
+        self.DANGER_THRESHOLD_HIGH = 65  # Alert when >= 65%
+        self.DANGER_THRESHOLD_MODERATE = 50
+        self.POLLING_INTERVAL = 30  # seconds
+        self.MATCH_TIMEOUT = 3600  # Stop monitoring after 1 hour of no updates
+
+        logger.info("ContinuousLiveMonitor initialized")
+
+    def add_match(self, match_url: str, match_id: str) -> bool:
+        """Add a match to monitoring"""
         try:
-            if os.path.exists(urls_file):
-                with open(urls_file, 'r') as f:
-                    data = json.load(f)
-                    return [item['url'] for item in data.get('urls', [])]
-        except Exception as e:
-            logger.warning(f"⚠️  Erreur chargement URLs: {e}")
-        
-        # URLs par défaut
-        return [
-            "https://www.soccerstats.com/pmatch.asp?league=bulgaria&stats=141-2-5-2026",
-        ]
-    
-    def discover_live_matches(self) -> list:
-        """Découvre les matchs en direct depuis les URLs"""
-        matches = []
-        
-        logger.info("🔍 Découverte des matchs en direct...")
-        
-        for url in self.match_urls:
-            try:
-                match_data = self._scrape_match_url(url)
-                if match_data:
-                    matches.append(match_data)
-                    logger.info(f"✅ Match trouvé: {match_data.get('home_team')} vs {match_data.get('away_team')}")
-            except Exception as e:
-                logger.warning(f"⚠️  Erreur scraping {url}: {e}")
-        
-        logger.info(f"📊 Total matchs découverts: {len(matches)}")
-        return matches
-    
-    def _scrape_match_url(self, url: str) -> dict:
-        """Scrape une URL de match"""
-        try:
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            match_data = self.scraper.scrape_live_match(match_url)
+            if not match_data:
+                logger.error(f"Failed to scrape match: {match_id}")
+                return False
+
+            self.active_matches[match_id] = {
+                'url': match_url,
+                'data': match_data,
+                'last_update': datetime.now(),
+                'last_minute': match_data.get('current_minute', 0),
+                'signals_count': 0,
             }
-            
-            response = requests.get(url, headers=headers, timeout=10)
-            response.raise_for_status()
-            
-            soup = BeautifulSoup(response.content, 'html.parser')
-            return self._parse_match_page(soup, url)
-            
+
+            logger.info(f"✅ Added match: {match_data.get('home_team')} vs {match_data.get('away_team')}")
+            return True
         except Exception as e:
-            logger.error(f"❌ Erreur scraping: {e}")
+            logger.error(f"Error adding match {match_id}: {e}")
+            return False
+
+    def remove_match(self, match_id: str):
+        """Remove a match from monitoring"""
+        if match_id in self.active_matches:
+            del self.active_matches[match_id]
+            logger.info(f"Removed match: {match_id}")
+
+    def process_match(self, match_id: str) -> Optional[List[BettingSignal]]:
+        """
+        Process a single match and generate predictions
+
+        Returns:
+            List of BettingSignal or None if error
+        """
+        if match_id not in self.active_matches:
             return None
-    
-    def _parse_match_page(self, soup: BeautifulSoup, url: str) -> dict:
-        """Parse la page HTML du match"""
-        data = {
-            'url': url,
-            'home_team': 'Unknown Home',
-            'away_team': 'Unknown Away',
-            'home_score': 0,
-            'away_score': 0,
-            'minute': 45,
-            'home_possession': 50,
-            'home_shots': 8,
-            'home_shots_on_target': 3,
-            'home_corners': 4,
-            'home_fouls': 12,
-            'away_possession': 50,
-            'away_shots': 7,
-            'away_shots_on_target': 2,
-            'away_corners': 3,
-            'away_fouls': 11,
-            'timestamp': datetime.now().isoformat(),
-        }
-        
+
+        match_info = self.active_matches[match_id]
+        match_url = match_info['url']
+
+        # Scrape latest data
         try:
-            # Trouver le titre et les infos du match
-            title_tag = soup.find('h1') or soup.find('title')
-            if title_tag:
-                text = title_tag.get_text()
-                if ' vs ' in text:
-                    teams = text.split(' vs ')
-                    data['home_team'] = teams[0].strip()
-                    data['away_team'] = teams[1].strip().split('|')[0].strip()
-            
-            # Extraire le score
-            page_text = soup.get_text()
-            score_patterns = [
-                r'(\d+)\s*-\s*(\d+)',
-                r'Score:\s*(\d+)\s*-\s*(\d+)',
-            ]
-            
-            for pattern in score_patterns:
-                match = re.search(pattern, page_text)
-                if match:
-                    data['home_score'] = int(match.group(1))
-                    data['away_score'] = int(match.group(2))
-                    break
-            
-            # Extraire la minute
-            minute_match = re.search(r"(\d+)['°]\s*(?:min|FT|HT)", page_text)
-            if minute_match:
-                data['minute'] = int(minute_match.group(1))
-        
+            match_data = self.scraper.scrape_live_match(match_url)
+            if not match_data:
+                logger.warning(f"Failed to scrape match {match_id}")
+                return None
         except Exception as e:
-            logger.warning(f"⚠️  Parse warning: {e}")
-        
-        return data
-    
-    def generate_features_from_match(self, match_data: dict) -> np.ndarray:
-        """Génère les 23 features à partir du match"""
-        try:
-            home_poss = match_data.get('home_possession', 50) / 100
-            away_poss = match_data.get('away_possession', 50) / 100 or (1 - home_poss)
-            
-            home_shots = match_data.get('home_shots', 8) / 20
-            away_shots = match_data.get('away_shots', 7) / 20
-            
-            home_sot = match_data.get('home_shots_on_target', 3) / 10
-            away_sot = match_data.get('away_shots_on_target', 2) / 10
-            
-            home_corners = match_data.get('home_corners', 4) / 10
-            away_corners = match_data.get('away_corners', 3) / 10
-            
-            home_fouls = match_data.get('home_fouls', 12) / 20
-            away_fouls = match_data.get('away_fouls', 10) / 20
-            
-            minute = match_data.get('minute', 45) / 90
-            
-            features = [
-                home_poss, away_poss, home_shots, away_shots,
-                home_sot, away_sot, home_corners, away_corners,
-                home_fouls, away_fouls,
-                home_sot / (home_shots + 0.01),
-                away_sot / (away_shots + 0.01),
-                home_shots / (minute + 0.01),
-                away_shots / (minute + 0.01),
-                (home_corners - away_corners) / 10,
-                (home_fouls - away_fouls) / 20,
-                minute,
-                home_poss - away_poss,
-                (home_shots - away_shots) / 20,
-                (home_sot - away_sot) / 10,
-                home_shots * home_poss,
-                away_shots * away_poss,
-                (home_shots * minute),
-            ]
-            
-            return np.array(features, dtype=np.float32).reshape(1, -1)
-        
-        except Exception as e:
-            logger.error(f"❌ Feature generation error: {e}")
-            return np.random.randn(1, 23)
-    
-    def process_match(self, match_data: dict) -> dict:
-        """Traite un match et génère une prédiction"""
-        # Vérifier si le match est dans les bons intervals
-        minute = match_data.get('minute', 0)
-        in_target_interval = (30 <= minute <= 45) or (75 <= minute <= 90)
-        
-        if not in_target_interval:
-            return {
-                'match_id': f"{match_data['home_team']}_vs_{match_data['away_team']}",
-                'status': 'SKIP_INTERVAL',
-                'reason': f"Minute {minute} not in [30-45] or [75-90]"
-            }
-        
-        # Générer les features
-        features = self.generate_features_from_match(match_data)
-        
-        # Obtenir la prédiction
-        result = self.pipeline.calculate_danger_score(features)
-        
-        danger_score = result.get('danger_score', 0) if isinstance(result, dict) else 0
-        confidence = result.get('confidence', 0) if isinstance(result, dict) else 0
-        
-        # Décision
-        decision = 'BUY' if (
-            danger_score >= self.danger_threshold and 
-            confidence >= self.confidence_threshold
-        ) else 'SKIP'
-        
-        prediction = {
-            'match_id': f"{match_data['home_team']}_vs_{match_data['away_team']}",
-            'home_team': match_data['home_team'],
-            'away_team': match_data['away_team'],
-            'score': f"{match_data['home_score']}-{match_data['away_score']}",
-            'minute': minute,
-            'danger_score': danger_score,
-            'confidence': confidence,
-            'decision': decision,
-            'timestamp': datetime.now().isoformat(),
-        }
-        
-        return prediction
-    
-    async def send_telegram_alert(self, message: str, silent: bool = False):
-        """Envoie une alerte Telegram"""
-        try:
-            bot = Bot(token=self.bot_token)
-            await bot.send_message(
-                chat_id=self.chat_id,
-                text=message,
-                parse_mode='HTML'
-            )
-            if not silent:
-                logger.info("✅ Alerte Telegram envoyée")
-        except Exception as e:
-            logger.warning(f"⚠️  Erreur Telegram: {e}")
-    
-    async def send_buy_signal(self, prediction: dict):
-        """Envoie une alerte pour un signal BUY"""
-        message = (
-            "🎯 <b>SIGNAL D'ACHAT DÉTECTÉ</b>\n\n"
-            f"🏟️  <b>{prediction['home_team']}</b> vs <b>{prediction['away_team']}</b>\n"
-            f"📊 Score: {prediction['score']}\n"
-            f"⏱️  Minute: {prediction['minute']}'\n\n"
-            f"🔮 <b>Prédiction AI:</b>\n"
-            f"📈 Danger Score: {prediction['danger_score']:.1%}\n"
-            f"💪 Confiance: {prediction['confidence']:.1%}\n\n"
-            f"💰 <b>ACTION: ACHETER - Au moins 1 but attendu</b>"
-        )
-        
-        await self.send_telegram_alert(message)
-        self.buy_signals_count += 1
-    
-    async def run_continuous_monitoring(self, duration_minutes: int = None):
-        """Lance le monitoring continu"""
-        logger.info("=" * 80)
-        logger.info("🚀 PARIS LIVE - CONTINUOUS LIVE MONITORING")
-        logger.info("=" * 80)
-        logger.info(f"Configuration:")
-        logger.info(f"  - Update Interval: {self.update_interval}s")
-        logger.info(f"  - Confidence Threshold: {self.confidence_threshold * 100:.0f}%")
-        logger.info(f"  - Danger Threshold: {self.danger_threshold * 100:.0f}%")
-        logger.info(f"  - Intervals: [30-45] and [75-90] minutes")
-        logger.info("=" * 80)
-        logger.info("")
-        
-        # Send startup alert
-        await self.send_telegram_alert(
-            "🚀 <b>PARIS LIVE - Monitoring Démarré</b>\n\n"
-            "📊 Configuration:\n"
-            f"• Mise à jour: {self.update_interval}s\n"
-            f"• Confiance min: {self.confidence_threshold * 100:.0f}%\n"
-            f"• Danger min: {self.danger_threshold * 100:.0f}%\n"
-            f"• Intervals: [30-45] et [75-90] min\n\n"
-            "⏳ En attente des matchs en direct..."
-        )
-        
-        start_time = datetime.now()
-        cycle = 0
-        
+            logger.error(f"Error scraping match {match_id}: {e}")
+            return None
+
+        # Update match info
+        match_info['data'] = match_data
+        match_info['last_update'] = datetime.now()
+
+        current_minute = match_data.get('current_minute')
+        status = match_data.get('status')
+        score = match_data.get('score', 'N/A')
+        home_team = match_data.get('home_team', 'HOME')
+        away_team = match_data.get('away_team', 'AWAY')
+
+        # Only process live matches
+        if status != 'Live' or not current_minute:
+            return None
+
+        signals = []
+
+        # Generate predictions for each target interval [31-45] and [76-90]
+        if 31 <= current_minute <= 45 or 76 <= current_minute <= 90:
+            try:
+                # Get possession (fallback to 50% neutral)
+                live_stats = match_data.get('stats', {})
+                home_possession = 50
+                if 'Possession' in live_stats:
+                    poss_str = live_stats['Possession'].get('home', '50')
+                    try:
+                        home_possession = float(poss_str.rstrip('%'))
+                    except:
+                        home_possession = 50
+
+                # Make prediction
+                prediction = self.predictor.predict_at_minute(
+                    home_team=home_team,
+                    away_team=away_team,
+                    current_minute=current_minute,
+                    home_possession=home_possession
+                )
+
+                if 'error' not in prediction:
+                    danger_score = prediction['danger_score_percentage']
+
+                    # Determine danger level
+                    if danger_score >= self.DANGER_THRESHOLD_HIGH:
+                        danger_level = "HIGH"
+                        should_bet = True
+                        signal_reason = f"HIGH DANGER ({danger_score:.1f}%)"
+                    elif danger_score >= self.DANGER_THRESHOLD_MODERATE:
+                        danger_level = "MODERATE"
+                        should_bet = False
+                        signal_reason = f"MODERATE ({danger_score:.1f}%)"
+                    else:
+                        danger_level = "LOW"
+                        should_bet = False
+                        signal_reason = f"LOW DANGER ({danger_score:.1f}%)"
+
+                    # Create signal
+                    signal = BettingSignal(
+                        match_id=match_id,
+                        home_team=home_team,
+                        away_team=away_team,
+                        minute=current_minute,
+                        current_score=score,
+                        danger_score=danger_score,
+                        danger_level=danger_level,
+                        should_bet=should_bet,
+                        prediction_data=prediction,
+                        timestamp=datetime.now(),
+                        signal_reason=signal_reason,
+                    )
+
+                    signals.append(signal)
+                    self.signals_history.append(signal)
+
+                    if should_bet:
+                        self.high_danger_signals.append(signal)
+                        logger.warning(f"🎯 HIGH DANGER SIGNAL: {signal.display()}")
+                    else:
+                        logger.info(f"⚠️ {signal.display()}")
+
+                    match_info['signals_count'] += 1
+
+            except Exception as e:
+                logger.error(f"Error generating prediction for {match_id}: {e}")
+                return None
+
+        return signals
+
+    def monitor_all_matches(self, interval_seconds: int = 30, max_duration_seconds: Optional[int] = None):
+        """
+        Continuously monitor all active matches
+
+        Args:
+            interval_seconds: Polling interval in seconds
+            max_duration_seconds: Maximum monitoring duration (None = infinite)
+        """
+        start_time = time.time()
+        poll_count = 0
+
+        print("\n" + "="*80)
+        print("🔴 LIVE MONITORING STARTED")
+        print("="*80)
+        print(f"Polling interval: {interval_seconds}s")
+        if max_duration_seconds:
+            print(f"Max duration: {max_duration_seconds}s")
+        print("="*80 + "\n")
+
         try:
             while True:
-                cycle += 1
-                logger.info(f"\n[Cycle {cycle}] {datetime.now().strftime('%H:%M:%S')}")
-                
-                # Découvrir les matchs
-                matches = self.discover_live_matches()
-                
-                if not matches:
-                    logger.warning("⚠️  Aucun match en direct trouvé")
-                else:
-                    # Traiter chaque match
-                    for match in matches:
-                        try:
-                            prediction = self.process_match(match)
-                            
-                            if prediction.get('status') == 'SKIP_INTERVAL':
-                                logger.info(
-                                    f"⏭️  {match['home_team']} vs {match['away_team']} "
-                                    f"({prediction.get('reason')})"
-                                )
-                            else:
-                                self.predictions_count += 1
-                                
-                                logger.info(
-                                    f"🎯 {match['home_team']} vs {match['away_team']} "
-                                    f"({match['minute']}') → "
-                                    f"D:{prediction['danger_score']:.2f} "
-                                    f"C:{prediction['confidence']:.2f} "
-                                    f"→ {prediction['decision']}"
-                                )
-                                
-                                if prediction['decision'] == 'BUY':
-                                    await self.send_buy_signal(prediction)
-                        
-                        except Exception as e:
-                            logger.error(f"❌ Erreur traitement match: {e}")
-                
-                # Vérifier la durée
-                if duration_minutes:
-                    elapsed = (datetime.now() - start_time).total_seconds() / 60
-                    if elapsed >= duration_minutes:
-                        logger.info(f"\n⏱️  Durée prévue ({duration_minutes}m) atteinte")
-                        break
-                
-                # Attendre avant la prochaine mise à jour
-                logger.info(f"⏳ Prochaine mise à jour dans {self.update_interval}s...")
-                await asyncio.sleep(self.update_interval)
-        
+                # Check duration
+                if max_duration_seconds and (time.time() - start_time) > max_duration_seconds:
+                    logger.info("Max duration reached, stopping monitor")
+                    break
+
+                if not self.active_matches:
+                    logger.warning("No active matches to monitor")
+                    time.sleep(interval_seconds)
+                    continue
+
+                poll_count += 1
+                current_time = datetime.now().strftime("%H:%M:%S")
+                print(f"\n⏰ [{current_time}] Poll #{poll_count}")
+                print("-" * 80)
+
+                # Process each match
+                for match_id in list(self.active_matches.keys()):
+                    match_info = self.active_matches[match_id]
+                    match_data = match_info['data']
+
+                    # Check if match timed out
+                    time_since_update = (datetime.now() - match_info['last_update']).total_seconds()
+                    if time_since_update > self.MATCH_TIMEOUT:
+                        logger.info(f"Match {match_id} timed out, removing from monitoring")
+                        self.remove_match(match_id)
+                        continue
+
+                    # Process match
+                    signals = self.process_match(match_id)
+
+                    if signals:
+                        for signal in signals:
+                            print(f"  {signal.display()}")
+
+                            # Send Telegram alert for high danger signals
+                            if signal.should_bet and self.telegram_token and self.telegram_chat_id:
+                                self._send_telegram_alert(signal)
+
+                # Sleep before next poll
+                time.sleep(interval_seconds)
+
         except KeyboardInterrupt:
-            logger.warning("\n⚠️  Monitoring arrêté par l'utilisateur")
-        
+            print("\n\n⏹️  Monitoring stopped by user")
+        except Exception as e:
+            logger.error(f"Error in monitoring loop: {e}")
         finally:
-            # Send summary
-            logger.info("")
-            logger.info("=" * 80)
-            logger.info("📊 RÉSUMÉ DU MONITORING")
-            logger.info("=" * 80)
-            logger.info(f"Cycles: {cycle}")
-            logger.info(f"Prédictions: {self.predictions_count}")
-            logger.info(f"Signaux d'achat: {self.buy_signals_count}")
-            logger.info("=" * 80)
-            
-            await self.send_telegram_alert(
-                "✅ <b>Monitoring Arrêté</b>\n\n"
-                f"📊 Résumé:\n"
-                f"• Cycles: {cycle}\n"
-                f"• Prédictions: {self.predictions_count}\n"
-                f"• Signaux d'achat: {self.buy_signals_count}\n\n"
-                "🔄 À bientôt!"
-            )
+            self._print_summary()
+
+    def _send_telegram_alert(self, signal: BettingSignal):
+        """Send Telegram alert for high danger signal"""
+        if not self.telegram_token or not self.telegram_chat_id:
+            return
+
+        try:
+            import requests
+
+            message = f"""
+🎯 BETTING SIGNAL ALERT
+
+Match: {signal.home_team} vs {signal.away_team}
+Minute: {signal.minute}'
+Score: {signal.current_score}
+Danger: {signal.danger_score:.1f}%
+
+Action: PARIER (High Confidence)
+Time: {signal.timestamp.strftime('%H:%M:%S')}
+            """.strip()
+
+            url = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
+            params = {
+                'chat_id': self.telegram_chat_id,
+                'text': message,
+                'parse_mode': 'HTML'
+            }
+
+            response = requests.post(url, params=params, timeout=10)
+            if response.status_code == 200:
+                logger.success(f"✅ Telegram alert sent for {signal.match_id}")
+            else:
+                logger.warning(f"Failed to send Telegram alert: {response.status_code}")
+        except Exception as e:
+            logger.error(f"Error sending Telegram alert: {e}")
+
+    def _print_summary(self):
+        """Print monitoring summary"""
+        print("\n" + "="*80)
+        print("📊 MONITORING SUMMARY")
+        print("="*80)
+        print(f"Total signals generated: {len(self.signals_history)}")
+        print(f"High danger signals: {len(self.high_danger_signals)}")
+
+        if self.high_danger_signals:
+            print(f"\n🎯 HIGH DANGER SIGNALS:")
+            for signal in self.high_danger_signals:
+                print(f"  • {signal.home_team} vs {signal.away_team} @ {signal.minute}' - {signal.danger_score:.1f}%")
+
+        print("="*80 + "\n")
+
+    def get_statistics(self) -> Dict:
+        """Get monitoring statistics"""
+        return {
+            'total_signals': len(self.signals_history),
+            'high_danger_signals': len(self.high_danger_signals),
+            'active_matches': len(self.active_matches),
+            'trigger_rate': len(self.high_danger_signals) / len(self.signals_history) if self.signals_history else 0,
+        }
 
 
-async def main():
-    """Main entry point"""
-    try:
-        monitor = ContinuousLiveMonitor()
-        
-        # Durée du monitoring (en minutes) - mettre à None pour infini
-        duration = 30  # 30 minutes de test
-        
-        await monitor.run_continuous_monitoring(duration_minutes=duration)
-    
-    except KeyboardInterrupt:
-        logger.warning("\n⚠️  Application arrêtée")
-    except Exception as e:
-        logger.error(f"❌ Erreur: {e}")
-        import traceback
-        traceback.print_exc()
+def demo_monitor():
+    """Demo: Monitor sample matches"""
+
+    print("\n" + "="*80)
+    print("🎯 LIVE MONITORING DEMO")
+    print("="*80 + "\n")
+
+    monitor = ContinuousLiveMonitor()
+
+    # Add sample matches (URL must be valid for actual scraping)
+    print("Note: Add live match URLs to monitor")
+    print("Example: https://www.soccerstats.com/match_detail.asp?...")
+
+    # In demo, we'll show the system is ready
+    print("\n✅ Live monitoring system initialized and ready")
+    print("   - RecurrencePredictor integrated")
+    print("   - Danger score threshold: 65%")
+    print("   - Polling interval: 30s")
+    print("   - Supports Telegram alerts")
+    print("   - Ready for Phase 5 live monitoring @ 12h")
+    print("\n" + "="*80)
 
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    demo_monitor()
