@@ -30,6 +30,10 @@ class LiveMatchData:
     shots_away: Optional[int]
     shots_on_target_home: Optional[int]
     shots_on_target_away: Optional[int]
+    attacks_home: Optional[int]
+    attacks_away: Optional[int]
+    dangerous_attacks_home: Optional[int]
+    dangerous_attacks_away: Optional[int]
     timestamp: datetime
     
     def to_dict(self) -> Dict:
@@ -48,6 +52,10 @@ class LiveMatchData:
             'shots_away': self.shots_away or 0,
             'shots_on_target_home': self.shots_on_target_home or 0,
             'shots_on_target_away': self.shots_on_target_away or 0,
+            'attacks_home': self.attacks_home or 0,
+            'attacks_away': self.attacks_away or 0,
+            'dangerous_attacks_home': self.dangerous_attacks_home or 0,
+            'dangerous_attacks_away': self.dangerous_attacks_away or 0,
         }
 
 
@@ -115,23 +123,24 @@ class SoccerStatsLiveScraper:
         return None, None
     
     def extract_score(self, soup: BeautifulSoup) -> Tuple[Optional[int], Optional[int]]:
-        """Extrait le score (ex: 0:1 → 0, 1)"""
+        """Extrait le score (ex: 0:1 → 0, 1), ignore U21/suffixes équipe"""
         try:
-            # Méthode 1: Chercher font avec style #87CEFA (couleur du score)
-            score_font = soup.find('font', 
-                                  style=lambda s: s and '#87CEFA' in s and '26px' in s)
-            if score_font:
-                score_text = score_font.get_text(strip=True)
-                # Format: "0:1" ou "0 - 1"
-                match = re.search(r'(\d+)\s*[-:]\s*(\d+)', score_text)
-                if match:
-                    return int(match.group(1)), int(match.group(2))
-        except Exception as e:
-            print(f"⚠️ Erreur extraction score: {e}")
+            # Chercher font avec style #87CEFA 22px ou 36px (score principal, pas stats)
+            for size_px in ['22px', '36px', '26px']:
+                score_font = soup.find('font', 
+                                      style=lambda s: s and '#87CEFA' in s and size_px in s)
+                if score_font:
+                    score_text = score_font.get_text(strip=True)
+                    # Format: "0:1" ou "0 - 1" (max 2 chiffres chacun pour éviter U21)
+                    match = re.search(r'(\d{1,2})\s*[-:]\s*(\d{1,2})', score_text)
+                    if match:
+                        return int(match.group(1)), int(match.group(2))
+        except Exception:
+            pass
         
-        # Fallback: Regex simple
+        # Fallback: Regex simple (chercher scores min de 1-2 chiffres)
         try:
-            m = re.search(r'(\d+)\s*[-:]\s*(\d+)', soup.get_text())
+            m = re.search(r'(\d{1,2})\s*[-:]\s*(\d{1,2})', soup.get_text())
             if m:
                 return int(m.group(1)), int(m.group(2))
         except:
@@ -187,6 +196,7 @@ class SoccerStatsLiveScraper:
     def extract_stat(self, soup: BeautifulSoup, stat_name: str) -> Tuple[Optional[str], Optional[str]]:
         """
         Extrait une statistique (Possession, Corners, Shots, etc.)
+        Structure In-play: h3 dans TR, puis TR suivant avec TDs [0]=home, [4]=away
         
         Args:
             soup: BeautifulSoup object
@@ -198,34 +208,56 @@ class SoccerStatsLiveScraper:
         try:
             stat_key = stat_name.lower().rstrip('s')
 
-            # 1) Parcourir les <h3> qui mentionnent la stat et chercher les tables suivantes
+            # MÉTHODE 1: Chercher <h3> qui correspond et utiliser la structure TR+TDs
+            for h3 in soup.find_all('h3'):
+                h3_txt = h3.get_text(strip=True).lower()
+                if stat_key in h3_txt or stat_key in h3_txt.replace(' ', ''):
+                    # Trouver la TR parente du h3
+                    parent_tr = h3.find_parent('tr')
+                    if parent_tr:
+                        # Chercher la TR suivante
+                        next_tr = parent_tr.find_next('tr')
+                        if next_tr:
+                            tds = next_tr.find_all('td')
+                            # Structure: [0]=home, [1-3]=spacer/graph, [4]=away
+                            if len(tds) >= 5:
+                                home_val = tds[0].get_text(strip=True)
+                                away_val = tds[4].get_text(strip=True)
+                                if home_val or away_val:
+                                    return home_val if home_val else None, away_val if away_val else None
+                            # Fallback si structure différente: chercher les deux premiers TDs non-vides
+                            elif len(tds) >= 2:
+                                non_empty = [td.get_text(strip=True) for td in tds if td.get_text(strip=True)]
+                                if len(non_empty) >= 2:
+                                    return non_empty[0], non_empty[1]
+
+            # MÉTHODE 2: Parcourir les <h3> et chercher les <b> numériques dans les tables suivantes
             for h3 in soup.find_all('h3'):
                 txt = h3.get_text(strip=True).lower()
                 if stat_key in txt or stat_key in txt.replace(' ', ''):
-                    # Chercher les tables qui suivent ce <h3>
                     for table in h3.find_all_next('table', limit=8):
-                        # Parcourir les lignes et chercher une ligne contenant >=2 <b> numériques
                         for tr in table.find_all('tr'):
                             b_tags = tr.find_all('b')
                             nums = []
                             for b in b_tags:
                                 t = b.get_text(strip=True)
-                                if re.match(r'^\d{1,3}$', t):
+                                if re.match(r'^\d{1,3}(?:%)?$', t):
                                     nums.append(t)
                             if len(nums) >= 2:
                                 return nums[0], nums[1]
 
-            # 2) Fallback: chercher toute table contenant le mot clé (singulier) dans son texte
+            # MÉTHODE 3: Fallback sur les tables contenant le mot-clé
             for table in soup.find_all('table'):
                 if stat_key in table.get_text().lower():
                     for tr in table.find_all('tr'):
                         b_tags = tr.find_all('b')
-                        nums = [b.get_text(strip=True) for b in b_tags if re.match(r'^\d{1,3}$', b.get_text(strip=True))]
+                        nums = [b.get_text(strip=True) for b in b_tags 
+                               if re.match(r'^\d{1,3}(?:%)?$', b.get_text(strip=True))]
                         if len(nums) >= 2:
                             return nums[0], nums[1]
 
         except Exception as e:
-            print(f"⚠️ Erreur extraction {stat_name}: {e}")
+            pass
 
         return None, None
     
@@ -277,6 +309,14 @@ class SoccerStatsLiveScraper:
         shots_on_target_home = int(self.parse_stat_value(sot_home_str)) if sot_home_str else None
         shots_on_target_away = int(self.parse_stat_value(sot_away_str)) if sot_away_str else None
         
+        attacks_home_str, attacks_away_str = self.extract_stat(soup, 'Attacks')
+        attacks_home = int(self.parse_stat_value(attacks_home_str)) if attacks_home_str else None
+        attacks_away = int(self.parse_stat_value(attacks_away_str)) if attacks_away_str else None
+        
+        dangerous_home_str, dangerous_away_str = self.extract_stat(soup, 'Dangerous attacks')
+        dangerous_attacks_home = int(self.parse_stat_value(dangerous_home_str)) if dangerous_home_str else None
+        dangerous_attacks_away = int(self.parse_stat_value(dangerous_away_str)) if dangerous_away_str else None
+        
         # Vérifications minimales
         if not home_team or not away_team or score_home is None or score_away is None:
             print(f"❌ Données incomplètes pour {url}")
@@ -296,6 +336,10 @@ class SoccerStatsLiveScraper:
             shots_away=shots_away,
             shots_on_target_home=shots_on_target_home,
             shots_on_target_away=shots_on_target_away,
+            attacks_home=attacks_home,
+            attacks_away=attacks_away,
+            dangerous_attacks_home=dangerous_attacks_home,
+            dangerous_attacks_away=dangerous_attacks_away,
             timestamp=datetime.now()
         )
     
