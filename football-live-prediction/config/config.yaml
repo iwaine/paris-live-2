@@ -105,7 +105,7 @@ leagues:
   url: https://www.soccerstats.com/halftime.asp?league=chile
   enabled: true
 - name: Estonia - Meistriliiga
-  url: https://www.soccerstats.com/halftime.asp?league=estonia
+  url: https://www.soccerstats.com/latest.asp?league=estonia
   enabled: true
 - name: FaroeIslands - Premier League
   url: https://www.soccerstats.com/halftime.asp?league=faroeislands
@@ -114,7 +114,7 @@ leagues:
   url: https://www.soccerstats.com/halftime.asp?league=finland
   enabled: true
 - name: Iceland - Besta deild
-  url: https://www.soccerstats.com/halftime.asp?league=iceland
+  url: https://www.soccerstats.com/latest.asp?league=iceland
   enabled: true
 - name: Latvia - Virsliga
   url: https://www.soccerstats.com/halftime.asp?league=latvia
@@ -133,6 +133,18 @@ leagues:
   enabled: true
 - name: Georgia - Erovnuli Liga
   url: https://www.soccerstats.com/latest.asp?league=georgia
+  enabled: true
+- name: Norway – Eliteserien
+  url: https://www.soccerstats.com/latest.asp?league=norway6
+  enabled: true
+- name: Iceland – Úrvalsdeild (2nd Tier)
+  url: https://www.soccerstats.com/latest.asp?league=iceland2
+  enabled: true
+- name: Cyprus – First Division
+  url: https://www.soccerstats.com/latest.asp?league=cyprus
+  enabled: true
+- name: Bolivia – Liga de Fútbol Profesional
+  url: https://www.soccerstats.com/latest.asp?league=bolivia
   enabled: true
 test_teams:
 - team: Manchester City
