@@ -30,15 +30,34 @@ class SoccerStatsLiveScraper:
             
             match_data = {}
             
-            # 1. ÉQUIPES
-            h1 = soup.find('h1')
-            if h1:
-                match_title = h1.get_text(strip=True)
-                teams = match_title.split(' vs ')
-                if len(teams) == 2:
-                    match_data['home_team'] = teams[0].strip()
-                    match_data['away_team'] = teams[1].strip()
-                    logger.info(f"Match: {match_data['home_team']} vs {match_data['away_team']}")
+            # 1. ÉQUIPES (Nouvelle méthode basée sur balises précises)
+            # Balise: <font style="color:blue;18px;bold">
+            teams_fonts = []
+
+            # Méthode 1: Chercher les fonts bleus avec taille 18px ou 28px (équipes)
+            all_fonts = soup.find_all('font')
+            for font in all_fonts:
+                style = font.get('style', '')
+                # Chercher fonts avec "blue" ou couleur bleue et taille >= 18px
+                if ('blue' in style.lower() or '#' in style) and any(size in style for size in ['18px', '28px', '26px']):
+                    text = font.get_text(strip=True)
+                    if text and len(text) > 2 and not any(c.isdigit() for c in text):  # Pas de chiffres
+                        teams_fonts.append(text)
+
+            # Méthode 2: Fallback sur <h1> si pas trouvé
+            if len(teams_fonts) >= 2:
+                match_data['home_team'] = teams_fonts[0]
+                match_data['away_team'] = teams_fonts[1]
+                logger.info(f"Match: {match_data['home_team']} vs {match_data['away_team']}")
+            else:
+                h1 = soup.find('h1')
+                if h1:
+                    match_title = h1.get_text(strip=True)
+                    teams = match_title.split(' vs ')
+                    if len(teams) == 2:
+                        match_data['home_team'] = teams[0].strip()
+                        match_data['away_team'] = teams[1].strip()
+                        logger.info(f"Match: {match_data['home_team']} vs {match_data['away_team']}")
             
             # 2. STATUT
             match_data['status'] = self._extract_status(soup)
@@ -119,11 +138,32 @@ class SoccerStatsLiveScraper:
         return None
     
     def _extract_score(self, soup: BeautifulSoup) -> Optional[str]:
-        """Extrait le score"""
+        """
+        Extrait le score
+        Balise: <font style="color:#87CEFA;26px;bold"> ou <font style="color:#87CEFA;36px;bold">
+        """
+        # Méthode 1: Chercher font avec #87CEFA et taille 26px ou 36px (score)
+        all_fonts = soup.find_all('font')
+        for font in all_fonts:
+            style = font.get('style', '')
+            # Chercher #87CEFA avec taille 26px ou 36px
+            if '#87CEFA' in style.upper() and any(size in style for size in ['26px', '36px']):
+                text = font.get_text(strip=True)
+                # Pattern score: "X - X" ou "X-X"
+                match = re.match(r'^(\d+)\s*[-:]\s*(\d+)$', text)
+                if match:
+                    score = f"{match.group(1)}-{match.group(2)}"
+                    logger.info(f"Score: {score}")
+                    return score
+
+        # Méthode 2: Fallback - recherche globale
         all_text = soup.get_text()
         scores = re.findall(r'\b(\d+)\s*[-:]\s*(\d+)\b', all_text)
         if scores:
-            return f"{scores[0][0]}-{scores[0][1]}"
+            score = f"{scores[0][0]}-{scores[0][1]}"
+            logger.info(f"Score (fallback): {score}")
+            return score
+
         return None
     
     def _extract_live_stats(self, soup: BeautifulSoup) -> Dict:
