@@ -254,11 +254,11 @@ class SoccerStatsLiveScraper:
 
         # Mapping des noms de stats vers les clés de sortie
         stat_mapping = {
-            'Possession %': ('possession_home', 'possession_away'),
-            'Shots': ('shots_home', 'shots_away'),
-            'Shots on Target': ('shots_on_target_home', 'shots_on_target_away'),
+            'Possession': ('possession_home', 'possession_away'),
+            'Total shots': ('shots_home', 'shots_away'),
+            'Shots on target': ('shots_on_target_home', 'shots_on_target_away'),
             'Attacks': ('attacks_home', 'attacks_away'),
-            'Dangerous Attacks': ('dangerous_attacks_home', 'dangerous_attacks_away'),
+            'Dangerous attacks': ('dangerous_attacks_home', 'dangerous_attacks_away'),
             'Corners': ('corners_home', 'corners_away'),
         }
 
