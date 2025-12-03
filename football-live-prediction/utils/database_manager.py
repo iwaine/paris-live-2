@@ -113,7 +113,63 @@ class DatabaseManager:
                 UNIQUE(stat_date)
             )
         ''')
-        
+
+        # Table MATCH_HISTORY (matchs historiques avec minutes exactes)
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS match_history (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                home_team TEXT NOT NULL,
+                away_team TEXT NOT NULL,
+                league TEXT,
+                match_date DATETIME,
+                final_score TEXT,
+                home_goals INTEGER DEFAULT 0,
+                away_goals INTEGER DEFAULT 0,
+                created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE(home_team, away_team, match_date)
+            )
+        ''')
+
+        # Table GOALS (buts minute par minute)
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS goals (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                match_id INTEGER NOT NULL,
+                team TEXT NOT NULL,
+                minute INTEGER NOT NULL,
+                player_name TEXT,
+                is_own_goal INTEGER DEFAULT 0,
+                created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (match_id) REFERENCES match_history(id)
+            )
+        ''')
+
+        # Table GOAL_STATS (pré-calculée pour rapidité)
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS goal_stats (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                team_name TEXT NOT NULL,
+                venue TEXT NOT NULL,
+                interval_name TEXT NOT NULL,
+                total_matches INTEGER DEFAULT 0,
+                goals_scored INTEGER DEFAULT 0,
+                goals_conceded INTEGER DEFAULT 0,
+                avg_minute REAL,
+                std_dev REAL,
+                min_minute INTEGER,
+                max_minute INTEGER,
+                recent_matches INTEGER DEFAULT 0,
+                recent_goals INTEGER DEFAULT 0,
+                recent_avg_minute REAL,
+                recent_std_dev REAL,
+                minute_distribution TEXT,
+                recent_minute_distribution TEXT,
+                created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE(team_name, venue, interval_name)
+            )
+        ''')
+
         self.connection.commit()
         logger.info("✅ Database tables created")
     
@@ -337,6 +393,155 @@ class DatabaseManager:
             logger.error(f"Error fetching accuracy by interval: {e}")
             return {}
     
+    # ===== MATCH HISTORY & GOALS (RECURRENCE) =====
+
+    def insert_match_history(self, match_data: Dict) -> Optional[int]:
+        """Insère un match historique"""
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute('''
+                INSERT INTO match_history
+                (home_team, away_team, league, match_date, final_score, home_goals, away_goals)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+            ''', (
+                match_data.get('home_team'),
+                match_data.get('away_team'),
+                match_data.get('league'),
+                match_data.get('match_date'),
+                match_data.get('final_score'),
+                match_data.get('home_goals', 0),
+                match_data.get('away_goals', 0)
+            ))
+            self.connection.commit()
+            logger.success(f"✓ Historical match inserted: {match_data.get('home_team')} vs {match_data.get('away_team')}")
+            return cursor.lastrowid
+        except sqlite3.IntegrityError:
+            logger.debug(f"Historical match already exists")
+            return None
+        except Exception as e:
+            logger.error(f"Error inserting historical match: {e}")
+            return None
+
+    def insert_goal(self, match_id: int, goal_data: Dict) -> Optional[int]:
+        """Insère un but avec minute exacte"""
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute('''
+                INSERT INTO goals
+                (match_id, team, minute, player_name, is_own_goal)
+                VALUES (?, ?, ?, ?, ?)
+            ''', (
+                match_id,
+                goal_data.get('team'),  # "home" ou "away"
+                goal_data.get('minute'),
+                goal_data.get('player_name'),
+                goal_data.get('is_own_goal', 0)
+            ))
+            self.connection.commit()
+            return cursor.lastrowid
+        except Exception as e:
+            logger.error(f"Error inserting goal: {e}")
+            return None
+
+    def get_goals_for_match(self, match_id: int) -> List[Dict]:
+        """Récupère tous les buts d'un match"""
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute('''
+                SELECT * FROM goals WHERE match_id = ? ORDER BY minute
+            ''', (match_id,))
+            return [dict(row) for row in cursor.fetchall()]
+        except Exception as e:
+            logger.error(f"Error fetching goals: {e}")
+            return []
+
+    def upsert_goal_stats(self, stats_data: Dict) -> bool:
+        """Insère ou met à jour les stats de but pour une équipe/venue/intervalle"""
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute('''
+                INSERT INTO goal_stats
+                (team_name, venue, interval_name, total_matches, goals_scored, goals_conceded,
+                 avg_minute, std_dev, min_minute, max_minute, recent_matches, recent_goals,
+                 recent_avg_minute, recent_std_dev, minute_distribution, recent_minute_distribution)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(team_name, venue, interval_name) DO UPDATE SET
+                    total_matches = excluded.total_matches,
+                    goals_scored = excluded.goals_scored,
+                    goals_conceded = excluded.goals_conceded,
+                    avg_minute = excluded.avg_minute,
+                    std_dev = excluded.std_dev,
+                    min_minute = excluded.min_minute,
+                    max_minute = excluded.max_minute,
+                    recent_matches = excluded.recent_matches,
+                    recent_goals = excluded.recent_goals,
+                    recent_avg_minute = excluded.recent_avg_minute,
+                    recent_std_dev = excluded.recent_std_dev,
+                    minute_distribution = excluded.minute_distribution,
+                    recent_minute_distribution = excluded.recent_minute_distribution,
+                    updated_at = CURRENT_TIMESTAMP
+            ''', (
+                stats_data.get('team_name'),
+                stats_data.get('venue'),  # "home" ou "away"
+                stats_data.get('interval_name'),  # "31-45", "75-90"
+                stats_data.get('total_matches'),
+                stats_data.get('goals_scored'),
+                stats_data.get('goals_conceded'),
+                stats_data.get('avg_minute'),
+                stats_data.get('std_dev'),
+                stats_data.get('min_minute'),
+                stats_data.get('max_minute'),
+                stats_data.get('recent_matches'),
+                stats_data.get('recent_goals'),
+                stats_data.get('recent_avg_minute'),
+                stats_data.get('recent_std_dev'),
+                stats_data.get('minute_distribution'),  # JSON string
+                stats_data.get('recent_minute_distribution')  # JSON string
+            ))
+            self.connection.commit()
+            logger.success(f"✓ Goal stats upserted: {stats_data.get('team_name')} ({stats_data.get('venue')}) {stats_data.get('interval_name')}")
+            return True
+        except Exception as e:
+            logger.error(f"Error upserting goal stats: {e}")
+            return False
+
+    def get_goal_stats(self, team_name: str, venue: str, interval_name: str) -> Optional[Dict]:
+        """Récupère les stats de but pour une équipe/venue/intervalle"""
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute('''
+                SELECT * FROM goal_stats
+                WHERE team_name = ? AND venue = ? AND interval_name = ?
+            ''', (team_name, venue, interval_name))
+            row = cursor.fetchone()
+            return dict(row) if row else None
+        except Exception as e:
+            logger.error(f"Error fetching goal stats: {e}")
+            return None
+
+    def get_match_history(self, home_team: str = None, away_team: str = None, limit: int = 1000) -> List[Dict]:
+        """Récupère l'historique des matchs (filtrable par équipe)"""
+        try:
+            cursor = self.connection.cursor()
+            query = "SELECT * FROM match_history WHERE 1=1"
+            params = []
+
+            if home_team:
+                query += " AND home_team = ?"
+                params.append(home_team)
+            if away_team:
+                query += " AND away_team = ?"
+                params.append(away_team)
+
+            query += " ORDER BY match_date DESC LIMIT ?"
+            params.append(limit)
+
+            cursor.execute(query, params)
+            return [dict(row) for row in cursor.fetchall()]
+        except Exception as e:
+            logger.error(f"Error fetching match history: {e}")
+            return []
+
     def close(self):
         """Ferme la connexion"""
         if self.connection:
