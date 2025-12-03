@@ -203,6 +203,7 @@ class LiveMatchDetector(BaseScraper):
             self.logger.debug(f"Found {len(live_fonts)} potential live indicators ({len(live_fonts_style)} with style, {len(live_fonts_blue)} with color=blue)")
 
             live_matches = []
+            seen_urls = set()  # Pour dédupliquer par URL
 
             for font in live_fonts:
                 status_text = font.get_text(strip=True)
@@ -223,50 +224,39 @@ class LiveMatchDetector(BaseScraper):
                     self.logger.warning(f"No match link found for status: {status_text}")
                     continue
 
-                # Extraire les noms des équipes
-                home_team, away_team = self.extract_team_names(font)
+                # Dédupliquer: si on a déjà vu cette URL, ignorer
+                if match_url in seen_urls:
+                    self.logger.debug(f"Skipping duplicate URL: {match_url}")
+                    continue
 
-                # Extraire le score (chercher le font avec couleur #87CEFA et taille 36px)
-                score = None
-                current = font
-                for _ in range(10):
-                    if current is None:
-                        break
-                    score_font = current.find('font', style=lambda x: x and '#87CEFA' in x and '36px' in x)
-                    if score_font:
-                        score = score_font.get_text(strip=True)
-                        break
-                    current = current.parent
+                seen_urls.add(match_url)
 
-                # Créer l'ID du match
+                # Créer l'ID du match à partir de l'URL
                 match_id = None
                 if 'stats=' in match_url:
                     stats_part = match_url.split('stats=')[-1].split('&')[0]
                     match_id = f"{league_name}_{stats_part}"
+                else:
+                    match_id = f"{league_name}_{len(live_matches)}"
 
+                # Note: Les équipes et le score seront extraits en scrapant la page pmatch.asp
+                # La page latest.asp ne contient pas ces infos de manière fiable
                 match_info = {
                     'url': match_url,
                     'league': league_name,
                     'status': status_text,
-                    'home_team': home_team,
-                    'away_team': away_team,
-                    'score': score,
-                    'id': match_id or f"{league_name}_{len(live_matches)}"
+                    'home_team': None,  # Sera extrait par le scraper pmatch.asp
+                    'away_team': None,  # Sera extrait par le scraper pmatch.asp
+                    'score': None,      # Sera extrait par le scraper pmatch.asp
+                    'id': match_id,
+                    'title': f"Live match - {status_text}"
                 }
-
-                # Créer le titre du match
-                if home_team and away_team:
-                    match_info['title'] = f"{home_team} vs {away_team}"
-                elif score:
-                    match_info['title'] = f"Match {score}"
-                else:
-                    match_info['title'] = f"Match live ({status_text})"
 
                 live_matches.append(match_info)
 
-                self.logger.info(f"✅ Live match detected: {match_info['title']} - {status_text}")
+                self.logger.info(f"✅ Live match detected: {match_url} ({status_text})")
 
-            self.logger.info(f"Total live matches found: {len(live_matches)}")
+            self.logger.info(f"Total unique live matches found: {len(live_matches)}")
 
             return live_matches
 
