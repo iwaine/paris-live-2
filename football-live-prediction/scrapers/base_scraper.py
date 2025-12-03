@@ -49,7 +49,10 @@ class BaseScraper(ABC):
         # Session pour réutiliser connexions
         self.session = requests.Session()
         self.session.headers.update(self.headers)
-        
+
+        # Désactiver les proxies (éviter les erreurs 403)
+        self.session.trust_env = False
+
         # Compteur de requêtes (pour rate limiting)
         self.request_count = 0
         self.last_request_time = 0
