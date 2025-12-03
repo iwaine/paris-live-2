@@ -62,6 +62,7 @@ class LiveMatchDetector(BaseScraper):
     def find_match_link_in_parent(self, element: Tag) -> Optional[str]:
         """
         Remonte dans le DOM pour trouver le lien du match (pmatch.asp)
+        Basé sur l'analyse: le lien est dans le <tr> parent qui contient le statut live
 
         Args:
             element: Element BeautifulSoup à partir duquel chercher
@@ -69,9 +70,24 @@ class LiveMatchDetector(BaseScraper):
         Returns:
             URL du match ou None
         """
-        # Chercher dans les 10 niveaux parents
+        # D'abord chercher le <tr> parent
+        tr_parent = element.find_parent('tr')
+
+        if tr_parent:
+            # Chercher le lien dans ce <tr>
+            link = tr_parent.find('a', href=lambda x: x and 'pmatch.asp' in x)
+            if link:
+                href = link.get('href', '')
+                if href:
+                    # Construire l'URL complète
+                    if href.startswith('http'):
+                        return href
+                    else:
+                        return f"https://www.soccerstats.com/{href}"
+
+        # Si pas trouvé dans <tr>, chercher dans les parents plus larges (jusqu'à 15 niveaux)
         current = element
-        for _ in range(10):
+        for _ in range(15):
             if current is None:
                 break
 
