@@ -153,7 +153,10 @@ class SoccerStatsLiveScraper:
 
     def _extract_score(self, soup: BeautifulSoup) -> tuple:
         """
-        SCORE: <font style="color:#87CEFA;26px/36px;bold">
+        SCORE: <font color="blue"><b>X:X</b></font> dans <td width="10%">
+
+        Le score LIVE est le premier <font color="blue"> avec un pattern X:X ou X-X
+        trouvé dans un <td width="10%">
 
         Returns:
             (score_home, score_away)
@@ -161,18 +164,23 @@ class SoccerStatsLiveScraper:
         all_fonts = soup.find_all('font')
 
         for font in all_fonts:
-            style = font.get('style', '')
+            color_attr = font.get('color', '')
 
-            # Chercher #87CEFA avec taille 26px ou 36px (score)
-            if '#87CEFA' in style.upper() and any(size in style for size in ['26px', '36px']):
-                text = font.get_text(strip=True)
+            # Chercher font avec color="blue"
+            if 'blue' in color_attr.lower():
+                # Vérifier que le parent est <td width="10%">
+                parent = font.parent
+                if parent and parent.name == 'td':
+                    width = parent.get('width', '')
+                    if '10%' in width:
+                        text = font.get_text(strip=True)
 
-                # Pattern: "X - X" ou "X-X" ou "X : X"
-                match = re.match(r'^(\d+)\s*[-:\s]+\s*(\d+)$', text)
-                if match:
-                    home = int(match.group(1))
-                    away = int(match.group(2))
-                    return (home, away)
+                        # Pattern: "X:X" ou "X - X" ou "X-X"
+                        match = re.match(r'^(\d+)\s*[-:\s]+\s*(\d+)$', text)
+                        if match:
+                            home = int(match.group(1))
+                            away = int(match.group(2))
+                            return (home, away)
 
         return (None, None)
 
