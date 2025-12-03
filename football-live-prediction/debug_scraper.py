@@ -66,9 +66,9 @@ def scrape_and_analyze(url):
                 print(f"   Style: {style}")
 
                 # Remonter pour trouver la structure parente
-                print(f"\n2️⃣ Structure parente (5 niveaux):")
+                print(f"\n2️⃣ Structure parente (10 niveaux):")
                 current = font
-                for level in range(5):
+                for level in range(10):
                     if current is None:
                         break
                     current = current.parent
@@ -80,6 +80,8 @@ def scrape_and_analyze(url):
                             tag_info += f" bgcolor='{current.get('bgcolor')}'"
                         if current.get('width'):
                             tag_info += f" width='{current.get('width')}'"
+                        if current.get('id'):
+                            tag_info += f" id='{current.get('id')}'"
                         tag_info += ">"
                         print(f"   Level {level+1}: {tag_info}")
 
@@ -89,7 +91,7 @@ def scrape_and_analyze(url):
                 # Chercher dans les parents
                 match_link = None
                 current = font
-                for _ in range(10):
+                for _ in range(15):
                     if current is None:
                         break
                     link = current.find('a', href=lambda x: x and 'pmatch.asp' in x)
@@ -113,17 +115,27 @@ def scrape_and_analyze(url):
 
                 if not match_link:
                     print(f"   ❌ Lien pmatch.asp non trouvé!")
+                    print(f"   💡 Cherchons dans toute la page autour de ce match...")
+
+                    # Chercher "Septemvri Sofia" ou les équipes
+                    parent_table = font.find_parent('table')
+                    if parent_table:
+                        print(f"   📋 Table parente trouvée, recherche des équipes...")
+                        team_fonts = parent_table.find_all('font', style=lambda x: x and '#eeeeee' in x and '28px' in x)
+                        if team_fonts:
+                            for tf in team_fonts:
+                                print(f"      Équipe: {tf.get_text(strip=True)}")
 
                 # Afficher le HTML brut autour de cet élément
-                print(f"\n4️⃣ HTML brut (contexte):")
+                print(f"\n4️⃣ HTML brut (contexte étendu):")
                 parent = font.parent
-                if parent and parent.parent:
-                    context = parent.parent
+                if parent and parent.parent and parent.parent.parent:
+                    context = parent.parent.parent
                     html_str = str(context)
-                    # Limiter à 500 caractères
-                    if len(html_str) > 500:
-                        html_str = html_str[:500] + "..."
-                    print(f"   {html_str}")
+                    # Limiter à 1000 caractères
+                    if len(html_str) > 1000:
+                        html_str = html_str[:1000] + "\n... (truncated)"
+                    print(f"{html_str}")
 
                 print()
 
@@ -142,6 +154,28 @@ def scrape_and_analyze(url):
 
         if len(all_links) > 10:
             print(f"\n... et {len(all_links) - 10} autres liens")
+
+        # Chercher spécifiquement "Septemvri Sofia"
+        print("\n" + "="*80)
+        print("🔍 RECHERCHE SPÉCIFIQUE: Septemvri Sofia")
+        print("="*80 + "\n")
+
+        septemvri_elements = soup.find_all(string=lambda x: x and 'Septemvri Sofia' in str(x))
+        print(f"📊 Trouvé {len(septemvri_elements)} occurrences de 'Septemvri Sofia'\n")
+
+        for i, elem in enumerate(septemvri_elements[:3], 1):
+            print(f"\nOccurrence #{i}:")
+            print(f"   Text: {str(elem).strip()}")
+            if hasattr(elem, 'parent'):
+                parent = elem.parent
+                for level in range(5):
+                    if parent:
+                        print(f"   Parent {level+1}: <{parent.name}>")
+                        # Chercher lien dans ce parent
+                        link = parent.find('a', href=lambda x: x and 'pmatch.asp' in x)
+                        if link:
+                            print(f"      → Lien trouvé: {link.get('href')}")
+                        parent = parent.parent
 
         print("\n" + "="*80)
         print("✅ ANALYSE TERMINÉE")
