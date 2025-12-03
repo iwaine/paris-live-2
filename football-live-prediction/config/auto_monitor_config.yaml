@@ -1,0 +1,63 @@
+# Configuration du Système de Surveillance Automatique
+# Auto Live Monitor - Détection et surveillance multi-ligues
+
+# Intervalles de scraping
+intervals:
+  detection: 300        # Scan des ligues toutes les 5 minutes
+  monitor: 60          # Update par match toutes les 60 secondes
+  retry_delay: 30      # Délai avant retry en cas d'erreur
+
+# Seuils d'alerte
+thresholds:
+  danger_score: 3.5    # Alerte Telegram si danger >= 3.5
+  high_danger: 4.0     # Danger ultra-élevé
+  confidence_min: "MOYENNE"  # Confidence minimale pour alertes
+
+# Telegram
+telegram:
+  enabled: true
+  alerts:
+    new_match: true          # Notifier nouveaux matchs détectés
+    danger: true             # Alertes danger
+    goals: true              # Notifications de buts
+    match_end: true          # Notification fin de match
+
+  update_interval: 15        # Notifications générales toutes les 15 min
+
+# Base de données
+database:
+  enabled: true
+  path: "data/predictions.db"
+  auto_cleanup: true         # Nettoyer les vieux matchs
+  retention_days: 30         # Garder 30 jours
+
+# Options de surveillance
+monitoring:
+  parallel: false            # Surveillance parallèle (non implémenté)
+  max_active_matches: 50     # Maximum de matchs surveillés simultanément
+  auto_retry: true           # Retry automatique en cas d'erreur
+  retry_attempts: 3
+
+# Logging
+logging:
+  level: "INFO"              # DEBUG, INFO, WARNING, ERROR
+  file: "logs/auto_monitor.log"
+  rotation: "1 day"
+  retention: "7 days"
+
+# Ligues prioritaires (surveillées en premier)
+priority_leagues:
+  - France – Ligue 1
+  - England – Premier League
+  - Spain – LaLiga
+  - Germany – Bundesliga
+  - Italy – Serie A
+
+# Filtres
+filters:
+  min_minute: 10             # Ignorer matchs avant 10'
+  max_minute: 90             # Ignorer matchs après 90'
+  exclude_statuses:
+    - "FT"
+    - "Postponed"
+    - "Cancelled"
