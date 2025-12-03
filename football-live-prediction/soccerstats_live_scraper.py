@@ -141,9 +141,22 @@ class SoccerStatsLiveScraper:
 
             if is_team_font:
                 text = font.get_text(strip=True)
-                # Filtrer: doit avoir au moins 2 caractères et pas que des chiffres
-                if text and len(text) > 2 and not text.replace(' ', '').isdigit():
-                    teams.append(text)
+
+                # Filtres pour exclure les non-équipes:
+                # 1. Au moins 3 caractères
+                if not text or len(text) < 3:
+                    continue
+
+                # 2. Exclure les patterns de score (X-X, X:X, X - X)
+                if re.match(r'^\d+\s*[-:]\s*\d+$', text):
+                    continue
+
+                # 3. Exclure les textes avec trop de chiffres (> 30% du texte)
+                digit_count = sum(c.isdigit() for c in text)
+                if digit_count / len(text) > 0.3:
+                    continue
+
+                teams.append(text)
 
         # Prendre les 2 premières équipes trouvées
         if len(teams) >= 2:
