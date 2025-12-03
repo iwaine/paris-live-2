@@ -62,7 +62,8 @@ class LiveMatchDetector(BaseScraper):
     def find_match_link_in_parent(self, element: Tag) -> Optional[str]:
         """
         Remonte dans le DOM pour trouver le lien du match (pmatch.asp)
-        Basé sur l'analyse: le lien est dans le <tr> parent qui contient le statut live
+        Basé sur l'analyse: le lien peut être dans le <tr> parent (Bulgaria)
+        ou plus loin (niveau 8 pour Bosnia)
 
         Args:
             element: Element BeautifulSoup à partir duquel chercher
@@ -70,24 +71,9 @@ class LiveMatchDetector(BaseScraper):
         Returns:
             URL du match ou None
         """
-        # D'abord chercher le <tr> parent
-        tr_parent = element.find_parent('tr')
-
-        if tr_parent:
-            # Chercher le lien dans ce <tr>
-            link = tr_parent.find('a', href=lambda x: x and 'pmatch.asp' in x)
-            if link:
-                href = link.get('href', '')
-                if href:
-                    # Construire l'URL complète
-                    if href.startswith('http'):
-                        return href
-                    else:
-                        return f"https://www.soccerstats.com/{href}"
-
-        # Si pas trouvé dans <tr>, chercher dans les parents plus larges (jusqu'à 15 niveaux)
+        # Chercher dans les parents (jusqu'à 20 niveaux pour être sûr)
         current = element
-        for _ in range(15):
+        for level in range(20):
             if current is None:
                 break
 
@@ -204,10 +190,17 @@ class LiveMatchDetector(BaseScraper):
             # Parser le HTML
             soup = self.parse_html(response.text)
 
-            # Chercher tous les <font> avec la couleur live (#87CEFA)
-            live_fonts = soup.find_all('font', style=lambda x: x and self.live_color.upper() in x.upper())
+            # Chercher tous les <font> avec la couleur live
+            # Méthode 1: style avec #87CEFA (Bulgaria, etc.)
+            live_fonts_style = soup.find_all('font', style=lambda x: x and self.live_color.upper() in x.upper())
 
-            self.logger.debug(f"Found {len(live_fonts)} potential live indicators")
+            # Méthode 2: attribut color="blue" (Bosnia, etc.)
+            live_fonts_blue = soup.find_all('font', color='blue')
+
+            # Combiner les deux listes (éviter les doublons)
+            live_fonts = live_fonts_style + [f for f in live_fonts_blue if f not in live_fonts_style]
+
+            self.logger.debug(f"Found {len(live_fonts)} potential live indicators ({len(live_fonts_style)} with style, {len(live_fonts_blue)} with color=blue)")
 
             live_matches = []
 
