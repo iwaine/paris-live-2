@@ -27,6 +27,8 @@ leagues:
   url: https://www.soccerstats.com/latest.asp?league=austria2
 - name: Bulgaria – Parva liga
   url: https://www.soccerstats.com/latest.asp?league=bulgaria
+- name: Bosnia and Herzegovina – Premier League
+  url: https://www.soccerstats.com/latest.asp?league=bosnia
 - name: Croatia – HNL
   url: https://www.soccerstats.com/latest.asp?league=croatia
 - name: Croatia – NL
