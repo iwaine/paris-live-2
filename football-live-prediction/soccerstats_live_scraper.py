@@ -153,10 +153,9 @@ class SoccerStatsLiveScraper:
 
     def _extract_score(self, soup: BeautifulSoup) -> tuple:
         """
-        SCORE: <font color="blue"><b>X:X</b></font> dans <td width="10%">
-
-        Le score LIVE est le premier <font color="blue"> avec un pattern X:X ou X-X
-        trouvé dans un <td width="10%">
+        SCORE dans <td width="10%">:
+        - Bulgaria (terminé): <font style="color:#87CEFA;font-size:36px;">
+        - Bosnia (live): <font color="blue">
 
         Returns:
             (score_home, score_away)
@@ -164,23 +163,38 @@ class SoccerStatsLiveScraper:
         all_fonts = soup.find_all('font')
 
         for font in all_fonts:
+            # Vérifier que le parent est <td width="10%">
+            parent = font.parent
+            if not (parent and parent.name == 'td'):
+                continue
+
+            width = parent.get('width', '')
+            if '10%' not in width:
+                continue
+
+            # Le parent est bien <td width="10%">
+            text = font.get_text(strip=True)
+
+            # Pattern: "X:X" ou "X - X" ou "X-X"
+            match = re.match(r'^(\d+)\s*[-:\s]+\s*(\d+)$', text)
+            if not match:
+                continue
+
+            # On a trouvé un score dans <td width="10%">!
+            # Vérifier que c'est bien le score du match (bleu ou #87CEFA)
             color_attr = font.get('color', '')
+            style_attr = font.get('style', '')
 
-            # Chercher font avec color="blue"
-            if 'blue' in color_attr.lower():
-                # Vérifier que le parent est <td width="10%">
-                parent = font.parent
-                if parent and parent.name == 'td':
-                    width = parent.get('width', '')
-                    if '10%' in width:
-                        text = font.get_text(strip=True)
+            is_score = (
+                'blue' in color_attr.lower() or
+                '#87CEFA' in style_attr.upper() or
+                'blue' in style_attr.lower()
+            )
 
-                        # Pattern: "X:X" ou "X - X" ou "X-X"
-                        match = re.match(r'^(\d+)\s*[-:\s]+\s*(\d+)$', text)
-                        if match:
-                            home = int(match.group(1))
-                            away = int(match.group(2))
-                            return (home, away)
+            if is_score:
+                home = int(match.group(1))
+                away = int(match.group(2))
+                return (home, away)
 
         return (None, None)
 
