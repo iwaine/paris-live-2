@@ -1,0 +1,44 @@
+
+Top 20 patterns toutes ligues - Intervalle 31-45+
+1. [austria] Salzburg HOME 31-45+ : 100% récurrence (8 matchs sur 8) - 7 marqués + 4 encaissés
+2. [netherlands] AZ Alkmaar HOME 31-45+ : 100% récurrence (7 matchs sur 7) - 8 marqués + 3 encaissés
+3. [portugal2] FC Porto B AWAY 31-45+ : 100% récurrence (6 matchs sur 6) - 2 marqués + 5 encaissés
+4. [norway6] Volda AWAY 31-45+ : 92% récurrence (12 matchs sur 13) - 8 marqués + 10 encaissés
+5. [poland] Radomiak Radom AWAY 31-45+ : 89% récurrence (8 matchs sur 9) - 4 marqués + 7 encaissés
+6. [poland] Lechia Gdansk AWAY 31-45+ : 89% récurrence (8 matchs sur 9) - 4 marqués + 4 encaissés
+7. [netherlands] PEC Zwolle AWAY 31-45+ : 88% récurrence (7 matchs sur 8) - 3 marqués + 10 encaissés
+8. [spain] FC Barcelona AWAY 31-45+ : 88% récurrence (7 matchs sur 8) - 7 marqués + 5 encaissés
+9. [czechrepublic2] Opava HOME 31-45+ : 88% récurrence (7 matchs sur 8) - 7 marqués + 4 encaissés
+10. [netherlands] NEC Nijmegen AWAY 31-45+ : 88% récurrence (7 matchs sur 8) - 3 marqués + 5 encaissés
+11. [bolivia] The Strongest HOME 31-45+ : 86% récurrence (12 matchs sur 14) - 9 marqués + 9 encaissés
+12. [germany] E. Frankfurt AWAY 31-45+ : 86% récurrence (6 matchs sur 7) - 6 marqués + 3 encaissés
+13. [germany2] Dynamo Dresden HOME 31-45+ : 86% récurrence (6 matchs sur 7) - 5 marqués + 4 encaissés
+14. [portugal] Tondela AWAY 31-45+ : 86% récurrence (6 matchs sur 7) - 1 marqués + 6 encaissés
+15. [portugal] Alverca HOME 31-45+ : 86% récurrence (6 matchs sur 7) - 2 marqués + 4 encaissés
+16. [norway6] Trygg/Lade HOME 31-45+ : 85% récurrence (11 matchs sur 13) - 16 marqués + 1 encaissés
+17. [germany] Leverkusen AWAY 31-45+ : 83% récurrence (5 matchs sur 6) - 3 marqués + 5 encaissés
+18. [portugal] Arouca AWAY 31-45+ : 83% récurrence (5 matchs sur 6) - 2 marqués + 6 encaissés
+19. [portugal2] Sporting CP B HOME 31-45+ : 83% récurrence (5 matchs sur 6) - 7 marqués + 0 encaissés
+20. [germany] Sankt Pauli HOME 31-45+ : 83% récurrence (5 matchs sur 6) - 2 marqués + 3 encaissés
+
+Top 20 patterns toutes ligues - Intervalle 75-90+
+1. [norway6] Spjelkavik AWAY 75-90+ : 100% récurrence (13 matchs sur 13) - 11 marqués + 7 encaissés
+2. [germany] Bayern Munich AWAY 75-90+ : 100% récurrence (6 matchs sur 6) - 8 marqués + 3 encaissés
+3. [germany] Stuttgart AWAY 75-90+ : 100% récurrence (7 matchs sur 7) - 4 marqués + 6 encaissés
+4. [germany] FC Koln HOME 75-90+ : 100% récurrence (6 matchs sur 6) - 6 marqués + 3 encaissés
+5. [cyprus] Achnas AWAY 75-90+ : 100% récurrence (6 matchs sur 6) - 1 marqués + 8 encaissés
+6. [italy] Genoa AWAY 75-90+ : 100% récurrence (7 matchs sur 7) - 4 marqués + 3 encaissés
+7. [portugal2] Felgueiras HOME 75-90+ : 100% récurrence (7 matchs sur 7) - 3 marqués + 4 encaissés
+8. [saudiarabia] Al Nassr HOME 75-90+ : 100% récurrence (5 matchs sur 5) - 7 marqués + 0 encaissés
+9. [scotland] Livingston HOME 75-90+ : 100% récurrence (6 matchs sur 6) - 2 marqués + 4 encaissés
+10. [chile] La Serena AWAY 75-90+ : 93% récurrence (14 matchs sur 15) - 4 marqués + 12 encaissés
+11. [bolivia] Bolivar HOME 75-90+ : 93% récurrence (13 matchs sur 14) - 12 marqués + 5 encaissés
+12. [england2] Coventry City AWAY 75-90+ : 90% récurrence (9 matchs sur 10) - 9 marqués + 4 encaissés
+13. [bulgaria] Spartak Varna HOME 75-90+ : 90% récurrence (9 matchs sur 10) - 5 marqués + 6 encaissés
+14. [poland] Lechia Gdansk AWAY 75-90+ : 89% récurrence (8 matchs sur 9) - 5 marqués + 7 encaissés
+15. [poland] Pogon Szczecin HOME 75-90+ : 89% récurrence (8 matchs sur 9) - 7 marqués + 4 encaissés
+16. [spain2] Huesca HOME 75-90+ : 89% récurrence (8 matchs sur 9) - 7 marqués + 2 encaissés
+17. [france] Metz AWAY 75-90+ : 88% récurrence (7 matchs sur 8) - 4 marqués + 10 encaissés
+18. [germany2] Greuther Furth AWAY 75-90+ : 88% récurrence (7 matchs sur 8) - 6 marqués + 8 encaissés
+19. [england] Burnley AWAY 75-90+ : 88% récurrence (7 matchs sur 8) - 5 marqués + 8 encaissés
+20. [england] Liverpool AWAY 75-90+ : 88% récurrence (7 matchs sur 8) - 6 marqués + 5 encaissés

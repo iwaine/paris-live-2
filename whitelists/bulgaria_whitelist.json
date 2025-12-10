@@ -1,0 +1,529 @@
+{
+  "league": "bulgaria",
+  "threshold": 65,
+  "min_matches": 4,
+  "total_teams_analyzed": 16,
+  "qualified_teams": [
+    {
+      "team": "Spartak Varna",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 88.88888888888889,
+      "recurrence": 111.11111111111111,
+      "matches": 9,
+      "matches_with_goal": 8,
+      "total_goals": 10
+    },
+    {
+      "team": "Slavia Sofia",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 75.0,
+      "recurrence": 87.5,
+      "matches": 8,
+      "matches_with_goal": 6,
+      "total_goals": 7
+    },
+    {
+      "team": "Beroe",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 100.0,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 9
+    },
+    {
+      "team": "CSKA 1948 Sofia",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 77.77777777777779,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 7
+    },
+    {
+      "team": "CSKA 1948 Sofia",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 77.77777777777779,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 7
+    },
+    {
+      "team": "Septemvri Sofia",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 6
+    },
+    {
+      "team": "Septemvri Sofia",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 77.77777777777779,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 7
+    }
+  ],
+  "all_stats": [
+    {
+      "team": "Arda",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 20.0,
+      "matches": 10
+    },
+    {
+      "team": "Arda",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 30.0,
+      "matches": 10
+    },
+    {
+      "team": "Arda",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 37.5,
+      "matches": 8
+    },
+    {
+      "team": "Arda",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 62.5,
+      "matches": 8
+    },
+    {
+      "team": "Beroe",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 25.0,
+      "matches": 8
+    },
+    {
+      "team": "Beroe",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 8
+    },
+    {
+      "team": "Beroe",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "Beroe",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Botev Plovdiv",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Botev Plovdiv",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "Botev Plovdiv",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "Botev Plovdiv",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Botev Vratsa",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 0.0,
+      "matches": 9
+    },
+    {
+      "team": "Botev Vratsa",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Botev Vratsa",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 11.11111111111111,
+      "matches": 9
+    },
+    {
+      "team": "Botev Vratsa",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 22.22222222222222,
+      "matches": 9
+    },
+    {
+      "team": "CSKA 1948 Sofia",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "CSKA 1948 Sofia",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "CSKA 1948 Sofia",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "CSKA 1948 Sofia",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "CSKA Sofia",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "CSKA Sofia",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "CSKA Sofia",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "CSKA Sofia",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Cherno More",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 25.0,
+      "matches": 8
+    },
+    {
+      "team": "Cherno More",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 8
+    },
+    {
+      "team": "Cherno More",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 40.0,
+      "matches": 10
+    },
+    {
+      "team": "Cherno More",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 40.0,
+      "matches": 10
+    },
+    {
+      "team": "Dobrudzha",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Dobrudzha",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Dobrudzha",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "Dobrudzha",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 22.22222222222222,
+      "matches": 9
+    },
+    {
+      "team": "Levski Sofia",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Levski Sofia",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Levski Sofia",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Levski Sofia",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Lok. Plovdiv",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 22.22222222222222,
+      "matches": 9
+    },
+    {
+      "team": "Lok. Plovdiv",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "Lok. Plovdiv",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Lok. Plovdiv",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Lokomotiv Sofia",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "Lokomotiv Sofia",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "Lokomotiv Sofia",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 0.0,
+      "matches": 9
+    },
+    {
+      "team": "Lokomotiv Sofia",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "Ludogorets",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 25.0,
+      "matches": 8
+    },
+    {
+      "team": "Ludogorets",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 37.5,
+      "matches": 8
+    },
+    {
+      "team": "Ludogorets",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "Ludogorets",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Montana",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Montana",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 11.11111111111111,
+      "matches": 9
+    },
+    {
+      "team": "Montana",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 22.22222222222222,
+      "matches": 9
+    },
+    {
+      "team": "Montana",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 22.22222222222222,
+      "matches": 9
+    },
+    {
+      "team": "Septemvri Sofia",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "Septemvri Sofia",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "Septemvri Sofia",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "Septemvri Sofia",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Slavia Sofia",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 30.0,
+      "matches": 10
+    },
+    {
+      "team": "Slavia Sofia",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 20.0,
+      "matches": 10
+    },
+    {
+      "team": "Slavia Sofia",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 8
+    },
+    {
+      "team": "Slavia Sofia",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 75.0,
+      "matches": 8
+    },
+    {
+      "team": "Spartak Varna",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Spartak Varna",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 88.88888888888889,
+      "matches": 9
+    },
+    {
+      "team": "Spartak Varna",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Spartak Varna",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 9
+    }
+  ],
+  "generated_at": "2025-12-05T21:52:17.475288"
+}

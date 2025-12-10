@@ -160,9 +160,17 @@ class BulgariaAutoScraper:
             
 			soup = BeautifulSoup(response.content, 'html.parser')
             
-			# Trouver le tableau des matches
+			# Trouver le tableau des matches (double-sélecteur)
 			table = soup.find('table', {'bgcolor': '#cccccc', 'width': '100%'})
-            
+			# Si non trouvé (ex: Iran), chercher le tableau juste après 'Latest matches'
+			if not table:
+				h3 = soup.find('h3', string=lambda s: s and 'Latest matches' in s)
+				if h3:
+					# Chercher le tableau suivant
+					next_table = h3.find_parent('tr')
+					if next_table:
+						# Le tableau de matchs est le suivant dans le DOM
+						table = next_table.find_next('table', {'cellpadding': '2', 'width': '100%'})
 			if not table:
 				print(f"    ❌ Tableau non trouvé pour {team_name}")
 				return None
@@ -296,12 +304,13 @@ class BulgariaAutoScraper:
 					# Nouveau match - l'insérer
 					cursor.execute('''
 						INSERT INTO soccerstats_scraped_matches 
-						(country, league, league_display_name, team, opponent, date, is_home, 
+						(country, league_code, league, league_display_name, team, opponent, date, is_home, 
 						 score, goals_for, goals_against, goal_times, goal_times_conceded, match_id)
-						VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+						VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 					''', (
 						match['country'],
 						match['league_code'],
+						match['league_code'],  # league = league_code pour compatibilité
 						match['league'],
 						match['team'],
 						match['opponent'],
@@ -405,8 +414,8 @@ if __name__ == "__main__":
 	scraper = BulgariaAutoScraper()
 
 	if args.league == 'all':
-		# Scraper toutes les ligues activées du fichier config.yaml
-		config_path = '/workspaces/paris-live/football-live-prediction/config/config.yaml'
+		# Scraper toutes les ligues activées du fichier config.yaml (version CLEAN_WORKFLOW)
+		config_path = '/workspaces/paris-live/CLEAN_WORKFLOW/config.yaml'
 		with open(config_path, 'r') as f:
 			config = yaml.safe_load(f)
 		leagues = [(l['url'].split('=')[-1], l['name']) for l in config['leagues'] if l.get('enabled', True)]
@@ -417,5 +426,5 @@ if __name__ == "__main__":
 			scraper.run(league_code=code, league_name=name, parallel_workers=args.workers)
 			print(f"\n✅ {name} terminé!")
 	else:
-		league_names = {l['url'].split('=')[-1]: l['name'] for l in yaml.safe_load(open('/workspaces/paris-live/football-live-prediction/config/config.yaml'))['leagues']}
+		league_names = {l['url'].split('=')[-1]: l['name'] for l in yaml.safe_load(open('/workspaces/paris-live/CLEAN_WORKFLOW/config.yaml'))['leagues']}
 		scraper.run(league_code=args.league, league_name=league_names.get(args.league, args.league.title()), parallel_workers=args.workers)

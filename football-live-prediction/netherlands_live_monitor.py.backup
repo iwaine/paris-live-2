@@ -1,0 +1,457 @@
+#!/usr/bin/env python3
+"""
+Moniteur live pour championnat néerlandais (Eerste Divisie).
+Détecte automatiquement les matches en cours et génère des prédictions.
+"""
+
+import sys
+import os
+import time
+import logging
+from datetime import datetime
+from typing import List, Dict, Optional
+
+# Ajouter le répertoire parent au path
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from soccerstats_live_selector import get_live_matches
+from soccerstats_live_scraper import SoccerStatsLiveScraper
+from live_predictor_v2 import LivePredictorV2, LiveMatchContext
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+
+class NetherlandsLiveMonitor:
+    """Moniteur live pour matches néerlandais (Eerste Divisie)."""
+    
+    # Équipes néerlandaises connues (Eerste Divisie)
+    DUTCH_TEAMS = {
+        "ADO Den Haag", "Almere City", "Cambuur", "De Graafschap",
+        "FC Den Bosch", "FC Dordrecht", "FC Eindhoven", "FC Emmen",
+        "Helmond Sport", "Jong AZ", "Jong Ajax", "Jong PSV",
+        "Jong Utrecht", "MVV Maastricht", "RKC Waalwijk", "Roda JC",
+        "TOP Oss", "VVV", "Vitesse Arnhem", "Willem II"
+    }
+    
+    # Mapping noms live -> DB (si différents)
+    TEAM_MAPPINGS = {
+        "ado den haag": "ADO Den Haag",
+        "almere": "Almere City",
+        "cambuur leeuwarden": "Cambuur",
+        "de graafschap": "De Graafschap",
+        "den bosch": "FC Den Bosch",
+        "fc den bosch": "FC Den Bosch",
+        "dordrecht": "FC Dordrecht",
+        "fc dordrecht": "FC Dordrecht",
+        "eindhoven": "FC Eindhoven",
+        "fc eindhoven": "FC Eindhoven",
+        "emmen": "FC Emmen",
+        "fc emmen": "FC Emmen",
+        "helmond": "Helmond Sport",
+        "helmond sport": "Helmond Sport",
+        "jong az alkmaar": "Jong AZ",
+        "jong ajax": "Jong Ajax",
+        "jong psv": "Jong PSV",
+        "jong utrecht": "Jong Utrecht",
+        "mvv": "MVV Maastricht",
+        "mvv maastricht": "MVV Maastricht",
+        "rkc": "RKC Waalwijk",
+        "rkc waalwijk": "RKC Waalwijk",
+        "roda": "Roda JC",
+        "roda jc": "Roda JC",
+        "top oss": "TOP Oss",
+        "vvv venlo": "VVV",
+        "vvv-venlo": "VVV",
+        "vitesse": "Vitesse Arnhem",
+        "vitesse arnhem": "Vitesse Arnhem",
+        "willem ii": "Willem II"
+    }
+    
+    # Intervalle de scan (secondes)
+    SCAN_INTERVAL = 30
+    
+    # Intervalles critiques
+    CRITICAL_INTERVALS = [(31, 45), (75, 90)]
+    
+    def __init__(self, db_path='data/predictions.db'):
+        self.scraper = SoccerStatsLiveScraper(throttle_seconds=5)
+        self.predictor = LivePredictorV2(db_path=db_path)
+        self.monitored_matches = {}  # match_url -> last_alert_minute
+    
+    def is_dutch_match(self, home_team: str, away_team: str) -> bool:
+        """Vérifier si c'est un match néerlandais (Eerste Divisie)."""
+        # Normaliser noms
+        home_norm = ' '.join(home_team.split()).strip()
+        away_norm = ' '.join(away_team.split()).strip()
+        
+        # Vérification exacte ou par substring
+        for team in self.DUTCH_TEAMS:
+            if team.lower() in home_norm.lower() or team.lower() in away_norm.lower():
+                return True
+        
+        # Vérifier aussi dans le mapping
+        if home_norm.lower() in self.TEAM_MAPPINGS or away_norm.lower() in self.TEAM_MAPPINGS:
+            return True
+        
+        return False
+    
+    def normalize_team_name(self, team_name: str) -> str:
+        """Normaliser nom équipe pour correspondre à la DB."""
+        team_norm = ' '.join(team_name.split()).strip()
+        team_lower = team_norm.lower()
+        
+        # Vérifier mapping d'abord
+        if team_lower in self.TEAM_MAPPINGS:
+            return self.TEAM_MAPPINGS[team_lower]
+        
+        # Correspondances exactes
+        for db_team in self.DUTCH_TEAMS:
+            if db_team.lower() == team_lower:
+                return db_team
+            # Correspondance partielle
+            if db_team.lower() in team_lower or team_lower in db_team.lower():
+                # Préférer le nom complet de la DB
+                if len(db_team) >= len(team_norm):
+                    return db_team
+        
+        # Si aucune correspondance, retourner tel quel
+        return team_norm
+    
+    def is_in_critical_interval(self, minute: int) -> bool:
+        """Vérifier si on est dans un intervalle critique."""
+        if minute is None:
+            return False
+        for start, end in self.CRITICAL_INTERVALS:
+            if start <= minute <= end:
+                return True
+        return False
+    
+    def get_next_critical_minute(self, minute: int) -> Optional[int]:
+        """Obtenir la prochaine minute critique."""
+        if minute is None:
+            return 31
+        if minute < 31:
+            return 31
+        elif minute < 75:
+            return 75
+        return None
+    
+    def should_alert(self, match_url: str, minute: int) -> bool:
+        """Décider si on doit alerter pour ce match."""
+        if not self.is_in_critical_interval(minute):
+            return False
+        
+        # Première fois qu'on voit ce match
+        if match_url not in self.monitored_matches:
+            self.monitored_matches[match_url] = minute
+            return True
+        
+        # Déjà alerté pour cet intervalle ?
+        last_alert = self.monitored_matches[match_url]
+        
+        # Si on est dans 31-45 et qu'on a alerté avant 31, ne pas re-alerter
+        if 31 <= minute <= 45 and last_alert >= 31 and last_alert <= 45:
+            return False
+        
+        # Si on est dans 75-90 et qu'on a alerté avant 75, ne pas re-alerter
+        if 75 <= minute <= 90 and last_alert >= 75 and last_alert <= 90:
+            return False
+        
+        # Nouvel intervalle critique
+        self.monitored_matches[match_url] = minute
+            return True
+        
+        # Déjà alerté pour cet intervalle ?
+        last_alert = self.monitored_matches[match_url]
+        
+        # Si on est dans 31-45 et qu'on a alerté avant 31, ne pas re-alerter
+        if 31 <= minute <= 45 and last_alert >= 31 and last_alert <= 45:
+            return False
+        
+        # Si on est dans 75-90 et qu'on a alerté avant 75, ne pas re-alerter
+        if 75 <= minute <= 90 and last_alert >= 75 and last_alert <= 90:
+            return False
+        
+        # Nouvel intervalle critique
+        self.monitored_matches[match_url] = minute
+        return True
+    
+    def analyze_match(self, match_info: Dict) -> Optional[Dict]:
+        """Analyser un match et générer prédiction."""
+        url = match_info.get('url')
+        if not url:
+            return None
+        
+        logger.info(f"🔍 Analyse match: {url}")
+        
+        # Scraper détails du match
+        soup = self.scraper.fetch_match_page(url)
+        if not soup:
+            logger.warning(f"⚠️ Impossible de récupérer {url}")
+            return None
+        
+        # Extraire données
+        match_data = self.scraper.scrape_match(url)
+        if not match_data:
+            logger.warning(f"⚠️ Impossible de parser {url}")
+            return None
+        
+        home_team = match_data.home_team
+        away_team = match_data.away_team
+        minute = match_data.minute
+        
+        # Vérifier si néerlandais
+        if not self.is_dutch_match(home_team, away_team):
+            logger.info(f"⏭️ Match non néerlandais: {home_team} vs {away_team}")
+            return None
+        
+        logger.info(f"✅ Match néerlandais détecté: {home_team} vs {away_team} (minute {minute})")
+        
+        # Normaliser noms équipes
+        home_team_norm = self.normalize_team_name(home_team)
+        away_team_norm = self.normalize_team_name(away_team)
+        
+        logger.info(f"📝 Noms normalisés: {home_team_norm} vs {away_team_norm}")
+        
+        # Créer contexte
+        context = LiveMatchContext(
+            home_team=home_team_norm,
+            away_team=away_team_norm,
+            current_minute=minute or 0,
+            home_score=match_data.score_home or 0,
+            away_score=match_data.score_away or 0,
+            country="Netherlands",
+            league="netherlands2",
+            possession_home=match_data.possession_home,
+            possession_away=match_data.possession_away,
+            corners_home=match_data.corners_home,
+            corners_away=match_data.corners_away,
+            shots_home=match_data.shots_home,
+            shots_away=match_data.shots_away,
+            shots_on_target_home=match_data.shots_on_target_home,
+            shots_on_target_away=match_data.shots_on_target_away,
+            shots_inside_box_home=match_data.shots_inside_box_home,
+            shots_inside_box_away=match_data.shots_inside_box_away,
+            shots_outside_box_home=match_data.shots_outside_box_home,
+            shots_outside_box_away=match_data.shots_outside_box_away,
+            attacks_home=match_data.attacks_home,
+            attacks_away=match_data.attacks_away,
+            dangerous_attacks_home=match_data.dangerous_attacks_home,
+            dangerous_attacks_away=match_data.dangerous_attacks_away
+        )
+        
+        # Générer prédiction
+        try:
+            prediction = self.predictor.predict(context)
+        except Exception as e:
+            logger.error(f"❌ Erreur prédiction: {e}")
+            return None
+        
+        return {
+            'match_data': match_data,
+            'context': context,
+            'prediction': prediction
+        }
+    
+    def display_prediction(self, result: Dict):
+        """Afficher prédiction formatée."""
+        match_data = result['match_data']
+        context = result['context']
+        prediction = result['prediction']
+        
+        print("\n" + "="*80)
+        print(f"🇳🇱 MATCH PAYS-BAS (Eerste Divisie)")
+        print("="*80)
+        print(f"🏟️  {context.home_team} vs {context.away_team}")
+        print(f"⏱️  Minute: {context.current_minute}")
+        print(f"⚽ Score: {context.home_score} - {context.away_score}")
+        
+        # Stats live si disponibles
+        if context.possession_home is not None:
+            print(f"\n📊 STATS LIVE:")
+            print(f"   Possession: {context.possession_home}% - {context.possession_away}%")
+            if context.shots_home is not None:
+                print(f"   Tirs: {context.shots_home} - {context.shots_away}")
+            if context.shots_on_target_home is not None:
+                print(f"   Tirs cadrés: {context.shots_on_target_home} - {context.shots_on_target_away}")
+            if context.dangerous_attacks_home is not None:
+                print(f"   Attaques dangereuses: {context.dangerous_attacks_home} - {context.dangerous_attacks_away}")
+            if context.corners_home is not None:
+                print(f"   Corners: {context.corners_home} - {context.corners_away}")
+        
+        # Prédictions
+        if prediction:
+            print(f"\n🔮 PRÉDICTION - Intervalle {prediction.home_interval_name}")
+            
+            if prediction.is_active_interval:
+                print("🚨 INTERVALLE CRITIQUE ACTIF!")
+            
+            print(f"\n🏡 {context.home_team} (HOME):")
+            if prediction.home_pattern:
+                p = prediction.home_pattern
+                print(f"   Probabilité: {p.probability*100:.1f}%")
+                print(f"   Confiance: {p.confidence_level}")
+                print(f"   Fréquence any_goal: {p.freq_any_goal*100:.1f}% ({p.matches_with_goal}/{p.total_matches} matches)")
+                if p.recurrence_last_5 is not None:
+                    print(f"   Récurrence 5 derniers: {p.recurrence_last_5*100:.1f}%")
+                if p.avg_minute:
+                    print(f"   ⏰ Timing: Minute moyenne {p.avg_minute:.1f}", end="")
+                    if p.std_minute:
+                        interval_min, interval_max = prediction.home_interval_name.split('-')
+                        interval_min = int(interval_min)
+                        interval_max = int(interval_max.replace('+', ''))
+                        min_range = max(p.avg_minute - p.std_minute, interval_min)
+                        max_range = min(p.avg_minute + p.std_minute, interval_max)
+                        print(f" (±{p.std_minute:.1f}) → Buts entre {min_range:.0f}-{max_range:.0f}min")
+                        if p.std_minute < 4:
+                            print("      💡 Écart-type FAIBLE = Timing TRÈS PRÉCIS!")
+                        elif p.std_minute > 6:
+                            print("      ⚠️ Écart-type ÉLEVÉ = Timing VARIABLE")
+                    else:
+                        print()
+            else:
+                print("   ⚠️ Pas de pattern disponible")
+            
+            print(f"\n✈️  {context.away_team} (AWAY):")
+            if prediction.away_pattern:
+                p = prediction.away_pattern
+                print(f"   Probabilité: {p.probability*100:.1f}%")
+                print(f"   Confiance: {p.confidence_level}")
+                print(f"   Fréquence any_goal: {p.freq_any_goal*100:.1f}% ({p.matches_with_goal}/{p.total_matches} matches)")
+                if p.recurrence_last_5 is not None:
+                    print(f"   Récurrence 5 derniers: {p.recurrence_last_5*100:.1f}%")
+                if p.avg_minute:
+                    print(f"   ⏰ Timing: Minute moyenne {p.avg_minute:.1f}", end="")
+                    if p.std_minute:
+                        interval_min, interval_max = prediction.away_interval_name.split('-')
+                        interval_min = int(interval_min)
+                        interval_max = int(interval_max.replace('+', ''))
+                        min_range = max(p.avg_minute - p.std_minute, interval_min)
+                        max_range = min(p.avg_minute + p.std_minute, interval_max)
+                        print(f" (±{p.std_minute:.1f}) → Buts entre {min_range:.0f}-{max_range:.0f}min")
+                        if p.std_minute < 4:
+                            print("      💡 Écart-type FAIBLE = Timing TRÈS PRÉCIS!")
+                        elif p.std_minute > 6:
+                            print("      ⚠️ Écart-type ÉLEVÉ = Timing VARIABLE")
+                    else:
+                        print()
+            else:
+                print("   ⚠️ Pas de pattern disponible")
+            
+            # Probabilité combinée
+            if prediction.combined_probability is not None:
+                print(f"\n🎯 PROBABILITÉ COMBINÉE: {prediction.combined_probability*100:.1f}%")
+                
+                # Recommandation
+                prob = prediction.combined_probability
+                if prob >= 0.90:
+                    print("   🟢 SIGNAL TRÈS FORT - Pari fortement recommandé")
+                elif prob >= 0.75:
+                    print("   🟡 SIGNAL FORT - Pari modéré possible")
+                elif prob >= 0.60:
+                    print("   ⚪ SIGNAL MOYEN - Prudence recommandée")
+                else:
+                    print("   🔴 SIGNAL FAIBLE - Ne pas parier")
+        
+        print("="*80 + "\n")
+    
+    def run_once(self):
+        """Scanner une fois tous les matches live."""
+        logger.info("🔍 Recherche matches néerlandais en cours...")
+        
+        # Récupérer matches live (tous championnats)
+        live_matches = get_live_matches()
+        
+        if not live_matches:
+            logger.info("📭 Aucun match live trouvé")
+            return
+        
+        logger.info(f"📊 {len(live_matches)} matches live détectés")
+        
+        # Filtrer et analyser matches néerlandais
+        dutch_matches_analyzed = 0
+        
+        for match_info in live_matches:
+            result = self.analyze_match(match_info)
+            
+            if result:
+                dutch_matches_analyzed += 1
+                
+                # Vérifier si on doit alerter
+                minute = result['context'].current_minute
+                url = match_info.get('url')
+                
+                if self.should_alert(url, minute):
+                    self.display_prediction(result)
+                else:
+                    logger.info(f"⏭️ Match déjà alerté: {result['context'].home_team} vs {result['context'].away_team}")
+        
+        if dutch_matches_analyzed == 0:
+            logger.info("📭 Aucun match néerlandais en cours")
+        else:
+            logger.info(f"✅ {dutch_matches_analyzed} match(es) néerlandais analysé(s)")
+    
+    def run_continuous(self, interval_seconds: int = None):
+        """Scanner en continu."""
+        if interval_seconds is None:
+            interval_seconds = self.SCAN_INTERVAL
+        
+        logger.info(f"🔁 Mode continu activé (scan toutes les {interval_seconds}s)")
+        logger.info("Press Ctrl+C to stop")
+        
+        try:
+            while True:
+                self.run_once()
+                logger.info(f"⏸️ Attente {interval_seconds}s avant prochain scan...")
+                time.sleep(interval_seconds)
+        except KeyboardInterrupt:
+            logger.info("\n👋 Arrêt du monitoring")
+
+
+def main():
+    import argparse
+    
+    parser = argparse.ArgumentParser(
+        description="Moniteur live pour championnat néerlandais (Eerste Divisie)"
+    )
+    parser.add_argument(
+        '--once',
+        action='store_true',
+        help='Scanner une seule fois puis quitter'
+    )
+    parser.add_argument(
+        '--continuous',
+        action='store_true',
+        help='Scanner en continu'
+    )
+    parser.add_argument(
+        '--interval',
+        type=int,
+        default=30,
+        help='Intervalle entre scans (secondes, défaut: 30)'
+    )
+    parser.add_argument(
+        '--db',
+        type=str,
+        default='data/predictions.db',
+        help='Chemin vers base de données'
+    )
+    
+    args = parser.parse_args()
+    
+    # Créer moniteur
+    monitor = NetherlandsLiveMonitor(db_path=args.db)
+    
+    if args.continuous:
+        monitor.run_continuous(interval_seconds=args.interval)
+    else:
+        # Par défaut: un seul scan
+        monitor.run_once()
+
+
+if __name__ == '__main__':
+    main()

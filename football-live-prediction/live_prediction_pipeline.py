@@ -127,7 +127,7 @@ class LivePredictionPipeline:
             'minute', 'minute_bucket', 'score_home', 'score_away', 'goal_diff',
             'poss_home', 'poss_away', 'shots_home', 'shots_away', 'sot_home', 'sot_away',
             'shot_accuracy', 'sot_ratio', 'shot_delta_5m', 'sot_delta_5m', 'corner_delta_5m',
-            'red_cards', 'yellow_cards', 'elo_home', 'elo_away', 'elo_diff',
+            'red_cards', 'yellow_cards',
             'recent_goal_count_5m', 'saturation_score'
         ]
         

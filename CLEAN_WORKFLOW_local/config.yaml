@@ -1,0 +1,7 @@
+# Exemple de configuration YAML pour les ligues et équipes
+# Adaptez selon vos besoins
+leagues:
+  - france
+  - montenegro
+  - germany2
+  - bulgaria

@@ -15,6 +15,8 @@ try:
 except ImportError:
     logger.error("python-telegram-bot not installed. Install with: pip install python-telegram-bot")
     Bot = None
+    Update = None
+    ContextTypes = None
 
 
 class TelegramNotifier:
@@ -287,42 +289,36 @@ Préparez-vous pour un but probable dans les prochaines minutes!
 
 class TelegramBotApp:
     """Application Telegram Bot avec commandes"""
-    
     def __init__(self, config_path: str = "config/telegram_config.yaml"):
-        """Initialise l'application bot"""
         self.notifier = TelegramNotifier(config_path)
         self.app = None
         self.predictor = None
         self.monitor_callbacks = {}
-    
-    async def start_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        """Commande /start"""
-        welcome_msg = self.notifier.config.get('telegram', {}).get('messages', {}).get('welcome', '')
-        await update.message.reply_text(welcome_msg, parse_mode="HTML")
-    
-    async def help_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        """Commande /help"""
-        help_msg = self.notifier.config.get('telegram', {}).get('messages', {}).get('help', '')
-        await update.message.reply_text(help_msg, parse_mode="HTML")
-    
-    async def match_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        """Commande /match URL"""
-        try:
-            if not context.args:
-                await update.message.reply_text("❌ Usage: /match <URL>")
-                return
-            
-            url = context.args[0]
-            await update.message.reply_text(f"⏳ Analyse du match: {url}")
-            
-            # TODO: Intégrer avec le scraper live
-            await update.message.reply_text("✅ Match analysé!")
-        except Exception as e:
-            await update.message.reply_text(f"❌ Erreur: {e}")
-    
-    async def stats_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        """Commande /stats"""
-        message = """
+
+    # Utiliser des types génériques si Telegram n'est pas installé
+    if Update is not None and ContextTypes is not None:
+        async def start_command(self, update: 'Update', context: 'ContextTypes.DEFAULT_TYPE'):
+            welcome_msg = self.notifier.config.get('telegram', {}).get('messages', {}).get('welcome', '')
+            await update.message.reply_text(welcome_msg, parse_mode="HTML")
+
+        async def help_command(self, update: 'Update', context: 'ContextTypes.DEFAULT_TYPE'):
+            help_msg = self.notifier.config.get('telegram', {}).get('messages', {}).get('help', '')
+            await update.message.reply_text(help_msg, parse_mode="HTML")
+
+        async def match_command(self, update: 'Update', context: 'ContextTypes.DEFAULT_TYPE'):
+            try:
+                if not context.args:
+                    await update.message.reply_text("❌ Usage: /match <URL>")
+                    return
+                url = context.args[0]
+                await update.message.reply_text(f"⏳ Analyse du match: {url}")
+                # TODO: Intégrer avec le scraper live
+                await update.message.reply_text("✅ Match analysé!")
+            except Exception as e:
+                await update.message.reply_text(f"❌ Erreur: {e}")
+
+        async def stats_command(self, update: 'Update', context: 'ContextTypes.DEFAULT_TYPE'):
+            message = """
 📊 <b>STATISTIQUES</b>
 
 <b>Prédictions ce mois:</b>
@@ -332,12 +328,22 @@ class TelegramBotApp:
 
 <b>Matchs surveillés:</b> 3
 <b>Buts prédits:</b> 7/10
-        """
-        await update.message.reply_text(message, parse_mode="HTML")
-    
-    async def stop_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-        """Commande /stop"""
-        await update.message.reply_text("⏹️  Surveillance arrêtée")
+            """
+            await update.message.reply_text(message, parse_mode="HTML")
+
+        async def stop_command(self, update: 'Update', context: 'ContextTypes.DEFAULT_TYPE'):
+            await update.message.reply_text("⏹️  Surveillance arrêtée")
+    else:
+        async def start_command(self, update, context):
+            pass
+        async def help_command(self, update, context):
+            pass
+        async def match_command(self, update, context):
+            pass
+        async def stats_command(self, update, context):
+            pass
+        async def stop_command(self, update, context):
+            pass
     
     async def run(self):
         """Démarre l'application bot"""

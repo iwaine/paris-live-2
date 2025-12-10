@@ -22,6 +22,7 @@ class LiveMatchData:
     score_home: int
     score_away: int
     minute: Optional[int]
+    minute_display: Optional[str]  # "45'+3" ou "48'" - texte brut
     possession_home: Optional[float]
     possession_away: Optional[float]
     corners_home: Optional[int]
@@ -30,10 +31,16 @@ class LiveMatchData:
     shots_away: Optional[int]
     shots_on_target_home: Optional[int]
     shots_on_target_away: Optional[int]
+    shots_inside_box_home: Optional[int]
+    shots_inside_box_away: Optional[int]
+    shots_outside_box_home: Optional[int]
+    shots_outside_box_away: Optional[int]
     attacks_home: Optional[int]
     attacks_away: Optional[int]
     dangerous_attacks_home: Optional[int]
     dangerous_attacks_away: Optional[int]
+    red_cards_home: Optional[int]
+    red_cards_away: Optional[int]
     timestamp: datetime
     
     def to_dict(self) -> Dict:
@@ -44,6 +51,7 @@ class LiveMatchData:
             'score_home': self.score_home,
             'score_away': self.score_away,
             'minute': self.minute or 0,
+            'minute_display': self.minute_display,
             'possession_home': self.possession_home,
             'possession_away': self.possession_away,
             'corners_home': self.corners_home or 0,
@@ -52,10 +60,16 @@ class LiveMatchData:
             'shots_away': self.shots_away or 0,
             'shots_on_target_home': self.shots_on_target_home or 0,
             'shots_on_target_away': self.shots_on_target_away or 0,
+            'shots_inside_box_home': self.shots_inside_box_home or 0,
+            'shots_inside_box_away': self.shots_inside_box_away or 0,
+            'shots_outside_box_home': self.shots_outside_box_home or 0,
+            'shots_outside_box_away': self.shots_outside_box_away or 0,
             'attacks_home': self.attacks_home or 0,
             'attacks_away': self.attacks_away or 0,
             'dangerous_attacks_home': self.dangerous_attacks_home or 0,
             'dangerous_attacks_away': self.dangerous_attacks_away or 0,
+            'red_cards_home': self.red_cards_home or 0,
+            'red_cards_away': self.red_cards_away or 0,
         }
 
 
@@ -111,6 +125,16 @@ class SoccerStatsLiveScraper:
     def extract_teams(self, soup: BeautifulSoup) -> Tuple[Optional[str], Optional[str]]:
         """Extrait les noms d'équipes"""
         try:
+            # PRIORITÉ 1: Matches LIVE - équipes en blanc (#eeeeee) sur fond noir
+            fonts_white = soup.find_all('font',
+                                       style=lambda s: s and '#eeeeee' in s and ('28px' in s or '26px' in s))
+            if len(fonts_white) >= 2:
+                home = fonts_white[0].get_text(strip=True)
+                away = fonts_white[1].get_text(strip=True)
+                if home and away and home != away:
+                    return home, away
+            
+            # PRIORITÉ 2: Matches terminés - équipes en bleu
             fonts_blue = soup.find_all('font', 
                                       style=lambda s: s and 'color:blue' in s and '18px' in s)
             if len(fonts_blue) >= 2:
@@ -125,33 +149,67 @@ class SoccerStatsLiveScraper:
     def extract_score(self, soup: BeautifulSoup) -> Tuple[Optional[int], Optional[int]]:
         """Extrait le score (ex: 0:1 → 0, 1), ignore U21/suffixes équipe"""
         try:
-            # Chercher font avec style #87CEFA 22px ou 36px (score principal, pas stats)
-            for size_px in ['22px', '36px', '26px']:
+            # PRIORITÉ 1: Matches LIVE - font cyan (#87CEFA) 36px avec format "X - Y"
+            for size_px in ['36px', '26px', '22px']:
                 score_font = soup.find('font', 
                                       style=lambda s: s and '#87CEFA' in s and size_px in s)
                 if score_font:
                     score_text = score_font.get_text(strip=True)
-                    # Format: "0:1" ou "0 - 1" (max 2 chiffres chacun pour éviter U21)
-                    match = re.search(r'(\d{1,2})\s*[-:]\s*(\d{1,2})', score_text)
+                    # Format: "1 - 0" ou "1:0" (avec espaces possibles)
+                    match = re.search(r'^(\d{1,2})\s*[-:]\s*(\d{1,2})$', score_text)
+                    if match:
+                        return int(match.group(1)), int(match.group(2))
+            
+            # PRIORITÉ 2: Matches terminés - font bleu (color:blue) 18-22px
+            for size_px in ['18px', '20px', '22px']:
+                score_fonts = soup.find_all('font', 
+                                           style=lambda s: s and 'color:blue' in s and size_px in s)
+                for font in score_fonts:
+                    score_text = font.get_text(strip=True)
+                    # Format: "1:2" ou "1-2"
+                    match = re.search(r'^(\d{1,2})\s*[-:]\s*(\d{1,2})$', score_text)
                     if match:
                         return int(match.group(1)), int(match.group(2))
         except Exception:
             pass
         
-        # Fallback: Regex simple (chercher scores min de 1-2 chiffres)
-        try:
-            m = re.search(r'(\d{1,2})\s*[-:]\s*(\d{1,2})', soup.get_text())
-            if m:
-                return int(m.group(1)), int(m.group(2))
-        except:
-            pass
-        
         return None, None
     
-    def extract_minute(self, soup: BeautifulSoup) -> Optional[int]:
-        """Extrait la minute du match (cherche le temps actuel, pas les stats)"""
+    def extract_minute(self, soup: BeautifulSoup) -> Tuple[Optional[int], Optional[str]]:
+        """Extrait la minute du match (cherche le temps actuel, pas les stats)
+        
+        Returns:
+            Tuple[minute_int, minute_display] - ex: (48, "45'+3") ou (48, "48'")
+        """
         try:
-            # 1) Préférence: trouver le bloc du score (font color #87CEFA) puis chercher la minute
+            # 1) Chercher <font #87CEFA 13px> avec "XX min." (affichage live)
+            for font in soup.find_all('font', style=lambda s: s and '#87CEFA' in s and '13px' in s):
+                txt = font.get_text(strip=True)
+                
+                # Vérifier HT/FT dans cette zone spécifique
+                if re.search(r'\bHT\b', txt, re.I):
+                    return 45, "HT"
+                if re.search(r'\bFT\b', txt, re.I):
+                    return 90, "FT"
+                
+                # Ignorer si c'est un score (contient "-" ou ":")
+                if '-' in txt or ':' in txt:
+                    continue
+                # Format: "90'+3" ou "68 min." ou "45'+2" ou simple "85"
+                # Garder le texte original pour minute_display
+                txt_display = txt.replace('min.', '').replace('min', '').strip()
+                # Retirer "min." si présent
+                txt_clean = txt.replace('min.', '').replace('min', '').strip()
+                # Pattern: nombre + optionnel temps additionnel
+                m = re.search(r"^(\d{1,3})(?:'\s*\+\s*(\d+))?$", txt_clean)
+                if m:
+                    base_minute = int(m.group(1))
+                    extra_time = int(m.group(2)) if m.group(2) else 0
+                    val = base_minute + extra_time
+                    if 0 <= val <= 130:
+                        return val, txt_display
+            
+            # 2) Chercher dans le bloc du score (font #87CEFA large)
             score_font = soup.find('font', style=lambda s: s and '#87CEFA' in s and ('36px' in s or '26px' in s or '22px' in s))
             if score_font:
                 # remonter jusqu'à un ancêtre table raisonnable
@@ -163,35 +221,39 @@ class SoccerStatsLiveScraper:
                         break
                     anc = anc.parent
                 if anc is not None:
+                    # D'abord chercher HT/FT dans cette zone
+                    anc_text = anc.get_text()
+                    if re.search(r'\bHT\b', anc_text, re.I):
+                        return 45, "HT"
+                    if re.search(r'\bFT\b', anc_text, re.I):
+                        return 90, "FT"
+                    
                     # chercher dans cet ancêtre des fonts proches contenant 'min' ou "'"
                     for font in anc.find_all('font'):
                         txt = font.get_text(strip=True)
-                        m = re.search(r"(\d{1,3})\s*(?:'|’|min\.? )", txt)
+                        # Ignorer si c'est un score
+                        if '-' in txt or ':' in txt:
+                            continue
+                        txt_display = txt.strip()
+                        # Format: "90'+3" ou "45'+2" ou simple "85"
+                        m = re.search(r"^(\d{1,3})(?:'\s*\+\s*(\d+))?$", txt)
                         if m:
-                            val = int(m.group(1))
+                            base_minute = int(m.group(1))
+                            extra_time = int(m.group(2)) if m.group(2) else 0
+                            val = base_minute + extra_time
                             if 0 <= val <= 130:
-                                return val
-
-            # 2) Ensuite: chercher les <font #87CEFA 13px> comme avant
-            for font in soup.find_all('font', style=lambda s: s and '#87CEFA' in s and '13px' in s):
-                txt = font.get_text(strip=True)
-                m = re.search(r"(\d{1,3})\s*(?:'|’|min\.? )?", txt)
-                if m:
-                    val = int(m.group(1))
-                    if 0 <= val <= 130:
-                        return val
+                                return val, txt_display
             
-            # 3) Fallback global: première occurrence raisonnable de "XX min" dans la page
-            html_text = soup.get_text()
+            # 3) Dernier fallback: première occurrence "XX min" dans la page
             m = re.search(r'\b(\d{1,3})\s*min\.?', html_text, re.I)
             if m:
                 val = int(m.group(1))
                 if 0 <= val <= 130:
-                    return val
+                    return val, f"{val}'"
         except Exception as e:
             pass
         
-        return None
+        return None, None
     
     def extract_stat(self, soup: BeautifulSoup, stat_name: str) -> Tuple[Optional[str], Optional[str]]:
         """
@@ -291,7 +353,7 @@ class SoccerStatsLiveScraper:
         # Extraire tous les éléments
         home_team, away_team = self.extract_teams(soup)
         score_home, score_away = self.extract_score(soup)
-        minute = self.extract_minute(soup)
+        minute, minute_display = self.extract_minute(soup)
         
         poss_home_str, poss_away_str = self.extract_stat(soup, 'Possession')
         possession_home = self.parse_stat_value(poss_home_str)
@@ -308,6 +370,14 @@ class SoccerStatsLiveScraper:
         sot_home_str, sot_away_str = self.extract_stat(soup, 'Shots on target')
         shots_on_target_home = int(self.parse_stat_value(sot_home_str)) if sot_home_str else None
         shots_on_target_away = int(self.parse_stat_value(sot_away_str)) if sot_away_str else None
+        
+        sib_home_str, sib_away_str = self.extract_stat(soup, 'Shots inside box')
+        shots_inside_box_home = int(self.parse_stat_value(sib_home_str)) if sib_home_str else None
+        shots_inside_box_away = int(self.parse_stat_value(sib_away_str)) if sib_away_str else None
+        
+        sob_home_str, sob_away_str = self.extract_stat(soup, 'Shots outside box')
+        shots_outside_box_home = int(self.parse_stat_value(sob_home_str)) if sob_home_str else None
+        shots_outside_box_away = int(self.parse_stat_value(sob_away_str)) if sob_away_str else None
         
         attacks_home_str, attacks_away_str = self.extract_stat(soup, 'Attacks')
         attacks_home = int(self.parse_stat_value(attacks_home_str)) if attacks_home_str else None
@@ -328,6 +398,7 @@ class SoccerStatsLiveScraper:
             score_home=score_home,
             score_away=score_away,
             minute=minute,
+            minute_display=minute_display,
             possession_home=possession_home,
             possession_away=possession_away,
             corners_home=corners_home,
@@ -336,10 +407,16 @@ class SoccerStatsLiveScraper:
             shots_away=shots_away,
             shots_on_target_home=shots_on_target_home,
             shots_on_target_away=shots_on_target_away,
+            shots_inside_box_home=shots_inside_box_home,
+            shots_inside_box_away=shots_inside_box_away,
+            shots_outside_box_home=shots_outside_box_home,
+            shots_outside_box_away=shots_outside_box_away,
             attacks_home=attacks_home,
             attacks_away=attacks_away,
             dangerous_attacks_home=dangerous_attacks_home,
             dangerous_attacks_away=dangerous_attacks_away,
+            red_cards_home=0,  # TODO: extraire si disponible
+            red_cards_away=0,  # TODO: extraire si disponible
             timestamp=datetime.now()
         )
     

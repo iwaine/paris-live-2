@@ -151,37 +151,30 @@ class BacktestingEngine:
 
     def _generate_simulated_features(self, match_data: pd.Series) -> np.ndarray:
         """Generate simulated features from available match data"""
-        # Generate 23 features with some realism
+        # Generate features with some realism
         np.random.seed(hash(str(match_data.get("match_id", ""))) % (2**32))
         
-        base_elo = 1600
-        home_elo = base_elo + np.random.randn() * 100
-        away_elo = base_elo + np.random.randn() * 100
-        
         features = np.array([
-            home_elo,                          # elo_home (1)
-            away_elo,                          # elo_away (2)
-            home_elo - away_elo,               # elo_diff (3)
-            50 + np.random.randn() * 10,       # poss_home (4)
-            50 + np.random.randn() * 10,       # poss_away (5)
-            int(match_data.get("home_goals", 0)),  # score_home (6)
-            int(match_data.get("away_goals", 0)),  # score_away (7)
-            max(0, np.random.randn() * 3 + 5),     # shots_home (8)
-            max(0, np.random.randn() * 3 + 5),     # shots_away (9)
-            max(0, np.random.randn() * 2 + 3),     # shots_on_target_home (10)
-            max(0, np.random.randn() * 2 + 3),     # shots_on_target_away (11)
-            np.random.randn() * 2,             # corner_delta_5m (12)
-            np.random.randn() * 2,             # corner_delta_10m (13)
-            max(0, np.random.randn() * 2 + 10),    # fouls_home (14)
-            max(0, np.random.randn() * 2 + 10),    # fouls_away (15)
-            max(0, np.random.randn() + 2),        # yellow_cards_home (16)
-            max(0, np.random.randn() + 2),        # yellow_cards_away (17)
-            np.random.binomial(1, 0.1),        # red_cards_home (18)
-            np.random.binomial(1, 0.1),        # red_cards_away (19)
-            np.random.uniform(0, 100),         # saturation_score (20)
-            np.random.randn() * 10,            # pressure_differential (21)
-            np.random.randn() * 15,            # momentum_score (22)
-            np.random.uniform(0, 1)            # chance_creation_index (23)
+            50 + np.random.randn() * 10,       # poss_home
+            50 + np.random.randn() * 10,       # poss_away
+            int(match_data.get("home_goals", 0)),  # score_home
+            int(match_data.get("away_goals", 0)),  # score_away
+            max(0, np.random.randn() * 3 + 5),     # shots_home
+            max(0, np.random.randn() * 3 + 5),     # shots_away
+            max(0, np.random.randn() * 2 + 3),     # shots_on_target_home
+            max(0, np.random.randn() * 2 + 3),     # shots_on_target_away
+            np.random.randn() * 2,             # corner_delta_5m
+            np.random.randn() * 2,             # corner_delta_10m
+            max(0, np.random.randn() * 2 + 10),    # fouls_home
+            max(0, np.random.randn() * 2 + 10),    # fouls_away
+            max(0, np.random.randn() + 2),        # yellow_cards_home
+            max(0, np.random.randn() + 2),        # yellow_cards_away
+            np.random.binomial(1, 0.1),        # red_cards_home
+            np.random.binomial(1, 0.1),        # red_cards_away
+            np.random.uniform(0, 100),         # saturation_score
+            np.random.randn() * 10,            # pressure_differential
+            np.random.randn() * 15,            # momentum_score
+            np.random.uniform(0, 1)            # chance_creation_index
         ])
         
         return features

@@ -85,9 +85,6 @@ def create_feature_vector(
         red_cards_away=0,
         yellow_cards_home=0,
         yellow_cards_away=0,
-        team_elo_home=1500.0,  # ELO par défaut
-        team_elo_away=1500.0,
-        elo_diff=0.0,
         home_advantage=1.0,
         recent_goal_count_5m=0,
         saturation_score=(score_home + score_away) * 10 + (shots_on_target_home + shots_on_target_away) / 2

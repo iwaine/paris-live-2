@@ -3,24 +3,50 @@ def compute_inplay_domination(stats_a, stats_b):
     Calcule un score de domination in-play pour stats_a vs stats_b (valeurs brutes live).
     Retourne un score entre 0 (faible) et 1 (domination totale).
     """
-    # Nouvelle logique : même calcul que pattern chaud
-    def ratio(a, b):
+    # Logique pondérée détaillée avec ratios, poids, contributions et affichage
+    def norm(a, b):
         return a / (a + b) if (a + b) > 0 else 0.5
 
-    # Pondérations par stat
-    # Nouveau mapping pour coller aux clés du dict live
     weights = {
-        'Possession': 0.25,
-        'Attacks': 0.2,
-        'Dangerous_attacks': 0.2,
-        'Shots': 0.2,
-        'Shots_on_target': 0.15
+        'possession': 0.15,
+        'shots': 0.15,
+        'shots_on_target': 0.25,
+        'shots_inside_box': 0.15,
+        'shots_outside_box': 0.05,
+        'attacks': 0.10,
+        'dangerous_attacks': 0.15
     }
-    stats_keys = ['Possession', 'Attacks', 'Dangerous_attacks', 'Shots', 'Shots_on_target']
-    score = 0.0
-    # Suppression du debug détaillé, affichage final synthétique
-    return score
-    return score
+    a_stats = {
+        'possession': stats_a.get('possession', 0),
+        'shots': stats_a.get('shots', 0),
+        'shots_on_target': stats_a.get('shots_on_target', 0),
+        'shots_inside_box': stats_a.get('shots_inside_box', 0),
+        'shots_outside_box': stats_a.get('shots_outside_box', 0),
+        'attacks': stats_a.get('attacks', 0),
+        'dangerous_attacks': stats_a.get('dangerous_attacks', 0)
+    }
+    b_stats = {
+        'possession': stats_b.get('possession', 0),
+        'shots': stats_b.get('shots', 0),
+        'shots_on_target': stats_b.get('shots_on_target', 0),
+        'shots_inside_box': stats_b.get('shots_inside_box', 0),
+        'shots_outside_box': stats_b.get('shots_outside_box', 0),
+        'attacks': stats_b.get('attacks', 0),
+        'dangerous_attacks': stats_b.get('dangerous_attacks', 0)
+    }
+    score_a = 0.0
+    print("[DOMINATION LIVE - DÉTAILS]")
+    for k, w in weights.items():
+        va = a_stats[k]
+        vb = b_stats[k]
+        pa = norm(va, vb)
+        pb = norm(vb, va)
+        contrib_a = w * pa
+        contrib_b = w * pb
+        score_a += contrib_a
+        print(f"  {k.replace('_',' ').capitalize()} : A={va} / B={vb} | ratio={pa:.3f} | poids={w:.2f} | contribution={contrib_a:.3f}")
+    print(f"Total domination A : {score_a*100:.0f}%, domination B : {(1-score_a)*100:.0f}%")
+    return score_a
 
 # -*- coding: utf-8 -*-
 """

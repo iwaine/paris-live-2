@@ -1,0 +1,510 @@
+================================================================================
+📌 ARDA
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+11 Aug     vs Lok. Plovdiv              (0-0  ) | Marqués: []                             | Encaissés: []
+18 Sep     vs CSKA Sofia                (1-0  ) | Marqués: [89]                           | Encaissés: []
+2 Dec      vs Botev Plovdiv             (0-0  ) | Marqués: []                             | Encaissés: []
+2 Nov      vs Levski Sofia              (0-3  ) | Marqués: []                             | Encaissés: [19, 50, 85]
+20 Oct     vs Septemvri Sofia           (0-1  ) | Marqués: []                             | Encaissés: [28]
+22 Nov     vs CSKA 1948 Sofia           (3-0  ) | Marqués: [31, 43, 90]                   | Encaissés: []
+22 Sep     vs Cherno More               (0-1  ) | Marqués: []                             | Encaissés: [28]
+27 Jul     vs Lokomotiv Sofia           (1-1  ) | Marqués: [14]                           | Encaissés: [68]
+28 Sep     vs Botev Vratsa              (0-2  ) | Marqués: []                             | Encaissés: [14, 47]
+31 Aug     vs Beroe                     (2-2  ) | Marqués: [35, 45]                       | Encaissés: [30, 43]
+
+📊 HOME TOTAL: Marqués 7 | Encaissés 10
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+13 Sep     vs Spartak Varna             (3-0  ) | Marqués: []                             | Encaissés: [30, 71, 90]
+18 Jul     vs CSKA 1948 Sofia           (1-0  ) | Marqués: []                             | Encaissés: [81]
+24 Oct     vs Montana                   (1-1  ) | Marqués: [7]                            | Encaissés: [45]
+25 Aug     vs Slavia Sofia              (2-0  ) | Marqués: []                             | Encaissés: [18, 23]
+28 Nov     vs Lokomotiv Sofia           (0-0  ) | Marqués: []                             | Encaissés: []
+4 Aug      vs Botev Plovdiv             (0-5  ) | Marqués: [27, 45, 68, 86, 89]           | Encaissés: []
+5 Oct      vs Dobrudzha                 (0-2  ) | Marqués: [21, 90]                       | Encaissés: []
+9 Nov      vs Ludogorets                (2-3  ) | Marqués: [12, 45, 86]                   | Encaissés: [27, 73]
+
+📊 AWAY TOTAL: Marqués 11 | Encaissés 9
+
+================================================================================
+📌 BEROE
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+12 Sep     vs Botev Vratsa              (2-0  ) | Marqués: [71, 85]                       | Encaissés: []
+16 Aug     vs Botev Plovdiv             (1-2  ) | Marqués: [46]                           | Encaissés: [81, 90]
+20 Oct     vs Montana                   (1-1  ) | Marqués: [7]                            | Encaissés: [16]
+21 Nov     vs Spartak Varna             (0-0  ) | Marqués: []                             | Encaissés: []
+26 Jul     vs CSKA 1948 Sofia           (1-1  ) | Marqués: [44]                           | Encaissés: [72]
+29 Sep     vs Dobrudzha                 (1-0  ) | Marqués: [56]                           | Encaissés: []
+3 Dec      vs Cherno More               (1-2  ) | Marqués: [45]                           | Encaissés: [54, 90]
+3 Nov      vs Lokomotiv Sofia           (1-3  ) | Marqués: [77]                           | Encaissés: [49, 62, 90]
+
+📊 HOME TOTAL: Marqués 8 | Encaissés 9
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+11 Aug     vs Septemvri Sofia           (2-3  ) | Marqués: [22, 27, 50]                   | Encaissés: [45, 90]
+21 Jul     vs Spartak Varna             (0-0  ) | Marqués: []                             | Encaissés: []
+21 Sep     vs Slavia Sofia              (0-0  ) | Marqués: []                             | Encaissés: []
+26 Oct     vs CSKA Sofia                (5-1  ) | Marqués: [87]                           | Encaissés: [39, 45, 48, 51, 59]
+29 Nov     vs CSKA 1948 Sofia           (2-1  ) | Marqués: [45]                           | Encaissés: [13, 67]
+31 Aug     vs Arda                      (2-2  ) | Marqués: [30, 43]                       | Encaissés: [35, 45]
+4 Aug      vs Cherno More               (4-0  ) | Marqués: []                             | Encaissés: [39, 78, 89, 90]
+4 Oct      vs Levski Sofia              (3-1  ) | Marqués: [73]                           | Encaissés: [11, 81, 90]
+8 Nov      vs Lok. Plovdiv              (1-0  ) | Marqués: []                             | Encaissés: [36]
+
+📊 AWAY TOTAL: Marqués 8 | Encaissés 19
+
+================================================================================
+📌 BOTEV PLOVDIV
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+10 Aug     vs Lokomotiv Sofia           (0-1  ) | Marqués: []                             | Encaissés: [29]
+12 Sep     vs Montana                   (0-1  ) | Marqués: []                             | Encaissés: [72]
+18 Oct     vs Slavia Sofia              (1-1  ) | Marqués: [43]                           | Encaissés: [77]
+19 Jul     vs CSKA Sofia                (1-1  ) | Marqués: [27]                           | Encaissés: [45]
+25 Sep     vs CSKA 1948 Sofia           (1-2  ) | Marqués: [60]                           | Encaissés: [41, 69]
+29 Nov     vs Cherno More               (2-1  ) | Marqués: [10, 69]                       | Encaissés: [77]
+30 Sep     vs Levski Sofia              (0-1  ) | Marqués: []                             | Encaissés: [75]
+4 Aug      vs Arda                      (0-5  ) | Marqués: []                             | Encaissés: [27, 45, 68, 86, 89]
+7 Nov      vs Dobrudzha                 (2-1  ) | Marqués: [61, 74]                       | Encaissés: [29]
+
+📊 HOME TOTAL: Marqués 7 | Encaissés 14
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+1 Nov      vs Lok. Plovdiv              (0-4  ) | Marqués: []                             | Encaissés: []
+16 Aug     vs Beroe                     (1-2  ) | Marqués: [81, 90]                       | Encaissés: [46]
+2 Dec      vs Arda                      (0-0  ) | Marqués: []                             | Encaissés: []
+21 Sep     vs Septemvri Sofia           (1-3  ) | Marqués: [9, 77, 90]                    | Encaissés: [34]
+22 Nov     vs CSKA Sofia                (2-1  ) | Marqués: [6]                            | Encaissés: [72, 90]
+24 Oct     vs Spartak Varna             (3-2  ) | Marqués: [42, 68]                       | Encaissés: [14, 50, 77]
+27 Jul     vs Cherno More               (2-1  ) | Marqués: [59]                           | Encaissés: [17, 18]
+31 Aug     vs Ludogorets                (2-1  ) | Marqués: [43]                           | Encaissés: [22, 49]
+5 Oct      vs Botev Vratsa              (1-2  ) | Marqués: [21, 78]                       | Encaissés: [15]
+
+📊 AWAY TOTAL: Marqués 12 | Encaissés 12
+
+================================================================================
+📌 BOTEV VRATSA
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+17 Aug     vs Levski Sofia              (0-0  ) | Marqués: []                             | Encaissés: []
+22 Sep     vs CSKA Sofia                (1-1  ) | Marqués: [75]                           | Encaissés: [49]
+24 Nov     vs Slavia Sofia              (0-1  ) | Marqués: []                             | Encaissés: [81]
+25 Jul     vs Ludogorets                (0-1  ) | Marqués: []                             | Encaissés: [90]
+25 Oct     vs Septemvri Sofia           (2-1  ) | Marqués: [82, 85]                       | Encaissés: [53]
+29 Aug     vs Cherno More               (1-0  ) | Marqués: [49]                           | Encaissés: []
+3 Nov      vs CSKA 1948 Sofia           (0-0  ) | Marqués: []                             | Encaissés: []
+4 Dec      vs Spartak Varna             (2-0  ) | Marqués: [76, 90]                       | Encaissés: []
+5 Oct      vs Botev Plovdiv             (1-2  ) | Marqués: [15]                           | Encaissés: [21, 78]
+
+📊 HOME TOTAL: Marqués 7 | Encaissés 6
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+1 Aug      vs Spartak Varna             (1-1  ) | Marqués: [60]                           | Encaissés: [90]
+12 Sep     vs Beroe                     (2-0  ) | Marqués: []                             | Encaissés: [71, 85]
+17 Oct     vs Lok. Plovdiv              (3-0  ) | Marqués: []                             | Encaissés: [2, 17, 19]
+20 Jul     vs Slavia Sofia              (2-2  ) | Marqués: [13, 24]                       | Encaissés: [50, 54]
+24 Aug     vs Dobrudzha                 (0-2  ) | Marqués: [5, 40]                        | Encaissés: []
+28 Sep     vs Arda                      (0-2  ) | Marqués: [14, 47]                       | Encaissés: []
+30 Nov     vs Ludogorets                (2-0  ) | Marqués: []                             | Encaissés: [27, 71]
+8 Aug      vs Montana                   (0-0  ) | Marqués: []                             | Encaissés: []
+8 Nov      vs Lokomotiv Sofia           (0-1  ) | Marqués: [49]                           | Encaissés: []
+
+📊 AWAY TOTAL: Marqués 8 | Encaissés 10
+
+================================================================================
+📌 CSKA 1948 SOFIA
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+1 Aug      vs Septemvri Sofia           (2-1  ) | Marqués: [9, 43]                        | Encaissés: [45]
+15 Aug     vs Montana                   (2-1  ) | Marqués: [30, 55]                       | Encaissés: [73]
+15 Sep     vs Slavia Sofia              (3-1  ) | Marqués: [16, 64, 76]                   | Encaissés: [32]
+18 Jul     vs Arda                      (1-0  ) | Marqués: [81]                           | Encaissés: []
+20 Sep     vs Lok. Plovdiv              (4-0  ) | Marqués: [43, 52, 68, 71]               | Encaissés: []
+27 Oct     vs Ludogorets                (5-4  ) | Marqués: [3, 16, 40, 52, 71]            | Encaissés: [10, 81, 90, 90]
+29 Nov     vs Beroe                     (2-1  ) | Marqués: [13, 67]                       | Encaissés: [45]
+4 Oct      vs Spartak Varna             (1-1  ) | Marqués: [33]                           | Encaissés: [59]
+9 Nov      vs Cherno More               (0-1  ) | Marqués: []                             | Encaissés: [61]
+
+📊 HOME TOTAL: Marqués 20 | Encaissés 10
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+19 Oct     vs Lokomotiv Sofia           (0-1  ) | Marqués: [74]                           | Encaissés: []
+22 Nov     vs Arda                      (3-0  ) | Marqués: []                             | Encaissés: [31, 43, 90]
+24 Aug     vs CSKA Sofia                (0-1  ) | Marqués: [37]                           | Encaissés: []
+25 Sep     vs Botev Plovdiv             (1-2  ) | Marqués: [41, 69]                       | Encaissés: [60]
+26 Jul     vs Beroe                     (1-1  ) | Marqués: [72]                           | Encaissés: [44]
+3 Dec      vs Septemvri Sofia           (1-4  ) | Marqués: [44, 61, 67, 90]               | Encaissés: [53]
+3 Nov      vs Botev Vratsa              (0-0  ) | Marqués: []                             | Encaissés: []
+31 Aug     vs Levski Sofia              (2-1  ) | Marqués: [50]                           | Encaissés: [8, 34]
+8 Aug      vs Dobrudzha                 (2-1  ) | Marqués: [25]                           | Encaissés: [75, 89]
+
+📊 AWAY TOTAL: Marqués 11 | Encaissés 10
+
+================================================================================
+📌 CSKA SOFIA
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+13 Sep     vs Septemvri Sofia           (3-1  ) | Marqués: [10, 90, 90]                   | Encaissés: [84]
+2 Nov      vs Montana                   (3-1  ) | Marqués: [12, 42, 90]                   | Encaissés: [35]
+22 Nov     vs Botev Plovdiv             (2-1  ) | Marqués: [72, 90]                       | Encaissés: [6]
+24 Aug     vs CSKA 1948 Sofia           (0-1  ) | Marqués: []                             | Encaissés: [37]
+26 Jul     vs Spartak Varna             (1-1  ) | Marqués: [7]                            | Encaissés: [47]
+26 Oct     vs Beroe                     (5-1  ) | Marqués: [39, 45, 48, 51, 59]           | Encaissés: [87]
+3 Dec      vs Lok. Plovdiv              (2-1  ) | Marqués: [35, 90]                       | Encaissés: [84]
+5 Oct      vs Ludogorets                (0-0  ) | Marqués: []                             | Encaissés: []
+9 Aug      vs Cherno More               (0-0  ) | Marqués: []                             | Encaissés: []
+
+📊 HOME TOTAL: Marqués 16 | Encaissés 7
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+18 Sep     vs Arda                      (1-0  ) | Marqués: []                             | Encaissés: [89]
+19 Jul     vs Botev Plovdiv             (1-1  ) | Marqués: [45]                           | Encaissés: [27]
+19 Oct     vs Dobrudzha                 (0-1  ) | Marqués: [17]                           | Encaissés: []
+2 Aug      vs Lok. Plovdiv              (1-0  ) | Marqués: []                             | Encaissés: [89]
+22 Sep     vs Botev Vratsa              (1-1  ) | Marqués: [49]                           | Encaissés: [75]
+27 Sep     vs Lokomotiv Sofia           (1-1  ) | Marqués: [43]                           | Encaissés: [77]
+29 Nov     vs Spartak Varna             (0-4  ) | Marqués: [18, 34, 70, 77]               | Encaissés: []
+30 Aug     vs Slavia Sofia              (2-2  ) | Marqués: [3, 52]                        | Encaissés: [27, 38]
+8 Nov      vs Levski Sofia              (0-1  ) | Marqués: [76]                           | Encaissés: []
+
+📊 AWAY TOTAL: Marqués 11 | Encaissés 7
+
+================================================================================
+📌 CHERNO MORE
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+15 Sep     vs Dobrudzha                 (2-0  ) | Marqués: [44, 90]                       | Encaissés: []
+19 Oct     vs Levski Sofia              (1-3  ) | Marqués: [22]                           | Encaissés: [55, 65, 90]
+2 Nov      vs Ludogorets                (0-0  ) | Marqués: []                             | Encaissés: []
+22 Nov     vs Lokomotiv Sofia           (0-1  ) | Marqués: []                             | Encaissés: [19]
+23 Aug     vs Lok. Plovdiv              (1-1  ) | Marqués: [29]                           | Encaissés: [90]
+27 Jul     vs Botev Plovdiv             (2-1  ) | Marqués: [17, 18]                       | Encaissés: [59]
+27 Sep     vs Septemvri Sofia           (1-1  ) | Marqués: [58]                           | Encaissés: [24]
+4 Aug      vs Beroe                     (4-0  ) | Marqués: [39, 78, 89, 90]               | Encaissés: []
+
+📊 HOME TOTAL: Marqués 11 | Encaissés 7
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+16 Aug     vs Spartak Varna             (1-3  ) | Marqués: [2, 39, 89]                    | Encaissés: [12]
+18 Jul     vs Lokomotiv Sofia           (1-1  ) | Marqués: [19]                           | Encaissés: [32]
+22 Sep     vs Arda                      (0-1  ) | Marqués: [28]                           | Encaissés: []
+25 Oct     vs Slavia Sofia              (0-0  ) | Marqués: []                             | Encaissés: []
+29 Aug     vs Botev Vratsa              (1-0  ) | Marqués: []                             | Encaissés: [49]
+29 Nov     vs Botev Plovdiv             (2-1  ) | Marqués: [77]                           | Encaissés: [10, 69]
+3 Dec      vs Beroe                     (1-2  ) | Marqués: [54, 90]                       | Encaissés: [45]
+4 Oct      vs Montana                   (1-3  ) | Marqués: [8, 34, 79]                    | Encaissés: [57]
+9 Aug      vs CSKA Sofia                (0-0  ) | Marqués: []                             | Encaissés: []
+9 Nov      vs CSKA 1948 Sofia           (0-1  ) | Marqués: [61]                           | Encaissés: []
+
+📊 AWAY TOTAL: Marqués 12 | Encaissés 7
+
+================================================================================
+📌 DOBRUDZHA
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+1 Nov      vs Spartak Varna             (2-0  ) | Marqués: [35, 79]                       | Encaissés: []
+19 Oct     vs CSKA Sofia                (0-1  ) | Marqués: []                             | Encaissés: [17]
+20 Sep     vs Lokomotiv Sofia           (2-2  ) | Marqués: [63, 80]                       | Encaissés: [53, 86]
+23 Nov     vs Lok. Plovdiv              (1-1  ) | Marqués: [65]                           | Encaissés: [41]
+24 Aug     vs Botev Vratsa              (0-2  ) | Marqués: []                             | Encaissés: [5, 40]
+28 Jul     vs Slavia Sofia              (2-1  ) | Marqués: [45, 57]                       | Encaissés: [5]
+4 Dec      vs Ludogorets                (0-2  ) | Marqués: []                             | Encaissés: [45, 72]
+5 Oct      vs Arda                      (0-2  ) | Marqués: []                             | Encaissés: [21, 90]
+8 Aug      vs CSKA 1948 Sofia           (2-1  ) | Marqués: [75, 89]                       | Encaissés: [25]
+
+📊 HOME TOTAL: Marqués 9 | Encaissés 12
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+15 Sep     vs Cherno More               (2-0  ) | Marqués: []                             | Encaissés: [44, 90]
+18 Aug     vs Septemvri Sofia           (2-1  ) | Marqués: [10]                           | Encaissés: [18, 34]
+2 Aug      vs Ludogorets                (2-1  ) | Marqués: [3]                            | Encaissés: [22, 78]
+21 Jul     vs Lok. Plovdiv              (1-0  ) | Marqués: []                             | Encaissés: [23]
+25 Oct     vs Levski Sofia              (3-0  ) | Marqués: []                             | Encaissés: [13, 27, 74]
+29 Aug     vs Montana                   (1-0  ) | Marqués: []                             | Encaissés: [7]
+29 Sep     vs Beroe                     (1-0  ) | Marqués: []                             | Encaissés: [56]
+30 Nov     vs Slavia Sofia              (3-1  ) | Marqués: [39]                           | Encaissés: [34, 45, 48]
+7 Nov      vs Botev Plovdiv             (2-1  ) | Marqués: [29]                           | Encaissés: [61, 74]
+
+📊 AWAY TOTAL: Marqués 4 | Encaissés 17
+
+================================================================================
+📌 LEVSKI SOFIA
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+10 Aug     vs Spartak Varna             (2-1  ) | Marqués: [4, 45]                        | Encaissés: [86]
+19 Sep     vs Ludogorets                (0-0  ) | Marqués: []                             | Encaissés: []
+20 Jul     vs Montana                   (5-0  ) | Marqués: [6, 42, 58, 61, 73]            | Encaissés: []
+25 Oct     vs Dobrudzha                 (3-0  ) | Marqués: [13, 27, 74]                   | Encaissés: []
+3 Aug      vs Slavia Sofia              (2-0  ) | Marqués: [70, 84]                       | Encaissés: []
+30 Nov     vs Septemvri Sofia           (7-0  ) | Marqués: [38, 52, 54, 69, 80, 84, 88]   | Encaissés: []
+31 Aug     vs CSKA 1948 Sofia           (2-1  ) | Marqués: [8, 34]                        | Encaissés: [50]
+4 Oct      vs Beroe                     (3-1  ) | Marqués: [11, 81, 90]                   | Encaissés: [73]
+8 Nov      vs CSKA Sofia                (0-1  ) | Marqués: []                             | Encaissés: [76]
+
+📊 HOME TOTAL: Marqués 24 | Encaissés 4
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+14 Sep     vs Lokomotiv Sofia           (1-2  ) | Marqués: [41, 90]                       | Encaissés: [57]
+17 Aug     vs Botev Vratsa              (0-0  ) | Marqués: []                             | Encaissés: []
+19 Oct     vs Cherno More               (1-3  ) | Marqués: [55, 65, 90]                   | Encaissés: [22]
+2 Nov      vs Arda                      (0-3  ) | Marqués: [19, 50, 85]                   | Encaissés: []
+23 Nov     vs Montana                   (1-5  ) | Marqués: [10, 17, 25, 45, 61]           | Encaissés: [48]
+26 Sep     vs Lok. Plovdiv              (1-0  ) | Marqués: []                             | Encaissés: [33]
+27 Jul     vs Septemvri Sofia           (1-2  ) | Marqués: [69, 82]                       | Encaissés: [44]
+30 Sep     vs Botev Plovdiv             (0-1  ) | Marqués: [75]                           | Encaissés: []
+4 Dec      vs Slavia Sofia              (2-0  ) | Marqués: []                             | Encaissés: [21, 27]
+
+📊 AWAY TOTAL: Marqués 16 | Encaissés 7
+
+================================================================================
+📌 LOK. PLOVDIV
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+1 Nov      vs Botev Plovdiv             (0-4  ) | Marqués: []                             | Encaissés: []
+14 Sep     vs Ludogorets                (1-1  ) | Marqués: [6]                            | Encaissés: [90]
+15 Aug     vs Slavia Sofia              (2-1  ) | Marqués: [56, 90]                       | Encaissés: [84]
+17 Oct     vs Botev Vratsa              (3-0  ) | Marqués: [2, 17, 19]                    | Encaissés: []
+2 Aug      vs CSKA Sofia                (1-0  ) | Marqués: [89]                           | Encaissés: []
+21 Jul     vs Dobrudzha                 (1-0  ) | Marqués: [23]                           | Encaissés: []
+26 Sep     vs Levski Sofia              (1-0  ) | Marqués: [33]                           | Encaissés: []
+28 Nov     vs Montana                   (0-0  ) | Marqués: []                             | Encaissés: []
+8 Nov      vs Beroe                     (1-0  ) | Marqués: [36]                           | Encaissés: []
+
+📊 HOME TOTAL: Marqués 10 | Encaissés 2
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+11 Aug     vs Arda                      (0-0  ) | Marqués: []                             | Encaissés: []
+20 Sep     vs CSKA 1948 Sofia           (4-0  ) | Marqués: []                             | Encaissés: [43, 52, 68, 71]
+23 Aug     vs Cherno More               (1-1  ) | Marqués: [90]                           | Encaissés: [29]
+23 Nov     vs Dobrudzha                 (1-1  ) | Marqués: [41]                           | Encaissés: [65]
+24 Oct     vs Lokomotiv Sofia           (2-2  ) | Marqués: [23, 90]                       | Encaissés: [68, 77]
+28 Jul     vs Montana                   (1-1  ) | Marqués: [36]                           | Encaissés: [23]
+3 Dec      vs CSKA Sofia                (2-1  ) | Marqués: [84]                           | Encaissés: [35, 90]
+3 Oct      vs Septemvri Sofia           (2-2  ) | Marqués: [45, 90]                       | Encaissés: [66, 68]
+30 Aug     vs Spartak Varna             (1-2  ) | Marqués: [4, 83]                        | Encaissés: [77]
+
+📊 AWAY TOTAL: Marqués 10 | Encaissés 14
+
+================================================================================
+📌 LOKOMOTIV SOFIA
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+14 Sep     vs Levski Sofia              (1-2  ) | Marqués: [57]                           | Encaissés: [41, 90]
+18 Jul     vs Cherno More               (1-1  ) | Marqués: [32]                           | Encaissés: [19]
+19 Oct     vs CSKA 1948 Sofia           (0-1  ) | Marqués: []                             | Encaissés: [74]
+22 Aug     vs Spartak Varna             (0-0  ) | Marqués: []                             | Encaissés: []
+24 Oct     vs Lok. Plovdiv              (2-2  ) | Marqués: [68, 77]                       | Encaissés: [23, 90]
+27 Sep     vs CSKA Sofia                (1-1  ) | Marqués: [77]                           | Encaissés: [43]
+28 Nov     vs Arda                      (0-0  ) | Marqués: []                             | Encaissés: []
+3 Aug      vs Montana                   (3-0  ) | Marqués: [4, 16, 20]                    | Encaissés: []
+8 Nov      vs Botev Vratsa              (0-1  ) | Marqués: []                             | Encaissés: [49]
+
+📊 HOME TOTAL: Marqués 8 | Encaissés 8
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+10 Aug     vs Botev Plovdiv             (0-1  ) | Marqués: [29]                           | Encaissés: []
+17 Aug     vs Ludogorets                (0-0  ) | Marqués: []                             | Encaissés: []
+2 Dec      vs Montana                   (1-2  ) | Marqués: [19, 66]                       | Encaissés: [59]
+20 Sep     vs Dobrudzha                 (2-2  ) | Marqués: [53, 86]                       | Encaissés: [63, 80]
+22 Nov     vs Cherno More               (0-1  ) | Marqués: [19]                           | Encaissés: []
+27 Jul     vs Arda                      (1-1  ) | Marqués: [68]                           | Encaissés: [14]
+29 Aug     vs Septemvri Sofia           (1-0  ) | Marqués: []                             | Encaissés: [77]
+3 Nov      vs Beroe                     (1-3  ) | Marqués: [49, 62, 90]                   | Encaissés: [77]
+3 Oct      vs Slavia Sofia              (2-0  ) | Marqués: []                             | Encaissés: [19, 62]
+
+📊 AWAY TOTAL: Marqués 10 | Encaissés 8
+
+================================================================================
+📌 LUDOGORETS
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+17 Aug     vs Lokomotiv Sofia           (0-0  ) | Marqués: []                             | Encaissés: []
+18 Oct     vs Spartak Varna             (1-1  ) | Marqués: [50]                           | Encaissés: [27]
+19 Jul     vs Septemvri Sofia           (5-0  ) | Marqués: [9, 49, 55, 77, 90]            | Encaissés: []
+2 Aug      vs Dobrudzha                 (2-1  ) | Marqués: [22, 78]                       | Encaissés: [3]
+28 Sep     vs Montana                   (3-0  ) | Marqués: [28, 53, 63]                   | Encaissés: []
+30 Nov     vs Botev Vratsa              (2-0  ) | Marqués: [27, 71]                       | Encaissés: []
+31 Aug     vs Botev Plovdiv             (2-1  ) | Marqués: [22, 49]                       | Encaissés: [43]
+9 Nov      vs Arda                      (2-3  ) | Marqués: [27, 73]                       | Encaissés: [12, 45, 86]
+
+📊 HOME TOTAL: Marqués 17 | Encaissés 6
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+14 Sep     vs Lok. Plovdiv              (1-1  ) | Marqués: [90]                           | Encaissés: [6]
+19 Sep     vs Levski Sofia              (0-0  ) | Marqués: []                             | Encaissés: []
+2 Nov      vs Cherno More               (0-0  ) | Marqués: []                             | Encaissés: []
+23 Nov     vs Septemvri Sofia           (0-2  ) | Marqués: [25, 67]                       | Encaissés: []
+25 Jul     vs Botev Vratsa              (0-1  ) | Marqués: [90]                           | Encaissés: []
+27 Oct     vs CSKA 1948 Sofia           (5-4  ) | Marqués: [10, 81, 90, 90]               | Encaissés: [3, 16, 40, 52, 71]
+4 Dec      vs Dobrudzha                 (0-2  ) | Marqués: [45, 72]                       | Encaissés: []
+5 Oct      vs CSKA Sofia                (0-0  ) | Marqués: []                             | Encaissés: []
+9 Aug      vs Slavia Sofia              (0-3  ) | Marqués: [43, 55, 82]                   | Encaissés: []
+
+📊 AWAY TOTAL: Marqués 13 | Encaissés 6
+
+================================================================================
+📌 MONTANA
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+19 Sep     vs Spartak Varna             (1-2  ) | Marqués: [50]                           | Encaissés: [32, 58]
+2 Dec      vs Lokomotiv Sofia           (1-2  ) | Marqués: [59]                           | Encaissés: [19, 66]
+23 Aug     vs Septemvri Sofia           (2-0  ) | Marqués: [23, 54]                       | Encaissés: []
+23 Nov     vs Levski Sofia              (1-5  ) | Marqués: [48]                           | Encaissés: [10, 17, 25, 45, 61]
+24 Oct     vs Arda                      (1-1  ) | Marqués: [45]                           | Encaissés: [7]
+28 Jul     vs Lok. Plovdiv              (1-1  ) | Marqués: [23]                           | Encaissés: [36]
+29 Aug     vs Dobrudzha                 (1-0  ) | Marqués: [7]                            | Encaissés: []
+4 Oct      vs Cherno More               (1-3  ) | Marqués: [57]                           | Encaissés: [8, 34, 79]
+8 Aug      vs Botev Vratsa              (0-0  ) | Marqués: []                             | Encaissés: []
+
+📊 HOME TOTAL: Marqués 9 | Encaissés 14
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+12 Sep     vs Botev Plovdiv             (0-1  ) | Marqués: [72]                           | Encaissés: []
+15 Aug     vs CSKA 1948 Sofia           (2-1  ) | Marqués: [73]                           | Encaissés: [30, 55]
+2 Nov      vs CSKA Sofia                (3-1  ) | Marqués: [35]                           | Encaissés: [12, 42, 90]
+20 Jul     vs Levski Sofia              (5-0  ) | Marqués: []                             | Encaissés: [6, 42, 58, 61, 73]
+20 Oct     vs Beroe                     (1-1  ) | Marqués: [16]                           | Encaissés: [7]
+28 Nov     vs Lok. Plovdiv              (0-0  ) | Marqués: []                             | Encaissés: []
+28 Sep     vs Ludogorets                (3-0  ) | Marqués: []                             | Encaissés: [28, 53, 63]
+3 Aug      vs Lokomotiv Sofia           (3-0  ) | Marqués: []                             | Encaissés: [4, 16, 20]
+9 Nov      vs Slavia Sofia              (2-1  ) | Marqués: [68]                           | Encaissés: [87, 90]
+
+📊 AWAY TOTAL: Marqués 5 | Encaissés 19
+
+================================================================================
+📌 SEPTEMVRI SOFIA
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+1 Nov      vs Slavia Sofia              (0-1  ) | Marqués: []                             | Encaissés: [70]
+11 Aug     vs Beroe                     (2-3  ) | Marqués: [45, 90]                       | Encaissés: [22, 27, 50]
+18 Aug     vs Dobrudzha                 (2-1  ) | Marqués: [18, 34]                       | Encaissés: [10]
+21 Sep     vs Botev Plovdiv             (1-3  ) | Marqués: [34]                           | Encaissés: [9, 77, 90]
+23 Nov     vs Ludogorets                (0-2  ) | Marqués: []                             | Encaissés: [25, 67]
+27 Jul     vs Levski Sofia              (1-2  ) | Marqués: [44]                           | Encaissés: [69, 82]
+29 Aug     vs Lokomotiv Sofia           (1-0  ) | Marqués: [77]                           | Encaissés: []
+3 Dec      vs CSKA 1948 Sofia           (1-4  ) | Marqués: [53]                           | Encaissés: [44, 61, 67, 90]
+3 Oct      vs Lok. Plovdiv              (2-2  ) | Marqués: [66, 68]                       | Encaissés: [45, 90]
+
+📊 HOME TOTAL: Marqués 10 | Encaissés 18
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+1 Aug      vs CSKA 1948 Sofia           (2-1  ) | Marqués: [45]                           | Encaissés: [9, 43]
+13 Sep     vs CSKA Sofia                (3-1  ) | Marqués: [84]                           | Encaissés: [10, 90, 90]
+19 Jul     vs Ludogorets                (5-0  ) | Marqués: []                             | Encaissés: [9, 49, 55, 77, 90]
+20 Oct     vs Arda                      (0-1  ) | Marqués: [28]                           | Encaissés: []
+23 Aug     vs Montana                   (2-0  ) | Marqués: []                             | Encaissés: [23, 54]
+25 Oct     vs Botev Vratsa              (2-1  ) | Marqués: [53]                           | Encaissés: [82, 85]
+27 Sep     vs Cherno More               (1-1  ) | Marqués: [24]                           | Encaissés: [58]
+30 Nov     vs Levski Sofia              (7-0  ) | Marqués: []                             | Encaissés: [38, 52, 54, 69, 80, 84, 88]
+7 Nov      vs Spartak Varna             (1-4  ) | Marqués: [39, 45, 79, 90]               | Encaissés: [61]
+
+📊 AWAY TOTAL: Marqués 9 | Encaissés 23
+
+================================================================================
+📌 SLAVIA SOFIA
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+20 Jul     vs Botev Vratsa              (2-2  ) | Marqués: [50, 54]                       | Encaissés: [13, 24]
+21 Sep     vs Beroe                     (0-0  ) | Marqués: []                             | Encaissés: []
+25 Aug     vs Arda                      (2-0  ) | Marqués: [18, 23]                       | Encaissés: []
+25 Oct     vs Cherno More               (0-0  ) | Marqués: []                             | Encaissés: []
+3 Oct      vs Lokomotiv Sofia           (2-0  ) | Marqués: [19, 62]                       | Encaissés: []
+30 Aug     vs CSKA Sofia                (2-2  ) | Marqués: [27, 38]                       | Encaissés: [3, 52]
+30 Nov     vs Dobrudzha                 (3-1  ) | Marqués: [34, 45, 48]                   | Encaissés: [39]
+4 Dec      vs Levski Sofia              (2-0  ) | Marqués: [21, 27]                       | Encaissés: []
+9 Aug      vs Ludogorets                (0-3  ) | Marqués: []                             | Encaissés: [43, 55, 82]
+9 Nov      vs Montana                   (2-1  ) | Marqués: [87, 90]                       | Encaissés: [68]
+
+📊 HOME TOTAL: Marqués 15 | Encaissés 9
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+1 Nov      vs Septemvri Sofia           (0-1  ) | Marqués: [70]                           | Encaissés: []
+15 Aug     vs Lok. Plovdiv              (2-1  ) | Marqués: [84]                           | Encaissés: [56, 90]
+15 Sep     vs CSKA 1948 Sofia           (3-1  ) | Marqués: [32]                           | Encaissés: [16, 64, 76]
+18 Oct     vs Botev Plovdiv             (1-1  ) | Marqués: [77]                           | Encaissés: [43]
+24 Nov     vs Botev Vratsa              (0-1  ) | Marqués: [81]                           | Encaissés: []
+28 Jul     vs Dobrudzha                 (2-1  ) | Marqués: [5]                            | Encaissés: [45, 57]
+28 Sep     vs Spartak Varna             (1-1  ) | Marqués: [87]                           | Encaissés: [45]
+3 Aug      vs Levski Sofia              (2-0  ) | Marqués: []                             | Encaissés: [70, 84]
+
+📊 AWAY TOTAL: Marqués 7 | Encaissés 11
+
+================================================================================
+📌 SPARTAK VARNA
+================================================================================
+
+🏠 HOME MATCHES:
+--------------------------------------------------------------------------------
+1 Aug      vs Botev Vratsa              (1-1  ) | Marqués: [90]                           | Encaissés: [60]
+13 Sep     vs Arda                      (3-0  ) | Marqués: [30, 71, 90]                   | Encaissés: []
+16 Aug     vs Cherno More               (1-3  ) | Marqués: [12]                           | Encaissés: [2, 39, 89]
+21 Jul     vs Beroe                     (0-0  ) | Marqués: []                             | Encaissés: []
+24 Oct     vs Botev Plovdiv             (3-2  ) | Marqués: [14, 50, 77]                   | Encaissés: [42, 68]
+28 Sep     vs Slavia Sofia              (1-1  ) | Marqués: [45]                           | Encaissés: [87]
+29 Nov     vs CSKA Sofia                (0-4  ) | Marqués: []                             | Encaissés: [18, 34, 70, 77]
+30 Aug     vs Lok. Plovdiv              (1-2  ) | Marqués: [77]                           | Encaissés: [4, 83]
+7 Nov      vs Septemvri Sofia           (1-4  ) | Marqués: [61]                           | Encaissés: [39, 45, 79, 90]
+
+📊 HOME TOTAL: Marqués 11 | Encaissés 17
+
+✈️  AWAY MATCHES:
+--------------------------------------------------------------------------------
+1 Nov      vs Dobrudzha                 (2-0  ) | Marqués: []                             | Encaissés: [35, 79]
+10 Aug     vs Levski Sofia              (2-1  ) | Marqués: [86]                           | Encaissés: [4, 45]
+18 Oct     vs Ludogorets                (1-1  ) | Marqués: [27]                           | Encaissés: [50]
+19 Sep     vs Montana                   (1-2  ) | Marqués: [32, 58]                       | Encaissés: [50]
+21 Nov     vs Beroe                     (0-0  ) | Marqués: []                             | Encaissés: []
+22 Aug     vs Lokomotiv Sofia           (0-0  ) | Marqués: []                             | Encaissés: []
+26 Jul     vs CSKA Sofia                (1-1  ) | Marqués: [47]                           | Encaissés: [7]
+4 Dec      vs Botev Vratsa              (2-0  ) | Marqués: []                             | Encaissés: [76, 90]
+4 Oct      vs CSKA 1948 Sofia           (1-1  ) | Marqués: [59]                           | Encaissés: [33]
+
+📊 AWAY TOTAL: Marqués 6 | Encaissés 10
+

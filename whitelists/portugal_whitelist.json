@@ -1,0 +1,745 @@
+{
+  "league": "portugal",
+  "threshold": 65,
+  "min_matches": 4,
+  "total_teams_analyzed": 18,
+  "qualified_teams": [
+    {
+      "team": "Alverca",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 100.0,
+      "recurrence": 100.0,
+      "matches": 6,
+      "matches_with_goal": 6,
+      "total_goals": 6
+    },
+    {
+      "team": "Tondela",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 85.71428571428571,
+      "recurrence": 100.0,
+      "matches": 7,
+      "matches_with_goal": 6,
+      "total_goals": 7
+    },
+    {
+      "team": "Benfica",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 83.33333333333334,
+      "recurrence": 100.0,
+      "matches": 6,
+      "matches_with_goal": 5,
+      "total_goals": 6
+    },
+    {
+      "team": "Guimaraes",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 83.33333333333334,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 5,
+      "total_goals": 5
+    },
+    {
+      "team": "Arouca",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 80.0,
+      "recurrence": 140.0,
+      "matches": 5,
+      "matches_with_goal": 4,
+      "total_goals": 7
+    },
+    {
+      "team": "Arouca",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 80.0,
+      "recurrence": 80.0,
+      "matches": 5,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "AVS",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "AVS",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "Alverca",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 5
+    },
+    {
+      "team": "Casa Pia",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 116.66666666666667,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 7
+    },
+    {
+      "team": "Casa Pia",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 100.0,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 6
+    },
+    {
+      "team": "Estoril",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 5
+    },
+    {
+      "team": "Estrela Amadora",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 100.0,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 6
+    },
+    {
+      "team": "FC Porto",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "Guimaraes",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 5
+    },
+    {
+      "team": "Guimaraes",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "Moreirense",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "Moreirense",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 100.0,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 6
+    },
+    {
+      "team": "Nacional",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 116.66666666666667,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 7
+    },
+    {
+      "team": "Nacional",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 5
+    },
+    {
+      "team": "Rio Ave",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 100.0,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 6
+    },
+    {
+      "team": "Santa Clara",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "Sporting Braga",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 5
+    }
+  ],
+  "all_stats": [
+    {
+      "team": "AVS",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "AVS",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "AVS",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "AVS",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Alverca",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 100.0,
+      "matches": 6
+    },
+    {
+      "team": "Alverca",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Alverca",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Alverca",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Arouca",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Arouca",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Arouca",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 80.0,
+      "matches": 5
+    },
+    {
+      "team": "Arouca",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 80.0,
+      "matches": 5
+    },
+    {
+      "team": "Benfica",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Benfica",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 83.33333333333334,
+      "matches": 6
+    },
+    {
+      "team": "Benfica",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Benfica",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Casa Pia",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Casa Pia",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Casa Pia",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Casa Pia",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Estoril",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Estoril",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Estoril",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Estoril",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Estrela Amadora",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Estrela Amadora",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Estrela Amadora",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Estrela Amadora",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "FC Porto",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "FC Porto",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "FC Porto",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "FC Porto",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Famalicao",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Famalicao",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Famalicao",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Famalicao",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Gil Vicente",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Gil Vicente",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Gil Vicente",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Gil Vicente",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Guimaraes",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Guimaraes",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Guimaraes",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Guimaraes",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 83.33333333333334,
+      "matches": 6
+    },
+    {
+      "team": "Moreirense",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Moreirense",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Moreirense",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Moreirense",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Nacional",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Nacional",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Nacional",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Nacional",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Rio Ave",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Rio Ave",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Rio Ave",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Rio Ave",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Santa Clara",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Santa Clara",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Santa Clara",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Santa Clara",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Sporting Braga",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Sporting Braga",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Sporting Braga",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Sporting Braga",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Sporting CP",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Sporting CP",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Sporting CP",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Sporting CP",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Tondela",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 20.0,
+      "matches": 5
+    },
+    {
+      "team": "Tondela",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 60.0,
+      "matches": 5
+    },
+    {
+      "team": "Tondela",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 85.71428571428571,
+      "matches": 7
+    },
+    {
+      "team": "Tondela",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    }
+  ],
+  "generated_at": "2025-12-05T22:03:06.190303"
+}

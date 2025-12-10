@@ -1,0 +1,8 @@
+# Configuration mise à jour des équipes par ligue
+# Format : {ligue: [liste d'équipes]}
+france:
+  - PSG
+  - Marseille
+montenegro:
+  - Buducnost
+  - Sutjeska

@@ -1,0 +1,795 @@
+{
+  "league": "germany",
+  "threshold": 65,
+  "min_matches": 4,
+  "total_teams_analyzed": 18,
+  "qualified_teams": [
+    {
+      "team": "Bayern Munich",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 100.0,
+      "recurrence": 160.0,
+      "matches": 5,
+      "matches_with_goal": 5,
+      "total_goals": 8
+    },
+    {
+      "team": "FC Koln",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 100.0,
+      "recurrence": 160.0,
+      "matches": 5,
+      "matches_with_goal": 5,
+      "total_goals": 8
+    },
+    {
+      "team": "Leverkusen",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 100.0,
+      "recurrence": 160.0,
+      "matches": 5,
+      "matches_with_goal": 5,
+      "total_goals": 8
+    },
+    {
+      "team": "Monchengladbach",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 100.0,
+      "recurrence": 100.0,
+      "matches": 5,
+      "matches_with_goal": 5,
+      "total_goals": 5
+    },
+    {
+      "team": "Stuttgart",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 100.0,
+      "recurrence": 142.85714285714286,
+      "matches": 7,
+      "matches_with_goal": 7,
+      "total_goals": 10
+    },
+    {
+      "team": "E. Frankfurt",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 83.33333333333334,
+      "recurrence": 133.33333333333331,
+      "matches": 6,
+      "matches_with_goal": 5,
+      "total_goals": 8
+    },
+    {
+      "team": "E. Frankfurt",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 83.33333333333334,
+      "recurrence": 133.33333333333331,
+      "matches": 6,
+      "matches_with_goal": 5,
+      "total_goals": 8
+    },
+    {
+      "team": "FSV Mainz",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 83.33333333333334,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 5,
+      "total_goals": 5
+    },
+    {
+      "team": "Sankt Pauli",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 83.33333333333334,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 5,
+      "total_goals": 5
+    },
+    {
+      "team": "Werder Bremen",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 83.33333333333334,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 5,
+      "total_goals": 5
+    },
+    {
+      "team": "Union Berlin",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 80.0,
+      "recurrence": 100.0,
+      "matches": 5,
+      "matches_with_goal": 4,
+      "total_goals": 5
+    },
+    {
+      "team": "Bayern Munich",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "recurrence": 100.0,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 7
+    },
+    {
+      "team": "Bayern Munich",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 114.28571428571428,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 8
+    },
+    {
+      "team": "Dortmund",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "recurrence": 85.71428571428571,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 6
+    },
+    {
+      "team": "FC Koln",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 100.0,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 7
+    },
+    {
+      "team": "Union Berlin",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "recurrence": 85.71428571428571,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 6
+    },
+    {
+      "team": "Union Berlin",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 100.0,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 7
+    },
+    {
+      "team": "E. Frankfurt",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 5
+    },
+    {
+      "team": "FC Augsburg",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 100.0,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 6
+    },
+    {
+      "team": "FC Augsburg",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "FSV Mainz",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 5
+    },
+    {
+      "team": "FSV Mainz",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 5
+    },
+    {
+      "team": "Heidenheim",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "Heidenheim",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "Hoffenheim",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "Sankt Pauli",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 83.33333333333334,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 5
+    },
+    {
+      "team": "Sankt Pauli",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    },
+    {
+      "team": "Wolfsburg",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 66.66666666666666,
+      "matches": 6,
+      "matches_with_goal": 4,
+      "total_goals": 4
+    }
+  ],
+  "all_stats": [
+    {
+      "team": "Bayern Munich",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Bayern Munich",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Bayern Munich",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 60.0,
+      "matches": 5
+    },
+    {
+      "team": "Bayern Munich",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 100.0,
+      "matches": 5
+    },
+    {
+      "team": "Dortmund",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 40.0,
+      "matches": 5
+    },
+    {
+      "team": "Dortmund",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 60.0,
+      "matches": 5
+    },
+    {
+      "team": "Dortmund",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Dortmund",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "E. Frankfurt",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "E. Frankfurt",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "E. Frankfurt",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 83.33333333333334,
+      "matches": 6
+    },
+    {
+      "team": "E. Frankfurt",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 83.33333333333334,
+      "matches": 6
+    },
+    {
+      "team": "FC Augsburg",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "FC Augsburg",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "FC Augsburg",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "FC Augsburg",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "FC Koln",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 40.0,
+      "matches": 5
+    },
+    {
+      "team": "FC Koln",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 100.0,
+      "matches": 5
+    },
+    {
+      "team": "FC Koln",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "FC Koln",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "FSV Mainz",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "FSV Mainz",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "FSV Mainz",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "FSV Mainz",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 83.33333333333334,
+      "matches": 6
+    },
+    {
+      "team": "Freiburg",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Freiburg",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Freiburg",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Freiburg",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Hamburger SV",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Hamburger SV",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Hamburger SV",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Hamburger SV",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Heidenheim",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Heidenheim",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Heidenheim",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Heidenheim",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Hoffenheim",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Hoffenheim",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Hoffenheim",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Hoffenheim",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Leverkusen",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Leverkusen",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Leverkusen",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 100.0,
+      "matches": 5
+    },
+    {
+      "team": "Leverkusen",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 40.0,
+      "matches": 5
+    },
+    {
+      "team": "Monchengladbach",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Monchengladbach",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Monchengladbach",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 60.0,
+      "matches": 5
+    },
+    {
+      "team": "Monchengladbach",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 100.0,
+      "matches": 5
+    },
+    {
+      "team": "RB Leipzig",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 60.0,
+      "matches": 5
+    },
+    {
+      "team": "RB Leipzig",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 60.0,
+      "matches": 5
+    },
+    {
+      "team": "RB Leipzig",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "RB Leipzig",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Sankt Pauli",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 83.33333333333334,
+      "matches": 6
+    },
+    {
+      "team": "Sankt Pauli",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Sankt Pauli",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Sankt Pauli",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 16.666666666666664,
+      "matches": 6
+    },
+    {
+      "team": "Stuttgart",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 60.0,
+      "matches": 5
+    },
+    {
+      "team": "Stuttgart",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 60.0,
+      "matches": 5
+    },
+    {
+      "team": "Stuttgart",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Stuttgart",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 100.0,
+      "matches": 7
+    },
+    {
+      "team": "Union Berlin",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Union Berlin",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Union Berlin",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 80.0,
+      "matches": 5
+    },
+    {
+      "team": "Union Berlin",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 40.0,
+      "matches": 5
+    },
+    {
+      "team": "Werder Bremen",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Werder Bremen",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Werder Bremen",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Werder Bremen",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 83.33333333333334,
+      "matches": 6
+    },
+    {
+      "team": "Wolfsburg",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 6
+    },
+    {
+      "team": "Wolfsburg",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Wolfsburg",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 0.0,
+      "matches": 6
+    },
+    {
+      "team": "Wolfsburg",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    }
+  ],
+  "generated_at": "2025-12-05T21:52:17.505931"
+}

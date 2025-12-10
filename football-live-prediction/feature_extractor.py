@@ -51,9 +51,6 @@ class FeatureVector:
     red_cards_away: int
     yellow_cards_home: int
     yellow_cards_away: int
-    team_elo_home: float  # Elo rating ~1500
-    team_elo_away: float
-    elo_diff: float  # home - away
     home_advantage: float  # 0 or 1
     recent_goal_count_5m: int  # goals in last 5 min
     saturation_score: float  # (goals + shots_on_target) in last 10 min
@@ -85,9 +82,6 @@ class FeatureVector:
             'red_cards_away': self.red_cards_away,
             'yellow_cards_home': self.yellow_cards_home,
             'yellow_cards_away': self.yellow_cards_away,
-            'team_elo_home': self.team_elo_home,
-            'team_elo_away': self.team_elo_away,
-            'elo_diff': self.elo_diff,
             'home_advantage': self.home_advantage,
             'recent_goal_count_5m': self.recent_goal_count_5m,
             'saturation_score': self.saturation_score,
@@ -99,13 +93,9 @@ class FeatureExtractor:
     Extract feature vectors from match snapshots and historical cache.
     """
     
-    def __init__(self, team_elo_map: Optional[Dict[str, float]] = None):
-        """
-        Args:
-            team_elo_map: Dict mapping team names to Elo ratings.
-                         If None, defaults all teams to 1500.
-        """
-        self.team_elo_map = team_elo_map or {}
+    def __init__(self):
+        """Initialize feature extractor"""
+        pass
     
     @staticmethod
     def get_minute_bucket(minute: int) -> str:
@@ -127,10 +117,6 @@ class FeatureExtractor:
             return default
         ratio = numerator / denominator
         return min(1.0, ratio)
-    
-    def get_team_elo(self, team_name: str) -> float:
-        """Get Elo for team, default 1500."""
-        return self.team_elo_map.get(team_name, 1500.0)
     
     def extract_deltas(
         self,
@@ -279,9 +265,6 @@ class FeatureExtractor:
             red_cards_away=red_cards_away,
             yellow_cards_home=yellow_cards_home,
             yellow_cards_away=yellow_cards_away,
-            team_elo_home=self.get_team_elo(home_team),
-            team_elo_away=self.get_team_elo(away_team),
-            elo_diff=self.get_team_elo(home_team) - self.get_team_elo(away_team),
             home_advantage=1.0,  # Always true by definition
             recent_goal_count_5m=deltas_5m.get('goal_count', 0),
             saturation_score=saturation,
@@ -327,7 +310,7 @@ if __name__ == "__main__":
     snapshots = [stats_1, stats_2]
     
     # Extract features
-    extractor = FeatureExtractor(team_elo_map={'Arsenal': 1620, 'Chelsea': 1580})
+    extractor = FeatureExtractor()
     
     features = extractor.extract_features(
         current_stats=stats_2,
@@ -350,7 +333,6 @@ if __name__ == "__main__":
     print(f"Corners: {features.corners_home} vs {features.corners_away} "
           f"(delta: +{features.corners_delta_5m_home} vs +{features.corners_delta_5m_away})")
     print(f"Red cards: {features.red_cards_home} vs {features.red_cards_away}")
-    print(f"Elo: {features.team_elo_home:.0f} vs {features.team_elo_away:.0f} (diff: {features.elo_diff:+.0f})")
     print(f"Recent goals (5m): {features.recent_goal_count_5m}")
     print(f"Saturation score (10m): {features.saturation_score:.1f}")
     print("\nFeature dict (for ML):")

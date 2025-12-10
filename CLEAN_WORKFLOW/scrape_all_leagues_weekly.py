@@ -9,17 +9,21 @@ import os
 import sqlite3
 import json
 
-LEAGUE_SCRIPTS = [
-    ('scrape_bolivia_auto.py', 'Bolivie'),
-    ('scrape_bulgaria_auto.py', 'Bulgarie'),
-    ('scrape_netherlands2_auto.py', 'Pays-Bas 2'),
-    # Ajouter ici d'autres scripts de scraping pour chaque ligue
-]
 
-# Recherche automatique de tous les scripts de scraping *_auto.py dans le dossier courant
-for fname in os.listdir('.'):
-    if fname.startswith('scrape_') and fname.endswith('_auto.py') and fname not in [s[0] for s in LEAGUE_SCRIPTS]:
-        LEAGUE_SCRIPTS.append((fname, fname.replace('scrape_', '').replace('_auto.py', '').replace('_', ' ').title()))
+# Nouvelle logique : lire la liste des ligues activées depuis CLEAN_WORKFLOW/config.yaml
+import yaml
+config_path = 'CLEAN_WORKFLOW/config.yaml'
+with open(config_path, 'r') as f:
+    config = yaml.safe_load(f)
+leagues = [(l['url'].split('=')[-1], l['name']) for l in config['leagues'] if l.get('enabled', True)]
+
+def run_scraper_for_league(league_code, league_name):
+    print(f"\n{'='*60}\n🕒 {datetime.datetime.now()} | Scraping {league_name}\n{'='*60}")
+    # Appel du workflow principal pour chaque ligue
+    result = subprocess.run(["python3", "CLEAN_WORKFLOW/scrape_all_leagues_auto.py", "--league", league_code], capture_output=True, text=True)
+    print(result.stdout)
+    if result.stderr:
+        print("[ERREUR]", result.stderr)
 
 def run_scraper(script, label):
     print(f"\n{'='*60}\n🕒 {datetime.datetime.now()} | Scraping {label}\n{'='*60}")
@@ -80,8 +84,8 @@ def print_global_top():
     print("\n=== FIN TOP GLOBAL ===\n")
 
 if __name__ == "__main__":
-    print("\n=== SCRAPING HEBDOMADAIRE DE TOUTES LES LIGUES ===\n")
-    for script, label in LEAGUE_SCRIPTS:
-        run_scraper(script, label)
+    print("\n=== SCRAPING HEBDOMADAIRE DE TOUTES LES LIGUES (config centralisée) ===\n")
+    for league_code, league_name in leagues:
+        run_scraper_for_league(league_code, league_name)
     print_global_top()
     print("\n=== SCRAPING GLOBAL TERMINÉ ===\n")

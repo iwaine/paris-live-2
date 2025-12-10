@@ -1,0 +1,22 @@
+# Données sensibles
+telegram_config.json
+
+# Base de données
+*.db
+*.db-journal
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Whitelists (seront regénérées)
+whitelists/*.json
+
+# Logs
+*.log

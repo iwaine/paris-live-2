@@ -1,0 +1,4 @@
+Dry-run: found 3 candidates
+ - https://www.soccerstats.com/pmatch.asp?league=albania&stats=69-1-3-2026 minute=17 snippet=16' Partizani T. 0:0 Bylis stats
+ - https://www.soccerstats.com/pmatch.asp?league=albania&stats=68-7-5-2026 minute=17 snippet=17' Teuta Durres 0:0 AF Elbasani stats
+ - https://www.soccerstats.com/pmatch.asp?league=bosnia&stats=81-6-1-2026 minute=8 snippet=HT R. Bijeljina 0:1 0-1 Luka Juricic  (8') Borac Banja L. stats

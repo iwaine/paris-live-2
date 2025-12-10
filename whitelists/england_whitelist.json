@@ -1,0 +1,721 @@
+{
+  "league": "england",
+  "threshold": 65,
+  "min_matches": 4,
+  "total_teams_analyzed": 20,
+  "qualified_teams": [
+    {
+      "team": "Brighton",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "recurrence": 114.28571428571428,
+      "matches": 7,
+      "matches_with_goal": 6,
+      "total_goals": 8
+    },
+    {
+      "team": "Burnley",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "recurrence": 171.42857142857142,
+      "matches": 7,
+      "matches_with_goal": 6,
+      "total_goals": 12
+    },
+    {
+      "team": "Chelsea",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 85.71428571428571,
+      "recurrence": 85.71428571428571,
+      "matches": 7,
+      "matches_with_goal": 6,
+      "total_goals": 6
+    },
+    {
+      "team": "Liverpool",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "recurrence": 114.28571428571428,
+      "matches": 7,
+      "matches_with_goal": 6,
+      "total_goals": 8
+    },
+    {
+      "team": "Nottm Forest",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "recurrence": 114.28571428571428,
+      "matches": 7,
+      "matches_with_goal": 6,
+      "total_goals": 8
+    },
+    {
+      "team": "Arsenal",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "recurrence": 100.0,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 7
+    },
+    {
+      "team": "Arsenal",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 71.42857142857143,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 5
+    },
+    {
+      "team": "Bournemouth",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "recurrence": 71.42857142857143,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 5
+    },
+    {
+      "team": "Brentford",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 142.85714285714286,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 10
+    },
+    {
+      "team": "Brentford",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 100.0,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 7
+    },
+    {
+      "team": "Liverpool",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 114.28571428571428,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 8
+    },
+    {
+      "team": "Newcastle Utd",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 128.57142857142858,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 9
+    },
+    {
+      "team": "Tottenham",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "recurrence": 114.28571428571428,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 8
+    },
+    {
+      "team": "West Ham Utd",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "recurrence": 100.0,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 7
+    },
+    {
+      "team": "West Ham Utd",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 100.0,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 7
+    }
+  ],
+  "all_stats": [
+    {
+      "team": "Arsenal",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Arsenal",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Arsenal",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Arsenal",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Aston Villa",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Aston Villa",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Aston Villa",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Aston Villa",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Bournemouth",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Bournemouth",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Bournemouth",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Bournemouth",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Brentford",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Brentford",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Brentford",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Brentford",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Brighton",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Brighton",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "matches": 7
+    },
+    {
+      "team": "Brighton",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Brighton",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Burnley",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Burnley",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Burnley",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Burnley",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "matches": 7
+    },
+    {
+      "team": "Chelsea",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 14.285714285714285,
+      "matches": 7
+    },
+    {
+      "team": "Chelsea",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Chelsea",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 85.71428571428571,
+      "matches": 7
+    },
+    {
+      "team": "Chelsea",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Crystal Palace",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Crystal Palace",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Crystal Palace",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Crystal Palace",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Everton",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Everton",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Everton",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 14.285714285714285,
+      "matches": 7
+    },
+    {
+      "team": "Everton",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Fulham",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Fulham",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Fulham",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Fulham",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Leeds Utd",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Leeds Utd",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Leeds Utd",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Leeds Utd",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Liverpool",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Liverpool",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Liverpool",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Liverpool",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "matches": 7
+    },
+    {
+      "team": "Manchester City",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Manchester City",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Manchester City",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Manchester City",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Manchester Utd",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Manchester Utd",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Manchester Utd",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Manchester Utd",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Newcastle Utd",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Newcastle Utd",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Newcastle Utd",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Newcastle Utd",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Nottm Forest",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Nottm Forest",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "matches": 7
+    },
+    {
+      "team": "Nottm Forest",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Nottm Forest",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Sunderland",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 14.285714285714285,
+      "matches": 7
+    },
+    {
+      "team": "Sunderland",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Sunderland",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Sunderland",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Tottenham",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Tottenham",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Tottenham",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Tottenham",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "West Ham Utd",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "West Ham Utd",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "West Ham Utd",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "West Ham Utd",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Wolverhampton",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Wolverhampton",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Wolverhampton",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 0.0,
+      "matches": 7
+    },
+    {
+      "team": "Wolverhampton",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 28.57142857142857,
+      "matches": 7
+    }
+  ],
+  "generated_at": "2025-12-05T21:52:17.485390"
+}

@@ -1,0 +1,28 @@
+Batch detection + scrape start
+
+Scanning index: https://www.soccerstats.com/
+  Found 4 candidate(s)
+   - https://www.soccerstats.com/pmatch.asp?league=bulgaria&stats=143-16-4-2026 (minute=45) snippet=FT Beroe 1:2 1-0 Tijan Sonha  (45'+2) --- 1-1 Georgi Lazarov  (53') 1-2 Gustavo França  (90'+3) Cherno More stats
+   - https://www.soccerstats.com/pmatch.asp?league=albania&stats=68-7-5-2026 (minute=44) snippet=12' Teuta Durres 0:0 AF Elbasani stats
+   - https://www.soccerstats.com/pmatch.asp?league=bosnia&stats=81-6-1-2026 (minute=44) snippet=44' R. Bijeljina 0:1 0-1 Luka Juricic  (8') Borac Banja L. stats
+   - https://www.soccerstats.com/pmatch.asp?league=albania&stats=69-1-3-2026 (minute=12) snippet=11' Partizani T. 0:0 Bylis stats
+
+Scanning index: https://www.soccerstats.com/matches.asp
+  Found 0 candidate(s)
+
+Total unique detected matches: 4
+
+Scraping https://www.soccerstats.com/pmatch.asp?league=bulgaria&stats=143-16-4-2026 ...
+❌ Données incomplètes pour https://www.soccerstats.com/pmatch.asp?league=bulgaria&stats=143-16-4-2026
+  WARN: no data returned
+
+Scraping https://www.soccerstats.com/pmatch.asp?league=albania&stats=68-7-5-2026 ...
+  FAIL: exception during scrape: 'LiveMatchData' object has no attribute 'home_score'
+
+Scraping https://www.soccerstats.com/pmatch.asp?league=bosnia&stats=81-6-1-2026 ...
+  FAIL: exception during scrape: 'LiveMatchData' object has no attribute 'home_score'
+
+Scraping https://www.soccerstats.com/pmatch.asp?league=albania&stats=69-1-3-2026 ...
+  FAIL: exception during scrape: 'LiveMatchData' object has no attribute 'home_score'
+
+Batch complete. Successes=0 Failures=4

@@ -1,0 +1,669 @@
+{
+  "league": "bolivia",
+  "threshold": 65,
+  "min_matches": 4,
+  "total_teams_analyzed": 16,
+  "qualified_teams": [
+    {
+      "team": "Bolivar",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 92.3076923076923,
+      "recurrence": 123.07692307692308,
+      "matches": 13,
+      "matches_with_goal": 12,
+      "total_goals": 16
+    },
+    {
+      "team": "Oriente P.",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 92.3076923076923,
+      "recurrence": 123.07692307692308,
+      "matches": 13,
+      "matches_with_goal": 12,
+      "total_goals": 16
+    },
+    {
+      "team": "Aurora",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "recurrence": 128.57142857142858,
+      "matches": 14,
+      "matches_with_goal": 12,
+      "total_goals": 18
+    },
+    {
+      "team": "Blooming",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 84.61538461538461,
+      "recurrence": 100.0,
+      "matches": 13,
+      "matches_with_goal": 11,
+      "total_goals": 13
+    },
+    {
+      "team": "The Strongest",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 84.61538461538461,
+      "recurrence": 123.07692307692308,
+      "matches": 13,
+      "matches_with_goal": 11,
+      "total_goals": 16
+    },
+    {
+      "team": "Always Ready",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 78.57142857142857,
+      "recurrence": 107.14285714285714,
+      "matches": 14,
+      "matches_with_goal": 11,
+      "total_goals": 15
+    },
+    {
+      "team": "Oriente P.",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 78.57142857142857,
+      "recurrence": 78.57142857142857,
+      "matches": 14,
+      "matches_with_goal": 11,
+      "total_goals": 11
+    },
+    {
+      "team": "Real Oruro",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 78.57142857142857,
+      "recurrence": 114.28571428571428,
+      "matches": 14,
+      "matches_with_goal": 11,
+      "total_goals": 16
+    },
+    {
+      "team": "SA Bulo Bulo",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 78.57142857142857,
+      "recurrence": 128.57142857142858,
+      "matches": 14,
+      "matches_with_goal": 11,
+      "total_goals": 18
+    },
+    {
+      "team": "Aurora",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 76.92307692307693,
+      "recurrence": 107.6923076923077,
+      "matches": 13,
+      "matches_with_goal": 10,
+      "total_goals": 14
+    },
+    {
+      "team": "Nacional Potosi",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 76.92307692307693,
+      "recurrence": 123.07692307692308,
+      "matches": 13,
+      "matches_with_goal": 10,
+      "total_goals": 16
+    },
+    {
+      "team": "U. de Vinto",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 76.92307692307693,
+      "recurrence": 84.61538461538461,
+      "matches": 13,
+      "matches_with_goal": 10,
+      "total_goals": 11
+    },
+    {
+      "team": "Aurora",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "recurrence": 92.85714285714286,
+      "matches": 14,
+      "matches_with_goal": 10,
+      "total_goals": 13
+    },
+    {
+      "team": "Guabira",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 107.14285714285714,
+      "matches": 14,
+      "matches_with_goal": 10,
+      "total_goals": 15
+    },
+    {
+      "team": "Real Tomayapo",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 78.57142857142857,
+      "matches": 14,
+      "matches_with_goal": 10,
+      "total_goals": 11
+    },
+    {
+      "team": "ABB",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "recurrence": 84.61538461538461,
+      "matches": 13,
+      "matches_with_goal": 9,
+      "total_goals": 11
+    },
+    {
+      "team": "Bolivar",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "recurrence": 76.92307692307693,
+      "matches": 13,
+      "matches_with_goal": 9,
+      "total_goals": 10
+    },
+    {
+      "team": "I. Petrolero",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "recurrence": 84.61538461538461,
+      "matches": 13,
+      "matches_with_goal": 9,
+      "total_goals": 11
+    },
+    {
+      "team": "Real Oruro",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "recurrence": 123.07692307692308,
+      "matches": 13,
+      "matches_with_goal": 9,
+      "total_goals": 16
+    },
+    {
+      "team": "The Strongest",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "recurrence": 92.3076923076923,
+      "matches": 13,
+      "matches_with_goal": 9,
+      "total_goals": 12
+    },
+    {
+      "team": "Wilstermann",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "recurrence": 100.0,
+      "matches": 13,
+      "matches_with_goal": 9,
+      "total_goals": 13
+    }
+  ],
+  "all_stats": [
+    {
+      "team": "ABB",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 64.28571428571429,
+      "matches": 14
+    },
+    {
+      "team": "ABB",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 28.57142857142857,
+      "matches": 14
+    },
+    {
+      "team": "ABB",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 46.15384615384615,
+      "matches": 13
+    },
+    {
+      "team": "ABB",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "matches": 13
+    },
+    {
+      "team": "Always Ready",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 64.28571428571429,
+      "matches": 14
+    },
+    {
+      "team": "Always Ready",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 78.57142857142857,
+      "matches": 14
+    },
+    {
+      "team": "Always Ready",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 46.15384615384615,
+      "matches": 13
+    },
+    {
+      "team": "Always Ready",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 46.15384615384615,
+      "matches": 13
+    },
+    {
+      "team": "Aurora",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 53.84615384615385,
+      "matches": 13
+    },
+    {
+      "team": "Aurora",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 76.92307692307693,
+      "matches": 13
+    },
+    {
+      "team": "Aurora",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "matches": 14
+    },
+    {
+      "team": "Aurora",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "matches": 14
+    },
+    {
+      "team": "Blooming",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 21.428571428571427,
+      "matches": 14
+    },
+    {
+      "team": "Blooming",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 64.28571428571429,
+      "matches": 14
+    },
+    {
+      "team": "Blooming",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 61.53846153846154,
+      "matches": 13
+    },
+    {
+      "team": "Blooming",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 84.61538461538461,
+      "matches": 13
+    },
+    {
+      "team": "Bolivar",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 53.84615384615385,
+      "matches": 13
+    },
+    {
+      "team": "Bolivar",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 92.3076923076923,
+      "matches": 13
+    },
+    {
+      "team": "Bolivar",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 53.84615384615385,
+      "matches": 13
+    },
+    {
+      "team": "Bolivar",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "matches": 13
+    },
+    {
+      "team": "GV San Jose",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 14
+    },
+    {
+      "team": "GV San Jose",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 14
+    },
+    {
+      "team": "GV San Jose",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 30.76923076923077,
+      "matches": 13
+    },
+    {
+      "team": "GV San Jose",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 46.15384615384615,
+      "matches": 13
+    },
+    {
+      "team": "Guabira",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 46.15384615384615,
+      "matches": 13
+    },
+    {
+      "team": "Guabira",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 38.46153846153847,
+      "matches": 13
+    },
+    {
+      "team": "Guabira",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 14
+    },
+    {
+      "team": "Guabira",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 14
+    },
+    {
+      "team": "I. Petrolero",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 61.53846153846154,
+      "matches": 13
+    },
+    {
+      "team": "I. Petrolero",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "matches": 13
+    },
+    {
+      "team": "I. Petrolero",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 14
+    },
+    {
+      "team": "I. Petrolero",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 64.28571428571429,
+      "matches": 14
+    },
+    {
+      "team": "Nacional Potosi",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 46.15384615384615,
+      "matches": 13
+    },
+    {
+      "team": "Nacional Potosi",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 76.92307692307693,
+      "matches": 13
+    },
+    {
+      "team": "Nacional Potosi",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 46.15384615384615,
+      "matches": 13
+    },
+    {
+      "team": "Nacional Potosi",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 53.84615384615385,
+      "matches": 13
+    },
+    {
+      "team": "Oriente P.",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 46.15384615384615,
+      "matches": 13
+    },
+    {
+      "team": "Oriente P.",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 92.3076923076923,
+      "matches": 13
+    },
+    {
+      "team": "Oriente P.",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 14
+    },
+    {
+      "team": "Oriente P.",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 78.57142857142857,
+      "matches": 14
+    },
+    {
+      "team": "Real Oruro",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 53.84615384615385,
+      "matches": 13
+    },
+    {
+      "team": "Real Oruro",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "matches": 13
+    },
+    {
+      "team": "Real Oruro",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 14
+    },
+    {
+      "team": "Real Oruro",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 78.57142857142857,
+      "matches": 14
+    },
+    {
+      "team": "Real Tomayapo",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 21.428571428571427,
+      "matches": 14
+    },
+    {
+      "team": "Real Tomayapo",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 14
+    },
+    {
+      "team": "Real Tomayapo",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 46.15384615384615,
+      "matches": 13
+    },
+    {
+      "team": "Real Tomayapo",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 46.15384615384615,
+      "matches": 13
+    },
+    {
+      "team": "SA Bulo Bulo",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 38.46153846153847,
+      "matches": 13
+    },
+    {
+      "team": "SA Bulo Bulo",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 53.84615384615385,
+      "matches": 13
+    },
+    {
+      "team": "SA Bulo Bulo",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 14
+    },
+    {
+      "team": "SA Bulo Bulo",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 78.57142857142857,
+      "matches": 14
+    },
+    {
+      "team": "The Strongest",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 84.61538461538461,
+      "matches": 13
+    },
+    {
+      "team": "The Strongest",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "matches": 13
+    },
+    {
+      "team": "The Strongest",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 61.53846153846154,
+      "matches": 13
+    },
+    {
+      "team": "The Strongest",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 53.84615384615385,
+      "matches": 13
+    },
+    {
+      "team": "U. de Vinto",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 38.46153846153847,
+      "matches": 13
+    },
+    {
+      "team": "U. de Vinto",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 76.92307692307693,
+      "matches": 13
+    },
+    {
+      "team": "U. de Vinto",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 30.76923076923077,
+      "matches": 13
+    },
+    {
+      "team": "U. de Vinto",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 61.53846153846154,
+      "matches": 13
+    },
+    {
+      "team": "Wilstermann",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 14
+    },
+    {
+      "team": "Wilstermann",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 14
+    },
+    {
+      "team": "Wilstermann",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 46.15384615384615,
+      "matches": 13
+    },
+    {
+      "team": "Wilstermann",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 69.23076923076923,
+      "matches": 13
+    }
+  ],
+  "generated_at": "2025-12-05T21:52:17.465083"
+}

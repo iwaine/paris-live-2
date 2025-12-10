@@ -1,0 +1,751 @@
+{
+  "league": "netherlands2",
+  "threshold": 65,
+  "min_matches": 4,
+  "total_teams_analyzed": 20,
+  "qualified_teams": [
+    {
+      "team": "ADO Den Haag",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "recurrence": 111.11111111111111,
+      "matches": 9,
+      "matches_with_goal": 7,
+      "total_goals": 10
+    },
+    {
+      "team": "FC Den Bosch",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "recurrence": 100.0,
+      "matches": 9,
+      "matches_with_goal": 7,
+      "total_goals": 9
+    },
+    {
+      "team": "FC Dordrecht",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "recurrence": 100.0,
+      "matches": 9,
+      "matches_with_goal": 7,
+      "total_goals": 9
+    },
+    {
+      "team": "FC Emmen",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "recurrence": 111.11111111111111,
+      "matches": 9,
+      "matches_with_goal": 7,
+      "total_goals": 10
+    },
+    {
+      "team": "FC Emmen",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "recurrence": 100.0,
+      "matches": 9,
+      "matches_with_goal": 7,
+      "total_goals": 9
+    },
+    {
+      "team": "Vitesse Arnhem",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "recurrence": 122.22222222222223,
+      "matches": 9,
+      "matches_with_goal": 7,
+      "total_goals": 11
+    },
+    {
+      "team": "ADO Den Haag",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 75.0,
+      "recurrence": 112.5,
+      "matches": 8,
+      "matches_with_goal": 6,
+      "total_goals": 9
+    },
+    {
+      "team": "Vitesse Arnhem",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 75.0,
+      "recurrence": 87.5,
+      "matches": 8,
+      "matches_with_goal": 6,
+      "total_goals": 7
+    },
+    {
+      "team": "VVV",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 70.0,
+      "recurrence": 70.0,
+      "matches": 10,
+      "matches_with_goal": 7,
+      "total_goals": 7
+    },
+    {
+      "team": "Almere City",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 100.0,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 9
+    },
+    {
+      "team": "Cambuur",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 88.88888888888889,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 8
+    },
+    {
+      "team": "De Graafschap",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 88.88888888888889,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 8
+    },
+    {
+      "team": "FC Den Bosch",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "recurrence": 111.11111111111111,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 10
+    },
+    {
+      "team": "FC Den Bosch",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 88.88888888888889,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 8
+    },
+    {
+      "team": "FC Eindhoven",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 100.0,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 9
+    },
+    {
+      "team": "Jong PSV",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 88.88888888888889,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 8
+    },
+    {
+      "team": "RKC Waalwijk",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 111.11111111111111,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 10
+    },
+    {
+      "team": "TOP Oss",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "recurrence": 88.88888888888889,
+      "matches": 9,
+      "matches_with_goal": 6,
+      "total_goals": 8
+    }
+  ],
+  "all_stats": [
+    {
+      "team": "ADO Den Haag",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 75.0,
+      "matches": 8
+    },
+    {
+      "team": "ADO Den Haag",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 8
+    },
+    {
+      "team": "ADO Den Haag",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "ADO Den Haag",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "matches": 9
+    },
+    {
+      "team": "Almere City",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Almere City",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Almere City",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Almere City",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "Cambuur",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Cambuur",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "Cambuur",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Cambuur",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "De Graafschap",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 22.22222222222222,
+      "matches": 9
+    },
+    {
+      "team": "De Graafschap",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "De Graafschap",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "De Graafschap",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "FC Den Bosch",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "FC Den Bosch",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "matches": 9
+    },
+    {
+      "team": "FC Den Bosch",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "FC Den Bosch",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "FC Dordrecht",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 11.11111111111111,
+      "matches": 9
+    },
+    {
+      "team": "FC Dordrecht",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "FC Dordrecht",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "FC Dordrecht",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "matches": 9
+    },
+    {
+      "team": "FC Eindhoven",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "FC Eindhoven",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "FC Eindhoven",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 22.22222222222222,
+      "matches": 9
+    },
+    {
+      "team": "FC Eindhoven",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "FC Emmen",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "FC Emmen",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "matches": 9
+    },
+    {
+      "team": "FC Emmen",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 11.11111111111111,
+      "matches": 9
+    },
+    {
+      "team": "FC Emmen",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "matches": 9
+    },
+    {
+      "team": "Helmond Sport",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Helmond Sport",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Helmond Sport",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 22.22222222222222,
+      "matches": 9
+    },
+    {
+      "team": "Helmond Sport",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Jong AZ",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 22.22222222222222,
+      "matches": 9
+    },
+    {
+      "team": "Jong AZ",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Jong AZ",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Jong AZ",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "Jong Ajax",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 20.0,
+      "matches": 10
+    },
+    {
+      "team": "Jong Ajax",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 10
+    },
+    {
+      "team": "Jong Ajax",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 25.0,
+      "matches": 8
+    },
+    {
+      "team": "Jong Ajax",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 62.5,
+      "matches": 8
+    },
+    {
+      "team": "Jong PSV",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Jong PSV",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Jong PSV",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Jong PSV",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "Jong Utrecht",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "Jong Utrecht",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 11.11111111111111,
+      "matches": 9
+    },
+    {
+      "team": "Jong Utrecht",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 11.11111111111111,
+      "matches": 9
+    },
+    {
+      "team": "Jong Utrecht",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "MVV Maastricht",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 22.22222222222222,
+      "matches": 9
+    },
+    {
+      "team": "MVV Maastricht",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "MVV Maastricht",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "MVV Maastricht",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "RKC Waalwijk",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "RKC Waalwijk",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "RKC Waalwijk",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 9
+    },
+    {
+      "team": "RKC Waalwijk",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Roda JC",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "Roda JC",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Roda JC",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Roda JC",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "TOP Oss",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "TOP Oss",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 66.66666666666666,
+      "matches": 9
+    },
+    {
+      "team": "TOP Oss",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 22.22222222222222,
+      "matches": 9
+    },
+    {
+      "team": "TOP Oss",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 55.55555555555556,
+      "matches": 9
+    },
+    {
+      "team": "VVV",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 40.0,
+      "matches": 10
+    },
+    {
+      "team": "VVV",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 70.0,
+      "matches": 10
+    },
+    {
+      "team": "VVV",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 25.0,
+      "matches": 8
+    },
+    {
+      "team": "VVV",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 8
+    },
+    {
+      "team": "Vitesse Arnhem",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 8
+    },
+    {
+      "team": "Vitesse Arnhem",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 75.0,
+      "matches": 8
+    },
+    {
+      "team": "Vitesse Arnhem",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 44.44444444444444,
+      "matches": 9
+    },
+    {
+      "team": "Vitesse Arnhem",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 77.77777777777779,
+      "matches": 9
+    },
+    {
+      "team": "Willem II",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 37.5,
+      "matches": 8
+    },
+    {
+      "team": "Willem II",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 8
+    },
+    {
+      "team": "Willem II",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 10
+    },
+    {
+      "team": "Willem II",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 40.0,
+      "matches": 10
+    }
+  ],
+  "generated_at": "2025-12-05T21:52:17.527655"
+}

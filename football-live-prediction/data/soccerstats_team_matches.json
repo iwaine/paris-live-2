@@ -1,0 +1,2114 @@
+{
+  "Angers": {
+    "team_id": "u502-angers",
+    "matches": [
+      {
+        "opponent": "Lens",
+        "is_home": true,
+        "score": "1-2",
+        "goals_for": 1,
+        "goals_against": 2,
+        "goal_times": [
+          "45",
+          "74",
+          "76"
+        ],
+        "result": "L",
+        "date": "30 Nov"
+      },
+      {
+        "opponent": "Toulouse",
+        "is_home": false,
+        "score": "0-1",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "16"
+        ],
+        "result": "W",
+        "date": "23 Nov"
+      },
+      {
+        "opponent": "Auxerre",
+        "is_home": true,
+        "score": "2-0",
+        "goals_for": 2,
+        "goals_against": 0,
+        "goal_times": [
+          "71",
+          "87"
+        ],
+        "result": "W",
+        "date": "9 Nov"
+      },
+      {
+        "opponent": "Lille",
+        "is_home": false,
+        "score": "1-0",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "45"
+        ],
+        "result": "L",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Marseille",
+        "is_home": false,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "25",
+          "52",
+          "70",
+          "90"
+        ],
+        "result": "D",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Lorient",
+        "is_home": true,
+        "score": "2-0",
+        "goals_for": 2,
+        "goals_against": 0,
+        "goal_times": [
+          "16",
+          "59"
+        ],
+        "result": "W",
+        "date": "26 Oct"
+      },
+      {
+        "opponent": "Monaco",
+        "is_home": true,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "72",
+          "85"
+        ],
+        "result": "D",
+        "date": "18 Oct"
+      },
+      {
+        "opponent": "Strasbourg",
+        "is_home": false,
+        "score": "5-0",
+        "goals_for": 0,
+        "goals_against": 5,
+        "goal_times": [
+          "36",
+          "51",
+          "61",
+          "66",
+          "70"
+        ],
+        "result": "L",
+        "date": "5 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Auxerre": {
+    "team_id": "u7648-auxerre",
+    "matches": [
+      {
+        "opponent": "Paris FC",
+        "is_home": false,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "32",
+          "40"
+        ],
+        "result": "D",
+        "date": "29 Nov"
+      },
+      {
+        "opponent": "Lyon",
+        "is_home": true,
+        "score": "0-0",
+        "goals_for": 0,
+        "goals_against": 0,
+        "goal_times": [],
+        "result": "D",
+        "date": "23 Nov"
+      },
+      {
+        "opponent": "Angers",
+        "is_home": false,
+        "score": "2-0",
+        "goals_for": 0,
+        "goals_against": 2,
+        "goal_times": [
+          "71",
+          "87"
+        ],
+        "result": "L",
+        "date": "9 Nov"
+      },
+      {
+        "opponent": "Marseille",
+        "is_home": true,
+        "score": "0-1",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "30"
+        ],
+        "result": "L",
+        "date": "1 Nov"
+      },
+      {
+        "opponent": "Strasbourg",
+        "is_home": false,
+        "score": "3-0",
+        "goals_for": 0,
+        "goals_against": 3,
+        "goal_times": [
+          "46",
+          "55",
+          "60"
+        ],
+        "result": "L",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Le Havre",
+        "is_home": true,
+        "score": "0-1",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "47"
+        ],
+        "result": "L",
+        "date": "26 Oct"
+      },
+      {
+        "opponent": "Rennes",
+        "is_home": false,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "8",
+          "18",
+          "56",
+          "72"
+        ],
+        "result": "D",
+        "date": "19 Oct"
+      },
+      {
+        "opponent": "Lens",
+        "is_home": true,
+        "score": "1-2",
+        "goals_for": 1,
+        "goals_against": 2,
+        "goal_times": [
+          "14",
+          "61",
+          "90"
+        ],
+        "result": "L",
+        "date": "4 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Brest": {
+    "team_id": "u510-brest",
+    "matches": [
+      {
+        "opponent": "Strasbourg",
+        "is_home": false,
+        "score": "1-2",
+        "goals_for": 2,
+        "goals_against": 1,
+        "goal_times": [
+          "11",
+          "55",
+          "82"
+        ],
+        "result": "W",
+        "date": "30 Nov"
+      },
+      {
+        "opponent": "Metz",
+        "is_home": true,
+        "score": "3-2",
+        "goals_for": 3,
+        "goals_against": 2,
+        "goal_times": [
+          "2",
+          "6",
+          "48",
+          "79",
+          "90"
+        ],
+        "result": "W",
+        "date": "23 Nov"
+      },
+      {
+        "opponent": "Marseille",
+        "is_home": false,
+        "score": "3-0",
+        "goals_for": 0,
+        "goals_against": 3,
+        "goal_times": [
+          "25",
+          "33",
+          "81"
+        ],
+        "result": "L",
+        "date": "8 Nov"
+      },
+      {
+        "opponent": "Lyon",
+        "is_home": true,
+        "score": "0-0",
+        "goals_for": 0,
+        "goals_against": 0,
+        "goal_times": [],
+        "result": "D",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Le Havre",
+        "is_home": false,
+        "score": "1-0",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "73"
+        ],
+        "result": "L",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Paris SG",
+        "is_home": true,
+        "score": "0-3",
+        "goals_for": 0,
+        "goals_against": 3,
+        "goal_times": [
+          "29",
+          "39",
+          "90"
+        ],
+        "result": "L",
+        "date": "25 Oct"
+      },
+      {
+        "opponent": "Lorient",
+        "is_home": false,
+        "score": "3-3",
+        "goals_for": 3,
+        "goals_against": 3,
+        "goal_times": [
+          "2",
+          "34",
+          "44",
+          "55",
+          "86",
+          "89"
+        ],
+        "result": "D",
+        "date": "19 Oct"
+      },
+      {
+        "opponent": "Nantes",
+        "is_home": true,
+        "score": "0-0",
+        "goals_for": 0,
+        "goals_against": 0,
+        "goal_times": [],
+        "result": "D",
+        "date": "4 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Le Havre": {
+    "team_id": "u7655-le-havre",
+    "matches": [
+      {
+        "opponent": "Lille",
+        "is_home": true,
+        "score": "0-1",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "88"
+        ],
+        "result": "L",
+        "date": "30 Nov"
+      },
+      {
+        "opponent": "Paris SG",
+        "is_home": false,
+        "score": "3-0",
+        "goals_for": 0,
+        "goals_against": 3,
+        "goal_times": [
+          "29",
+          "65",
+          "87"
+        ],
+        "result": "L",
+        "date": "22 Nov"
+      },
+      {
+        "opponent": "Nantes",
+        "is_home": true,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "4",
+          "90"
+        ],
+        "result": "D",
+        "date": "8 Nov"
+      },
+      {
+        "opponent": "Toulouse",
+        "is_home": false,
+        "score": "0-0",
+        "goals_for": 0,
+        "goals_against": 0,
+        "goal_times": [],
+        "result": "D",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Brest",
+        "is_home": true,
+        "score": "1-0",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "73"
+        ],
+        "result": "W",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Auxerre",
+        "is_home": false,
+        "score": "0-1",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "47"
+        ],
+        "result": "W",
+        "date": "26 Oct"
+      },
+      {
+        "opponent": "Marseille",
+        "is_home": false,
+        "score": "6-2",
+        "goals_for": 2,
+        "goals_against": 6,
+        "goal_times": [
+          "24",
+          "35",
+          "67",
+          "72",
+          "76",
+          "88",
+          "90",
+          "90"
+        ],
+        "result": "L",
+        "date": "18 Oct"
+      },
+      {
+        "opponent": "Rennes",
+        "is_home": true,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "10",
+          "29",
+          "45",
+          "79"
+        ],
+        "result": "D",
+        "date": "5 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Lens": {
+    "team_id": "u512-lens",
+    "matches": [
+      {
+        "opponent": "Angers",
+        "is_home": false,
+        "score": "1-2",
+        "goals_for": 2,
+        "goals_against": 1,
+        "goal_times": [
+          "45",
+          "74",
+          "76"
+        ],
+        "result": "W",
+        "date": "30 Nov"
+      },
+      {
+        "opponent": "Strasbourg",
+        "is_home": true,
+        "score": "1-0",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "69"
+        ],
+        "result": "W",
+        "date": "22 Nov"
+      },
+      {
+        "opponent": "Monaco",
+        "is_home": false,
+        "score": "1-4",
+        "goals_for": 4,
+        "goals_against": 1,
+        "goal_times": [
+          "21",
+          "37",
+          "40",
+          "45",
+          "60"
+        ],
+        "result": "W",
+        "date": "8 Nov"
+      },
+      {
+        "opponent": "Lorient",
+        "is_home": true,
+        "score": "3-0",
+        "goals_for": 3,
+        "goals_against": 0,
+        "goal_times": [
+          "6",
+          "77",
+          "89"
+        ],
+        "result": "W",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Metz",
+        "is_home": false,
+        "score": "2-0",
+        "goals_for": 0,
+        "goals_against": 2,
+        "goal_times": [
+          "87",
+          "90"
+        ],
+        "result": "L",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Marseille",
+        "is_home": true,
+        "score": "2-1",
+        "goals_for": 2,
+        "goals_against": 1,
+        "goal_times": [
+          "17",
+          "23",
+          "53"
+        ],
+        "result": "W",
+        "date": "25 Oct"
+      },
+      {
+        "opponent": "Paris FC",
+        "is_home": true,
+        "score": "2-1",
+        "goals_for": 2,
+        "goals_against": 1,
+        "goal_times": [
+          "17",
+          "27",
+          "64"
+        ],
+        "result": "W",
+        "date": "19 Oct"
+      },
+      {
+        "opponent": "Auxerre",
+        "is_home": false,
+        "score": "1-2",
+        "goals_for": 2,
+        "goals_against": 1,
+        "goal_times": [
+          "14",
+          "61",
+          "90"
+        ],
+        "result": "W",
+        "date": "4 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Lille": {
+    "team_id": "u503-lille",
+    "matches": [
+      {
+        "opponent": "Le Havre",
+        "is_home": false,
+        "score": "0-1",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "88"
+        ],
+        "result": "W",
+        "date": "30 Nov"
+      },
+      {
+        "opponent": "Paris FC",
+        "is_home": true,
+        "score": "4-2",
+        "goals_for": 4,
+        "goals_against": 2,
+        "goal_times": [
+          "11",
+          "40",
+          "77",
+          "80",
+          "84",
+          "90"
+        ],
+        "result": "W",
+        "date": "23 Nov"
+      },
+      {
+        "opponent": "Strasbourg",
+        "is_home": false,
+        "score": "2-0",
+        "goals_for": 0,
+        "goals_against": 2,
+        "goal_times": [
+          "33",
+          "62"
+        ],
+        "result": "L",
+        "date": "9 Nov"
+      },
+      {
+        "opponent": "Angers",
+        "is_home": true,
+        "score": "1-0",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "45"
+        ],
+        "result": "W",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Nice",
+        "is_home": false,
+        "score": "2-0",
+        "goals_for": 0,
+        "goals_against": 2,
+        "goal_times": [
+          "29",
+          "87"
+        ],
+        "result": "L",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Metz",
+        "is_home": true,
+        "score": "6-1",
+        "goals_for": 6,
+        "goals_against": 1,
+        "goal_times": [
+          "24",
+          "34",
+          "53",
+          "64",
+          "82",
+          "90",
+          "90"
+        ],
+        "result": "W",
+        "date": "26 Oct"
+      },
+      {
+        "opponent": "Nantes",
+        "is_home": false,
+        "score": "0-2",
+        "goals_for": 2,
+        "goals_against": 0,
+        "goal_times": [
+          "8",
+          "89"
+        ],
+        "result": "W",
+        "date": "19 Oct"
+      },
+      {
+        "opponent": "Paris SG",
+        "is_home": true,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "66",
+          "85"
+        ],
+        "result": "D",
+        "date": "5 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Lorient": {
+    "team_id": "u507-lorient",
+    "matches": [
+      {
+        "opponent": "Nice",
+        "is_home": true,
+        "score": "3-1",
+        "goals_for": 3,
+        "goals_against": 1,
+        "goal_times": [
+          "12",
+          "31",
+          "45",
+          "53"
+        ],
+        "result": "W",
+        "date": "30 Nov"
+      },
+      {
+        "opponent": "Nantes",
+        "is_home": false,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "45",
+          "90"
+        ],
+        "result": "D",
+        "date": "23 Nov"
+      },
+      {
+        "opponent": "Toulouse",
+        "is_home": true,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "44",
+          "65"
+        ],
+        "result": "D",
+        "date": "9 Nov"
+      },
+      {
+        "opponent": "Lens",
+        "is_home": false,
+        "score": "3-0",
+        "goals_for": 0,
+        "goals_against": 3,
+        "goal_times": [
+          "6",
+          "77",
+          "89"
+        ],
+        "result": "L",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Paris SG",
+        "is_home": true,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "49",
+          "51"
+        ],
+        "result": "D",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Angers",
+        "is_home": false,
+        "score": "2-0",
+        "goals_for": 0,
+        "goals_against": 2,
+        "goal_times": [
+          "16",
+          "59"
+        ],
+        "result": "L",
+        "date": "26 Oct"
+      },
+      {
+        "opponent": "Brest",
+        "is_home": true,
+        "score": "3-3",
+        "goals_for": 3,
+        "goals_against": 3,
+        "goal_times": [
+          "2",
+          "34",
+          "44",
+          "55",
+          "86",
+          "89"
+        ],
+        "result": "D",
+        "date": "19 Oct"
+      },
+      {
+        "opponent": "Paris FC",
+        "is_home": false,
+        "score": "2-0",
+        "goals_for": 0,
+        "goals_against": 2,
+        "goal_times": [
+          "25",
+          "30"
+        ],
+        "result": "L",
+        "date": "3 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Lyon": {
+    "team_id": "u513-lyon",
+    "matches": [
+      {
+        "opponent": "Nantes",
+        "is_home": true,
+        "score": "3-0",
+        "goals_for": 3,
+        "goals_against": 0,
+        "goal_times": [
+          "51",
+          "70",
+          "77"
+        ],
+        "result": "W",
+        "date": "30 Nov"
+      },
+      {
+        "opponent": "Auxerre",
+        "is_home": false,
+        "score": "0-0",
+        "goals_for": 0,
+        "goals_against": 0,
+        "goal_times": [],
+        "result": "D",
+        "date": "23 Nov"
+      },
+      {
+        "opponent": "Paris SG",
+        "is_home": true,
+        "score": "2-3",
+        "goals_for": 2,
+        "goals_against": 3,
+        "goal_times": [
+          "26",
+          "30",
+          "33",
+          "50",
+          "90"
+        ],
+        "result": "L",
+        "date": "9 Nov"
+      },
+      {
+        "opponent": "Brest",
+        "is_home": false,
+        "score": "0-0",
+        "goals_for": 0,
+        "goals_against": 0,
+        "goal_times": [],
+        "result": "D",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Paris FC",
+        "is_home": false,
+        "score": "3-3",
+        "goals_for": 3,
+        "goals_against": 3,
+        "goal_times": [
+          "5",
+          "51",
+          "58",
+          "65",
+          "77",
+          "84"
+        ],
+        "result": "D",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Strasbourg",
+        "is_home": true,
+        "score": "2-1",
+        "goals_for": 2,
+        "goals_against": 1,
+        "goal_times": [
+          "25",
+          "31",
+          "90"
+        ],
+        "result": "W",
+        "date": "26 Oct"
+      },
+      {
+        "opponent": "Nice",
+        "is_home": false,
+        "score": "3-2",
+        "goals_for": 2,
+        "goals_against": 3,
+        "goal_times": [
+          "5",
+          "29",
+          "35",
+          "55",
+          "90"
+        ],
+        "result": "L",
+        "date": "18 Oct"
+      },
+      {
+        "opponent": "Toulouse",
+        "is_home": true,
+        "score": "1-2",
+        "goals_for": 1,
+        "goals_against": 2,
+        "goal_times": [
+          "24",
+          "87",
+          "90"
+        ],
+        "result": "L",
+        "date": "5 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Marseille": {
+    "team_id": "u517-marseille",
+    "matches": [
+      {
+        "opponent": "Toulouse",
+        "is_home": true,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "14",
+          "66",
+          "74",
+          "90"
+        ],
+        "result": "D",
+        "date": "29 Nov"
+      },
+      {
+        "opponent": "Nice",
+        "is_home": false,
+        "score": "1-5",
+        "goals_for": 5,
+        "goals_against": 1,
+        "goal_times": [
+          "11",
+          "33",
+          "53",
+          "58",
+          "63",
+          "74"
+        ],
+        "result": "W",
+        "date": "21 Nov"
+      },
+      {
+        "opponent": "Brest",
+        "is_home": true,
+        "score": "3-0",
+        "goals_for": 3,
+        "goals_against": 0,
+        "goal_times": [
+          "25",
+          "33",
+          "81"
+        ],
+        "result": "W",
+        "date": "8 Nov"
+      },
+      {
+        "opponent": "Auxerre",
+        "is_home": false,
+        "score": "0-1",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "30"
+        ],
+        "result": "W",
+        "date": "1 Nov"
+      },
+      {
+        "opponent": "Angers",
+        "is_home": true,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "25",
+          "52",
+          "70",
+          "90"
+        ],
+        "result": "D",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Lens",
+        "is_home": false,
+        "score": "2-1",
+        "goals_for": 1,
+        "goals_against": 2,
+        "goal_times": [
+          "17",
+          "23",
+          "53"
+        ],
+        "result": "L",
+        "date": "25 Oct"
+      },
+      {
+        "opponent": "Le Havre",
+        "is_home": true,
+        "score": "6-2",
+        "goals_for": 6,
+        "goals_against": 2,
+        "goal_times": [
+          "24",
+          "35",
+          "67",
+          "72",
+          "76",
+          "88",
+          "90",
+          "90"
+        ],
+        "result": "W",
+        "date": "18 Oct"
+      },
+      {
+        "opponent": "Metz",
+        "is_home": false,
+        "score": "0-3",
+        "goals_for": 3,
+        "goals_against": 0,
+        "goal_times": [
+          "51",
+          "69",
+          "76"
+        ],
+        "result": "W",
+        "date": "4 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Metz": {
+    "team_id": "u515-metz",
+    "matches": [
+      {
+        "opponent": "Rennes",
+        "is_home": true,
+        "score": "0-1",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "22"
+        ],
+        "result": "L",
+        "date": "28 Nov"
+      },
+      {
+        "opponent": "Brest",
+        "is_home": false,
+        "score": "3-2",
+        "goals_for": 2,
+        "goals_against": 3,
+        "goal_times": [
+          "2",
+          "6",
+          "48",
+          "79",
+          "90"
+        ],
+        "result": "L",
+        "date": "23 Nov"
+      },
+      {
+        "opponent": "Nice",
+        "is_home": true,
+        "score": "2-1",
+        "goals_for": 2,
+        "goals_against": 1,
+        "goal_times": [
+          "35",
+          "53",
+          "84"
+        ],
+        "result": "W",
+        "date": "9 Nov"
+      },
+      {
+        "opponent": "Nantes",
+        "is_home": false,
+        "score": "0-2",
+        "goals_for": 2,
+        "goals_against": 0,
+        "goal_times": [
+          "82",
+          "89"
+        ],
+        "result": "W",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Lens",
+        "is_home": true,
+        "score": "2-0",
+        "goals_for": 2,
+        "goals_against": 0,
+        "goal_times": [
+          "87",
+          "90"
+        ],
+        "result": "W",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Lille",
+        "is_home": false,
+        "score": "6-1",
+        "goals_for": 1,
+        "goals_against": 6,
+        "goal_times": [
+          "24",
+          "34",
+          "53",
+          "64",
+          "82",
+          "90",
+          "90"
+        ],
+        "result": "L",
+        "date": "26 Oct"
+      },
+      {
+        "opponent": "Toulouse",
+        "is_home": false,
+        "score": "4-0",
+        "goals_for": 0,
+        "goals_against": 4,
+        "goal_times": [
+          "2",
+          "8",
+          "79",
+          "84"
+        ],
+        "result": "L",
+        "date": "19 Oct"
+      },
+      {
+        "opponent": "Marseille",
+        "is_home": true,
+        "score": "0-3",
+        "goals_for": 0,
+        "goals_against": 3,
+        "goal_times": [
+          "51",
+          "69",
+          "76"
+        ],
+        "result": "L",
+        "date": "4 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Monaco": {
+    "team_id": "u505-monaco",
+    "matches": [
+      {
+        "opponent": "Paris SG",
+        "is_home": true,
+        "score": "1-0",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "68"
+        ],
+        "result": "W",
+        "date": "29 Nov"
+      },
+      {
+        "opponent": "Rennes",
+        "is_home": false,
+        "score": "4-1",
+        "goals_for": 1,
+        "goals_against": 4,
+        "goal_times": [
+          "20",
+          "48",
+          "73",
+          "83",
+          "90"
+        ],
+        "result": "L",
+        "date": "22 Nov"
+      },
+      {
+        "opponent": "Lens",
+        "is_home": true,
+        "score": "1-4",
+        "goals_for": 1,
+        "goals_against": 4,
+        "goal_times": [
+          "21",
+          "37",
+          "40",
+          "45",
+          "60"
+        ],
+        "result": "L",
+        "date": "8 Nov"
+      },
+      {
+        "opponent": "Paris FC",
+        "is_home": true,
+        "score": "0-1",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "53"
+        ],
+        "result": "L",
+        "date": "1 Nov"
+      },
+      {
+        "opponent": "Nantes",
+        "is_home": false,
+        "score": "3-5",
+        "goals_for": 5,
+        "goals_against": 3,
+        "goal_times": [
+          "6",
+          "19",
+          "41",
+          "45",
+          "55",
+          "75",
+          "80",
+          "90"
+        ],
+        "result": "W",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Toulouse",
+        "is_home": true,
+        "score": "1-0",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "3"
+        ],
+        "result": "W",
+        "date": "25 Oct"
+      },
+      {
+        "opponent": "Angers",
+        "is_home": false,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "72",
+          "85"
+        ],
+        "result": "D",
+        "date": "18 Oct"
+      },
+      {
+        "opponent": "Nice",
+        "is_home": true,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "29",
+          "42",
+          "45",
+          "56"
+        ],
+        "result": "D",
+        "date": "5 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Nantes": {
+    "team_id": "u500-nantes",
+    "matches": [
+      {
+        "opponent": "Lyon",
+        "is_home": false,
+        "score": "3-0",
+        "goals_for": 0,
+        "goals_against": 3,
+        "goal_times": [
+          "51",
+          "70",
+          "77"
+        ],
+        "result": "L",
+        "date": "30 Nov"
+      },
+      {
+        "opponent": "Lorient",
+        "is_home": true,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "45",
+          "90"
+        ],
+        "result": "D",
+        "date": "23 Nov"
+      },
+      {
+        "opponent": "Le Havre",
+        "is_home": false,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "4",
+          "90"
+        ],
+        "result": "D",
+        "date": "8 Nov"
+      },
+      {
+        "opponent": "Metz",
+        "is_home": true,
+        "score": "0-2",
+        "goals_for": 0,
+        "goals_against": 2,
+        "goal_times": [
+          "82",
+          "89"
+        ],
+        "result": "L",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Monaco",
+        "is_home": true,
+        "score": "3-5",
+        "goals_for": 3,
+        "goals_against": 5,
+        "goal_times": [
+          "6",
+          "19",
+          "41",
+          "45",
+          "55",
+          "75",
+          "80",
+          "90"
+        ],
+        "result": "L",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Paris FC",
+        "is_home": false,
+        "score": "1-2",
+        "goals_for": 2,
+        "goals_against": 1,
+        "goal_times": [
+          "2",
+          "15",
+          "38"
+        ],
+        "result": "W",
+        "date": "24 Oct"
+      },
+      {
+        "opponent": "Lille",
+        "is_home": true,
+        "score": "0-2",
+        "goals_for": 0,
+        "goals_against": 2,
+        "goal_times": [
+          "8",
+          "89"
+        ],
+        "result": "L",
+        "date": "19 Oct"
+      },
+      {
+        "opponent": "Brest",
+        "is_home": false,
+        "score": "0-0",
+        "goals_for": 0,
+        "goals_against": 0,
+        "goal_times": [],
+        "result": "D",
+        "date": "4 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Nice": {
+    "team_id": "u511-nice",
+    "matches": [
+      {
+        "opponent": "Lorient",
+        "is_home": false,
+        "score": "3-1",
+        "goals_for": 1,
+        "goals_against": 3,
+        "goal_times": [
+          "12",
+          "31",
+          "45",
+          "53"
+        ],
+        "result": "L",
+        "date": "30 Nov"
+      },
+      {
+        "opponent": "Marseille",
+        "is_home": true,
+        "score": "1-5",
+        "goals_for": 1,
+        "goals_against": 5,
+        "goal_times": [
+          "11",
+          "33",
+          "53",
+          "58",
+          "63",
+          "74"
+        ],
+        "result": "L",
+        "date": "21 Nov"
+      },
+      {
+        "opponent": "Metz",
+        "is_home": false,
+        "score": "2-1",
+        "goals_for": 1,
+        "goals_against": 2,
+        "goal_times": [
+          "35",
+          "53",
+          "84"
+        ],
+        "result": "L",
+        "date": "9 Nov"
+      },
+      {
+        "opponent": "Paris SG",
+        "is_home": false,
+        "score": "1-0",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "90"
+        ],
+        "result": "L",
+        "date": "1 Nov"
+      },
+      {
+        "opponent": "Lille",
+        "is_home": true,
+        "score": "2-0",
+        "goals_for": 2,
+        "goals_against": 0,
+        "goal_times": [
+          "29",
+          "87"
+        ],
+        "result": "W",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Rennes",
+        "is_home": false,
+        "score": "1-2",
+        "goals_for": 2,
+        "goals_against": 1,
+        "goal_times": [
+          "38",
+          "45",
+          "67"
+        ],
+        "result": "W",
+        "date": "26 Oct"
+      },
+      {
+        "opponent": "Lyon",
+        "is_home": true,
+        "score": "3-2",
+        "goals_for": 3,
+        "goals_against": 2,
+        "goal_times": [
+          "5",
+          "29",
+          "35",
+          "55",
+          "90"
+        ],
+        "result": "W",
+        "date": "18 Oct"
+      },
+      {
+        "opponent": "Monaco",
+        "is_home": false,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "29",
+          "42",
+          "45",
+          "56"
+        ],
+        "result": "D",
+        "date": "5 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "PSG": {
+    "team_id": "u518-paris-sg",
+    "matches": [
+      {
+        "opponent": "Monaco",
+        "is_home": false,
+        "score": "1-0",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "68"
+        ],
+        "result": "L",
+        "date": "29 Nov"
+      },
+      {
+        "opponent": "Paris SG",
+        "is_home": false,
+        "score": "3-0",
+        "goals_for": 0,
+        "goals_against": 3,
+        "goal_times": [
+          "29",
+          "65",
+          "87"
+        ],
+        "result": "L",
+        "date": "22 Nov"
+      },
+      {
+        "opponent": "Lyon",
+        "is_home": false,
+        "score": "2-3",
+        "goals_for": 3,
+        "goals_against": 2,
+        "goal_times": [
+          "26",
+          "30",
+          "33",
+          "50",
+          "90"
+        ],
+        "result": "W",
+        "date": "9 Nov"
+      },
+      {
+        "opponent": "Paris SG",
+        "is_home": false,
+        "score": "1-0",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "90"
+        ],
+        "result": "L",
+        "date": "1 Nov"
+      },
+      {
+        "opponent": "Lorient",
+        "is_home": false,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "49",
+          "51"
+        ],
+        "result": "D",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Brest",
+        "is_home": false,
+        "score": "0-3",
+        "goals_for": 3,
+        "goals_against": 0,
+        "goal_times": [
+          "29",
+          "39",
+          "90"
+        ],
+        "result": "W",
+        "date": "25 Oct"
+      },
+      {
+        "opponent": "Paris SG",
+        "is_home": false,
+        "score": "3-3",
+        "goals_for": 3,
+        "goals_against": 3,
+        "goal_times": [
+          "6",
+          "26",
+          "41",
+          "49",
+          "58",
+          "79"
+        ],
+        "result": "D",
+        "date": "17 Oct"
+      },
+      {
+        "opponent": "Lille",
+        "is_home": false,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "66",
+          "85"
+        ],
+        "result": "D",
+        "date": "5 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Paris FC": {
+    "team_id": "u7654-paris-fc",
+    "matches": [
+      {
+        "opponent": "Auxerre",
+        "is_home": true,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "32",
+          "40"
+        ],
+        "result": "D",
+        "date": "29 Nov"
+      },
+      {
+        "opponent": "Lille",
+        "is_home": false,
+        "score": "4-2",
+        "goals_for": 2,
+        "goals_against": 4,
+        "goal_times": [
+          "11",
+          "40",
+          "77",
+          "80",
+          "84",
+          "90"
+        ],
+        "result": "L",
+        "date": "23 Nov"
+      },
+      {
+        "opponent": "Rennes",
+        "is_home": true,
+        "score": "0-1",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "81"
+        ],
+        "result": "L",
+        "date": "7 Nov"
+      },
+      {
+        "opponent": "Monaco",
+        "is_home": false,
+        "score": "0-1",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "53"
+        ],
+        "result": "W",
+        "date": "1 Nov"
+      },
+      {
+        "opponent": "Lyon",
+        "is_home": true,
+        "score": "3-3",
+        "goals_for": 3,
+        "goals_against": 3,
+        "goal_times": [
+          "5",
+          "51",
+          "58",
+          "65",
+          "77",
+          "84"
+        ],
+        "result": "D",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Nantes",
+        "is_home": true,
+        "score": "1-2",
+        "goals_for": 1,
+        "goals_against": 2,
+        "goal_times": [
+          "2",
+          "15",
+          "38"
+        ],
+        "result": "L",
+        "date": "24 Oct"
+      },
+      {
+        "opponent": "Lens",
+        "is_home": false,
+        "score": "2-1",
+        "goals_for": 1,
+        "goals_against": 2,
+        "goal_times": [
+          "17",
+          "27",
+          "64"
+        ],
+        "result": "L",
+        "date": "19 Oct"
+      },
+      {
+        "opponent": "Lorient",
+        "is_home": true,
+        "score": "2-0",
+        "goals_for": 2,
+        "goals_against": 0,
+        "goal_times": [
+          "25",
+          "30"
+        ],
+        "result": "W",
+        "date": "3 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Rennes": {
+    "team_id": "u504-rennes",
+    "matches": [
+      {
+        "opponent": "Metz",
+        "is_home": false,
+        "score": "0-1",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "22"
+        ],
+        "result": "W",
+        "date": "28 Nov"
+      },
+      {
+        "opponent": "Monaco",
+        "is_home": true,
+        "score": "4-1",
+        "goals_for": 4,
+        "goals_against": 1,
+        "goal_times": [
+          "20",
+          "48",
+          "73",
+          "83",
+          "90"
+        ],
+        "result": "W",
+        "date": "22 Nov"
+      },
+      {
+        "opponent": "Paris FC",
+        "is_home": false,
+        "score": "0-1",
+        "goals_for": 1,
+        "goals_against": 0,
+        "goal_times": [
+          "81"
+        ],
+        "result": "W",
+        "date": "7 Nov"
+      },
+      {
+        "opponent": "Strasbourg",
+        "is_home": true,
+        "score": "4-1",
+        "goals_for": 4,
+        "goals_against": 1,
+        "goal_times": [
+          "9",
+          "35",
+          "48",
+          "60",
+          "77"
+        ],
+        "result": "W",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Toulouse",
+        "is_home": false,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "50",
+          "54",
+          "58",
+          "85"
+        ],
+        "result": "D",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Nice",
+        "is_home": true,
+        "score": "1-2",
+        "goals_for": 1,
+        "goals_against": 2,
+        "goal_times": [
+          "38",
+          "45",
+          "67"
+        ],
+        "result": "L",
+        "date": "26 Oct"
+      },
+      {
+        "opponent": "Auxerre",
+        "is_home": true,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "8",
+          "18",
+          "56",
+          "72"
+        ],
+        "result": "D",
+        "date": "19 Oct"
+      },
+      {
+        "opponent": "Le Havre",
+        "is_home": false,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "10",
+          "29",
+          "45",
+          "79"
+        ],
+        "result": "D",
+        "date": "5 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Strasbourg": {
+    "team_id": "u508-strasbourg",
+    "matches": [
+      {
+        "opponent": "Brest",
+        "is_home": true,
+        "score": "1-2",
+        "goals_for": 1,
+        "goals_against": 2,
+        "goal_times": [
+          "11",
+          "55",
+          "82"
+        ],
+        "result": "L",
+        "date": "30 Nov"
+      },
+      {
+        "opponent": "Lens",
+        "is_home": false,
+        "score": "1-0",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "69"
+        ],
+        "result": "L",
+        "date": "22 Nov"
+      },
+      {
+        "opponent": "Lille",
+        "is_home": true,
+        "score": "2-0",
+        "goals_for": 2,
+        "goals_against": 0,
+        "goal_times": [
+          "33",
+          "62"
+        ],
+        "result": "W",
+        "date": "9 Nov"
+      },
+      {
+        "opponent": "Rennes",
+        "is_home": false,
+        "score": "4-1",
+        "goals_for": 1,
+        "goals_against": 4,
+        "goal_times": [
+          "9",
+          "35",
+          "48",
+          "60",
+          "77"
+        ],
+        "result": "L",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Auxerre",
+        "is_home": true,
+        "score": "3-0",
+        "goals_for": 3,
+        "goals_against": 0,
+        "goal_times": [
+          "46",
+          "55",
+          "60"
+        ],
+        "result": "W",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Lyon",
+        "is_home": false,
+        "score": "2-1",
+        "goals_for": 1,
+        "goals_against": 2,
+        "goal_times": [
+          "25",
+          "31",
+          "90"
+        ],
+        "result": "L",
+        "date": "26 Oct"
+      },
+      {
+        "opponent": "Paris SG",
+        "is_home": false,
+        "score": "3-3",
+        "goals_for": 3,
+        "goals_against": 3,
+        "goal_times": [
+          "6",
+          "26",
+          "41",
+          "49",
+          "58",
+          "79"
+        ],
+        "result": "D",
+        "date": "17 Oct"
+      },
+      {
+        "opponent": "Angers",
+        "is_home": true,
+        "score": "5-0",
+        "goals_for": 5,
+        "goals_against": 0,
+        "goal_times": [
+          "36",
+          "51",
+          "61",
+          "66",
+          "70"
+        ],
+        "result": "W",
+        "date": "5 Oct"
+      }
+    ],
+    "total": 8
+  },
+  "Toulouse": {
+    "team_id": "u7659-toulouse",
+    "matches": [
+      {
+        "opponent": "Marseille",
+        "is_home": false,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "14",
+          "66",
+          "74",
+          "90"
+        ],
+        "result": "D",
+        "date": "29 Nov"
+      },
+      {
+        "opponent": "Angers",
+        "is_home": true,
+        "score": "0-1",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "16"
+        ],
+        "result": "L",
+        "date": "23 Nov"
+      },
+      {
+        "opponent": "Lorient",
+        "is_home": false,
+        "score": "1-1",
+        "goals_for": 1,
+        "goals_against": 1,
+        "goal_times": [
+          "44",
+          "65"
+        ],
+        "result": "D",
+        "date": "9 Nov"
+      },
+      {
+        "opponent": "Le Havre",
+        "is_home": true,
+        "score": "0-0",
+        "goals_for": 0,
+        "goals_against": 0,
+        "goal_times": [],
+        "result": "D",
+        "date": "2 Nov"
+      },
+      {
+        "opponent": "Rennes",
+        "is_home": true,
+        "score": "2-2",
+        "goals_for": 2,
+        "goals_against": 2,
+        "goal_times": [
+          "50",
+          "54",
+          "58",
+          "85"
+        ],
+        "result": "D",
+        "date": "29 Oct"
+      },
+      {
+        "opponent": "Monaco",
+        "is_home": false,
+        "score": "1-0",
+        "goals_for": 0,
+        "goals_against": 1,
+        "goal_times": [
+          "3"
+        ],
+        "result": "L",
+        "date": "25 Oct"
+      },
+      {
+        "opponent": "Metz",
+        "is_home": true,
+        "score": "4-0",
+        "goals_for": 4,
+        "goals_against": 0,
+        "goal_times": [
+          "2",
+          "8",
+          "79",
+          "84"
+        ],
+        "result": "W",
+        "date": "19 Oct"
+      },
+      {
+        "opponent": "Lyon",
+        "is_home": false,
+        "score": "1-2",
+        "goals_for": 2,
+        "goals_against": 1,
+        "goal_times": [
+          "24",
+          "87",
+          "90"
+        ],
+        "result": "W",
+        "date": "5 Oct"
+      }
+    ],
+    "total": 8
+  }
+}

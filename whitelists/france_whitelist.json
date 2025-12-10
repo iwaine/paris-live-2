@@ -1,0 +1,615 @@
+{
+  "league": "france",
+  "threshold": 65,
+  "min_matches": 4,
+  "total_teams_analyzed": 18,
+  "qualified_teams": [
+    {
+      "team": "Monaco",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 100.0,
+      "recurrence": 166.66666666666669,
+      "matches": 6,
+      "matches_with_goal": 6,
+      "total_goals": 10
+    },
+    {
+      "team": "Lyon",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "recurrence": 100.0,
+      "matches": 7,
+      "matches_with_goal": 6,
+      "total_goals": 7
+    },
+    {
+      "team": "Marseille",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "recurrence": 142.85714285714286,
+      "matches": 7,
+      "matches_with_goal": 6,
+      "total_goals": 10
+    },
+    {
+      "team": "Metz",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "recurrence": 185.71428571428572,
+      "matches": 7,
+      "matches_with_goal": 6,
+      "total_goals": 13
+    },
+    {
+      "team": "Strasbourg",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "recurrence": 142.85714285714286,
+      "matches": 7,
+      "matches_with_goal": 6,
+      "total_goals": 10
+    },
+    {
+      "team": "Lille",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 157.14285714285714,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 11
+    },
+    {
+      "team": "Lorient",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "recurrence": 100.0,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 7
+    },
+    {
+      "team": "Metz",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 85.71428571428571,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 6
+    },
+    {
+      "team": "Nantes",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 100.0,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 7
+    },
+    {
+      "team": "Nice",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "recurrence": 71.42857142857143,
+      "matches": 7,
+      "matches_with_goal": 5,
+      "total_goals": 5
+    }
+  ],
+  "all_stats": [
+    {
+      "team": "Angers",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Angers",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Angers",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Angers",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Auxerre",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Auxerre",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Auxerre",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Auxerre",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Brest",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Brest",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Brest",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Brest",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Le Havre",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Le Havre",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Le Havre",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Le Havre",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Lens",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Lens",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Lens",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Lens",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Lille",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Lille",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Lille",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Lille",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Lorient",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Lorient",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Lorient",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Lorient",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Lyon",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Lyon",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "matches": 7
+    },
+    {
+      "team": "Lyon",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Lyon",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Marseille",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Marseille",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "matches": 7
+    },
+    {
+      "team": "Marseille",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 14.285714285714285,
+      "matches": 7
+    },
+    {
+      "team": "Marseille",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Metz",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 14.285714285714285,
+      "matches": 7
+    },
+    {
+      "team": "Metz",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Metz",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Metz",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "matches": 7
+    },
+    {
+      "team": "Monaco",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 37.5,
+      "matches": 8
+    },
+    {
+      "team": "Monaco",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 25.0,
+      "matches": 8
+    },
+    {
+      "team": "Monaco",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Monaco",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 100.0,
+      "matches": 6
+    },
+    {
+      "team": "Nantes",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Nantes",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Nantes",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Nantes",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Nice",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Nice",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 71.42857142857143,
+      "matches": 7
+    },
+    {
+      "team": "Nice",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Nice",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Paris FC",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Paris FC",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Paris FC",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Paris FC",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Paris SG",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 33.33333333333333,
+      "matches": 6
+    },
+    {
+      "team": "Paris SG",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 6
+    },
+    {
+      "team": "Paris SG",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 37.5,
+      "matches": 8
+    },
+    {
+      "team": "Paris SG",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 50.0,
+      "matches": 8
+    },
+    {
+      "team": "Rennes",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Rennes",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Rennes",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Rennes",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Strasbourg",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Strasbourg",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    },
+    {
+      "team": "Strasbourg",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Strasbourg",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 85.71428571428571,
+      "matches": 7
+    },
+    {
+      "team": "Toulouse",
+      "location": "HOME",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Toulouse",
+      "location": "HOME",
+      "interval": "76-90",
+      "probability": 42.857142857142854,
+      "matches": 7
+    },
+    {
+      "team": "Toulouse",
+      "location": "AWAY",
+      "interval": "31-45",
+      "probability": 28.57142857142857,
+      "matches": 7
+    },
+    {
+      "team": "Toulouse",
+      "location": "AWAY",
+      "interval": "76-90",
+      "probability": 57.14285714285714,
+      "matches": 7
+    }
+  ],
+  "generated_at": "2025-12-05T21:52:17.495895"
+}

@@ -1,0 +1,66 @@
+PAGE TITLE: SoccerSTATS.com | Football statistics, form tables and result analysis
+
+Total <a> tags: 312
+Links containing "match" (count): 83
+- //www.soccerstats.com/matches.asp | text="MATCHES" | parent=<td>
+- pmatch.asp?league=england&stats=131-18-14-2026 | text="Arsenal vs Brentford" | parent=<p>
+- pmatch.asp?league=england&stats=131-18-14-2026 | text="[More...]" | parent=<p>
+- pmatch.asp?league=england&stats=133-5-3-2026 | text="Brighton vs Aston Villa" | parent=<p>
+- pmatch.asp?league=england&stats=133-5-3-2026 | text="[More...]" | parent=<p>
+- pmatch.asp?league=england&stats=134-10-16-2026 | text="Burnley vs Crystal Palace" | parent=<p>
+- pmatch.asp?league=england&stats=134-10-16-2026 | text="[More...]" | parent=<p>
+- pmatch.asp?league=england&stats=140-11-13-2026 | text="Wolverhampton vs Nottm Forest" | parent=<p>
+- pmatch.asp?league=england&stats=140-11-13-2026 | text="[More...]" | parent=<p>
+- pmatch.asp?league=england&stats=136-19-15-2026 | text="Leeds Utd vs Chelsea" | parent=<p>
+- pmatch.asp?league=england&stats=136-19-15-2026 | text="[More...]" | parent=<p>
+- pmatch.asp?league=england&stats=137-1-7-2026 | text="Liverpool vs Sunderland" | parent=<p>
+- pmatch.asp?league=england&stats=137-1-7-2026 | text="[More...]" | parent=<p>
+- pmatch.asp?league=england&stats=138-17-8-2026 | text="Manchester Utd vs West Ham Utd" | parent=<p>
+- pmatch.asp?league=england&stats=138-17-8-2026 | text="[More...]" | parent=<p>
+- pmatch.asp?league=england&stats=132-2-20-2026 | text="Bournemouth 0 - 1 Everton" | parent=<p>
+- pmatch.asp?league=england&stats=132-2-20-2026 | text="[More...]" | parent=<p>
+- pmatch.asp?league=england&stats=135-6-12-2026 | text="Fulham 4 - 5 Manchester City" | parent=<p>
+- pmatch.asp?league=england&stats=135-6-12-2026 | text="[More...]" | parent=<p>
+- pmatch.asp?league=spain&stats=182-8-16-2026 | text="FC Barcelona 3 - 1 Atletico Madrid" | parent=<p>
+- pmatch.asp?league=spain&stats=182-8-16-2026 | text="[More...]" | parent=<p>
+- pmatch.asp?league=england&stats=139-4-9-2026 | text="Newcastle Utd 2 - 2 Tottenham" | parent=<p>
+- pmatch.asp?league=england&stats=139-4-9-2026 | text="[More...]" | parent=<p>
+- matches.asp?matchday=0&daym=yesterday&matchdayn=1 | text="Yesterday" | parent=<td>
+- matches.asp?matchday=1 | text="Today" | parent=<td>
+- matches.asp?matchday=6 | text="(by time)" | parent=<td>
+- matches.asp?matchday=2&matchdayn=1 | text="Thu 4 th" | parent=<td>
+- matches.asp?matchday=3&matchdayn=1 | text="Fri 5 th" | parent=<td>
+- matches.asp?matchday=4&matchdayn=1 | text="Sat 6 th" | parent=<td>
+- pmatch.asp?league=england&stats=133-5-3-2026 | text="Brighton vs Aston Villa Wed 3 Dec  - 19:30" | parent=<td>
+
+Found text nodes matching minute/live patterns (sample 60): 18
+- <style> attrs={} | "html,body { background:#ffffff; z-index:0; /*text-align:center;*/ font-family: Tahoma, Arial, sans-serif; font-size:12px; line-height:1.3em; margin:0; padding:0; } #insidetopdiv {     z-index: 999; } ..."
+- <script> attrs={} | "(function(){/*   Copyright The Closure Library Authors.  SPDX-License-Identifier: Apache-2.0 */ 'use strict';var aa=function(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done..."
+- <font> attrs={'style': 'font-size:24px;font-weight:normal;color:#444444;'} | "Live Blog"
+- <p> attrs={'style': 'background-color:#f0f0f0;font-size:15px;line-height:20px;margin-top:14px;margin-bottom:7px;padding:12px;'} | "In a chaotic, breathless encounter, Manchester City emerged victorious from a nine-goal thriller at Craven Cottage, edging out Fulham 5-4 in a match that will live long in the memory."
+- <td> attrs={'colspan': '2', 'style': 'padding-left:10px;'} | "You can select up to 16 leagues as favourites from the in-play domestic leagues list, for easy access from this page or from the favourite leagues dropdown list."
+- <font> attrs={'color': '#C70039'} | "1'"
+- <font> attrs={'color': '#C70039'} | "2'"
+- <font> attrs={'color': '#C70039'} | "34'"
+- <p> attrs={'class': ['ScorersList']} | "Luka Juricic  (8')"
+- <p> attrs={'class': ['ScorersList']} | "Tijan Sonha  (45'+2)"
+- <p> attrs={'class': ['ScorersList']} | "Georgi Lazarov  (53')"
+- <p> attrs={'class': ['ScorersList']} | "Gustavo Frana  (90'+3)"
+- <div> attrs={'id': 'content', 'style': 'width:990px;min-height:1400px;background-color:#ffffff;padding-top:2px;text-align:left;border:0px solid #cccccc;'} | "<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>"
+- <script> attrs={'type': 'text/javascript'} | "$(function () { $('#txtCalendarDate1').datepicker({  dateFormat: 'yy-mm-dd',  firstDay: '1',  showOn: 'button',  buttonText: "Select date", maxDate: "+30", minDate: "-8", constrainInput: true,        ..."
+- <script> attrs={} | "window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-156655133-1', { 'anonymize_ip': true });"
+- <script> attrs={'type': 'text/javascript'} | "function parseJSAtOnload() { var links = ["js/summaries_leaguesearchjs.js","js/summaries_searchteams.js","js/richhtmlticker.js"], headElement = document.getElementsByTagName("head")[0], linkElement, i..."
+- <script> attrs={} | "(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a84207a6e508239',t:'MTc2NDc3NjA1Mg=='};var a=do..."
+- <[document]> attrs={} | "<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.1/jquery.autocomplete.min.js"></script>"
+
+Candidate containers (div/table) that contain minute/live keywords: 10
+-- candidate #1 tag=<div> attrs={'id': 'container-row', 'style': 'display: flex;margin-top:48px;margin-left:0px;'} sample_text="AR AT AU BE BR CH CZ DE D2 DK EN E2 E3 E4 E5 ES E2 FI FR F2 GR KR NL N2 IT I2 JP NO PL PT P2 RU SC S2 SE TR UA REMOVE ADS - Enjoy an ad-free experience on SoccerSTATS.com and show your support: become..."
+-- candidate #2 tag=<div> attrs={'class': ['body-text'], 'style': 'float:left;'} sample_text="AR AT AU BE BR CH CZ DE D2 DK EN E2 E3 E4 E5 ES E2 FI FR F2 GR KR NL N2 IT I2 JP NO PL PT P2 RU SC S2 SE TR UA REMOVE ADS - Enjoy an ad-free experience on SoccerSTATS.com and show your support: become..."
+-- candidate #3 tag=<div> attrs={'id': 'content', 'style': 'width:990px;min-height:1400px;background-color:#ffffff;padding-top:2px;text-align:left;border:0px solid #cccccc;'} sample_text="REMOVE ADS - Enjoy an ad-free experience on SoccerSTATS.com and show your support: become a Member! More info advertisement Football statistics Premier League Serie A LaLiga Championship Ligue 1 Bunde..."
+-- candidate #4 tag=<div> attrs={'class': ['row'], 'style': 'width:980px;margin-top:3px;margin-left:10px;'} sample_text="Football statistics Premier League Serie A LaLiga Championship Ligue 1 Bundesliga ALL LEAGUES Champions League Europa League Conference League UEFA Nations League Copa Libertadores Copa Sudamericana F..."
+-- candidate #5 tag=<div> attrs={'class': ['five', 'columns'], 'style': 'padding-right:25px;min-width:405px;text-align:left;'} sample_text="Football statistics Premier League Serie A LaLiga Championship Ligue 1 Bundesliga ALL LEAGUES Champions League Europa League Conference League UEFA Nations League Copa Libertadores Copa Sudamericana F..."
+-- candidate #6 tag=<table> attrs={'width': '100%', 'cellpadding': '6', 'cellspacing': '0', 'border': '0'} sample_text="Live Blog"
+-- candidate #7 tag=<table> attrs={'width': '100%', 'cellpadding': '0', 'cellspacing': '0', 'border': '0'} sample_text="Playing today Arsenal vs Brentford Premier League Wed 3 Dec 2025 | 19:30 UTC When the league leaders on a winning streak at home host a local rival, you know you're in for a Premier League clash with ..."
+-- candidate #8 tag=<div> attrs={'class': ['seven', 'columns'], 'style': 'margin-top:3px;margin-left:21px;text-align:left;'} sample_text="Analysis Performance Analysis Dashboards and indicators aimed at analysing team performance Last updated: 1 June 2025 Blog section Theme-based descriptions and analysis of statistical tables Last upda..."
+-- candidate #9 tag=<table> attrs={'width': '99%', 'cellpadding': '0', 'cellspacing': '0', 'border': '0', 'style': 'margin-bottom:4px;'} sample_text="Yesterday Today (by time) Thu 4 th Fri 5 th Sat 6 th Brighton vs Aston Villa Wed 3 Dec  - 19:30 Athletic Bil. vs Real Madrid Wed 3 Dec  - 18:00 Cruzeiro vs Botafogo Thu 4 Dec  - 22:30 Lille vs Marseil..."
+-- candidate #10 tag=<table> attrs={'id': 'btable', 'style': 'background-color:#f8f8f8;'} sample_text="Albania - Abissnet Superiore 1' Partizani T. 0:0 Bylis stats 2' Teuta Durres 0:0 AF Elbasani stats Bosnia and Herzegovina - Premier Liga 34' R. Bijeljina 0:1 0-1 Luka Juricic  (8') Borac Banja L. stat..."

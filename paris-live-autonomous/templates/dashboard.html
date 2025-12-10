@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ Paris Live - Dashboard</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .status {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .status-indicator {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            animation: pulse 2s infinite;
+        }
+        
+        .status-indicator.active {
+            background: #4caf50;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+        }
+        
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-start {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .btn-start:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        .btn-stop {
+            background: #f44336;
+            color: white;
+        }
+        
+        .btn-stop:hover {
+            background: #da190b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(244, 67, 54, 0.3);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-card h3 {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .stat-card .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .matches-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        
+        .matches-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .match-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s;
+        }
+        
+        .match-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .match-card.qualified {
+            border-left-color: #4caf50;
+        }
+        
+        .match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .match-teams {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .match-score {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .match-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .info-label {
+            font-size: 0.8em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .info-value {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+            margin-top: 5px;
+        }
+        
+        .probability {
+            font-size: 2em !important;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .probability.high {
+            background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .no-matches {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+        
+        .no-matches-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        
+        .last-update {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .badge-qualified {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .badge-monitoring {
+            background: #ff9800;
+            color: white;
+        }
+        
+        .badge-interval {
+            background: #2196f3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <h1>⚽ Paris Live Dashboard</h1>
+                <p style="color: #666; margin-top: 10px;">Monitoring en temps réel - 8 ligues</p>
+            </div>
+            <div class="status">
+                <div class="status-indicator" id="statusIndicator"></div>
+                <div class="controls">
+                    <button class="btn-start" onclick="startMonitoring()">▶️ Démarrer</button>
+                    <button class="btn-stop" onclick="stopMonitoring()">⏹️ Arrêter</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Statistiques -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>🔍 Scans</h3>
+                <div class="value" id="statScans">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>⚽ Matchs détectés</h3>
+                <div class="value" id="statMatches">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>🚨 Signaux envoyés</h3>
+                <div class="value" id="statSignals">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>📊 Prob. moyenne</h3>
+                <div class="value" id="statAvgProb">0%</div>
+            </div>
+        </div>
+        
+        <!-- Matchs live -->
+        <div class="matches-section">
+            <h2>🔴 Matchs Live</h2>
+            <div id="matchesContainer">
+                <div class="no-matches">
+                    <div class="no-matches-icon">⚽</div>
+                    <p>Aucun match en cours</p>
+                    <p style="margin-top: 10px; color: #bbb;">Cliquez sur "Démarrer" pour lancer le monitoring</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Graphique -->
+        <div class="chart-container">
+            <h2 style="margin-bottom: 20px;">📈 Évolution des probabilités</h2>
+            <canvas id="probabilityChart"></canvas>
+        </div>
+        
+        <div class="last-update" id="lastUpdate">
+            Dernière mise à jour: Jamais
+        </div>
+    </div>
+    
+    <script>
+        // Connexion WebSocket
+        const socket = io();
+        
+        // Variables globales
+        let chart = null;
+        let chartData = {
+            labels: [],
+            datasets: []
+        };
+        
+        // Initialisation du graphique
+        function initChart() {
+            const ctx = document.getElementById('probabilityChart').getContext('2d');
+            chart = new Chart(ctx, {
+                type: 'line',
+                data: chartData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.parsed.y.toFixed(1) + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // WebSocket: Connexion
+        socket.on('connected', (data) => {
+            console.log('✅ Connecté au serveur');
+        });
+        
+        // WebSocket: Mise à jour des matchs
+        socket.on('matches_update', (data) => {
+            updateMatches(data.matches);
+            updateStats(data.stats);
+            updateLastUpdate(data.timestamp);
+            updateChart(data.matches);
+        });
+        
+        // WebSocket: Statut monitoring
+        socket.on('monitoring_status', (data) => {
+            const indicator = document.getElementById('statusIndicator');
+            if (data.active) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+            console.log('📡 Monitoring:', data.message);
+        });
+        
+        // Démarrer monitoring
+        function startMonitoring() {
+            socket.emit('start_monitoring');
+        }
+        
+        // Arrêter monitoring
+        function stopMonitoring() {
+            socket.emit('stop_monitoring');
+        }
+        
+        // Mettre à jour les matchs
+        function updateMatches(matches) {
+            const container = document.getElementById('matchesContainer');
+            
+            if (matches.length === 0) {
+                container.innerHTML = `
+                    <div class="no-matches">
+                        <div class="no-matches-icon">⚽</div>
+                        <p>Aucun match en cours</p>
+                        <p style="margin-top: 10px; color: #bbb;">Le scan détectera les matchs automatiquement</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = matches.map(match => `
+                <div class="match-card ${match.status === 'qualified' ? 'qualified' : ''}">
+                    <div class="match-header">
+                        <div class="match-teams">
+                            ${match.home_team} vs ${match.away_team}
+                        </div>
+                        <div class="match-score">
+                            ${match.home_score} - ${match.away_score}
+                        </div>
+                    </div>
+                    <div class="match-info">
+                        <div class="info-item">
+                            <span class="info-label">Ligue</span>
+                            <span class="info-value">${match.league_name}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Minute</span>
+                            <span class="info-value">${match.minute}'</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Intervalle</span>
+                            <span class="info-value">
+                                <span class="badge badge-interval">${match.interval}</span>
+                            </span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Probabilité</span>
+                            <span class="info-value probability ${match.probability >= 65 ? 'high' : ''}">
+                                ${match.probability.toFixed(1)}%
+                            </span>
+                        </div>
+                    </div>
+                    ${match.probability >= 65 ? '<span class="badge badge-qualified" style="margin-top: 15px;">✅ Signal Qualifié</span>' : ''}
+                </div>
+            `).join('');
+        }
+        
+        // Mettre à jour les statistiques
+        function updateStats(stats) {
+            document.getElementById('statScans').textContent = stats.total_scans;
+            document.getElementById('statMatches').textContent = stats.matches_detected;
+            document.getElementById('statSignals').textContent = stats.signals_sent;
+            document.getElementById('statAvgProb').textContent = stats.avg_probability.toFixed(1) + '%';
+        }
+        
+        // Mettre à jour dernière mise à jour
+        function updateLastUpdate(timestamp) {
+            const date = new Date(timestamp);
+            const timeStr = date.toLocaleTimeString('fr-FR');
+            document.getElementById('lastUpdate').textContent = `Dernière mise à jour: ${timeStr}`;
+        }
+        
+        // Mettre à jour le graphique
+        function updateChart(matches) {
+            if (!chart) return;
+            
+            const now = new Date().toLocaleTimeString('fr-FR');
+            
+            // Ajouter le timestamp
+            if (chartData.labels.length > 20) {
+                chartData.labels.shift();
+            }
+            chartData.labels.push(now);
+            
+            // Mettre à jour les données pour chaque match
+            matches.forEach(match => {
+                const matchLabel = `${match.home_team} vs ${match.away_team}`;
+                let dataset = chartData.datasets.find(ds => ds.label === matchLabel);
+                
+                if (!dataset) {
+                    // Créer un nouveau dataset
+                    const color = `hsl(${Math.random() * 360}, 70%, 50%)`;
+                    dataset = {
+                        label: matchLabel,
+                        data: [],
+                        borderColor: color,
+                        backgroundColor: color + '20',
+                        tension: 0.4
+                    };
+                    chartData.datasets.push(dataset);
+                }
+                
+                // Ajouter la probabilité
+                if (dataset.data.length > 20) {
+                    dataset.data.shift();
+                }
+                dataset.data.push(match.probability);
+            });
+            
+            chart.update();
+        }
+        
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', () => {
+            initChart();
+            console.log('🚀 Dashboard initialisé');
+        });
+    </script>
+</body>
+</html>

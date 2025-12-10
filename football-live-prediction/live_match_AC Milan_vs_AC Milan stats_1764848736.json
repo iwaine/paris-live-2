@@ -1,0 +1,120 @@
+{
+  "home_team": "AC Milan",
+  "away_team": "AC Milan stats",
+  "start_time": "2025-12-04T11:45:36.719177",
+  "predictions": [
+    {
+      "minute": 35,
+      "team": "AC Milan",
+      "team_type": "home",
+      "probability": 0.4683672942712241,
+      "confidence": "MEDIUM",
+      "reasoning": "Global: 0.75 | Interval: 3 goals in 8 matches (freq=0.38) | Recent: 1 in last 4 (freq=0.25) | Typical: 39.7\u00b14.1min | Proximity: 0.52 | Momentum: 0.66 | Final: 0.47"
+    },
+    {
+      "minute": 35,
+      "team": "AC Milan stats",
+      "team_type": "away",
+      "probability": 0.2,
+      "confidence": "LOW",
+      "reasoning": "Insufficient historical data for AC Milan stats (away) in 31-45"
+    },
+    {
+      "minute": 40,
+      "team": "AC Milan",
+      "team_type": "home",
+      "probability": 0.5954710599270625,
+      "confidence": "HIGH",
+      "reasoning": "Global: 0.75 | Interval: 3 goals in 8 matches (freq=0.38) | Recent: 1 in last 4 (freq=0.25) | Typical: 39.7\u00b14.1min | Proximity: 1.00 | Momentum: 0.64 | Final: 0.60"
+    },
+    {
+      "minute": 40,
+      "team": "AC Milan stats",
+      "team_type": "away",
+      "probability": 0.2,
+      "confidence": "LOW",
+      "reasoning": "Insufficient historical data for AC Milan stats (away) in 31-45"
+    },
+    {
+      "minute": 45,
+      "team": "AC Milan",
+      "team_type": "home",
+      "probability": 0.42460733511947824,
+      "confidence": "MEDIUM",
+      "reasoning": "Global: 0.75 | Interval: 3 goals in 8 matches (freq=0.38) | Recent: 1 in last 4 (freq=0.25) | Typical: 39.7\u00b14.1min | Proximity: 0.43 | Momentum: 0.54 | Final: 0.42"
+    },
+    {
+      "minute": 45,
+      "team": "AC Milan stats",
+      "team_type": "away",
+      "probability": 0.2,
+      "confidence": "LOW",
+      "reasoning": "Insufficient historical data for AC Milan stats (away) in 31-45"
+    },
+    {
+      "minute": 50,
+      "team": "AC Milan",
+      "team_type": "home",
+      "probability": 0.3229956227880907,
+      "confidence": "MEDIUM",
+      "reasoning": "Global: 0.75 | Interval: 3 goals in 8 matches (freq=0.38) | Recent: 1 in last 4 (freq=0.25) | Typical: 39.7\u00b14.1min | Proximity: 0.04 | Momentum: 0.55 | Final: 0.32"
+    },
+    {
+      "minute": 50,
+      "team": "AC Milan stats",
+      "team_type": "away",
+      "probability": 0.2,
+      "confidence": "LOW",
+      "reasoning": "Insufficient historical data for AC Milan stats (away) in 31-45"
+    },
+    {
+      "minute": 80,
+      "team": "AC Milan",
+      "team_type": "home",
+      "probability": 0.2,
+      "confidence": "LOW",
+      "reasoning": "No recurrence: only 2 matches with goals (need \u22653) for AC Milan (home) in 76-90"
+    },
+    {
+      "minute": 80,
+      "team": "AC Milan stats",
+      "team_type": "away",
+      "probability": 0.2,
+      "confidence": "LOW",
+      "reasoning": "Insufficient historical data for AC Milan stats (away) in 76-90"
+    },
+    {
+      "minute": 85,
+      "team": "AC Milan",
+      "team_type": "home",
+      "probability": 0.2,
+      "confidence": "LOW",
+      "reasoning": "No recurrence: only 2 matches with goals (need \u22653) for AC Milan (home) in 76-90"
+    },
+    {
+      "minute": 85,
+      "team": "AC Milan stats",
+      "team_type": "away",
+      "probability": 0.2,
+      "confidence": "LOW",
+      "reasoning": "Insufficient historical data for AC Milan stats (away) in 76-90"
+    },
+    {
+      "minute": 90,
+      "team": "AC Milan",
+      "team_type": "home",
+      "probability": 0.2,
+      "confidence": "LOW",
+      "reasoning": "No recurrence: only 2 matches with goals (need \u22653) for AC Milan (home) in 76-90"
+    },
+    {
+      "minute": 90,
+      "team": "AC Milan stats",
+      "team_type": "away",
+      "probability": 0.2,
+      "confidence": "LOW",
+      "reasoning": "Insufficient historical data for AC Milan stats (away) in 76-90"
+    }
+  ],
+  "critical_alerts": []
+}

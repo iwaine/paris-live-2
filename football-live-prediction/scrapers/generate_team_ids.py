@@ -33,6 +33,7 @@ LEAGUES = {
     'brazil': 'Serie A',
     'australia': 'A-League',
     'japan': 'J1 League',
+    'iran': 'Persian Gulf Pro League',
 }
 
 class TeamIDScraper:
