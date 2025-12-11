@@ -2,7 +2,8 @@ import sqlite3
 import json
 from collections import defaultdict
 
-DB_PATH = "/workspaces/paris-live/football-live-prediction/data/predictions.db"
+import os
+DB_PATH = os.path.join(os.path.dirname(__file__), "data", "predictions.db")
 conn = sqlite3.connect(DB_PATH)
 cursor = conn.cursor()
 conn.close()
@@ -32,6 +33,15 @@ for league_code in leagues_in_db:
 			conceded = json.loads(goal_times_conceded) if goal_times_conceded else []
 		except Exception:
 			goals, conceded = [], []
+		# Toujours travailler avec des listes
+		if isinstance(goals, int):
+			goals = [goals]
+		if isinstance(conceded, int):
+			conceded = [conceded]
+		if not isinstance(goals, list):
+			goals = []
+		if not isinstance(conceded, list):
+			conceded = []
 		for interval in INTERVALS:
 			start, end = interval
 			buts_marques = sum(1 for m in goals if start <= m <= end)

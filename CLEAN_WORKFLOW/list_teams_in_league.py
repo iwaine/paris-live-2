@@ -6,7 +6,8 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 league = sys.argv[1]
-DB_PATH = "/workspaces/paris-live/football-live-prediction/data/predictions.db"
+import os
+DB_PATH = os.path.join(os.path.dirname(__file__), "data", "predictions.db")
 
 conn = sqlite3.connect(DB_PATH)
 cursor = conn.cursor()

@@ -35,7 +35,8 @@ def run_scraper(script, label):
 def print_global_top():
     INTERVALS = [(31, 45), (75, 120)]
     INTERVAL_LABELS = { (31, 45): "31-45+", (75, 120): "75-90+" }
-    conn = sqlite3.connect('football-live-prediction/data/predictions.db')
+    import os
+    conn = sqlite3.connect(os.path.join(os.path.dirname(__file__), 'data', 'predictions.db'))
     cursor = conn.cursor()
     cursor.execute("SELECT DISTINCT league FROM soccerstats_scraped_matches")
     leagues = [row[0] for row in cursor.fetchall()]

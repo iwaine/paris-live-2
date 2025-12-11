@@ -15,11 +15,21 @@ from bs4 import BeautifulSoup
 import json
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "data", "predictions.db")
-LEAGUES = [
-    "france", "germany", "england", "italy", "spain", "netherlands", "portugal", "bulgaria"
-    # Ajoutez ici les ligues à suivre
-]
+LEAGUES = []  # Placeholder for leagues, will be populated from the database
 
+# Charger la liste des ligues actives depuis leagues_dates.db
+def get_active_leagues():
+    db_path = os.path.join(os.path.dirname(__file__), "data", "leagues_dates.db")
+    conn = sqlite3.connect(db_path)
+    c = conn.cursor()
+    try:
+        c.execute("SELECT league FROM leagues_dates WHERE season_finished=0")
+        leagues = [row[0] for row in c.fetchall()]
+    except Exception as e:
+        print(f"[ERREUR] Impossible de lire les ligues actives : {e}")
+        leagues = []
+    conn.close()
+    return leagues
 # Table cible : soccerstats_scraped_matches
 CREATE_TABLE = """
 CREATE TABLE IF NOT EXISTS soccerstats_scraped_matches (
@@ -77,7 +87,9 @@ def main():
     c.execute(CREATE_TABLE)
     c.execute("DELETE FROM soccerstats_scraped_matches")
     total = 0
-    for league in LEAGUES:
+    active_leagues = get_active_leagues()
+    print(f"[INFO] Ligues actives détectées : {active_leagues}")
+    for league in active_leagues:
         print(f"[INFO] Téléchargement et parsing de la ligue : {league}")
         matches = fetch_and_parse_league(league)
         for m in matches:

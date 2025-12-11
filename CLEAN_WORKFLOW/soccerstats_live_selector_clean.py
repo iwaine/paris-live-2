@@ -155,7 +155,8 @@ if __name__ == "__main__":
 					interval = (31, 45) if minute_raw.strip().upper() == "HT" or (is_in_interval(minute_raw, minute_num) and ("45'" in minute_raw or "45+" in minute_raw or (31 <= minute_num <= 45))) else (75, 90)
 					league = m['url'].split('league=')[1].split('&')[0] if 'league=' in m['url'] else 'france'
 					import sqlite3
-					conn = sqlite3.connect('/workspaces/paris-live/football-live-prediction/data/predictions.db')
+                    import os
+                    conn = sqlite3.connect(os.path.join(os.path.dirname(__file__), 'data', 'predictions.db'))
 					cursor = conn.cursor()
 					cursor.execute("SELECT goal_times, goal_times_conceded, is_home FROM soccerstats_scraped_matches WHERE league = ? AND team = ?", (league, d['home_team']))
 					matchs_home = [mm for mm in cursor.fetchall() if mm[2]]

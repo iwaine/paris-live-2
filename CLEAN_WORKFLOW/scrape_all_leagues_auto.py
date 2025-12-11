@@ -16,9 +16,11 @@ import time
 from typing import List, Tuple, Optional
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+import os
+
 class BulgariaAutoScraper:
 	BASE_URL = "https://www.soccerstats.com"
-	DB_PATH = "/workspaces/paris-live/football-live-prediction/data/predictions.db"
+	DB_PATH = os.path.join(os.path.dirname(__file__), "data", "predictions.db")
     
 	def __init__(self):
 		self.session = requests.Session()
@@ -101,39 +103,36 @@ class BulgariaAutoScraper:
 		for score_tag in score_tags:
 			score_text = score_tag.get_text().strip()
 			match = re.match(r'(\d+)-(\d+)', score_text)
-            
 			if not match:
 				continue
-            
 			home_score = int(match.group(1))
 			away_score = int(match.group(2))
-            
-			# Trouver la minute du but dans le parent
 			parent = score_tag.parent
 			if parent:
 				parent_text = parent.get_text()
-				minute_match = re.search(r'\((\d+)\)', parent_text)
+				# Nouvelle regex : extraire le nombre au début de la parenthèse, même si suivi de texte (ex: (45 pen.), (45 o.g.))
+				minute_match = re.search(r'\((\d{1,3})[^)]*\)', parent_text)
 				if minute_match:
 					minute = int(minute_match.group(1))
-                    
-					# Déterminer qui a marqué
-					if home_score > prev_home:
-						# But équipe domicile
-						if team_is_home:
-							goals_scored.append(minute)
-						else:
-							goals_conceded.append(minute)
-                    
-					elif away_score > prev_away:
-						# But équipe extérieur
-						if not team_is_home:
-							goals_scored.append(minute)
-						else:
-							goals_conceded.append(minute)
-                    
+					if minute > 0:  # Filtrer les zéros
+						if home_score > prev_home:
+							if team_is_home:
+								goals_scored.append(minute)
+							else:
+								goals_conceded.append(minute)
+						elif away_score > prev_away:
+							if not team_is_home:
+								goals_scored.append(minute)
+							else:
+								goals_conceded.append(minute)
 					prev_home = home_score
 					prev_away = away_score
-        
+		# Debug : afficher les minutes extraites
+		print(f"[DEBUG] Minutes extraites : marqués={goals_scored}, encaissés={goals_conceded}")
+		# Cas suspect : minutes attendues manquantes (exemple E. Frankfurt AWAY)
+		minutes_suspectes = {5, 39, 4}  # à adapter selon le match
+		if any(m in minutes_suspectes for m in goals_scored + goals_conceded) is False:
+			print("[DEBUG] HTML tooltip suspect (aucune minute clé trouvée) :\n", tooltip_html)
 		return goals_scored, goals_conceded
     
 	def scrape_team(self, league_code: str, team_code: str, team_name: str, 

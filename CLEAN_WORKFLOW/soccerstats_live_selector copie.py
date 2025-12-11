@@ -51,7 +51,8 @@ def print_full_patterns(league, home_team, away_team, get_pattern_score):
     INTERVALS = [(31, 45), (75, 120)]
     INTERVAL_LABELS = { (31, 45): "31-45+", (75, 120): "75-90+" }
     # Charger la liste des équipes normalisées de la base pour la ligue
-    conn = __import__('sqlite3').connect('/workspaces/paris-live/football-live-prediction/data/predictions.db')
+        import os
+        conn = __import__('sqlite3').connect(os.path.join(os.path.dirname(__file__), 'data', 'predictions.db'))
     cursor = conn.cursor()
     cursor.execute("SELECT DISTINCT team FROM soccerstats_scraped_matches WHERE league = ?", (league,))
     teams_in_db = [row[0] for row in cursor.fetchall()]
@@ -83,6 +84,8 @@ def print_full_patterns(league, home_team, away_team, get_pattern_score):
             for interval in INTERVALS:
                 # Extraction détaillée
                 conn = __import__('sqlite3').connect('/workspaces/paris-live/football-live-prediction/data/predictions.db')
+                    import os
+                    conn = __import__('sqlite3').connect(os.path.join(os.path.dirname(__file__), 'data', 'predictions.db'))
                 cursor = conn.cursor()
                 if norm_team is not None:
                     cursor.execute("""

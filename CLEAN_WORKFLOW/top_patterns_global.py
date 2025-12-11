@@ -3,7 +3,8 @@ import json
 from collections import defaultdict
 
 def top_patterns_global(n=20):
-    DB_PATH = "/workspaces/paris-live/football-live-prediction/data/predictions.db"
+    import os
+    DB_PATH = os.path.join(os.path.dirname(__file__), "data", "predictions.db")
     INTERVALS = [(31, 45), (75, 120)]
     INTERVAL_LABELS = { (31, 45): "31-45+", (75, 120): "75-90+" }
     patterns = defaultdict(lambda: ["", "", 0, 0, 0, 0])  # league, team, side, buts_marques, encaisses, matchs, matchs_avec_but
@@ -18,6 +19,15 @@ def top_patterns_global(n=20):
             conceded = json.loads(goal_times_conceded) if goal_times_conceded else []
         except Exception:
             goals, conceded = [], []
+        # Toujours travailler avec des listes
+        if isinstance(goals, int):
+            goals = [goals]
+        if isinstance(conceded, int):
+            conceded = [conceded]
+        if not isinstance(goals, list):
+            goals = []
+        if not isinstance(conceded, list):
+            conceded = []
         for interval in INTERVALS:
             start, end = interval
             buts_marques = sum(1 for m in goals if start <= m <= end)

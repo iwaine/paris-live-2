@@ -1,0 +1,344 @@
+30 Aug | Hoffenheim vs E. Frankfurt | Score: 1 - 30-1Ritsu Doan (17)0-2Ritsu Doan (27)---------------------------------------0-3Can Uzun (51)1-3Grischa Prömel (90)
+  Tooltip: <span style="width:350px;">
+<div style="text-align:left;font-size:13px;line-height:16px;padding:10px;">
+<font style="color:#000000;">
+<br/>    
+<b>0-1</b>  
+
+<font color="#000000">Ritsu Doan (17)</font>
+</font>
+<font style="color:#000000;">
+<br/>    
+<b>0-2</b>  
+
+<font color="#000000">Ritsu Doan (27)</font>
+</font>
+<br/>
+---------------------------------------
+<font style="color:#000000;">
+<br/>    
+<b>0-3</b>  
+
+<font color="#000000">Can Uzun (51)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>1-3</b>  
+<font color="#000000">Grischa Prömel (90)</font>
+</font>
+</div>
+</span>
+    Minute détectée : 17 (texte : 0-1  
+
+Ritsu Doan (17))
+    Minute détectée : 27 (texte : 0-2  
+
+Ritsu Doan (27))
+    Minute détectée : 51 (texte : 0-3  
+
+Can Uzun (51))
+    Minute détectée : 90 (texte : 1-3  
+Grischa Prömel (90))
+12 Sep | Leverkusen vs E. Frankfurt | Score: 3 - 11-0Alejandro Grimaldo (10)2-0Patrik Schick (45)pen.---------------------------------------2-1Can Uzun (52)3-1Alejandro Grimaldo (90)
+  Tooltip: <span style="width:350px;">
+<div style="text-align:left;font-size:13px;line-height:16px;padding:10px;">
+<font style="color:#000000;">
+<br/>
+<b>1-0</b>  
+<font color="#000000">Alejandro Grimaldo (10)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>2-0</b>  
+<font color="#000000">Patrik Schick (45)</font> pen.
+
+</font>
+<br/>
+---------------------------------------
+<font style="color:#000000;">
+<br/>    
+<b>2-1</b>  
+
+<font color="#000000">Can Uzun (52)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>3-1</b>  
+<font color="#000000">Alejandro Grimaldo (90)</font>
+</font>
+</div>
+</span>
+    Minute détectée : 10 (texte : 1-0  
+Alejandro Grimaldo (10))
+    Minute détectée : 45 (texte : 2-0  
+Patrik Schick (45) pen.)
+    Minute détectée : 52 (texte : 2-1  
+
+Can Uzun (52))
+    Minute détectée : 90 (texte : 3-1  
+Alejandro Grimaldo (90))
+27 Sep | Monchengladbach vs E. Frankfurt | Score: 4 - 60-1Robin Koch (11)0-2Ansgar Knauff (15)0-3Jonathan Burkardt (35)0-4Farès Chaïbi (39)0-5Can Uzun (45)---------------------------------------0-6Robin Koch (47)1-6Jens Castrop (72)2-6Haris Tabakovic (78)3-6Yannik Engelhardt (83)4-6Grant-Leon Ranos (90)
+  Tooltip: <span style="width:350px;">
+<div style="text-align:left;font-size:13px;line-height:16px;padding:10px;">
+<font style="color:#000000;">
+<br/>    
+<b>0-1</b>  
+
+<font color="#000000">Robin Koch (11)</font>
+</font>
+<font style="color:#000000;">
+<br/>    
+<b>0-2</b>  
+
+<font color="#000000">Ansgar Knauff (15)</font>
+</font>
+<font style="color:#000000;">
+<br/>    
+<b>0-3</b>  
+
+<font color="#000000">Jonathan Burkardt (35)</font>
+</font>
+<font style="color:#000000;">
+<br/>    
+<b>0-4</b>  
+
+<font color="#000000">Farès Chaïbi (39)</font>
+</font>
+<font style="color:#000000;">
+<br/>    
+<b>0-5</b>  
+
+<font color="#000000">Can Uzun (45)</font>
+</font>
+<br/>
+---------------------------------------
+<font style="color:#000000;">
+<br/>    
+<b>0-6</b>  
+
+<font color="#000000">Robin Koch (47)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>1-6</b>  
+<font color="#000000">Jens Castrop (72)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>2-6</b>  
+<font color="#000000">Haris Tabakovic (78)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>3-6</b>  
+<font color="#000000">Yannik Engelhardt (83)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>4-6</b>  
+<font color="#000000">Grant-Leon Ranos (90)</font>
+</font>
+</div>
+</span>
+    Minute détectée : 11 (texte : 0-1  
+
+Robin Koch (11))
+    Minute détectée : 15 (texte : 0-2  
+
+Ansgar Knauff (15))
+    Minute détectée : 35 (texte : 0-3  
+
+Jonathan Burkardt (35))
+    Minute détectée : 39 (texte : 0-4  
+
+Farès Chaïbi (39))
+    Minute détectée : 45 (texte : 0-5  
+
+Can Uzun (45))
+    Minute détectée : 47 (texte : 0-6  
+
+Robin Koch (47))
+    Minute détectée : 72 (texte : 1-6  
+Jens Castrop (72))
+    Minute détectée : 78 (texte : 2-6  
+Haris Tabakovic (78))
+    Minute détectée : 83 (texte : 3-6  
+Yannik Engelhardt (83))
+    Minute détectée : 90 (texte : 4-6  
+Grant-Leon Ranos (90))
+19 Oct | Freiburg vs E. Frankfurt | Score: 2 - 21-0Derry Scherhant (2)1-1Jonathan Burkardt (18)1-2Jonathan Burkardt (38)---------------------------------------2-2Vincenzo Grifo (87)
+  Tooltip: <span style="width:350px;">
+<div style="text-align:left;font-size:13px;line-height:16px;padding:10px;">
+<font style="color:#000000;">
+<br/>
+<b>1-0</b>  
+<font color="#000000">Derry Scherhant (2)</font>
+</font>
+<font style="color:#000000;">
+<br/>    
+<b>1-1</b>  
+
+<font color="#000000">Jonathan Burkardt (18)</font>
+</font>
+<font style="color:#000000;">
+<br/>    
+<b>1-2</b>  
+
+<font color="#000000">Jonathan Burkardt (38)</font>
+</font>
+<br/>
+---------------------------------------
+<font style="color:#000000;">
+<br/>
+<b>2-2</b>  
+<font color="#000000">Vincenzo Grifo (87)</font>
+</font>
+</div>
+</span>
+    Minute détectée : 2 (texte : 1-0  
+Derry Scherhant (2))
+    Minute détectée : 18 (texte : 1-1  
+
+Jonathan Burkardt (18))
+    Minute détectée : 38 (texte : 1-2  
+
+Jonathan Burkardt (38))
+    Minute détectée : 87 (texte : 2-2  
+Vincenzo Grifo (87))
+1 Nov | Heidenheim vs E. Frankfurt | Score: 1 - 11-0Budu Zivzivadze (32)---------------------------------------1-1Rasmus Kristensen (55)
+  Tooltip: <span style="width:350px;">
+<div style="text-align:left;font-size:13px;line-height:16px;padding:10px;">
+<font style="color:#000000;">
+<br/>
+<b>1-0</b>  
+<font color="#000000">Budu Zivzivadze (32)</font>
+</font>
+<br/>
+---------------------------------------
+<font style="color:#000000;">
+<br/>    
+<b>1-1</b>  
+
+<font color="#000000">Rasmus Kristensen (55)</font>
+</font>
+</div>
+</span>
+    Minute détectée : 32 (texte : 1-0  
+Budu Zivzivadze (32))
+    Minute détectée : 55 (texte : 1-1  
+
+Rasmus Kristensen (55))
+22 Nov | FC Koln vs E. Frankfurt | Score: 3 - 41-0Jakub Kaminski (4)1-1Arthur Theate (39)1-2Mahmoud Dahoud (45)---------------------------------------1-3Jonathan Burkardt (59)1-4Jonathan Burkardt (63)2-4Marius Bülter (83)3-4Luca Waldschmidt (90)
+  Tooltip: <span style="width:350px;">
+<div style="text-align:left;font-size:13px;line-height:16px;padding:10px;">
+<font style="color:#000000;">
+<br/>
+<b>1-0</b>  
+<font color="#000000">Jakub Kaminski (4)</font>
+</font>
+<font style="color:#000000;">
+<br/>    
+<b>1-1</b>  
+
+<font color="#000000">Arthur Theate (39)</font>
+</font>
+<font style="color:#000000;">
+<br/>    
+<b>1-2</b>  
+
+<font color="#000000">Mahmoud Dahoud (45)</font>
+</font>
+<br/>
+---------------------------------------
+<font style="color:#000000;">
+<br/>    
+<b>1-3</b>  
+
+<font color="#000000">Jonathan Burkardt (59)</font>
+</font>
+<font style="color:#000000;">
+<br/>    
+<b>1-4</b>  
+
+<font color="#000000">Jonathan Burkardt (63)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>2-4</b>  
+<font color="#000000">Marius Bülter (83)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>3-4</b>  
+<font color="#000000">Luca Waldschmidt (90)</font>
+</font>
+</div>
+</span>
+    Minute détectée : 4 (texte : 1-0  
+Jakub Kaminski (4))
+    Minute détectée : 39 (texte : 1-1  
+
+Arthur Theate (39))
+    Minute détectée : 45 (texte : 1-2  
+
+Mahmoud Dahoud (45))
+    Minute détectée : 59 (texte : 1-3  
+
+Jonathan Burkardt (59))
+    Minute détectée : 63 (texte : 1-4  
+
+Jonathan Burkardt (63))
+    Minute détectée : 83 (texte : 2-4  
+Marius Bülter (83))
+    Minute détectée : 90 (texte : 3-4  
+Luca Waldschmidt (90))
+6 Dec | RB Leipzig vs E. Frankfurt | Score: 6 - 01-0Conrad Harder (5)2-0C. Baumgartner (31)---------------------------------------3-0Yan Diomande (47)4-0Yan Diomande (55)5-0David Raum (62)pen.6-0Yan Diomande (65)
+  Tooltip: <span style="width:350px;">
+<div style="text-align:left;font-size:13px;line-height:16px;padding:10px;">
+<font style="color:#000000;">
+<br/>
+<b>1-0</b>  
+<font color="#000000">Conrad Harder (5)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>2-0</b>  
+<font color="#000000">C. Baumgartner (31)</font>
+</font>
+<br/>
+---------------------------------------
+<font style="color:#000000;">
+<br/>
+<b>3-0</b>  
+<font color="#000000">Yan Diomande (47)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>4-0</b>  
+<font color="#000000">Yan Diomande (55)</font>
+</font>
+<font style="color:#000000;">
+<br/>
+<b>5-0</b>  
+<font color="#000000">David Raum (62)</font> pen.
+
+</font>
+<font style="color:#000000;">
+<br/>
+<b>6-0</b>  
+<font color="#000000">Yan Diomande (65)</font>
+</font>
+</div>
+</span>
+    Minute détectée : 5 (texte : 1-0  
+Conrad Harder (5))
+    Minute détectée : 31 (texte : 2-0  
+C. Baumgartner (31))
+    Minute détectée : 47 (texte : 3-0  
+Yan Diomande (47))
+    Minute détectée : 55 (texte : 4-0  
+Yan Diomande (55))
+    Minute détectée : 62 (texte : 5-0  
+David Raum (62) pen.)
+    Minute détectée : 65 (texte : 6-0  
+Yan Diomande (65))

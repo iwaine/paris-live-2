@@ -9,7 +9,8 @@ import json
 from collections import defaultdict
 from typing import Tuple
 
-DB_PATH = "/workspaces/paris-live/football-live-prediction/data/predictions.db"
+import os
+DB_PATH = os.path.join(os.path.dirname(__file__), "data", "predictions.db")
 INTERVALS = [(31, 45), (75, 120)]
 INTERVAL_LABELS = { (31, 45): "31-45+", (75, 120): "75-90+" }
 

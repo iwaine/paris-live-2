@@ -1,6 +1,7 @@
 import sqlite3
 
-DB_PATH = "/workspaces/paris-live/football-live-prediction/data/predictions.db"
+import os
+DB_PATH = os.path.join(os.path.dirname(__file__), "data", "predictions.db")
 
 schema = '''
 DROP TABLE IF EXISTS soccerstats_scraped_matches;
